@@ -1,0 +1,23 @@
+services:
+  dev:
+    build:
+      context: .
+      target: deps
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "127.0.0.1:3334:3334"
+    environment:
+      - NODE_ENV=development
+
+  prod:
+    build:
+      context: .
+      target: runner
+    ports:
+      - "127.0.0.1:3333:3333"
+    environment:
+      - NODE_ENV=production
