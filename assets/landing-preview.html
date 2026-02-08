@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitMyCV - Landing Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a1a;
+    color: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ==========================================================
+     HERO SECTION
+     ========================================================== */
+  .hero-section {
+    position: relative;
+    height: 170vh;
+  }
+
+  .hero-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 0;
+  }
+
+  .hero-video.ready { opacity: 0.35; }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10,10,26,0.6) 0%, transparent 12%, transparent 60%, rgba(10,10,26,0.7) 75%, #0a0a1a 90%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    animation: fadeInUp 1.5s ease-out;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, #22d3ee 0%, #34d399 40%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 25px rgba(52,211,153,0.35));
+  }
+
+  .hero-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 6rem;
+    padding: 0.85rem 2.2rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.25), 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .hero-cta:hover::before { left: 100%; }
+
+  .hero-cta:hover {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4), 0 8px 25px rgba(0,0,0,0.3);
+    border-color: rgba(16, 185, 129, 0.7);
+  }
+
+  .hero-cta .cta-arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+  }
+
+  .hero-cta:hover .cta-arrow { transform: translateX(3px); }
+
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    max-width: 550px;
+    margin: 0 auto;
+    white-space: nowrap;
+    min-height: 1.5em;
+  }
+
+  .hero-subtitle .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #10b981;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 0.7s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes fadeInUp { from { opacity: 0; transform: translate(-50%, -50%) translateY(30px); } to { opacity: 1; transform: translate(-50%, -50%); } }
+
+  .scroll-indicator {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    animation: bounce 2s infinite;
+  }
+
+  .scroll-indicator span {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .scroll-chevron {
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid rgba(255,255,255,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    transform: rotate(45deg);
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-8px); }
+    60% { transform: translateX(-50%) translateY(-4px); }
+  }
+
+  .hero-mockup-wrapper {
+    position: absolute;
+    left: 50%;
+    z-index: 4;
+    perspective: 1200px;
+  }
+
+  .hero-mockup-frame {
+    width: min(960px, 90vw);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    position: relative;
+    transform: rotateX(20deg);
+    transform-origin: center top;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .hero-mockup-frame iframe {
+    position: absolute;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 960px;
+    height: 600px;
+    border: none;
+    transform-origin: top left;
+  }
+
+  .hero-mockup-glow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 80px;
+    background: radial-gradient(ellipse, rgba(16,185,129,0.2) 0%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-mockup-glow {
+      height: 30px;
+      width: 90%;
+      background: radial-gradient(ellipse, rgba(16,185,129,0.15) 0%, transparent 70%);
+    }
+  }
+
+  /* ==========================================================
+     BRIDGE
+     ========================================================== */
+  .bridge {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    position: relative;
+  }
+
+  .bridge-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(52,211,153,0.4));
+    margin: 0 auto 2rem;
+  }
+
+  .bridge-stat {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #22d3ee, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bridge-label {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* ==========================================================
+     HOW IT WORKS
+     ========================================================== */
+  .how-it-works {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  .grid-bg, .grid-fade, .grid-vfade {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    pointer-events: none;
+  }
+
+  .grid-bg {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, #262626 1px, transparent 1px),
+      linear-gradient(to bottom, #262626 1px, transparent 1px);
+  }
+
+  .grid-fade {
+    background: #0a0a1a;
+    mask-image: radial-gradient(ellipse at center, transparent 20%, black);
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, black);
+  }
+
+  .grid-vfade {
+    background: linear-gradient(to bottom, #0a0a1a 0%, transparent 15%, transparent 85%, #0a0a1a 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  /* ===== SPARKLES (gradient lines + fade) ===== */
+  .sparkles-container {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .sparkle-line {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+  }
+
+  .sparkle-line.line-wide {
+    width: 75%;
+    left: 12.5%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #22d3ee, transparent);
+    filter: blur(0.5px);
+  }
+
+  .sparkle-line.line-wide-sharp {
+    width: 75%;
+    left: 12.5%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #22d3ee, transparent);
+  }
+
+  .sparkle-line.line-narrow {
+    width: 25%;
+    left: 37.5%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #34d399, transparent);
+    filter: blur(0.5px);
+  }
+
+  .sparkle-line.line-narrow-sharp {
+    width: 25%;
+    left: 37.5%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #34d399, transparent);
+  }
+
+  .sparkles-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .sparkle-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    animation: sparkle-twinkle var(--dur) linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes sparkle-twinkle {
+    0% { opacity: 0; transform: scale(1); }
+    20% { opacity: var(--peak-opacity); transform: scale(1.2); }
+    50% { opacity: calc(var(--peak-opacity) * 0.5); transform: scale(1); }
+    100% { opacity: 0; transform: scale(0); }
+  }
+
+  .sparkles-mask {
+    position: absolute;
+    inset: 0;
+    background: #0a0a1a;
+    mask-image:
+      linear-gradient(to right, white, transparent 15%, transparent 85%, white),
+      linear-gradient(to top, white 0%, transparent 40%);
+    -webkit-mask-image:
+      linear-gradient(to right, white, transparent 15%, transparent 85%, white),
+      linear-gradient(to top, white 0%, transparent 40%);
+    mask-composite: add;
+    -webkit-mask-composite: source-over;
+  }
+
+  .section-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.2);
+    color: #34d399;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-intro {
+    color: rgba(255,255,255,0.55);
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    font-style: italic;
+    font-weight: 600;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .scroll-layout {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .steps-text {
+    flex: 0 0 38%;
+    position: relative;
+  }
+
+  .hiw-mockup-sticky {
+    flex: 1;
+    position: sticky;
+    top: 10vh;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  .progress-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+  }
+
+  .progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0%;
+    background: linear-gradient(to bottom, #22d3ee, #34d399, #60a5fa);
+    border-radius: 3px;
+    transition: height 0.4s ease;
+  }
+
+  .phase-header {
+    padding: 1.5rem 0 0.5rem 2rem;
+    position: relative;
+  }
+
+  .phase-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #34d399;
+  }
+
+  .step-card {
+    position: relative;
+    padding: 2.5rem 2rem;
+    margin-left: 2rem;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+  }
+
+  .step-card.active { opacity: 1; }
+
+  .step-dot {
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translate(calc(-50% + 1.5px), -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+
+  .step-card.active .step-dot {
+    background: #34d399;
+    border-color: #34d399;
+    box-shadow: 0 0 12px rgba(52,211,153,0.5);
+    width: 14px;
+    height: 14px;
+  }
+
+  .step-number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    transition: color 0.4s ease;
+  }
+
+  .step-card.active .step-number { color: #34d399; }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: rgba(255,255,255,0.85);
+    transition: color 0.4s ease;
+  }
+
+  .step-card.active .step-title { color: #fff; }
+
+  .step-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.45);
+    max-width: 340px;
+    transition: color 0.4s ease;
+  }
+
+  .step-card.active .step-desc { color: rgba(255,255,255,0.65); }
+
+  .step-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(52,211,153,0.6);
+    transition: color 0.4s ease;
+  }
+
+  .step-card.active .step-time { color: #34d399; }
+
+  .hiw-mockup-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    overflow: hidden;
+  }
+
+  .hiw-mockup-frame {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+      0 0 40px rgba(52,211,153,0.08),
+      0 25px 60px rgba(0,0,0,0.4);
+    transform: perspective(1200px) rotateY(-2deg) rotateX(1deg);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+
+  .hiw-mockup-frame:hover {
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+    box-shadow:
+      0 0 60px rgba(52,211,153,0.12),
+      0 30px 70px rgba(0,0,0,0.5);
+  }
+
+  .hiw-mockup-frame iframe {
+    display: block;
+    width: 960px;
+    height: 600px;
+    border: none;
+    transform-origin: top left;
+    pointer-events: none;
+    background: #0a0a1a;
+  }
+
+  .hiw-mockup-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.04) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  .hiw-mockup-frame.loaded::after { opacity: 0; }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .mockup-label {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    transition: all 0.4s ease;
+  }
+
+  .mockup-label .label-step { color: #34d399; }
+
+  .step-dots {
+    margin-bottom: 1.2rem;
+  }
+
+  .step-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .step-dots button[data-step] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .step-dots button[data-step].active {
+    background: #34d399;
+    box-shadow: 0 0 8px rgba(52,211,153,0.4);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  .step-dots button[data-step]:hover:not(.active) { background: rgba(255,255,255,0.3); }
+
+  /* Swipe arrows — hidden on desktop */
+  .swipe-arrow {
+    display: none;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .sparkles-container {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .scroll-layout { flex-direction: column; gap: 0; }
+
+    .steps-text {
+      flex: none;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0;
+      padding: 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .steps-text::-webkit-scrollbar { display: none; }
+    .progress-track, .progress-fill { display: none; }
+    .phase-header { display: none; }
+
+    .step-card {
+      flex: 0 0 85vw;
+      scroll-snap-align: center;
+      margin-left: 0;
+      padding: 1.5rem 1.5rem 0.5rem;
+      min-height: auto;
+      opacity: 1;
+      text-align: center;
+      align-items: center;
+    }
+
+    .step-dot { display: none; }
+    .step-desc { max-width: none; margin: 0 auto; }
+
+    .hiw-mockup-sticky {
+      position: relative;
+      top: 0;
+      height: auto;
+      padding: 0 0 2rem;
+      width: 100%;
+      align-self: stretch;
+    }
+
+    .hiw-mockup-container {
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    .hiw-mockup-frame, .hiw-mockup-frame:hover { transform: none; }
+
+    .mockup-label { display: none; }
+
+    /* Show dots between cards and mockup on mobile */
+    .step-dots {
+      margin: 1rem 0;
+    }
+
+    .hiw-mockup-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hiw-mockup-frame {
+      order: 3;
+    }
+
+    .how-it-works {
+      overflow: hidden;
+    }
+
+    .scroll-layout {
+      overflow: visible;
+    }
+
+    /* Gradient fades on sides to hint scrollable */
+    .steps-text {
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+
+    /* Step dots: stretch to viewport for arrow positioning */
+    .step-dots {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    /* Swipe arrows pinned to screen edges */
+    .swipe-arrow {
+      display: inline-flex;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #34d399;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      font-weight: 600;
+      font-family: system-ui, sans-serif;
+      z-index: 2;
+    }
+
+    .swipe-prev { left: 2rem; }
+    .swipe-next { right: 2rem; }
+
+    .swipe-arrow:active {
+      opacity: 1;
+    }
+
+    .swipe-arrow.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==========================================================
+     HERO SECTION
+     ========================================================== -->
+<section class="hero-section">
+  <div class="hero-sticky" id="heroSticky">
+
+    <video class="hero-video" autoplay muted playsinline preload="auto">
+      <source src="background_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content" id="heroContent">
+      <h1 class="hero-title">Votre CV, optimisé par l'IA</h1>
+      <p class="hero-subtitle"><span id="heroSubtitle"></span><span class="cursor"></span></p>
+      <a href="https://app.fitmycv.io" class="hero-cta">Démarrer maintenant <span class="cta-arrow">&rarr;</span></a>
+    </div>
+
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>Discover</span>
+      <div class="scroll-chevron"></div>
+    </div>
+
+    <div class="hero-mockup-wrapper" id="heroMockupWrapper">
+      <div class="hero-mockup-frame" id="heroMockupFrame">
+        <iframe id="heroMockupIframe"
+                src="/mockups/workflow-demo.html?embed"
+                style="width:960px;height:600px;border:none;transform-origin:top left;">
+        </iframe>
+      </div>
+    </div>
+    <div class="hero-mockup-glow" id="heroMockupGlow"></div>
+
+  </div>
+</section>
+
+<!-- ==========================================================
+     BRIDGE
+     ========================================================== -->
+
+<!-- ==========================================================
+     HOW IT WORKS
+     ========================================================== -->
+<section class="how-it-works" id="howItWorks">
+
+  <div class="section-header" id="sectionHeader">
+    <h4 class="section-intro">FitMyCV optimise votre CV grâce à l'IA pour matcher chaque offre d'emploi. Il adapte le contenu au format ATS et génère un document unique conçu pour passer les filtres des robots RH et décrocher plus d'entretiens.</h4>
+    <h2 class="section-title">Un workflow simple,<br>des résultats puissants</h2>
+    <div class="sparkles-container">
+      <div class="sparkle-line line-wide"></div>
+      <div class="sparkle-line line-wide-sharp"></div>
+      <div class="sparkle-line line-narrow"></div>
+      <div class="sparkle-line line-narrow-sharp"></div>
+      <div class="sparkles-particles" id="sparklesParticles"></div>
+      <div class="sparkles-mask"></div>
+    </div>
+    <p class="section-subtitle" style="margin-top:-7rem;position:relative;z-index:1;">Importez votre CV, laissez l'IA l'optimiser pour chaque offre, et exportez un document parfaitement adapté.</p>
+  </div>
+
+  <div class="scroll-layout">
+    <div class="grid-bg"></div>
+    <div class="grid-fade"></div>
+    <div class="grid-vfade"></div>
+
+    <div class="steps-text" id="stepsText">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="phase-header">
+        <div class="phase-number">Phase 1 — Import</div>
+      </div>
+
+      <div class="step-card" data-step="1">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 01</div>
+        <h3 class="step-title">Importez votre CV</h3>
+        <p class="step-desc">Glissez votre PDF ou uploadez-le. L'IA extrait automatiquement vos compétences, expériences et formations en quelques secondes.</p>
+      </div>
+
+      <div class="phase-header">
+        <div class="phase-number">Phase 2 — Intelligence IA</div>
+      </div>
+
+      <div class="step-card" data-step="2">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 02</div>
+        <h3 class="step-title">Génération IA</h3>
+        <p class="step-desc">Ajoutez les URLs des offres d'emploi. L'IA génère des variantes de CV taillées sur mesure pour chaque poste visé.</p>
+        <span class="step-time">⚡ ~35s en multi-offre</span>
+      </div>
+
+      <div class="step-card" data-step="3">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 03</div>
+        <h3 class="step-title">Revue des modifications</h3>
+        <p class="step-desc">Visualisez chaque modification suggérée par l'IA avec un diff clair. Acceptez, rejetez ou ajustez — vous gardez le contrôle total.</p>
+        <span class="step-time">⚡ ~1 minute</span>
+      </div>
+
+      <div class="step-card" data-step="4">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 04</div>
+        <h3 class="step-title">Score de compatibilité</h3>
+        <p class="step-desc">Un score intelligent évalue la correspondance entre votre CV et l'offre ciblée. Voyez exactement où vous pouvez vous améliorer.</p>
+        <span class="step-time">⚡ ~10 secondes</span>
+      </div>
+
+      <div class="step-card" data-step="5">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 05</div>
+        <h3 class="step-title">Optimisation ciblée</h3>
+        <p class="step-desc">L'IA propose des optimisations précises pour maximiser votre score. Sélectionnez les suggestions qui vous correspondent et ajoutez vos propres notes.</p>
+        <span class="step-time">⚡ ~40 secondes</span>
+      </div>
+
+      <div class="step-card" data-step="6">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 06</div>
+        <h3 class="step-title">Validation finale</h3>
+        <p class="step-desc">Revoyez les optimisations appliquées et constatez l'amélioration de votre score. De 79 à 87 en moyenne — chaque point compte.</p>
+        <span class="step-time">⚡ ~30 secondes</span>
+      </div>
+
+      <div class="phase-header">
+        <div class="phase-number">Phase 3 — Export</div>
+      </div>
+
+      <div class="step-card" data-step="7">
+        <div class="step-dot"></div>
+        <div class="step-number">Étape 07</div>
+        <h3 class="step-title">Export PDF / Word</h3>
+        <p class="step-desc">Prévisualisez votre CV finalisé et exportez-le au format de votre choix. Prêt à envoyer, parfaitement formaté.</p>
+        <span class="step-time">⚡ 1 clic</span>
+      </div>
+
+    </div>
+
+    <div class="hiw-mockup-sticky">
+      <div class="hiw-mockup-container">
+        <div class="mockup-label" id="hiwMockupLabel">
+          <span class="label-step">Étape 1</span> — Import PDF
+        </div>
+        <div class="step-dots" id="stepDots">
+          <button class="swipe-arrow swipe-prev" id="swipePrev" aria-label="Étape précédente">&lt;</button>
+          <button class="active" data-step="1" aria-label="Étape 1"></button>
+          <button data-step="2" aria-label="Étape 2"></button>
+          <button data-step="3" aria-label="Étape 3"></button>
+          <button data-step="4" aria-label="Étape 4"></button>
+          <button data-step="5" aria-label="Étape 5"></button>
+          <button data-step="6" aria-label="Étape 6"></button>
+          <button data-step="7" aria-label="Étape 7"></button>
+          <button class="swipe-arrow swipe-next" id="swipeNext" aria-label="Étape suivante">&gt;</button>
+        </div>
+        <div class="hiw-mockup-frame" id="hiwMockupFrame">
+          <iframe id="hiwMockupIframe"
+                  src="/mockups/step1.html?embed"
+                  loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================
+     SCRIPTS
+     ========================================================== -->
+
+<!-- Hero Script -->
+<script>
+(function() {
+  const heroSticky = document.getElementById('heroSticky');
+  const heroContent = document.getElementById('heroContent');
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  const mockupWrapper = document.getElementById('heroMockupWrapper');
+  const mockupFrame = document.getElementById('heroMockupFrame');
+  const mockupIframe = document.getElementById('heroMockupIframe');
+  const mockupGlow = document.getElementById('heroMockupGlow');
+  const section = document.querySelector('.hero-section');
+  const heroVideo = document.querySelector('.hero-video');
+
+  let demoStarted = false;
+  let demoPaused = false;
+
+  const BASE_W = 960;
+  const BASE_H = 600;
+  const MAX_TILT = 20;
+  const VISIBLE_RATIO = 0.33;
+
+  heroVideo.loop = false;
+  if (heroVideo.readyState >= 3) {
+    heroVideo.classList.add('ready');
+  } else {
+    heroVideo.addEventListener('canplay', () => heroVideo.classList.add('ready'), { once: true });
+  }
+
+  heroVideo.addEventListener('ended', () => {
+    heroVideo.style.transition = 'opacity 1s';
+    heroVideo.style.opacity = '0.6';
+  });
+
+  function updateScale() {
+    const containerW = mockupFrame.offsetWidth;
+    const scale = containerW / BASE_W;
+    const scaledH = BASE_H * scale;
+    mockupFrame.style.height = `${scaledH}px`;
+    mockupIframe.style.transform = `scale(${scale})`;
+    return { scale, scaledH };
+  }
+
+  function update() {
+    const { scaledH } = updateScale();
+    const rect = section.getBoundingClientRect();
+    const sectionHeight = rect.height - window.innerHeight;
+    const scrolled = -rect.top;
+    const progress = Math.max(0, Math.min(1, scrolled / sectionHeight));
+    const vh = window.innerHeight;
+    const mockupHeight = scaledH;
+
+    const startY = vh - (mockupHeight * VISIBLE_RATIO);
+    const endY = (vh - mockupHeight) / 2;
+    const easedPos = 1 - Math.pow(1 - progress, 3);
+    const currentY = startY + (endY - startY) * easedPos;
+
+    mockupWrapper.style.top = `${currentY}px`;
+    mockupWrapper.style.left = '50%';
+    mockupWrapper.style.transform = `translateX(-50%)`;
+
+    const easedTilt = 1 - Math.pow(1 - progress, 3);
+    const currentTilt = MAX_TILT * (1 - easedTilt);
+    mockupFrame.style.transform = `rotateX(${currentTilt}deg)`;
+
+    const discoverBottom = vh - currentY + 16;
+    scrollIndicator.style.bottom = `${discoverBottom}px`;
+
+    const titleY = currentY / 2;
+    heroContent.style.top = `${titleY}px`;
+    heroContent.style.transform = `translate(-50%, -50%)`;
+
+    const fadeOut = Math.max(0, 1 - progress * 2.5);
+    heroContent.style.opacity = fadeOut;
+    scrollIndicator.style.opacity = fadeOut;
+
+    heroVideo.style.transform = `translateY(${-progress * vh * 0.4}px)`;
+    if (progress > 0.01) {
+      heroVideo.style.opacity = Math.max(0, 0.35 - (progress * 0.5));
+    } else {
+      heroVideo.style.removeProperty('opacity');
+    }
+
+    const overlay = document.querySelector('.hero-overlay');
+    overlay.style.transform = `translateY(${-progress * vh * 0.4}px)`;
+    overlay.style.background = `linear-gradient(to bottom,
+      rgba(10,10,26,${0.6 + progress * 0.4}) 0%,
+      transparent 12%,
+      transparent ${60 - progress * 20}%,
+      rgba(10,10,26,${0.7 + progress * 0.3}) ${75 - progress * 10}%,
+      #0a0a1a ${90 - progress * 10}%)`;
+
+    const glowY = currentY + mockupHeight + 5;
+    mockupGlow.style.top = `${glowY}px`;
+    mockupGlow.style.opacity = Math.max(0, (progress - 0.6) / 0.4);
+
+    const finalStickyH = endY + mockupHeight + 90;
+    heroSticky.style.height = `${vh + (finalStickyH - vh) * easedPos}px`;
+
+    if (progress > 0.1 && !demoStarted) {
+      demoStarted = true;
+      demoPaused = false;
+      mockupIframe.contentWindow.postMessage('start-demo', '*');
+    }
+
+    if (demoStarted) {
+      const mockupVisible = currentY < vh && currentY + mockupHeight > 0 && progress > 0.3;
+      if (!mockupVisible && !demoPaused) {
+        demoPaused = true;
+        mockupIframe.contentWindow.postMessage('pause-demo', '*');
+      } else if (mockupVisible && demoPaused) {
+        demoPaused = false;
+        mockupIframe.contentWindow.postMessage('resume-demo', '*');
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+
+  // Typewriter
+  const subtitleEl = document.getElementById('heroSubtitle');
+  const phrases = [
+    'Fini le copier-coller — une URL suffit',
+    '10 liens, 10 CV générés en même temps',
+    'Analysez, scorez, optimisez — en quelques secondes',
+    'Sans abonnement — paiement à la demande',
+    '7 étapes pour un CV parfait',
+  ];
+
+  async function typewrite() {
+    for (const phrase of phrases) {
+      for (let i = 0; i <= phrase.length; i++) {
+        subtitleEl.textContent = phrase.slice(0, i);
+        await new Promise(r => setTimeout(r, 40));
+      }
+      await new Promise(r => setTimeout(r, 1000));
+      const words = phrase.split(' ');
+      while (words.length > 0) {
+        words.pop();
+        subtitleEl.textContent = words.join(' ');
+        await new Promise(r => setTimeout(r, 80));
+      }
+      await new Promise(r => setTimeout(r, 400));
+    }
+    typewrite();
+  }
+
+  setTimeout(typewrite, 1500);
+})();
+</script>
+
+<!-- How it Works Script -->
+<script>
+(function() {
+  const stepCards = document.querySelectorAll('.step-card');
+  const mockupIframe = document.getElementById('hiwMockupIframe');
+  const mockupFrame = document.getElementById('hiwMockupFrame');
+  const mockupLabel = document.getElementById('hiwMockupLabel');
+  const progressFill = document.getElementById('progressFill');
+  const stepDots = document.querySelectorAll('.step-dots button[data-step]');
+
+  const BASE_W = 960;
+  const BASE_H = 600;
+
+  const stepLabels = [
+    'Import PDF',
+    'Génération IA',
+    'Revue des modifications',
+    'Score de compatibilité',
+    'Optimisation ciblée',
+    'Validation finale',
+    'Export PDF / Word',
+  ];
+
+  let currentStep = 1;
+  let iframeLoaded = false;
+
+  function updateScale() {
+    const containerW = mockupFrame.offsetWidth;
+    const scale = containerW / BASE_W;
+    const scaledH = BASE_H * scale;
+    mockupFrame.style.height = `${scaledH}px`;
+    mockupIframe.style.transform = `scale(${scale})`;
+  }
+
+  function switchToStep(n) {
+    if (n === currentStep && iframeLoaded) return;
+    currentStep = n;
+    iframeLoaded = false;
+
+    mockupFrame.classList.remove('loaded');
+    mockupIframe.src = `/mockups/step${n}.html?embed`;
+
+    mockupLabel.innerHTML = `<span class="label-step">Étape ${n}</span> — ${stepLabels[n - 1]}`;
+
+    stepDots.forEach(dot => {
+      dot.classList.toggle('active', parseInt(dot.dataset.step) === n);
+    });
+
+    stepCards.forEach(card => {
+      card.classList.toggle('active', parseInt(card.dataset.step) === n);
+    });
+
+    const progress = ((n - 1) / (stepCards.length - 1)) * 100;
+    progressFill.style.height = `${progress}%`;
+  }
+
+  mockupIframe.addEventListener('load', () => {
+    iframeLoaded = true;
+    mockupFrame.classList.add('loaded');
+    updateScale();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+        const step = parseInt(entry.target.dataset.step);
+        if (step && step !== currentStep) {
+          switchToStep(step);
+        }
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '-30% 0px -30% 0px',
+    threshold: [0.5],
+  });
+
+  stepCards.forEach(card => observer.observe(card));
+
+  stepDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const step = parseInt(dot.dataset.step);
+      switchToStep(step);
+      const card = document.querySelector(`.step-card[data-step="${step}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
+  updateScale();
+  switchToStep(1);
+  window.addEventListener('resize', updateScale);
+
+  // Arrow navigation
+  const swipePrev = document.getElementById('swipePrev');
+  const swipeNext = document.getElementById('swipeNext');
+
+  function updateArrows() {
+    swipePrev.classList.toggle('hidden', currentStep <= 1);
+    swipeNext.classList.toggle('hidden', currentStep >= 7);
+  }
+
+  // Patch switchToStep to update arrows
+  const _origSwitch = switchToStep;
+  switchToStep = function(n) {
+    _origSwitch(n);
+    updateArrows();
+  };
+
+  swipePrev.addEventListener('click', () => {
+    if (currentStep > 1) {
+      const card = document.querySelector(`.step-card[data-step="${currentStep - 1}"]`);
+      if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
+
+  swipeNext.addEventListener('click', () => {
+    if (currentStep < 7) {
+      const card = document.querySelector(`.step-card[data-step="${currentStep + 1}"]`);
+      if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
+
+  updateArrows();
+
+  // Swipe on mockup scrolls the step cards
+  const stepsContainer = document.getElementById('stepsText');
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  mockupFrame.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  mockupFrame.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+
+    const nextStep = dx < 0
+      ? Math.min(currentStep + 1, 7)
+      : Math.max(currentStep - 1, 1);
+
+    if (nextStep !== currentStep) {
+      const card = document.querySelector(`.step-card[data-step="${nextStep}"]`);
+      if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }, { passive: true });
+
+  // Sync mockup when user scrolls step cards on mobile
+  let scrollTimer;
+  stepsContainer.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const containerRect = stepsContainer.getBoundingClientRect();
+      const centerX = containerRect.left + containerRect.width / 2;
+      let closest = 1;
+      let closestDist = Infinity;
+      stepCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const dist = Math.abs(cardCenter - centerX);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = parseInt(card.dataset.step);
+        }
+      });
+      if (closest !== currentStep) switchToStep(closest);
+    }, 100);
+  }, { passive: true });
+})();
+</script>
+
+<!-- Sparkles Script -->
+<script>
+(function() {
+  const container = document.getElementById('sparklesParticles');
+  const DENSITY = window.innerWidth <= 1024 ? 400 : 1200;
+  const MIN_SIZE = 0.8;
+  const MAX_SIZE = 2;
+  const SPEED = 1;
+
+  for (let i = 0; i < DENSITY; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'sparkle-dot';
+    const size = MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE);
+    const dur = (Math.random() * 3 + SPEED).toFixed(2);
+    const delay = (Math.random() * 4).toFixed(2);
+    const peakOpacity = (0.1 + Math.random() * 0.9).toFixed(2);
+    dot.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      top: ${(Math.random() * 100).toFixed(1)}%;
+      left: ${(Math.random() * 100).toFixed(1)}%;
+      --dur: ${dur}s;
+      --peak-opacity: ${peakOpacity};
+      animation-delay: ${delay}s;
+    `;
+    container.appendChild(dot);
+  }
+})();
+</script>
+
+</body>
+</html>

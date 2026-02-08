@@ -5,6 +5,7 @@ import { createCvAreas } from './html/cv-areas.js';
 import { createGeneratorModal, createOptimizationModal, createExportModal, createImportModal } from './html/modals.js';
 import { createCursor } from './html/cursor-and-indicator.js';
 import { runStepLoop } from './js/steps/step-runner.js';
+import { setPaused } from './js/dom-helpers.js';
 
 import { setupStep1, runStep1 } from './js/steps/step1.js';
 import { setupStep2, runStep2 } from './js/steps/step2.js';
@@ -47,8 +48,26 @@ const html = createBrowserFrame(viewportContent);
 // Inject into DOM
 app.innerHTML = html;
 
-// Start animation on load
+// Start animation — in embed mode, wait for parent to send 'start-demo'
+const isEmbed = location.search.includes('embed');
 const { setup, run } = stepMap[stepNum];
-window.addEventListener('load', () => {
-  setTimeout(() => runStepLoop(stepNum, setup, run), 500);
-});
+
+if (isEmbed) {
+  document.body.classList.add('embed');
+  window.addEventListener('message', (e) => {
+    if (e.data === 'start-demo') runStepLoop(stepNum, setup, run);
+    if (e.data === 'pause-demo') setPaused(true);
+    if (e.data === 'resume-demo') setPaused(false);
+  });
+  // Auto-start after short delay if no message received (fallback)
+  setTimeout(() => {
+    if (!document.body.dataset.started) {
+      document.body.dataset.started = '1';
+      runStepLoop(stepNum, setup, run);
+    }
+  }, 1000);
+} else {
+  window.addEventListener('load', () => {
+    setTimeout(() => runStepLoop(stepNum, setup, run), 500);
+  });
+}

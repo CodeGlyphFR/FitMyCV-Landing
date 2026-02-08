@@ -1252,6 +1252,13 @@
   }
   var _paused = false;
   var _resumeResolve = null;
+  function setPaused(paused) {
+    _paused = paused;
+    if (!paused && _resumeResolve) {
+      _resumeResolve();
+      _resumeResolve = null;
+    }
+  }
   function waitForResume() {
     if (!_paused) return Promise.resolve();
     return new Promise((r) => {
@@ -1964,8 +1971,24 @@
   ].join("");
   var html = createBrowserFrame(viewportContent);
   app.innerHTML = html;
+  var isEmbed = location.search.includes("embed");
   var { setup, run } = stepMap[stepNum];
-  window.addEventListener("load", () => {
-    setTimeout(() => runStepLoop(stepNum, setup, run), 500);
-  });
+  if (isEmbed) {
+    document.body.classList.add("embed");
+    window.addEventListener("message", (e) => {
+      if (e.data === "start-demo") runStepLoop(stepNum, setup, run);
+      if (e.data === "pause-demo") setPaused(true);
+      if (e.data === "resume-demo") setPaused(false);
+    });
+    setTimeout(() => {
+      if (!document.body.dataset.started) {
+        document.body.dataset.started = "1";
+        runStepLoop(stepNum, setup, run);
+      }
+    }, 1e3);
+  } else {
+    window.addEventListener("load", () => {
+      setTimeout(() => runStepLoop(stepNum, setup, run), 500);
+    });
+  }
 })();

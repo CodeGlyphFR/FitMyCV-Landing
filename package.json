@@ -10,9 +10,15 @@
     "build:mockups": "node public/mockups/build-mockups.mjs"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
+    "clsx": "^2.1.1",
+    "motion": "^12.33.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
