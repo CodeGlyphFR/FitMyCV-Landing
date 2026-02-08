@@ -18,6 +18,12 @@ docker compose up dev    # Dev with volume mounts (port 3334)
 docker compose up prod   # Production standalone (port 3333)
 ```
 
+**Important:** `node_modules` is managed inside Docker (anonymous volume). Run npm commands via Docker:
+```bash
+docker compose exec dev npm run build:mockups    # Build mockups inside container
+docker compose exec dev npm install              # Install deps inside container
+```
+
 ## Architecture
 
 **Stack:** Next.js 15.3 (App Router, standalone output) + React 19 + Tailwind 4 + TypeScript 5

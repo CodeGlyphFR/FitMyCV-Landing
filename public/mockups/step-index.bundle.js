@@ -1250,8 +1250,16 @@
     cursor.classList.add("clicking");
     setTimeout(() => cursor.classList.remove("clicking"), 400);
   }
+  var _paused = false;
+  var _resumeResolve = null;
+  function waitForResume() {
+    if (!_paused) return Promise.resolve();
+    return new Promise((r) => {
+      _resumeResolve = r;
+    });
+  }
   function wait(ms) {
-    return new Promise((r) => setTimeout(r, ms));
+    return new Promise((r) => setTimeout(r, ms)).then(() => waitForResume());
   }
   function slowScroll(el, target, duration) {
     return new Promise((resolve) => {

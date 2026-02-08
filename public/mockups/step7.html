@@ -1551,10 +1551,36 @@ body {
   min-width: 0;
 }
 
+/* ============================================
+   EMBED MODE — loaded via ?embed query param
+   Removes body padding, makes mockup fill 100%
+   ============================================ */
+body.embed {
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: stretch;
+}
+body.embed .mockup-frame {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: none;
+}
+body.embed .mockup-viewport {
+  height: calc(100vh - 42px); /* full height minus browser-bar */
+}
+body.embed .browser-bar {
+  border-radius: 12px 12px 0 0;
+}
+
 </style>
 </head>
 <body>
 <div id="app" data-step="7"></div>
+<script>if(location.search.includes('embed'))document.body.classList.add('embed');</script>
 <script src="step-index.bundle.js"></script>
 </body>
 </html>

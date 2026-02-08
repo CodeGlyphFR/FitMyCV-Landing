@@ -1263,8 +1263,23 @@
     cursor.classList.add("clicking");
     setTimeout(() => cursor.classList.remove("clicking"), 400);
   }
+  var _paused = false;
+  var _resumeResolve = null;
+  function setPaused(paused) {
+    _paused = paused;
+    if (!paused && _resumeResolve) {
+      _resumeResolve();
+      _resumeResolve = null;
+    }
+  }
+  function waitForResume() {
+    if (!_paused) return Promise.resolve();
+    return new Promise((r) => {
+      _resumeResolve = r;
+    });
+  }
   function wait(ms) {
-    return new Promise((r) => setTimeout(r, ms));
+    return new Promise((r) => setTimeout(r, ms)).then(() => waitForResume());
   }
   function slowScroll(el, target, duration) {
     return new Promise((resolve) => {
@@ -1901,7 +1916,16 @@
   ].join("");
   var html = createBrowserFrame(viewportContent) + createStepIndicator();
   document.getElementById("app").innerHTML = html;
-  window.addEventListener("load", () => {
-    setTimeout(runAnimation, 500);
-  });
+  var isEmbed = location.search.includes("embed");
+  if (isEmbed) {
+    window.addEventListener("message", (e) => {
+      if (e.data === "start-demo") runAnimation();
+      if (e.data === "pause-demo") setPaused(true);
+      if (e.data === "resume-demo") setPaused(false);
+    });
+  } else {
+    window.addEventListener("load", () => {
+      setTimeout(runAnimation, 500);
+    });
+  }
 })();

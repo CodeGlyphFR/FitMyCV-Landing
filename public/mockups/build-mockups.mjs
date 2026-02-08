@@ -66,6 +66,7 @@ ${allCss}
 </head>
 <body>
 ${tpl.body}
+<script>if(location.search.includes('embed'))document.body.classList.add('embed');</script>
 <script src="${tpl.script}"></script>
 </body>
 </html>

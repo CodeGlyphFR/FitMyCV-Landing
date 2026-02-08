@@ -26,8 +26,25 @@ export function clickEffect(cursor) {
   setTimeout(() => cursor.classList.remove('clicking'), 400);
 }
 
+// Pause/resume support
+let _paused = false;
+let _resumeResolve = null;
+
+export function setPaused(paused) {
+  _paused = paused;
+  if (!paused && _resumeResolve) {
+    _resumeResolve();
+    _resumeResolve = null;
+  }
+}
+
+function waitForResume() {
+  if (!_paused) return Promise.resolve();
+  return new Promise(r => { _resumeResolve = r; });
+}
+
 export function wait(ms) {
-  return new Promise(r => setTimeout(r, ms));
+  return new Promise(r => setTimeout(r, ms)).then(() => waitForResume());
 }
 
 export function slowScroll(el, target, duration) {
