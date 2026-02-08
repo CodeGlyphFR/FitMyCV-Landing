@@ -9,7 +9,7 @@ services:
       - /app/node_modules
       - /app/.next
     ports:
-      - "127.0.0.1:3334:3334"
+      - "127.0.0.1:3001:3001"
     environment:
       - NODE_ENV=development
 
