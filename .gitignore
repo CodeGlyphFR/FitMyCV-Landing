@@ -41,3 +41,5 @@ next-env.d.ts
 
 /_bmad/
 /_bmad-output/
+/assets/
+/.claude/
