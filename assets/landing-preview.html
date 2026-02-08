@@ -75,50 +75,77 @@
     filter: drop-shadow(0 0 25px rgba(52,211,153,0.35));
   }
 
+  /* Noise background wrapper */
+  .hero-cta-wrapper {
+    position: relative;
+    display: inline-flex;
+    margin-top: 6rem;
+    padding: 6px;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-cta-gradient {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: conic-gradient(from var(--cta-angle, 0deg), #22d3ee, #34d399, #60a5fa, #22d3ee);
+    animation: cta-rotate 3s linear infinite;
+  }
+
+  @keyframes cta-rotate {
+    to { --cta-angle: 360deg; }
+  }
+
+  @property --cta-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .hero-cta-noise {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 100px 100px;
+    mix-blend-mode: overlay;
+  }
+
   .hero-cta {
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    margin-top: 6rem;
+    gap: 1.5rem;
     padding: 0.85rem 2.2rem;
     font-size: clamp(0.95rem, 1.5vw, 1.1rem);
     font-weight: 600;
     font-family: inherit;
     color: #fff;
-    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-    border: 1px solid rgba(16, 185, 129, 0.4);
+    background: radial-gradient(ellipse at center, #0a0a1a 50%, #141430 100%);
+    border: none;
     border-radius: 50px;
     cursor: pointer;
     text-decoration: none;
-    transition: box-shadow 0.25s ease, border-color 0.25s ease;
-    box-shadow: 0 0 25px rgba(16, 185, 129, 0.25), 0 4px 15px rgba(0,0,0,0.3);
-    overflow: hidden;
+    transition: all 0.25s ease;
     z-index: 1;
   }
 
-  .hero-cta::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-    transition: left 0.5s ease;
-  }
-
-  .hero-cta:hover::before { left: 100%; }
-
   .hero-cta:hover {
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4), 0 8px 25px rgba(0,0,0,0.3);
-    border-color: rgba(16, 185, 129, 0.7);
+    background: radial-gradient(ellipse at center, #111128 50%, #1a1a40 100%);
   }
 
   .hero-cta .cta-arrow {
     display: inline-block;
-    transition: transform 0.25s ease;
+    animation: cta-arrow-bounce 1.5s ease-in-out infinite;
   }
 
-  .hero-cta:hover .cta-arrow { transform: translateX(3px); }
+  @keyframes cta-arrow-bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
 
   .hero-subtitle {
     font-size: clamp(0.95rem, 1.8vw, 1.3rem);
@@ -818,11 +845,15 @@
     <div class="hero-content" id="heroContent">
       <h1 class="hero-title">Votre CV, optimisé par l'IA</h1>
       <p class="hero-subtitle"><span id="heroSubtitle"></span><span class="cursor"></span></p>
-      <a href="https://app.fitmycv.io" class="hero-cta">Démarrer maintenant <span class="cta-arrow">&rarr;</span></a>
+      <div class="hero-cta-wrapper">
+        <div class="hero-cta-gradient"></div>
+        <div class="hero-cta-noise"></div>
+        <a href="https://app.fitmycv.io" class="hero-cta">Commencer maintenant <span class="cta-arrow">&rarr;</span></a>
+      </div>
     </div>
 
     <div class="scroll-indicator" id="scrollIndicator">
-      <span>Discover</span>
+      <span>EN SAVOIR PLUS</span>
       <div class="scroll-chevron"></div>
     </div>
 
@@ -1015,7 +1046,12 @@
     return { scale, scaledH };
   }
 
+  const overlay = document.querySelector('.hero-overlay');
+  let rafId = 0;
+  let needsUpdate = true;
+
   function update() {
+    rafId = 0;
     const { scaledH } = updateScale();
     const rect = section.getBoundingClientRect();
     const sectionHeight = rect.height - window.innerHeight;
@@ -1055,7 +1091,6 @@
       heroVideo.style.removeProperty('opacity');
     }
 
-    const overlay = document.querySelector('.hero-overlay');
     overlay.style.transform = `translateY(${-progress * vh * 0.4}px)`;
     overlay.style.background = `linear-gradient(to bottom,
       rgba(10,10,26,${0.6 + progress * 0.4}) 0%,
@@ -1087,11 +1122,16 @@
         mockupIframe.contentWindow.postMessage('resume-demo', '*');
       }
     }
-
-    requestAnimationFrame(update);
   }
 
-  requestAnimationFrame(update);
+  function scheduleUpdate() {
+    if (!rafId) rafId = requestAnimationFrame(update);
+  }
+
+  // Run once on load, then only on scroll/resize
+  scheduleUpdate();
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate, { passive: true });
 
   // Typewriter
   const subtitleEl = document.getElementById('heroSubtitle');
@@ -1297,6 +1337,23 @@
       if (closest !== currentStep) switchToStep(closest);
     }, 100);
   }, { passive: true });
+
+  // Pause/resume HIW iframe when section leaves/enters viewport
+  let hiwPaused = false;
+  const hiwObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      try {
+        if (!entry.isIntersecting && !hiwPaused) {
+          hiwPaused = true;
+          mockupIframe.contentWindow.postMessage('pause-demo', '*');
+        } else if (entry.isIntersecting && hiwPaused) {
+          hiwPaused = false;
+          mockupIframe.contentWindow.postMessage('resume-demo', '*');
+        }
+      } catch(e) {}
+    });
+  }, { rootMargin: '100px' });
+  hiwObserver.observe(document.getElementById('howItWorks'));
 })();
 </script>
 
