@@ -3,6 +3,7 @@ services:
     build:
       context: .
       target: deps
+    user: "1000:1000"
     command: npm run dev
     volumes:
       - .:/app
