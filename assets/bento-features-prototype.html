@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features Marquee — Prototype v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a1a;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+  --cyan: #22d3ee;
+  --green: #34d399;
+  --blue: #60a5fa;
+  --purple: #a78bfa;
+  --orange: #fb923c;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --row-gap: 1rem;
+  --card-gap: 1rem;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ===== STATS STRIP ===== */
+.stats-strip {
+  display: flex; justify-content: center; align-items: center; gap: 3rem;
+  padding: 2.5rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(34,211,238,0.03) 0%, transparent 100%);
+}
+.stat-item { text-align: center; }
+.stat-value {
+  font-size: 2.2rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1.2;
+}
+.stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+.stat-separator { width: 1px; height: 2rem; background: rgba(255,255,255,0.1); }
+
+/* ===== SECTION ===== */
+.features-section {
+  padding: 4rem 0 5rem;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--cyan), var(--green), var(--blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1.2; margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem; color: var(--text-dim); font-style: italic;
+}
+
+/* ===== MARQUEE GRID ===== */
+.marquee-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--row-gap);
+  padding: 0.75rem 0;
+  /* Fade edges */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.marquee-row {
+  display: flex;
+  gap: var(--card-gap);
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-row.scroll-left {
+  animation: scrollLeft 40s linear infinite;
+}
+.marquee-row.scroll-right {
+  animation: scrollRight 45s linear infinite;
+}
+.marquee-row.scroll-left-slow {
+  animation: scrollLeft 50s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - var(--card-gap) / 2)); }
+}
+@keyframes scrollRight {
+  0% { transform: translateX(calc(-50% - var(--card-gap) / 2)); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== CARDS ===== */
+.f-card {
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .f-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: rgba(34,211,238,0.35);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.4), 0 0 30px rgba(34,211,238,0.06);
+    z-index: 5;
+  }
+}
+
+.f-card:active {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(34,211,238,0.3);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 20px rgba(34,211,238,0.08);
+  z-index: 5;
+}
+
+/* Glow border */
+.f-card::before {
+  content: '';
+  position: absolute; inset: -1px;
+  border-radius: 1rem; padding: 1px;
+  background: conic-gradient(from var(--a,0deg) at var(--mx,50%) var(--my,50%), var(--cyan), var(--green), var(--blue), var(--cyan));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity 0.35s;
+  z-index: 1; pointer-events: none;
+}
+@media (hover: hover) {
+  .f-card:hover::before { opacity: 1; }
+}
+
+/* ===== SIZE VARIANTS ===== */
+.f-card { height: 200px; }
+.card-lg { width: 340px; }
+.card-md { width: 300px; }
+.card-sm { width: 240px; }
+.card-wide { width: 360px; }
+
+/* ===== CARD CONTENT ===== */
+.f-card .c-title {
+  font-size: 1.1rem; font-weight: 700; color: #fff;
+  line-height: 1.25; margin-bottom: 0.35rem;
+  position: relative; z-index: 2;
+}
+.card-sm .c-title { font-size: 1rem; }
+.card-lg .c-title, .card-wide .c-title { font-size: 1.15rem; }
+
+.f-card .c-sub {
+  font-size: 0.8rem; color: var(--text-dim); font-style: italic;
+  line-height: 1.4; position: relative; z-index: 2;
+}
+.card-sm .c-sub { font-size: 0.75rem; }
+
+.f-card .c-vis {
+  flex: 1; margin-top: 0.75rem;
+  border-radius: 0.5rem; overflow: hidden;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative; z-index: 2;
+}
+
+/* Info hint — glowing gradient dot */
+.f-card .c-hint {
+  position: absolute; top: 0.65rem; right: 0.65rem;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  box-shadow: 0 0 8px rgba(34,211,238,0.25), 0 0 16px rgba(52,211,153,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; font-weight: 700; line-height: 1;
+  color: var(--bg);
+  z-index: 3; opacity: 0.6;
+  transition: opacity 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+@media (hover: hover) {
+  .f-card:hover .c-hint {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(34,211,238,0.4), 0 0 22px rgba(52,211,153,0.25);
+    transform: scale(1.1);
+  }
+}
+
+
+/* ===== MINI VISUALS ===== */
+
+/* Score mini */
+.vis-score { display:flex; align-items:center; justify-content:center; height:100%; gap:0.75rem; padding:0.5rem; }
+.mini-circle { position:relative; width:65px; height:65px; }
+.mini-circle svg { width:65px; height:65px; transform:rotate(-90deg); }
+.sc-bg { fill:none; stroke:rgba(255,255,255,0.06); stroke-width:6; }
+.sc-fg { fill:none; stroke:url(#sg); stroke-width:6; stroke-linecap:round; stroke-dasharray:170; stroke-dashoffset:170; transition:stroke-dashoffset 2s ease; }
+.mini-circle.anim .sc-fg { stroke-dashoffset: 27; }
+.sc-num { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; color:var(--green); }
+.mini-bars { display:flex; flex-direction:column; gap:0.3rem; flex:1; }
+.mb-label { font-size:0.55rem; color:var(--text-muted); }
+.mb-track { height:4px; border-radius:2px; background:rgba(255,255,255,0.06); overflow:hidden; }
+.mb-fill { height:100%; border-radius:2px; width:0; transition:width 1.5s ease; }
+.mini-circle.anim ~ .mini-bars .mb1 .mb-fill { width:92%; background:var(--green); }
+.mini-circle.anim ~ .mini-bars .mb2 .mb-fill { width:78%; background:var(--cyan); }
+.mini-circle.anim ~ .mini-bars .mb3 .mb-fill { width:85%; background:var(--blue); }
+
+/* Mockup mini */
+.vis-mockup { display:flex; flex-direction:column; height:100%; padding:0.5rem; gap:0.3rem; }
+.mk-bar { display:flex; gap:0.25rem; padding:0.15rem 0; }
+.mk-d { width:6px; height:6px; border-radius:50%; }
+.mk-d:nth-child(1){background:#ef4444} .mk-d:nth-child(2){background:#eab308} .mk-d:nth-child(3){background:#22c55e}
+.mk-body { flex:1; display:flex; gap:0.3rem; }
+.mk-side { width:25%; display:flex; flex-direction:column; gap:0.25rem; }
+.mk-si { height:1rem; border-radius:0.15rem; background:rgba(255,255,255,0.06); }
+.mk-si.on { background:rgba(34,211,238,0.15); border:1px solid rgba(34,211,238,0.3); }
+.mk-main { flex:1; border-radius:0.3rem; background:rgba(255,255,255,0.03); padding:0.3rem; display:flex; flex-direction:column; gap:0.25rem; }
+.mk-l { height:0.4rem; border-radius:0.1rem; background:rgba(255,255,255,0.08); }
+.mk-l.sh { width:55%; }
+.mk-l.hi { background:rgba(52,211,153,0.2); border:1px solid rgba(52,211,153,0.3); }
+
+/* Langs mini */
+.vis-lang { display:flex; align-items:center; justify-content:center; height:100%; gap:0.4rem; padding:0.4rem; flex-wrap:nowrap; }
+.lg-i { text-align:center; padding:0.35rem 0.45rem; border-radius:0.35rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); transition:all 0.4s; }
+.lg-i.on { border-color:rgba(34,211,238,0.4); box-shadow:0 0 12px rgba(34,211,238,0.08); }
+.lg-f { font-size:1.2rem; }
+.lg-n { font-size:0.5rem; color:var(--text-muted); margin-top:0.1rem; }
+.lg-arr { color:var(--cyan); font-size:0.8rem; animation:lp 2s ease infinite; }
+@keyframes lp { 0%,100%{opacity:0.3;transform:translateX(0)} 50%{opacity:1;transform:translateX(2px)} }
+
+/* Edit mini */
+.vis-edit { display:flex; flex-direction:column; height:100%; padding:0.5rem; gap:0.2rem; }
+.ed-r { display:flex; align-items:center; gap:0.3rem; padding:0.15rem 0.3rem; border-radius:0.2rem; }
+.ed-r.act { background:rgba(34,211,238,0.06); border:1px solid rgba(34,211,238,0.12); }
+.ed-cur { width:1.5px; height:0.7rem; background:var(--cyan); animation:bk 1s step-end infinite; }
+@keyframes bk { 0%,100%{opacity:1} 50%{opacity:0} }
+.ed-t { height:0.35rem; border-radius:0.1rem; background:rgba(255,255,255,0.07); }
+.ed-t.a{width:100px} .ed-t.b{width:70px} .ed-t.c{width:85px} .ed-t.d{width:60px}
+.ed-t.ch { background:rgba(52,211,153,0.2); border:1px solid rgba(52,211,153,0.25); }
+
+/* History mini */
+.vis-hist { display:flex; align-items:center; justify-content:center; height:100%; gap:0.25rem; padding:0.4rem; }
+.hd { width:8px; height:8px; border-radius:50%; border:2px solid rgba(255,255,255,0.12); }
+.hd.p { border-color:rgba(34,211,238,0.3); background:rgba(34,211,238,0.12); }
+.hd.a { border-color:var(--cyan); background:var(--cyan); box-shadow:0 0 8px rgba(34,211,238,0.25); }
+.hl { width:14px; height:1.5px; background:rgba(255,255,255,0.06); }
+.hl.d { background:rgba(34,211,238,0.25); }
+
+/* Recap mini */
+.vis-recap { display:flex; flex-direction:column; height:100%; padding:0.5rem; gap:0.25rem; justify-content:center; }
+.rc-r { display:flex; gap:0.4rem; align-items:center; }
+.rc-l { font-size:0.5rem; color:var(--text-dim); width:38px; text-align:right; flex-shrink:0; }
+.rc-v { height:0.35rem; border-radius:0.1rem; background:rgba(52,211,153,0.12); border:1px solid rgba(52,211,153,0.18); flex:1; }
+.rc-v.s { width:50%; flex:none; }
+
+/* Anti-bot mini */
+.vis-bot { display:flex; flex-direction:column; height:100%; padding:0.5rem; gap:0.2rem; }
+.bot-blocked { display:flex; flex-direction:column; gap:0.2rem; padding:0.3rem; border-radius:0.25rem; background:rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.1); flex:1; }
+.bot-ok { display:flex; flex-direction:column; gap:0.2rem; padding:0.3rem; border-radius:0.25rem; background:rgba(52,211,153,0.04); border:1px solid rgba(52,211,153,0.1); flex:1; }
+.bot-lbl { font-size:0.5rem; color:var(--text-dim); margin-bottom:0.1rem; }
+.bot-line { height:0.35rem; border-radius:0.1rem; }
+.bot-line.fail { background:rgba(239,68,68,0.15); }
+.bot-line.ok { background:rgba(52,211,153,0.2); }
+.bot-line.w50 { width:50%; } .bot-line.w70 { width:70%; } .bot-line.w80 { width:80%; }
+
+/* Export mini */
+.vis-export { display:flex; align-items:center; justify-content:center; height:100%; gap:0.6rem; padding:0.5rem; }
+.exp-fmt { text-align:center; padding:0.5rem; border-radius:0.4rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); }
+.exp-icon { font-size:1.3rem; margin-bottom:0.15rem; }
+.exp-label { font-size:0.55rem; color:var(--text-muted); }
+
+/* ===== DETAIL OVERLAY ===== */
+.detail-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  z-index: 50;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.detail-overlay.open { opacity: 1; pointer-events: all; }
+
+.detail-panel {
+  width: min(880px, 92vw); max-height: 85vh;
+  background: linear-gradient(145deg, rgba(15,15,35,0.98), rgba(10,10,26,0.98));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.25rem; overflow-y: auto;
+  transform: translateY(25px) scale(0.96);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+}
+.detail-overlay.open .detail-panel { transform: translateY(0) scale(1); }
+
+.detail-close {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-muted); font-size: 1.1rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; z-index: 5;
+}
+.detail-close:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+.detail-content { padding: 2.5rem; }
+.d-title { font-size: 1.6rem; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 0.4rem; max-width: 80%; }
+.d-sub { font-size: 0.95rem; color: var(--text-dim); font-style: italic; margin-bottom: 1.75rem; }
+.d-vis {
+  width: 100%; height: 320px; border-radius: 0.75rem;
+  background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: center;
+}
+.d-vis .ph { color: var(--text-dim); font-size: 0.85rem; text-align: center; padding: 2rem; line-height: 1.6; }
+.d-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+.d-desc ul { list-style: none; margin-top: 0.75rem; }
+.d-desc ul li { padding: 0.4rem 0 0.4rem 1.25rem; position: relative; }
+.d-desc ul li::before { content:''; position:absolute; left:0; top:0.75rem; width:5px; height:5px; border-radius:50%; background:var(--cyan); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .stats-strip {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; padding: 1.5rem 1.5rem;
+  }
+  .stat-separator { display: none; }
+  .stat-value { font-size: 1.8rem; }
+
+  .features-section { padding: 2rem 0 2.5rem; }
+  .section-header { margin-bottom: 1.5rem; }
+
+  /* 3 rows, condensed */
+  .marquee-grid { gap: 0.5rem; padding: 0.4rem 0; }
+
+  .f-card { height: 120px; width: 180px !important; padding: 0.65rem; border-radius: 0.7rem; }
+  .f-card .c-title { font-size: 0.75rem; margin-bottom: 0.15rem; }
+  .card-sm .c-title, .card-lg .c-title, .card-wide .c-title { font-size: 0.75rem; }
+  .f-card .c-sub { display: none; }
+  .f-card .c-vis { margin-top: 0.35rem; border-radius: 0.3rem; overflow: hidden; }
+
+  /* Scale ALL visual content uniformly */
+  .f-card .c-vis > * { transform: scale(0.6); transform-origin: center center; }
+  .f-card .c-hint { width: 14px; height: 14px; font-size: 0.45rem; top: 0.35rem; right: 0.35rem; opacity: 0.5; }
+
+  /* Faster scroll on smaller screen */
+  .marquee-row.scroll-left { animation-duration: 22s; }
+  .marquee-row.scroll-right { animation-duration: 25s; }
+  .marquee-row.scroll-left-slow { animation-duration: 28s; }
+
+  .detail-content { padding: 1.5rem; }
+  .d-title { font-size: 1.25rem; max-width: 85%; }
+  .d-vis { height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;">
+  <defs>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-value">87%</div><div class="stat-label">de correspondance</div></div>
+  <div class="stat-separator"></div>
+  <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">langues</div></div>
+  <div class="stat-separator"></div>
+  <div class="stat-item"><div class="stat-value">30s</div><div class="stat-label">pour optimiser</div></div>
+  <div class="stat-separator"></div>
+  <div class="stat-item"><div class="stat-value">0&euro;</div><div class="stat-label">d'abonnement</div></div>
+</div>
+
+<section class="features-section">
+  <div class="section-header">
+    <h2 class="section-title">Tout ce qu'il faut pour d&eacute;crocher le poste</h2>
+    <p class="section-subtitle">Con&ccedil;u pour vos CVs. Pas un &eacute;ni&egrave;me chatbot.</p>
+  </div>
+
+  <div class="marquee-grid">
+
+    <!-- ROW 1: scroll left -->
+    <div class="marquee-row scroll-left" id="row1">
+
+      <div class="f-card card-lg" data-id="1">
+        <div class="c-title">Un CV taill&eacute; pour chaque offre</div>
+        <div class="c-sub">G&eacute;n&eacute;r&eacute; en 30 secondes depuis un lien</div>
+        <div class="c-vis"><div class="vis-mockup"><div class="mk-bar"><div class="mk-d"></div><div class="mk-d"></div><div class="mk-d"></div></div><div class="mk-body"><div class="mk-side"><div class="mk-si on"></div><div class="mk-si"></div><div class="mk-si"></div></div><div class="mk-main"><div class="mk-l"></div><div class="mk-l sh"></div><div class="mk-l hi"></div><div class="mk-l"></div><div class="mk-l hi"></div></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-sm" data-id="2">
+        <div class="c-title">Export multi-format</div>
+        <div class="c-sub">PDF, DOCX, lien direct</div>
+        <div class="c-vis"><div class="vis-export"><div class="exp-fmt"><div class="exp-icon">&#128196;</div><div class="exp-label">PDF</div></div><div class="exp-fmt"><div class="exp-icon">&#128221;</div><div class="exp-label">DOCX</div></div><div class="exp-fmt"><div class="exp-icon">&#128279;</div><div class="exp-label">Link</div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-wide" data-id="3">
+        <div class="c-title">Connaissez la force de votre CV avant de postuler</div>
+        <div class="c-sub">Score de correspondance + axes d'am&eacute;lioration</div>
+        <div class="c-vis"><div class="vis-score"><div class="mini-circle"><svg viewBox="0 0 120 120"><circle class="sc-bg" cx="60" cy="60" r="54"/><circle class="sc-fg" cx="60" cy="60" r="54"/></svg><div class="sc-num">92</div></div><div class="mini-bars"><div class="mb1"><div class="mb-label">Mots-cl&eacute;s</div><div class="mb-track"><div class="mb-fill"></div></div></div><div class="mb2"><div class="mb-label">Format</div><div class="mb-track"><div class="mb-fill"></div></div></div><div class="mb3"><div class="mb-label">ATS</div><div class="mb-track"><div class="mb-fill"></div></div></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-md" data-id="4">
+        <div class="c-title">Historique complet</div>
+        <div class="c-sub">Restaurez n'importe quelle version</div>
+        <div class="c-vis"><div class="vis-hist"><div class="hd p"></div><div class="hl d"></div><div class="hd p"></div><div class="hl d"></div><div class="hd p"></div><div class="hl d"></div><div class="hd a"></div><div class="hl"></div><div class="hd"></div><div class="hl"></div><div class="hd"></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-sm" data-id="5">
+        <div class="c-title">Paiement &agrave; l'usage</div>
+        <div class="c-sub">Z&eacute;ro abonnement</div>
+        <div class="c-vis"><div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:0.3rem;"><div style="font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0&euro;/mois</div><div style="font-size:0.6rem;color:var(--text-dim);">Cr&eacute;dits &agrave; la demande</div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: scroll right (offset) -->
+    <div class="marquee-row scroll-right" id="row2">
+
+      <div class="f-card card-md" data-id="6">
+        <div class="c-title">Postulez &agrave; Berlin, Madrid ou London</div>
+        <div class="c-sub">5 langues, vocabulaire pro adapt&eacute;</div>
+        <div class="c-vis"><div class="vis-lang"><div class="lg-i on"><div class="lg-f">&#127467;&#127479;</div><div class="lg-n">FR</div></div><div class="lg-arr">&#8594;</div><div class="lg-i"><div class="lg-f">&#127468;&#127463;</div><div class="lg-n">EN</div></div><div class="lg-arr">&#8594;</div><div class="lg-i"><div class="lg-f">&#127465;&#127466;</div><div class="lg-n">DE</div></div><div class="lg-arr">&#8594;</div><div class="lg-i"><div class="lg-f">&#127466;&#127480;</div><div class="lg-n">ES</div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-lg" data-id="7">
+        <div class="c-title">Lit les offres que les autres ne peuvent pas lire</div>
+        <div class="c-sub">Extraction anti-bot : Cloudflare, LinkedIn, Indeed</div>
+        <div class="c-vis"><div class="vis-bot"><div class="bot-blocked"><div class="bot-lbl">&#10060; Autres outils</div><div class="bot-line fail w70"></div><div class="bot-line fail w50"></div></div><div class="bot-ok"><div class="bot-lbl">&#9989; FitMyCV</div><div class="bot-line ok w80"></div><div class="bot-line ok w70"></div><div class="bot-line ok w50"></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-sm" data-id="8">
+        <div class="c-title">Workflow transparent</div>
+        <div class="c-sub">Chaque &eacute;tape visible</div>
+        <div class="c-vis"><div style="display:flex;align-items:center;justify-content:center;height:100%;gap:0.3rem;padding:0.4rem;"><div style="width:28px;height:28px;border-radius:50%;border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--cyan);font-weight:700;">1</div><div style="width:12px;height:1.5px;background:rgba(34,211,238,0.3);"></div><div style="width:28px;height:28px;border-radius:50%;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--green);font-weight:700;">2</div><div style="width:12px;height:1.5px;background:rgba(52,211,153,0.3);"></div><div style="width:28px;height:28px;border-radius:50%;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--blue);font-weight:700;">3</div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-wide" data-id="9">
+        <div class="c-title">&Eacute;ditez directement dans l'application</div>
+        <div class="c-sub">Contr&ocirc;le total sur chaque mot</div>
+        <div class="c-vis"><div class="vis-edit"><div class="ed-r"><div class="ed-t a"></div></div><div class="ed-r"><div class="ed-t c"></div></div><div class="ed-r act"><div class="ed-t b ch"></div><div class="ed-cur"></div></div><div class="ed-r"><div class="ed-t d"></div></div><div class="ed-r"><div class="ed-t a ch"></div></div><div class="ed-r"><div class="ed-t c"></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-md" data-id="10">
+        <div class="c-title">Template depuis un titre de poste</div>
+        <div class="c-sub">Pas besoin de lien, juste le titre</div>
+        <div class="c-vis"><div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0.4rem;padding:0.5rem;"><div style="font-size:0.6rem;color:var(--text-dim);border:1px solid rgba(255,255,255,0.08);padding:0.3rem 0.6rem;border-radius:0.3rem;background:rgba(255,255,255,0.03);width:80%;text-align:center;">&#128269; &laquo; Product Manager &raquo;</div><div style="font-size:0.8rem;color:var(--cyan);">&#8595;</div><div style="font-size:0.5rem;color:var(--text-dim);border:1px solid rgba(52,211,153,0.2);padding:0.3rem 0.6rem;border-radius:0.3rem;background:rgba(52,211,153,0.04);width:80%;text-align:center;">&#9889; Template g&eacute;n&eacute;r&eacute;</div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+    </div>
+
+    <!-- ROW 3: scroll left slow -->
+    <div class="marquee-row scroll-left-slow" id="row3">
+
+      <div class="f-card card-wide" data-id="11">
+        <div class="c-title">Fiche offre compl&egrave;te en un clic</div>
+        <div class="c-sub">Poste, salaire, stack, comp&eacute;tences — tout extrait</div>
+        <div class="c-vis"><div class="vis-recap"><div class="rc-r"><div class="rc-l">Poste</div><div class="rc-v"></div></div><div class="rc-r"><div class="rc-l">Lieu</div><div class="rc-v s"></div></div><div class="rc-r"><div class="rc-l">Salaire</div><div class="rc-v s"></div></div><div class="rc-r"><div class="rc-l">Stack</div><div class="rc-v"></div></div><div class="rc-r"><div class="rc-l">XP</div><div class="rc-v s"></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-sm" data-id="12">
+        <div class="c-title">Optimisation IA</div>
+        <div class="c-sub">Suggestions intelligentes</div>
+        <div class="c-vis"><div style="display:flex;flex-direction:column;height:100%;padding:0.4rem;gap:0.2rem;justify-content:center;"><div style="display:flex;align-items:center;gap:0.3rem;"><div style="width:14px;height:14px;border-radius:50%;background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:var(--green);">&#10003;</div><div style="height:0.3rem;flex:1;border-radius:0.1rem;background:rgba(52,211,153,0.15);"></div></div><div style="display:flex;align-items:center;gap:0.3rem;"><div style="width:14px;height:14px;border-radius:50%;background:rgba(34,211,238,0.15);border:1px solid rgba(34,211,238,0.3);display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:var(--cyan);">&#10003;</div><div style="height:0.3rem;flex:1;border-radius:0.1rem;background:rgba(34,211,238,0.15);"></div></div><div style="display:flex;align-items:center;gap:0.3rem;"><div style="width:14px;height:14px;border-radius:50%;background:rgba(96,165,250,0.15);border:1px solid rgba(96,165,250,0.3);display:flex;align-items:center;justify-content:center;font-size:0.5rem;color:var(--blue);">+</div><div style="height:0.3rem;flex:1;border-radius:0.1rem;background:rgba(96,165,250,0.1);border:1px dashed rgba(96,165,250,0.2);"></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-md" data-id="13">
+        <div class="c-title">Score avant / apr&egrave;s optimisation</div>
+        <div class="c-sub">Voyez la diff&eacute;rence en temps r&eacute;el</div>
+        <div class="c-vis"><div style="display:flex;align-items:center;justify-content:center;height:100%;gap:1rem;padding:0.5rem;"><div style="text-align:center;"><div style="font-size:0.5rem;color:var(--text-dim);margin-bottom:0.2rem;">AVANT</div><div style="font-size:1.6rem;font-weight:800;color:#ef4444;">45</div></div><div style="font-size:1.2rem;color:var(--green);">&#8594;</div><div style="text-align:center;"><div style="font-size:0.5rem;color:var(--text-dim);margin-bottom:0.2rem;">APR&Egrave;S</div><div style="font-size:1.6rem;font-weight:800;color:var(--green);">92</div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-md" data-id="14">
+        <div class="c-title">Compatible tous les ATS</div>
+        <div class="c-sub">Workday, Greenhouse, Lever...</div>
+        <div class="c-vis"><div style="display:flex;align-items:center;justify-content:center;height:100%;gap:0.5rem;flex-wrap:wrap;padding:0.5rem;"><div style="font-size:0.55rem;color:var(--text-muted);padding:0.25rem 0.5rem;border-radius:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);">Workday</div><div style="font-size:0.55rem;color:var(--text-muted);padding:0.25rem 0.5rem;border-radius:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);">Greenhouse</div><div style="font-size:0.55rem;color:var(--text-muted);padding:0.25rem 0.5rem;border-radius:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);">Lever</div><div style="font-size:0.55rem;color:var(--text-muted);padding:0.25rem 0.5rem;border-radius:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);">SmartRecruiters</div><div style="font-size:0.55rem;color:var(--text-muted);padding:0.25rem 0.5rem;border-radius:1rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);">Taleo</div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+      <div class="f-card card-lg" data-id="15">
+        <div class="c-title">G&eacute;n&eacute;rez aussi depuis un titre de poste</div>
+        <div class="c-sub">Pas de lien ? Pas de probl&egrave;me.</div>
+        <div class="c-vis"><div class="vis-mockup"><div class="mk-bar"><div class="mk-d"></div><div class="mk-d"></div><div class="mk-d"></div></div><div class="mk-body"><div class="mk-main" style="width:100%"><div class="mk-l hi"></div><div class="mk-l hi" style="width:70%"></div><div class="mk-l sh"></div><div class="mk-l hi"></div><div class="mk-l hi" style="width:65%"></div></div></div></div></div>
+        <div class="c-hint">+</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Detail Overlay -->
+<div class="detail-overlay" id="overlay">
+  <div class="detail-panel">
+    <button class="detail-close" id="closeBtn">&times;</button>
+    <div class="detail-content">
+      <h2 class="d-title" id="dTitle"></h2>
+      <p class="d-sub" id="dSub"></p>
+      <div class="d-vis"><div class="ph" id="dVis">Ici : mockup anim&eacute;, vid&eacute;o, ou d&eacute;mo CSS.<br>Contenu d&eacute;fini lors du brainstorming feature par feature.</div></div>
+      <div class="d-desc" id="dDesc"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ===== SETUP =====
+const rows = document.querySelectorAll('.marquee-row');
+const rowArr = [...rows];
+const DUR = { 'scroll-left': 40, 'scroll-right': 45, 'scroll-left-slow': 50 };
+let overlayOpen = false;
+let preventNextClick = false;
+let activeRow = null; // the row currently being dragged (mouse)
+
+// Duplicate children for seamless loop
+rows.forEach(row => {
+  [...row.children].forEach(c => row.appendChild(c.cloneNode(true)));
+  row._ac = [...row.classList].find(c => c.startsWith('scroll-'));
+});
+
+// Mouse gradient on cards — single delegated listener
+document.querySelector('.marquee-grid').addEventListener('mousemove', e => {
+  const c = e.target.closest('.f-card');
+  if (!c) return;
+  const r = c.getBoundingClientRect();
+  c.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+  c.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+});
+
+function getStride(row) {
+  const gap = parseFloat(getComputedStyle(row).gap) || 16;
+  return row.scrollWidth / 2 + gap / 2;
+}
+
+function wrap(row) {
+  if (row._cx <= -row._hw) row._cx += row._hw;
+  if (row._cx >= 0) row._cx -= row._hw;
+}
+
+function applyX(row) {
+  row.style.transform = 'translateX(' + row._cx + 'px)';
+}
+
+// ===== INIT ROWS =====
+rows.forEach(row => {
+  const ac = row._ac;
+  const dur = DUR[ac] || 40;
+  const dir = ac === 'scroll-right' ? 1 : -1;
+
+  row._hw = getStride(row);
+  row._cx = ac === 'scroll-right' ? -row._hw : 0;
+  row._paused = false;
+  row._vel = 0;
+  row._hasMomentum = false;
+  row._autoSpeed = row._hw / (dur * 60) * dir;
+
+  // Remove CSS animation, full JS control
+  row.classList.remove(ac);
+  row.style.cursor = 'grab';
+  applyX(row);
+});
+
+// ===== SINGLE rAF LOOP =====
+let rafId = 0;
+let pageVisible = true;
+
+function tick() {
+  if (pageVisible && !overlayOpen) {
+    for (let i = 0; i < rowArr.length; i++) {
+      const row = rowArr[i];
+      if (row._hasMomentum) {
+        row._vel *= 0.96;
+        if (Math.abs(row._vel) < 0.3) {
+          row._hasMomentum = false;
+          row._paused = false;
+        } else {
+          row._cx += row._vel;
+          wrap(row); applyX(row);
+        }
+      } else if (!row._paused) {
+        row._cx += row._autoSpeed;
+        wrap(row); applyX(row);
+      }
+    }
+  }
+  rafId = requestAnimationFrame(tick);
+}
+rafId = requestAnimationFrame(tick);
+
+// Pause when tab hidden
+document.addEventListener('visibilitychange', () => {
+  pageVisible = !document.hidden;
+});
+
+// ===== TOUCH EVENTS (per-row) =====
+rows.forEach(row => {
+  let startX = 0, startY = 0, lastX = 0, lastT = 0;
+  let dragging = false, dist = 0;
+  let dirLocked = false, isHoriz = false;
+
+  row.addEventListener('touchstart', e => {
+    if (overlayOpen) return;
+    const t = e.touches[0];
+    startX = t.clientX; startY = t.clientY;
+    lastX = startX; lastT = Date.now(); row._t0 = lastT;
+    dragging = false; dist = 0;
+    dirLocked = false; isHoriz = false;
+    row._vel = 0; row._hasMomentum = false;
+    row._paused = true;
+  }, { passive: true });
+
+  row.addEventListener('touchmove', e => {
+    if (overlayOpen) return;
+    const t = e.touches[0];
+    const now = Date.now(); const dt = now - lastT;
+
+    if (!dirLocked) {
+      const totalDx = Math.abs(t.clientX - startX);
+      const totalDy = Math.abs(t.clientY - startY);
+      if (totalDx > 12 || totalDy > 12) {
+        dirLocked = true;
+        isHoriz = totalDx > totalDy * 1.5;
+        if (!isHoriz) { row._paused = false; return; }
+      } else { return; }
+    }
+    if (!isHoriz) { row._paused = false; return; }
+
+    e.preventDefault();
+    dragging = true;
+    const dx = t.clientX - lastX;
+    dist += Math.abs(dx);
+    row._cx += dx; wrap(row); applyX(row);
+    if (dt > 0) row._vel = dx / dt * 16;
+    lastX = t.clientX; lastT = now;
+  }, { passive: false });
+
+  row.addEventListener('touchend', () => {
+    if (overlayOpen) return;
+    const elapsed = Date.now() - (row._t0 || 0);
+    if (elapsed < 300 && dist < 15) { row._paused = false; return; }
+    preventNextClick = true;
+    if (dragging && Math.abs(row._vel) > 0.5) { row._hasMomentum = true; }
+    else { row._paused = false; }
+  });
+});
+
+// ===== MOUSE EVENTS — single document-level listeners =====
+let mStartX = 0, mLastX = 0, mLastT = 0;
+let mDragging = false, mDist = 0;
+
+// mousedown on each row (lightweight — just captures)
+rows.forEach(row => {
+  row.addEventListener('mousedown', e => {
+    if (overlayOpen || e.button !== 0) return;
+    e.preventDefault();
+    activeRow = row;
+    mStartX = e.clientX; mLastX = e.clientX; mLastT = Date.now(); row._t0 = mLastT;
+    mDragging = false; mDist = 0;
+    row._vel = 0; row._hasMomentum = false;
+    row._paused = true;
+    row.style.cursor = 'grabbing';
+  });
+});
+
+// Single mousemove on document
+document.addEventListener('mousemove', e => {
+  if (!activeRow || overlayOpen) return;
+  const row = activeRow;
+  const dx = e.clientX - mLastX;
+  const now = Date.now(); const dt = now - mLastT;
+
+  if (Math.abs(e.clientX - mStartX) > 5) mDragging = true;
+
+  mDist += Math.abs(dx);
+  row._cx += dx; wrap(row); applyX(row);
+  if (dt > 0) row._vel = dx / dt * 16;
+  mLastX = e.clientX; mLastT = now;
+});
+
+// Single mouseup on document
+document.addEventListener('mouseup', () => {
+  if (!activeRow) return;
+  const row = activeRow;
+  activeRow = null;
+  row.style.cursor = 'grab';
+  if (overlayOpen) return;
+
+  const elapsed = Date.now() - (row._t0 || 0);
+  if (elapsed < 250 && mDist < 8) { row._paused = false; return; }
+  if (mDist > 8) preventNextClick = true;
+
+  if (mDragging && Math.abs(row._vel) > 0.5) { row._hasMomentum = true; }
+  else { row._paused = false; }
+});
+
+// ===== FREEZE / UNFREEZE (overlay) =====
+function freezeAll() {
+  for (let i = 0; i < rowArr.length; i++) {
+    rowArr[i]._paused = true;
+    rowArr[i]._hasMomentum = false;
+    rowArr[i]._vel = 0;
+  }
+}
+
+function unfreezeAll() {
+  for (let i = 0; i < rowArr.length; i++) rowArr[i]._paused = false;
+}
+
+// ===== SCORE ANIMATION =====
+const sObs = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){ const c=e.target.querySelector('.mini-circle'); if(c)setTimeout(()=>c.classList.add('anim'),400); sObs.unobserve(e.target); }});
+},{threshold:0.3});
+document.querySelectorAll('.vis-score').forEach(el => sObs.observe(el.closest('.f-card')));
+
+// ===== LANG CYCLING (paused when tab hidden) =====
+let li = 0;
+const lis = document.querySelectorAll('.lg-i');
+const halfLis = lis.length / 2;
+let langInterval = null;
+
+function cycleLang() {
+  lis.forEach(l => l.classList.remove('on'));
+  li = (li + 1) % halfLis;
+  for (let i = 0; i < lis.length; i++) {
+    if (i % halfLis === li) lis[i].classList.add('on');
+  }
+}
+
+function startLangCycle() {
+  if (!langInterval && lis.length) langInterval = setInterval(cycleLang, 1500);
+}
+function stopLangCycle() {
+  if (langInterval) { clearInterval(langInterval); langInterval = null; }
+}
+
+startLangCycle();
+document.addEventListener('visibilitychange', () => {
+  document.hidden ? stopLangCycle() : startLangCycle();
+});
+
+// ===== DETAIL OVERLAY =====
+const ov=document.getElementById('overlay');
+const descs={
+  '1':'Collez le lien d\'une offre. L\'IA extrait les exigences et g&eacute;n&egrave;re un template CV align&eacute;.<ul><li>Analyse des mots-cl&eacute;s</li><li>Template en 30 secondes</li><li>Adapt&eacute; &agrave; chaque offre</li></ul>',
+  '2':'Exportez dans le format adapt&eacute;.<ul><li>PDF professionnel</li><li>DOCX &eacute;ditable</li><li>Lien de partage</li></ul>',
+  '3':'Score pr&eacute;cis entre votre CV et l\'offre.<ul><li>Score global + ventilation</li><li>Mots-cl&eacute;s manquants</li><li>Suggestions cibl&eacute;es</li></ul>',
+  '4':'Chaque modification sauvegard&eacute;e.<ul><li>Historique complet</li><li>Comparaison</li><li>Restauration instantan&eacute;e</li></ul>',
+  '5':'Pas d\'abonnement.<ul><li>Cr&eacute;dits &agrave; la demande</li><li>Pas d\'engagement</li><li>Payez ce que vous utilisez</li></ul>',
+  '6':'Traduction intelligente, vocabulaire pro.<ul><li>5 langues</li><li>Vocabulaire sectoriel</li><li>Mise en page conserv&eacute;e</li></ul>',
+  '7':'Extraction derri&egrave;re les protections anti-bot.<ul><li>Cloudflare, Akamai</li><li>LinkedIn, Indeed, WTTJ</li><li>Z&eacute;ro copier-coller</li></ul>',
+  '8':'Workflow en &eacute;tapes visibles.<ul><li>Chaque action transparente</li><li>Pas de bo&icirc;te noire</li><li>Vous gardez le contr&ocirc;le</li></ul>',
+  '9':'&Eacute;dition inline dans l\'app.<ul><li>Chaque champ modifiable</li><li>Pr&eacute;visualisation live</li><li>Aucun outil externe</li></ul>',
+  '10':'G&eacute;n&eacute;rez un template depuis un simple titre.<ul><li>Pas besoin de lien</li><li>Template intelligent</li><li>Id&eacute;al en phase d\'exploration</li></ul>',
+  '11':'Toutes les infos de l\'offre extraites.<ul><li>Poste, lieu, salaire, stack</li><li>Comp&eacute;tences prioris&eacute;es</li><li>Un clic</li></ul>',
+  '12':'Suggestions IA pour am&eacute;liorer votre CV.<ul><li>Mots-cl&eacute;s sugg&eacute;r&eacute;s</li><li>Reformulations</li><li>Am&eacute;lioration du score</li></ul>',
+  '13':'Comparez avant et apr&egrave;s.<ul><li>Score initial vs optimis&eacute;</li><li>Diff&eacute;rence visible</li><li>Motivation imm&eacute;diate</li></ul>',
+  '14':'Format compatible avec tous les ATS.<ul><li>Workday, Greenhouse, Lever</li><li>Parsing valid&eacute;</li><li>Aucun rejet technique</li></ul>',
+  '15':'Template depuis un titre de poste.<ul><li>Recherche par m&eacute;tier</li><li>Template adapt&eacute; au r&ocirc;le</li><li>Point de d&eacute;part rapide</li></ul>'
+};
+
+function openOverlay(card) {
+  const id = card.dataset.id;
+  document.getElementById('dTitle').innerHTML = card.querySelector('.c-title')?.innerHTML || '';
+  document.getElementById('dSub').innerHTML = card.querySelector('.c-sub')?.innerHTML || '';
+  document.getElementById('dDesc').innerHTML = descs[id] || '';
+  overlayOpen = true;
+  freezeAll();
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOverlay() {
+  ov.classList.remove('open');
+  document.body.style.overflow = '';
+  overlayOpen = false;
+  unfreezeAll();
+}
+
+document.addEventListener('click', e => {
+  if (preventNextClick) { preventNextClick = false; return; }
+  const c = e.target.closest('.f-card');
+  if (!c) return;
+  openOverlay(c);
+});
+
+document.getElementById('closeBtn').addEventListener('click', closeOverlay);
+ov.addEventListener('click', e => { if (e.target === ov) closeOverlay(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlayOpen) closeOverlay(); });
+</script>
+
+</body>
+</html>
