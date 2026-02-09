@@ -5,7 +5,7 @@ WORKDIR /app
 # --- Stage 2: Dependencies ---
 FROM base AS deps
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci && mkdir -p /app/.next && chown -R 1000:1000 /app
 
 # --- Stage 3: Builder ---
 FROM deps AS builder
