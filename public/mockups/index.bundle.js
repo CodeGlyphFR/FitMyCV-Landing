@@ -1612,7 +1612,7 @@
     await wait(300);
     $("link2-history").classList.remove("visible");
     $("lh2-item-2").classList.remove("highlighted");
-    $("link2-input").value = "https://linkedin.com/jobs/view/3845672190";
+    $("link2-input").value = "https://indeed.com/viewjob?jk=a8f3c2d1e9b74560";
     await wait(500);
     updateStepIndicator(2, stepLabels);
     moveToEl(viewport, cursor, "btn-valider");

@@ -293,6 +293,49 @@ body {
 .exp-icon { font-size:1.3rem; margin-bottom:0.15rem; }
 .exp-label { font-size:0.55rem; color:var(--text-muted); }
 
+/* ===== CARD 1: Generator mini-modal ===== */
+.vis-gen {
+  position: relative; height: 100%; padding: 0.35rem; display: flex; flex-direction: column;
+  font-size: 0.5rem; overflow: hidden;
+}
+.gm-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.25rem 0.35rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.gm-title { font-weight: 600; color: var(--text); font-size: 0.55rem; }
+.gm-close { color: var(--text-dim); font-size: 0.7rem; cursor: default; }
+.gm-body { padding: 0.3rem 0.35rem; display: flex; flex-direction: column; gap: 0.2rem; flex: 1; }
+.gm-label { font-size: 0.4rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.03em; }
+.gm-select {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.2rem 0.3rem; border-radius: 0.2rem;
+  border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
+  color: var(--text-muted); font-size: 0.45rem;
+}
+.gm-arrow { font-size: 0.4rem; opacity: 0.5; }
+.gm-input {
+  padding: 0.2rem 0.3rem; border-radius: 0.2rem; min-height: 1.1rem;
+  border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
+  color: var(--cyan); font-size: 0.4rem; font-family: 'Inter', monospace;
+  white-space: nowrap; overflow: hidden;
+}
+.gm-input.typing { border-color: rgba(34,211,238,0.3); }
+.gm-actions {
+  display: flex; justify-content: flex-end; gap: 0.3rem; margin-top: auto; padding-top: 0.15rem;
+}
+.gm-cancel { font-size: 0.4rem; color: var(--text-dim); padding: 0.15rem 0.35rem; }
+.gm-validate {
+  font-size: 0.4rem; color: #fff; padding: 0.15rem 0.45rem; border-radius: 0.2rem;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  font-weight: 600; transition: box-shadow 0.2s;
+}
+.gm-validate.flash { box-shadow: 0 0 8px rgba(34,211,238,0.5); }
+.gm-cursor {
+  position: absolute; pointer-events: none; z-index: 5;
+  transition: left 0.5s cubic-bezier(0.4,0,0.2,1), top 0.5s cubic-bezier(0.4,0,0.2,1);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
 /* ===== DETAIL OVERLAY ===== */
 .detail-overlay {
   position: fixed; inset: 0;
@@ -341,6 +384,26 @@ body {
 .d-desc ul li { padding: 0.4rem 0 0.4rem 1.25rem; position: relative; }
 .d-desc ul li::before { content:''; position:absolute; left:0; top:0.75rem; width:5px; height:5px; border-radius:50%; background:var(--cyan); }
 
+/* ===== SPLIT LAYOUT (text + mockup) ===== */
+.d-split { display: flex; gap: 2rem; align-items: flex-start; }
+.d-split .d-text-col { flex: 1; min-width: 0; }
+.d-split .d-mockup-col { flex: 0 0 380px; }
+
+/* ===== OVERLAY MODAL IFRAME ===== */
+.d-mockup-scaler {
+  width: 100%; aspect-ratio: 420 / 402;
+  overflow: hidden; position: relative;
+  border-radius: 14px;
+  background: rgb(2,6,23);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.d-modal-iframe {
+  position: absolute; top: 0; left: 0;
+  width: 420px; height: 402px;
+  border: none; transform-origin: 0 0;
+  pointer-events: none;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 767px) {
   .stats-strip {
@@ -374,6 +437,11 @@ body {
   .detail-content { padding: 1.5rem; }
   .d-title { font-size: 1.25rem; max-width: 85%; }
   .d-vis { height: 200px; }
+
+  /* Split layout: mockup top, text bottom */
+  .d-split { flex-direction: column; gap: 1.5rem; }
+  .d-split .d-mockup-col { flex: none; width: 100%; }
+  .d-mockup-scaler { border-radius: 10px; }
 }
 </style>
 </head>
@@ -411,8 +479,18 @@ body {
 
       <div class="f-card card-lg" data-id="1">
         <div class="c-title">Un CV taill&eacute; pour chaque offre</div>
-        <div class="c-sub">G&eacute;n&eacute;r&eacute; en 30 secondes depuis un lien</div>
-        <div class="c-vis"><div class="vis-mockup"><div class="mk-bar"><div class="mk-d"></div><div class="mk-d"></div><div class="mk-d"></div></div><div class="mk-body"><div class="mk-side"><div class="mk-si on"></div><div class="mk-si"></div><div class="mk-si"></div></div><div class="mk-main"><div class="mk-l"></div><div class="mk-l sh"></div><div class="mk-l hi"></div><div class="mk-l"></div><div class="mk-l hi"></div></div></div></div></div>
+        <div class="c-sub">Collez un lien, l'IA fait le reste</div>
+        <div class="c-vis"><div class="vis-gen" id="vis-gen">
+          <div class="gm-header"><span class="gm-title">G&eacute;n&eacute;rer un CV avec l'IA</span><span class="gm-close">&times;</span></div>
+          <div class="gm-body">
+            <div class="gm-label">CV de r&eacute;f&eacute;rence</div>
+            <div class="gm-select"><span class="gm-select-text">D&eacute;veloppeur Full-Stack JS</span><span class="gm-arrow">&#9662;</span></div>
+            <div class="gm-label">Lien offre d'emploi</div>
+            <div class="gm-input" id="gm-link"></div>
+            <div class="gm-actions"><span class="gm-cancel">Annuler</span><span class="gm-validate" id="gm-validate">Valider</span></div>
+          </div>
+          <div class="gm-cursor" id="gm-cursor"><svg width="12" height="16" viewBox="0 0 12 16"><path d="M1 1l10 7-5 1.5-2.5 5.5z" fill="#fff" stroke="#222" stroke-width="0.8"/></svg></div>
+        </div></div>
         <div class="c-hint">+</div>
       </div>
 
@@ -458,7 +536,7 @@ body {
 
       <div class="f-card card-lg" data-id="7">
         <div class="c-title">Lit les offres que les autres ne peuvent pas lire</div>
-        <div class="c-sub">Extraction anti-bot : Cloudflare, LinkedIn, Indeed</div>
+        <div class="c-sub">Extraction anti-bot : Cloudflare, Indeed, WTTJ</div>
         <div class="c-vis"><div class="vis-bot"><div class="bot-blocked"><div class="bot-lbl">&#10060; Autres outils</div><div class="bot-line fail w70"></div><div class="bot-line fail w50"></div></div><div class="bot-ok"><div class="bot-lbl">&#9989; FitMyCV</div><div class="bot-line ok w80"></div><div class="bot-line ok w70"></div><div class="bot-line ok w50"></div></div></div></div>
         <div class="c-hint">+</div>
       </div>
@@ -533,12 +611,7 @@ body {
 <div class="detail-overlay" id="overlay">
   <div class="detail-panel">
     <button class="detail-close" id="closeBtn">&times;</button>
-    <div class="detail-content">
-      <h2 class="d-title" id="dTitle"></h2>
-      <p class="d-sub" id="dSub"></p>
-      <div class="d-vis"><div class="ph" id="dVis">Ici : mockup anim&eacute;, vid&eacute;o, ou d&eacute;mo CSS.<br>Contenu d&eacute;fini lors du brainstorming feature par feature.</div></div>
-      <div class="d-desc" id="dDesc"></div>
-    </div>
+    <div class="detail-content"></div>
   </div>
 </div>
 
@@ -547,7 +620,7 @@ body {
 // ===== SETUP =====
 const rows = document.querySelectorAll('.marquee-row');
 const rowArr = [...rows];
-const DUR = { 'scroll-left': 40, 'scroll-right': 45, 'scroll-left-slow': 50 };
+const DUR = { 'scroll-left': 25, 'scroll-right': 28, 'scroll-left-slow': 32 };
 let overlayOpen = false;
 let preventNextClick = false;
 let activeRow = null; // the row currently being dragged (mouse)
@@ -590,6 +663,7 @@ rows.forEach(row => {
   row._hw = getStride(row);
   row._cx = ac === 'scroll-right' ? -row._hw : 0;
   row._paused = false;
+  row._hovered = false;
   row._vel = 0;
   row._hasMomentum = false;
   row._autoSpeed = row._hw / (dur * 60) * dir;
@@ -617,7 +691,7 @@ function tick() {
           row._cx += row._vel;
           wrap(row); applyX(row);
         }
-      } else if (!row._paused) {
+      } else if (!row._paused && !row._hovered) {
         row._cx += row._autoSpeed;
         wrap(row); applyX(row);
       }
@@ -683,6 +757,15 @@ rows.forEach(row => {
     else { row._paused = false; }
   });
 });
+
+// ===== HOVER PAUSE (desktop only) =====
+const hasHover = window.matchMedia('(hover: hover)').matches;
+if (hasHover) {
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', () => { row._hovered = true; });
+    row.addEventListener('mouseleave', () => { row._hovered = false; });
+  });
+}
 
 // ===== MOUSE EVENTS — single document-level listeners =====
 let mStartX = 0, mLastX = 0, mLastT = 0;
@@ -752,6 +835,67 @@ const sObs = new IntersectionObserver(es => {
 },{threshold:0.3});
 document.querySelectorAll('.vis-score').forEach(el => sObs.observe(el.closest('.f-card')));
 
+// ===== CARD 1: Generator modal animation =====
+(function() {
+  const url = 'https://wttj.com/fr/companies/techvision/jobs/senior-frontend';
+  function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  // Animate ALL instances (original + clones)
+  document.querySelectorAll('.vis-gen').forEach(vis => {
+    const cursor = vis.querySelector('.gm-cursor');
+    const linkEl = vis.querySelector('.gm-input');
+    const valBtn = vis.querySelector('.gm-validate');
+    if (!cursor || !linkEl || !valBtn) return;
+
+    function moveTo(el) {
+      const vr = vis.getBoundingClientRect();
+      const er = el.getBoundingClientRect();
+      cursor.style.left = (er.left - vr.left + er.width * 0.5) + 'px';
+      cursor.style.top = (er.top - vr.top + er.height * 0.5) + 'px';
+    }
+
+    async function cycle() {
+      try {
+        linkEl.textContent = '';
+        cursor.style.opacity = '0';
+        valBtn.classList.remove('flash');
+        await wait(800);
+
+        cursor.style.opacity = '1';
+        moveTo(linkEl);
+        await wait(600);
+
+        linkEl.classList.add('typing');
+        for (let i = 0; i <= url.length; i++) {
+          linkEl.textContent = url.slice(0, i);
+          await wait(25);
+        }
+        linkEl.classList.remove('typing');
+        await wait(400);
+
+        moveTo(valBtn);
+        await wait(500);
+
+        valBtn.classList.add('flash');
+        cursor.style.transform = 'scale(0.85)';
+        await wait(150);
+        cursor.style.transform = '';
+        await wait(300);
+
+        await wait(1200);
+
+        cursor.style.opacity = '0';
+        await wait(500);
+        valBtn.classList.remove('flash');
+      } catch(e) {}
+
+      setTimeout(cycle, 300);
+    }
+
+    cycle();
+  });
+})();
+
 // ===== LANG CYCLING (paused when tab hidden) =====
 let li = 0;
 const lis = document.querySelectorAll('.lg-i');
@@ -787,7 +931,7 @@ const descs={
   '4':'Chaque modification sauvegard&eacute;e.<ul><li>Historique complet</li><li>Comparaison</li><li>Restauration instantan&eacute;e</li></ul>',
   '5':'Pas d\'abonnement.<ul><li>Cr&eacute;dits &agrave; la demande</li><li>Pas d\'engagement</li><li>Payez ce que vous utilisez</li></ul>',
   '6':'Traduction intelligente, vocabulaire pro.<ul><li>5 langues</li><li>Vocabulaire sectoriel</li><li>Mise en page conserv&eacute;e</li></ul>',
-  '7':'Extraction derri&egrave;re les protections anti-bot.<ul><li>Cloudflare, Akamai</li><li>LinkedIn, Indeed, WTTJ</li><li>Z&eacute;ro copier-coller</li></ul>',
+  '7':'Extraction derri&egrave;re les protections anti-bot.<ul><li>Cloudflare, Akamai</li><li>Indeed, WTTJ, HelloWork</li><li>Z&eacute;ro copier-coller</li></ul>',
   '8':'Workflow en &eacute;tapes visibles.<ul><li>Chaque action transparente</li><li>Pas de bo&icirc;te noire</li><li>Vous gardez le contr&ocirc;le</li></ul>',
   '9':'&Eacute;dition inline dans l\'app.<ul><li>Chaque champ modifiable</li><li>Pr&eacute;visualisation live</li><li>Aucun outil externe</li></ul>',
   '10':'G&eacute;n&eacute;rez un template depuis un simple titre.<ul><li>Pas besoin de lien</li><li>Template intelligent</li><li>Id&eacute;al en phase d\'exploration</li></ul>',
@@ -798,15 +942,63 @@ const descs={
   '15':'Template depuis un titre de poste.<ul><li>Recherche par m&eacute;tier</li><li>Template adapt&eacute; au r&ocirc;le</li><li>Point de d&eacute;part rapide</li></ul>'
 };
 
+// Custom overlay content per card
+const overlayCustom = {
+  '1': function() {
+    return `
+      <h2 class="d-title">Un CV taillé pour chaque offre</h2>
+      <p class="d-sub">Collez un lien, l'IA fait le reste</p>
+      <div class="d-split">
+        <div class="d-text-col">
+          <div class="d-desc">
+            Collez le lien d'une offre d'emploi depuis n'importe quel site (Welcome to the Jungle, Indeed, HelloWork...).
+            L'IA extrait automatiquement les exigences et génère un CV parfaitement aligné.
+            <ul>
+              <li>Extraction intelligente derrière les protections anti-bot</li>
+              <li>Analyse des mots-clés, compétences et responsabilités</li>
+              <li>CV généré et optimisé en quelques secondes</li>
+              <li>Historique des liens pour réutilisation rapide</li>
+              <li>Support des offres en PDF</li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-mockup-col">
+          <div class="d-mockup-scaler">
+            <iframe class="d-modal-iframe" src="/mockups/modal-gen.html" frameborder="0" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>`;
+  }
+};
+
 function openOverlay(card) {
   const id = card.dataset.id;
-  document.getElementById('dTitle').innerHTML = card.querySelector('.c-title')?.innerHTML || '';
-  document.getElementById('dSub').innerHTML = card.querySelector('.c-sub')?.innerHTML || '';
-  document.getElementById('dDesc').innerHTML = descs[id] || '';
+  const content = document.querySelector('.detail-content');
+
+  if (overlayCustom[id]) {
+    content.innerHTML = '<button class="detail-close" onclick="closeOverlay()">&times;</button>' + overlayCustom[id]();
+  } else {
+    content.innerHTML = `
+      <h2 class="d-title">${card.querySelector('.c-title')?.innerHTML || ''}</h2>
+      <p class="d-sub">${card.querySelector('.c-sub')?.innerHTML || ''}</p>
+      <div class="d-vis"><div class="ph">${'Contenu à définir lors du brainstorming feature par feature.'}</div></div>
+      <div class="d-desc">${descs[id] || ''}</div>`;
+  }
+
   overlayOpen = true;
   freezeAll();
   ov.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Scale mockup iframe to fit its wrapper
+  requestAnimationFrame(() => {
+    const scaler = content.querySelector('.d-mockup-scaler');
+    const iframe = scaler?.querySelector('.d-modal-iframe');
+    if (scaler && iframe) {
+      const scale = scaler.offsetWidth / 420;
+      iframe.style.transform = 'scale(' + scale + ')';
+    }
+  });
 }
 
 function closeOverlay() {
@@ -825,6 +1017,8 @@ document.addEventListener('click', e => {
 
 document.getElementById('closeBtn').addEventListener('click', closeOverlay);
 ov.addEventListener('click', e => { if (e.target === ov) closeOverlay(); });
+// Also handle close buttons injected in custom overlays
+ov.addEventListener('click', e => { if (e.target.classList.contains('detail-close')) closeOverlay(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlayOpen) closeOverlay(); });
 </script>
 

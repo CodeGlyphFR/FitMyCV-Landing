@@ -26,8 +26,17 @@ buildSync({
   minify: false,
 });
 
+buildSync({
+  entryPoints: [join(srcDir, 'modal-gen-index.js')],
+  bundle: true,
+  format: 'iife',
+  outfile: join(outDir, 'modal-gen.bundle.js'),
+  minify: false,
+});
+
 console.log('  -> index.bundle.js');
 console.log('  -> step-index.bundle.js');
+console.log('  -> modal-gen.bundle.js');
 
 // Step 2: Read CSS
 const variablesCss = readFileSync(join(srcDir, 'styles', 'variables.css'), 'utf-8');
@@ -49,9 +58,12 @@ const htmlTemplates = [
   { output: 'step5.html', title: 'FitMyCV - Optimisation', body: '<div id="app" data-step="5"></div>', script: 'step-index.bundle.js' },
   { output: 'step6.html', title: 'FitMyCV - Review Optimisation', body: '<div id="app" data-step="6"></div>', script: 'step-index.bundle.js' },
   { output: 'step7.html', title: 'FitMyCV - Export', body: '<div id="app" data-step="7"></div>', script: 'step-index.bundle.js' },
+  { output: 'modal-gen.html', title: 'FitMyCV - Generator Modal', body: '<div id="app"></div>', script: 'modal-gen.bundle.js' },
 ];
 
 console.log('Generating HTML files with inline CSS...');
+
+const cacheBust = Date.now();
 
 for (const tpl of htmlTemplates) {
   const html = `<!DOCTYPE html>
@@ -67,7 +79,7 @@ ${allCss}
 <body>
 ${tpl.body}
 <script>if(location.search.includes('embed'))document.body.classList.add('embed');</script>
-<script src="${tpl.script}"></script>
+<script src="${tpl.script}?v=${cacheBust}"></script>
 </body>
 </html>
 `;
