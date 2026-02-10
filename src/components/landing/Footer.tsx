@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="footer-copyright">&copy; 2025 FitMyCV.io</p>
+          <p className="footer-copyright">&copy; 2026 FitMyCV.io</p>
           <div className="footer-socials">
             <span aria-label="LinkedIn">
               <svg

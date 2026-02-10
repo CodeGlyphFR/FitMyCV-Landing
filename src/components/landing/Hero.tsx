@@ -145,12 +145,6 @@ export default function Hero() {
     }
   }, [update]);
 
-  // Scroll restoration: force top on mount
-  useEffect(() => {
-    history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
-  }, []);
-
   // Video setup: ready class + ended handler
   useEffect(() => {
     const video = videoRef.current;

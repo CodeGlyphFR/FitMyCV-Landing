@@ -20,5 +20,6 @@ services:
       target: runner
     ports:
       - "127.0.0.1:3333:3333"
+    env_file: .env.local
     environment:
       - NODE_ENV=production

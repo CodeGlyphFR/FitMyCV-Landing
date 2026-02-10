@@ -329,12 +329,12 @@ export default function HowItWorks() {
   return (
     <section className="how-it-works" id="howItWorks" ref={sectionRef}>
       <div className="section-header" id="sectionHeader">
-        <h4 className="section-intro">
-          FitMyCV optimise votre CV grâce à l’IA pour matcher
-          chaque offre d’emploi. Il adapte le contenu au format ATS et
+        <p className="section-intro">
+          FitMyCV optimise votre CV grâce à l&apos;IA pour matcher
+          chaque offre d&apos;emploi. Il adapte le contenu au format ATS et
           génère un document unique conçu pour passer les
-          filtres des robots RH et décrocher plus d’entretiens.
-        </h4>
+          filtres des robots RH et décrocher plus d&apos;entretiens.
+        </p>
         <h2 className="section-title">
           Un workflow simple,
           <br />
