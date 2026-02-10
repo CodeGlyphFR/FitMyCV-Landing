@@ -9,7 +9,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { touch-action: manipulation; }
+  html { touch-action: manipulation; scroll-behavior: smooth; scroll-padding-top: 5rem; }
   body {
     background: #0a0a1a;
     color: #fff;
@@ -61,6 +61,24 @@
     width: auto;
   }
 
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .header-nav a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 450;
+    transition: color 0.2s ease;
+  }
+
+  .header-nav a:hover {
+    color: #fff;
+  }
+
   .header-actions {
     display: flex;
     align-items: center;
@@ -102,6 +120,93 @@
     border-color: rgba(34, 211, 238, 0.7);
   }
 
+  /* Hamburger button — hidden on desktop */
+  .header-burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    flex-direction: column;
+    gap: 4.5px;
+  }
+
+  .header-burger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 1px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .header-burger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .header-burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header-burger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* Mobile menu panel */
+  .header-mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10,10,26,0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 1rem 1.5rem 1.25rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .header-mobile-menu.open {
+    display: flex;
+  }
+
+  .header-mobile-menu a {
+    display: block;
+    padding: 0.65rem 0.5rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 450;
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .header-mobile-menu a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+  }
+
+  .header-mobile-menu .mobile-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 0.5rem 0;
+  }
+
+  .header-mobile-menu .header-btn.signup {
+    text-align: center;
+    margin-top: 0.25rem;
+    padding: 0.6rem;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .header-nav { display: none; }
+    .header-actions { display: none; }
+    .header-burger { display: flex; }
+  }
+
   @media (max-width: 480px) {
     .header-inner { padding: 0 1rem; }
     .site-header {
@@ -110,7 +215,6 @@
     }
     .site-header.header-hidden { transform: translateY(-100%); }
     .header-logo img { height: 1.8rem; }
-    .header-btn { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
   }
 
   /* ==========================================================
@@ -2667,7 +2771,25 @@
     <a href="/" class="header-logo">
       <img src="icons/logo.png" alt="FitMyCV">
     </a>
+    <nav class="header-nav">
+      <a href="#howItWorks">Comment ça marche</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="header-actions">
+      <a href="https://app.fitmycv.io" class="header-btn login">Log in</a>
+      <a href="https://app.fitmycv.io" class="header-btn signup">Sign Up</a>
+    </div>
+    <button class="header-burger" id="headerBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-mobile-menu" id="headerMobileMenu">
+      <a href="#howItWorks">Comment ça marche</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#faq">FAQ</a>
+      <div class="mobile-divider"></div>
       <a href="https://app.fitmycv.io" class="header-btn login">Log in</a>
       <a href="https://app.fitmycv.io" class="header-btn signup">Sign Up</a>
     </div>
@@ -4854,6 +4976,27 @@ document.querySelectorAll('.vis-score').forEach(el => { const card = el.closest(
       ticking = true;
     }
   }, { passive: true });
+})();
+</script>
+
+<!-- Hamburger menu toggle -->
+<script>
+(() => {
+  const burger = document.getElementById('headerBurger');
+  const menu = document.getElementById('headerMobileMenu');
+  if (!burger || !menu) return;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
 })();
 </script>
 
