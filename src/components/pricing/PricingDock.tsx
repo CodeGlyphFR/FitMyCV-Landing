@@ -35,17 +35,17 @@ function ScoreIcon() {
 const creditItems = [
   {
     title: "Génération IA — 3 Cr",
-    icon: <MockupIcon src="/icons/openai-symbol.png" alt="Génération IA" />,
+    icon: <MockupIcon src="/icons/openai-symbol.svg" alt="Génération IA" />,
     href: "#",
   },
   {
     title: "Optimisation — 2 Cr",
-    icon: <MockupIcon src="/icons/analyzer.png" alt="Optimisation" />,
+    icon: <MockupIcon src="/icons/analyzer.svg" alt="Optimisation" />,
     href: "#",
   },
   {
     title: "Import CV — 2 Cr",
-    icon: <MockupIcon src="/icons/import.png" alt="Import CV" />,
+    icon: <MockupIcon src="/icons/import.svg" alt="Import CV" />,
     href: "#",
   },
   {
@@ -55,7 +55,7 @@ const creditItems = [
   },
   {
     title: "Export PDF — 1 Cr",
-    icon: <MockupIcon src="/icons/export.png" alt="Export PDF" />,
+    icon: <MockupIcon src="/icons/export.svg" alt="Export PDF" />,
     href: "#",
   },
 ];

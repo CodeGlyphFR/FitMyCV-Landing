@@ -101,6 +101,7 @@ function pickRandom(max: number, n: number): number[] {
 /* ── Component ── */
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const synapsesRef = useRef<SVGGElement>(null);
   const neuronsRef = useRef<SVGGElement>(null);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -231,9 +232,12 @@ export default function FAQ() {
     }
 
     let cancelled = false;
+    let visible = true;
+    let cycling = false;
 
     function cycle() {
-      if (cancelled) return;
+      if (cancelled || cycling) return;
+      cycling = true;
       const LAYER_DELAY = 250;
 
       // Forward pass
@@ -318,24 +322,37 @@ export default function FAQ() {
 
       const totalDuration =
         fwdDuration + (NN_LAYERS.length - 1) * BP_DELAY + 500;
-      const tid = setTimeout(
-        cycle,
-        totalDuration + 400 + Math.random() * 600
-      );
+      const tid = setTimeout(() => {
+        cycling = false;
+        if (!cancelled && visible) cycle();
+      }, totalDuration + 400 + Math.random() * 600);
       timersRef.current.push(tid);
     }
 
     cycle();
 
+    // Observe the neural network container (not the whole section)
+    // so the NN stops when the SVG scrolls off-screen even if the
+    // FAQ list below is still visible.
+    const nnEl = synG.closest('.faq-neural') as HTMLElement | null;
+    const sectionObs = nnEl ? new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (entry.isIntersecting && !cycling && !cancelled) {
+        cycle();
+      }
+    }, { threshold: 0 }) : null;
+    if (nnEl) sectionObs!.observe(nnEl);
+
     return () => {
       cancelled = true;
       timersRef.current.forEach((t) => clearTimeout(t));
       timersRef.current = [];
+      sectionObs?.disconnect();
     };
   }, []);
 
   return (
-    <section className="faq-section" id="faq">
+    <section className="faq-section" id="faq" ref={sectionRef}>
       <div className="faq-grid">
         <div className="faq-left">
           <h2 className="faq-title">

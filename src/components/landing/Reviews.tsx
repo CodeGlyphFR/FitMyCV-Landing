@@ -207,7 +207,22 @@ export default function Reviews() {
       animId = requestAnimationFrame(animate);
     }
 
-    // Intersection observer to start/stop animation
+    /* ── Glow border setup ── */
+    const glowEl = glowRef.current;
+    let glowAnimId: number | null = null;
+    let angle = 0;
+
+    function tickGlow() {
+      angle += 1.6;
+      glowEl!.style.setProperty('--start', String(angle));
+      glowAnimId = requestAnimationFrame(tickGlow);
+    }
+
+    if (glowEl) {
+      glowEl.style.setProperty('--active', '1');
+    }
+
+    // Intersection observer to start/stop canvas + glow
     let running = false;
 
     const observer = new IntersectionObserver(
@@ -216,12 +231,11 @@ export default function Reviews() {
           if (entry.isIntersecting && !running) {
             running = true;
             animate();
+            if (glowEl && glowAnimId === null) glowAnimId = requestAnimationFrame(tickGlow);
           } else if (!entry.isIntersecting && running) {
             running = false;
-            if (animId) {
-              cancelAnimationFrame(animId);
-              animId = null;
-            }
+            if (animId) { cancelAnimationFrame(animId); animId = null; }
+            if (glowAnimId) { cancelAnimationFrame(glowAnimId); glowAnimId = null; }
           }
         });
       },
@@ -236,22 +250,6 @@ export default function Reviews() {
 
     const section = sectionRef.current;
     if (section) observer.observe(section);
-
-    /* ── Glow border animation ── */
-    const glowEl = glowRef.current;
-    let glowAnimId: number | null = null;
-    let angle = 0;
-
-    if (glowEl) {
-      glowEl.style.setProperty('--active', '1');
-
-      function tickGlow() {
-        angle += 1.6;
-        glowEl!.style.setProperty('--start', String(angle));
-        glowAnimId = requestAnimationFrame(tickGlow);
-      }
-      glowAnimId = requestAnimationFrame(tickGlow);
-    }
 
     return () => {
       running = false;
@@ -277,6 +275,8 @@ export default function Reviews() {
     const PAUSE = 1500;
     const timers: ReturnType<typeof setTimeout>[] = [];
     let cancelled = false;
+    let visible = false;
+    let looping = false;
 
     function resetAll() {
       stars.forEach((s) => s.classList.remove('filled', 'filling'));
@@ -289,7 +289,9 @@ export default function Reviews() {
           if (cancelled) return;
           resetAll();
           const tid2 = setTimeout(() => {
-            if (!cancelled) fillStars(0);
+            if (cancelled) return;
+            if (!visible) { looping = false; return; }
+            fillStars(0);
           }, PAUSE);
           timers.push(tid2);
         }, HOLD);
@@ -309,11 +311,11 @@ export default function Reviews() {
       timers.push(tid2);
     }
 
-    let started = false;
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !started) {
-          started = true;
+        visible = entries[0].isIntersecting;
+        if (visible && !looping && !cancelled) {
+          looping = true;
           const tid = setTimeout(() => {
             if (!cancelled) fillStars(0);
           }, 600);

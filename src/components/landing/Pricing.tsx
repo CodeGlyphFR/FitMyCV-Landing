@@ -12,11 +12,11 @@ interface DockItemData {
 }
 
 const dockItems: DockItemData[] = [
-  { tooltip: 'Génération IA · 3 Cr', type: 'img', src: '/icons/openai-symbol.png', alt: 'Génération' },
-  { tooltip: 'Optimisation · 2 Cr', type: 'img', src: '/icons/analyzer.png', alt: 'Optimisation' },
-  { tooltip: 'Import CV · 2 Cr', type: 'img', src: '/icons/import.png', alt: 'Import' },
+  { tooltip: 'Génération IA · 3 Cr', type: 'img', src: '/icons/openai-symbol.svg', alt: 'Génération' },
+  { tooltip: 'Optimisation · 2 Cr', type: 'img', src: '/icons/analyzer.svg', alt: 'Optimisation' },
+  { tooltip: 'Import CV · 2 Cr', type: 'img', src: '/icons/import.svg', alt: 'Import' },
   { tooltip: 'Score · 1 Cr', type: 'svg', alt: 'Score' },
-  { tooltip: 'Export PDF · 1 Cr', type: 'img', src: '/icons/export.png', alt: 'Export' },
+  { tooltip: 'Export PDF · 1 Cr', type: 'img', src: '/icons/export.svg', alt: 'Export' },
 ];
 
 interface PackData {
@@ -354,6 +354,16 @@ export default function Pricing() {
     const isPortrait = window.innerWidth < 768;
 
     let rafId: number | null = null;
+    let visible = true;
+    let tickFn: (() => void) | null = null;
+
+    const sectionObs = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (entry.isIntersecting && rafId === null && tickFn) {
+        rafId = requestAnimationFrame(tickFn);
+      }
+    }, { threshold: 0 });
+    sectionObs.observe(section);
 
     if (!isTouch) {
       // Desktop: follow mouse
@@ -368,6 +378,7 @@ export default function Pricing() {
       document.body.addEventListener('pointermove', handlePointerMove, { passive: true });
 
       function tickDesktop() {
+        if (!visible) { rafId = null; return; }
         for (let i = 0; i < states.length; i++) {
           const s = states[i];
           const card = s.el.parentElement;
@@ -389,10 +400,12 @@ export default function Pricing() {
         }
         rafId = requestAnimationFrame(tickDesktop);
       }
+      tickFn = tickDesktop;
       rafId = requestAnimationFrame(tickDesktop);
 
       return () => {
         if (rafId !== null) cancelAnimationFrame(rafId);
+        sectionObs.disconnect();
         document.body.removeEventListener('pointermove', handlePointerMove);
       };
     } else if (!isPortrait) {
@@ -401,6 +414,7 @@ export default function Pricing() {
       const lStates = glowEls.map((el) => ({ el, angle: 0 }));
 
       function tickLandscape() {
+        if (!visible) { rafId = null; return; }
         for (let i = 0; i < lStates.length; i++) {
           const s = lStates[i];
           const card = s.el.parentElement;
@@ -411,10 +425,12 @@ export default function Pricing() {
         }
         rafId = requestAnimationFrame(tickLandscape);
       }
+      tickFn = tickLandscape;
       rafId = requestAnimationFrame(tickLandscape);
 
       return () => {
         if (rafId !== null) cancelAnimationFrame(rafId);
+        sectionObs.disconnect();
       };
     } else {
       // Mobile: auto-rotate on snapped card
@@ -463,6 +479,7 @@ export default function Pricing() {
       }
 
       function tickMobile() {
+        if (!visible) { rafId = null; return; }
         for (let i = 0; i < mStates.length; i++) {
           if (i !== activeIndex) continue;
           mStates[i].angle += SPEED;
@@ -470,10 +487,12 @@ export default function Pricing() {
         }
         rafId = requestAnimationFrame(tickMobile);
       }
+      tickFn = tickMobile;
       rafId = requestAnimationFrame(tickMobile);
 
       return () => {
         if (rafId !== null) cancelAnimationFrame(rafId);
+        sectionObs.disconnect();
         if (grid) grid.removeEventListener('scroll', handleScroll);
       };
     }

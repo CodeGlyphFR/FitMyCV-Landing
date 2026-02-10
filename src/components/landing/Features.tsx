@@ -48,7 +48,15 @@ export default function Features() {
     let featRafId = 0;
     let featPageVisible = true;
     let featResizeTimer: ReturnType<typeof setTimeout>;
-    const intervalIds: number[] = [];
+    let featSectionVisible = true;
+    const stalledCycles: Array<() => void> = [];
+    function scheduleCycle(fn: () => void, delay: number) {
+      if (featSectionVisible) {
+        setTimeout(fn, delay);
+      } else {
+        stalledCycles.push(fn);
+      }
+    }
 
     /* ======================================================================
        MARQUEE: duplicate cards & physics loop
@@ -161,6 +169,7 @@ export default function Features() {
 
     /* ── Single rAF loop ── */
     function featTick() {
+      if (!featSectionVisible) { featRafId = 0; return; }
       if (featPageVisible) {
         for (let i = 0; i < rowArr.length; i++) {
           const row = rowArr[i];
@@ -185,6 +194,17 @@ export default function Features() {
       featRafId = requestAnimationFrame(featTick);
     }
     featRafId = requestAnimationFrame(featTick);
+
+    // Section visibility observer
+    const sectionObs = new IntersectionObserver(([entry]) => {
+      featSectionVisible = entry.isIntersecting;
+      if (entry.isIntersecting) {
+        if (!featRafId) featRafId = requestAnimationFrame(featTick);
+        const toRestart = stalledCycles.splice(0);
+        toRestart.forEach((fn) => fn());
+      }
+    }, { threshold: 0 });
+    sectionObs.observe(section);
 
     const onVisibilityChange = () => {
       featPageVisible = !document.hidden;
@@ -484,7 +504,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 300);
+        scheduleCycle(cycle, 300);
       }
       cycle();
     });
@@ -518,7 +538,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -544,7 +564,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 300);
+        scheduleCycle(cycle, 300);
       }
       cycle();
     });
@@ -587,7 +607,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -634,7 +654,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -685,7 +705,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -714,7 +734,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -743,7 +763,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -783,7 +803,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -814,7 +834,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -852,7 +872,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -896,7 +916,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 400);
+        scheduleCycle(cycle, 400);
       }
       cycle();
     });
@@ -924,7 +944,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 100);
+        scheduleCycle(cycle, 100);
       }
       cycle();
     });
@@ -951,8 +971,11 @@ export default function Features() {
         }, 550);
       }
 
-      const id = window.setInterval(rotate, 2000);
-      intervalIds.push(id);
+      function rotateLoop() {
+        rotate();
+        scheduleCycle(rotateLoop, 2000);
+      }
+      scheduleCycle(rotateLoop, 2000);
     });
 
     /* ── Card 15: Task manager ── */
@@ -1008,7 +1031,7 @@ export default function Features() {
         } catch {
           return;
         }
-        setTimeout(cycle, 300);
+        scheduleCycle(cycle, 300);
       }
       cycle();
     });
@@ -1023,8 +1046,8 @@ export default function Features() {
       // Stop rAF loop
       cancelAnimationFrame(featRafId);
 
-      // Clear intervals
-      intervalIds.forEach((id) => clearInterval(id));
+      // Stop section observer
+      sectionObs.disconnect();
 
       // Clear resize timer
       clearTimeout(featResizeTimer);

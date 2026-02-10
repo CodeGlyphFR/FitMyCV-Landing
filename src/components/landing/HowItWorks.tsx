@@ -220,9 +220,11 @@ export default function HowItWorks() {
             if (!entry.isIntersecting && !paused) {
               paused = true;
               iframe.contentWindow?.postMessage('pause-demo', '*');
+              sparklesRef.current?.classList.add('paused');
             } else if (entry.isIntersecting && paused) {
               paused = false;
               iframe.contentWindow?.postMessage('resume-demo', '*');
+              sparklesRef.current?.classList.remove('paused');
             }
           } catch {
             // cross-origin safety

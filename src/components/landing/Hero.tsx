@@ -32,6 +32,7 @@ export default function Hero() {
   const demoStartedRef = useRef(false);
   const demoPausedRef = useRef(false);
   const cancelledRef = useRef(false);
+  const visibleRef = useRef(true);
 
   const updateScale = useCallback(() => {
     const mockupFrame = mockupFrameRef.current;
@@ -194,6 +195,18 @@ export default function Hero() {
     };
   }, [scheduleUpdate]);
 
+  // Section visibility for typewriter pause
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { visibleRef.current = entry.isIntersecting; },
+      { threshold: 0 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   // Typewriter effect
   useEffect(() => {
     cancelledRef.current = false;
@@ -211,6 +224,13 @@ export default function Hero() {
         }
       });
 
+    async function waitVisible() {
+      while (!visibleRef.current && !cancelledRef.current) {
+        await new Promise<void>((r) => setTimeout(r, 500));
+      }
+      if (cancelledRef.current) throw new Error('cancelled');
+    }
+
     async function typewrite() {
       const el = subtitleRef.current;
       if (!el) return;
@@ -219,6 +239,7 @@ export default function Hero() {
         while (!cancelledRef.current) {
           for (const phrase of PHRASES) {
             if (cancelledRef.current) return;
+            await waitVisible();
             // Type in character by character
             for (let i = 0; i <= phrase.length; i++) {
               if (cancelledRef.current) return;
@@ -226,6 +247,7 @@ export default function Hero() {
               await wait(40);
             }
             await wait(1000);
+            await waitVisible();
             // Erase word by word
             const words = phrase.split(' ');
             while (words.length > 0) {

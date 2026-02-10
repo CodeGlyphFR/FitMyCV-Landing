@@ -578,6 +578,10 @@ body {
     opacity: 0;
   }
 
+  .sparkles-particles.paused .sparkle-dot {
+    animation-play-state: paused;
+  }
+
   @keyframes sparkle-twinkle {
     0% { opacity: 0; transform: scale(1); }
     20% { opacity: var(--peak-opacity); transform: scale(1.2); }
