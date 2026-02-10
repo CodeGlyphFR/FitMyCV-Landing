@@ -37,9 +37,8 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Légal</h4>
-            <a href="terms.html">CGU</a>
-            <a href="privacy.html">Vie privée</a>
-            <a href="cookies.html">Cookies</a>
+            <a href="/terms">CGU</a>
+            <a href="/privacy">Vie privée</a>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
