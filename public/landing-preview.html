@@ -2593,17 +2593,18 @@
 .faq-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; }
 .faq-neural { margin-top: 3rem; width: 100%; max-width: 420px; aspect-ratio: 4 / 3; }
 .faq-neural svg { width: 100%; height: 100%; overflow: visible; }
-.faq-neural .synapse { stroke: rgba(34,211,238,0.1); stroke-width: 1; fill: none; }
-.faq-neural .synapse-fire { stroke: #22d3ee; stroke-width: 1.5; fill: none; opacity: 0; }
-.faq-neural .neuron { fill: rgba(34,211,238,0.15); stroke: rgba(34,211,238,0.4); stroke-width: 1; }
-.faq-neural .neuron-core { fill: #22d3ee; filter: url(#nn-glow); }
+.faq-neural .synapse { stroke: rgba(52,211,153,0.1); stroke-width: 1; fill: none; }
+.faq-neural .synapse-fire { stroke: url(#nn-gradient); stroke-width: 1.5; fill: none; opacity: 0; }
+.faq-neural .synapse-backprop { stroke: url(#nn-gradient-red); stroke-width: 1.5; fill: none; opacity: 0; }
+.faq-neural .neuron { fill: rgba(52,211,153,0.12); stroke: url(#nn-gradient); stroke-width: 1; opacity: 0.5; }
+.faq-neural .neuron-core { fill: url(#nn-gradient); filter: url(#nn-glow); }
 .faq-list { display: flex; flex-direction: column; }
 .faq-item { cursor: pointer; padding: 1.25rem 1rem; margin-inline: -1rem; border-radius: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; }
 .faq-item:last-child { border-bottom: none; }
 .faq-item:hover { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: rgba(255,255,255,0.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); }
 .faq-item-header { display: flex; align-items: flex-start; gap: 1rem; }
 .faq-icon { position: relative; width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
-.faq-icon svg { position: absolute; inset: 0; width: 24px; height: 24px; color: #22d3ee; stroke: currentColor; stroke-width: 2; stroke-linecap: round; fill: none; transition: transform 0.2s ease, opacity 0.2s ease; }
+.faq-icon svg { position: absolute; inset: 0; width: 24px; height: 24px; stroke: url(#brand-gradient); stroke-width: 2; stroke-linecap: round; fill: none; transition: transform 0.2s ease, opacity 0.2s ease; }
 .faq-icon-minus { transform: rotate(90deg); opacity: 0; }
 .faq-item.active .faq-icon-plus { transform: rotate(90deg); opacity: 0; }
 .faq-item.active .faq-icon-minus { transform: rotate(0deg); opacity: 1; }
@@ -2647,6 +2648,15 @@
 </style>
 </head>
 <body>
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <linearGradient id="brand-gradient" gradientUnits="userSpaceOnUse" x1="2" y1="12" x2="22" y2="12">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="40%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+</svg>
 <script>history.scrollRestoration = 'manual'; window.scrollTo(0, 0);</script>
 
 <!-- ==========================================================
@@ -3395,6 +3405,16 @@
       <div class="faq-neural">
         <svg viewBox="0 0 420 320" id="nn-svg">
           <defs>
+            <linearGradient id="nn-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#22d3ee"/>
+              <stop offset="40%" stop-color="#34d399"/>
+              <stop offset="100%" stop-color="#60a5fa"/>
+            </linearGradient>
+            <linearGradient id="nn-gradient-red" x1="100%" y1="0%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#f97316"/>
+              <stop offset="50%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#f43f5e"/>
+            </linearGradient>
             <filter id="nn-glow">
               <feGaussianBlur stdDeviation="3" result="blur"/>
               <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -3533,6 +3553,7 @@
       <div class="footer-brand">
         <img src="icons/logo.png" alt="FitMyCV" height="32">
         <p>Votre CV, optimisé par l'IA</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.25);">Fait avec <img src="icons/pixel_heart.svg" alt="♥" style="display:inline-block;height:0.85em;vertical-align:-0.05em;margin:0 0.15em"> par un seul dev</p>
       </div>
       <div class="footer-col">
         <h4>Produit</h4>
@@ -5645,94 +5666,212 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-// Neural network animation
+// Neural network animation — forward propagation cascade
 (() => {
   const layers = [3, 6, 7, 2];
   const xPad = 50, xEnd = 370;
   const yPad = 30, yEnd = 290;
   const layerX = layers.map((_, i) => xPad + i * ((xEnd - xPad) / (layers.length - 1)));
 
-  const neurons = [];
+  // Build neuron positions per layer
+  const neuronsByLayer = [];
   layers.forEach((count, li) => {
-    const totalH = yEnd - yPad;
-    const gap = totalH / (count + 1);
+    const arr = [];
+    const gap = (yEnd - yPad) / (count + 1);
     for (let ni = 0; ni < count; ni++) {
-      neurons.push({ x: layerX[li], y: yPad + gap * (ni + 1), layer: li });
+      arr.push({ x: layerX[li], y: yPad + gap * (ni + 1) });
     }
+    neuronsByLayer.push(arr);
   });
 
   const svgNS = 'http://www.w3.org/2000/svg';
   const synG = document.getElementById('nn-synapses');
   const neuG = document.getElementById('nn-neurons');
   if (!synG || !neuG) return;
-  const fireLines = [];
 
-  let offset = 0;
+  // fireLines indexed as [layerIdx][srcNeuron][dstNeuron]
+  // backLines indexed the same way — red lines for backprop
+  const fireLines = [];
+  const backLines = [];
   for (let li = 0; li < layers.length - 1; li++) {
-    const startIdx = offset;
-    const endIdx = offset + layers[li];
-    const nextStart = endIdx;
-    const nextEnd = nextStart + layers[li + 1];
-    for (let a = startIdx; a < endIdx; a++) {
-      for (let b = nextStart; b < nextEnd; b++) {
+    const layerFire = [];
+    const layerBack = [];
+    for (let a = 0; a < layers[li]; a++) {
+      const srcFire = [];
+      const srcBack = [];
+      for (let b = 0; b < layers[li + 1]; b++) {
+        const src = neuronsByLayer[li][a];
+        const dst = neuronsByLayer[li + 1][b];
         const base = document.createElementNS(svgNS, 'line');
-        base.setAttribute('x1', neurons[a].x);
-        base.setAttribute('y1', neurons[a].y);
-        base.setAttribute('x2', neurons[b].x);
-        base.setAttribute('y2', neurons[b].y);
+        base.setAttribute('x1', src.x); base.setAttribute('y1', src.y);
+        base.setAttribute('x2', dst.x); base.setAttribute('y2', dst.y);
         base.setAttribute('class', 'synapse');
         synG.appendChild(base);
         const fire = document.createElementNS(svgNS, 'line');
-        fire.setAttribute('x1', neurons[a].x);
-        fire.setAttribute('y1', neurons[a].y);
-        fire.setAttribute('x2', neurons[b].x);
-        fire.setAttribute('y2', neurons[b].y);
+        fire.setAttribute('x1', src.x); fire.setAttribute('y1', src.y);
+        fire.setAttribute('x2', dst.x); fire.setAttribute('y2', dst.y);
         fire.setAttribute('class', 'synapse-fire');
         fire.setAttribute('filter', 'url(#nn-glow-line)');
         synG.appendChild(fire);
-        fireLines.push(fire);
+        srcFire.push(fire);
+        const back = document.createElementNS(svgNS, 'line');
+        back.setAttribute('x1', dst.x); back.setAttribute('y1', dst.y);
+        back.setAttribute('x2', src.x); back.setAttribute('y2', src.y);
+        back.setAttribute('class', 'synapse-backprop');
+        back.setAttribute('filter', 'url(#nn-glow-line)');
+        synG.appendChild(back);
+        srcBack.push(back);
       }
+      layerFire.push(srcFire);
+      layerBack.push(srcBack);
     }
-    offset += layers[li];
+    fireLines.push(layerFire);
+    backLines.push(layerBack);
   }
 
-  neurons.forEach(n => {
-    const outer = document.createElementNS(svgNS, 'circle');
-    outer.setAttribute('cx', n.x);
-    outer.setAttribute('cy', n.y);
-    outer.setAttribute('r', 8);
-    outer.setAttribute('class', 'neuron');
-    neuG.appendChild(outer);
-    const core = document.createElementNS(svgNS, 'circle');
-    core.setAttribute('cx', n.x);
-    core.setAttribute('cy', n.y);
-    core.setAttribute('r', 3);
-    core.setAttribute('class', 'neuron-core');
-    neuG.appendChild(core);
+  // Draw neuron circles and store core refs per layer
+  const neuronCores = [];
+  neuronsByLayer.forEach((layerNeurons, li) => {
+    const cores = [];
+    layerNeurons.forEach(n => {
+      const outer = document.createElementNS(svgNS, 'circle');
+      outer.setAttribute('cx', n.x); outer.setAttribute('cy', n.y);
+      outer.setAttribute('r', 8); outer.setAttribute('class', 'neuron');
+      neuG.appendChild(outer);
+      const core = document.createElementNS(svgNS, 'circle');
+      core.setAttribute('cx', n.x); core.setAttribute('cy', n.y);
+      core.setAttribute('r', 3); core.setAttribute('class', 'neuron-core');
+      neuG.appendChild(core);
+      cores.push(core);
+    });
+    neuronCores.push(cores);
   });
 
   function fireSynapse(line) {
     line.style.transition = 'none';
     line.style.opacity = '0';
     requestAnimationFrame(() => {
-      line.style.transition = 'opacity 0.15s ease-in';
+      line.style.transition = 'opacity 0.12s ease-in';
       line.style.opacity = '0.9';
       setTimeout(() => {
-        line.style.transition = 'opacity 0.6s ease-out';
+        line.style.transition = 'opacity 0.5s ease-out';
         line.style.opacity = '0';
+      }, 120);
+    });
+  }
+
+  function pulseNeuron(core, color) {
+    core.style.transition = 'none';
+    core.style.filter = 'url(#nn-glow) brightness(2)';
+    core.style.r = '4.5';
+    if (color) core.style.fill = color;
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        core.style.transition = 'filter 0.5s ease-out, r 0.5s ease-out, fill 0.5s ease-out';
+        core.style.filter = 'url(#nn-glow)';
+        core.style.r = '3';
+        core.style.fill = '';
       }, 150);
     });
   }
 
-  function randomFire() {
-    const count = 3 + Math.floor(Math.random() * 4);
-    for (let i = 0; i < count; i++) {
-      const idx = Math.floor(Math.random() * fireLines.length);
-      setTimeout(() => fireSynapse(fireLines[idx]), Math.random() * 400);
+  // Pick N random unique indices from [0..max)
+  function pickRandom(max, n) {
+    const indices = [];
+    for (let i = 0; i < max; i++) indices.push(i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
     }
-    setTimeout(randomFire, 300 + Math.random() * 600);
+    return indices.slice(0, Math.min(n, max));
   }
-  randomFire();
+
+  function cycle() {
+    const LAYER_DELAY = 250;
+
+    // === FORWARD PASS (left → right) ===
+    // 1, 2 ou 3 inputs aléatoires
+    const inputCount = 1 + Math.floor(Math.random() * layers[0]);
+    const inputNeurons = pickRandom(layers[0], inputCount);
+    let activeNeurons = inputNeurons;
+    inputNeurons.forEach(idx => pulseNeuron(neuronCores[0][idx]));
+
+    // Store path for backprop: which neurons were active at each layer
+    const path = [inputNeurons.slice()];
+
+    for (let li = 0; li < layers.length - 1; li++) {
+      const currentActive = activeNeurons.slice();
+      const nextCount = li === layers.length - 2
+        ? 1 : 2 + Math.floor(Math.random() * 2);
+      const nextActive = pickRandom(layers[li + 1], nextCount);
+
+      currentActive.forEach(srcIdx => {
+        nextActive.forEach((dstIdx, k) => {
+          setTimeout(() => {
+            fireSynapse(fireLines[li][srcIdx][dstIdx]);
+          }, li * LAYER_DELAY + k * 30);
+        });
+      });
+
+      nextActive.forEach((dstIdx, k) => {
+        setTimeout(() => {
+          pulseNeuron(neuronCores[li + 1][dstIdx]);
+        }, (li + 1) * LAYER_DELAY + k * 30);
+      });
+
+      activeNeurons = nextActive;
+      path.push(nextActive.slice());
+    }
+
+    // === BACKPROP (right → left, red) — own random path ===
+    const fwdDuration = layers.length * LAYER_DELAY + 300;
+    const BP_DELAY = 250;
+
+    // Start from the same output neuron, then pick its own path backward
+    let bpActive = path[layers.length - 1].slice(); // output neuron(s)
+
+    // Pulse output neuron red to start backprop
+    bpActive.forEach((nIdx, k) => {
+      setTimeout(() => {
+        pulseNeuron(neuronCores[layers.length - 1][nIdx], '#ef4444');
+      }, fwdDuration + k * 30);
+    });
+
+    for (let li = layers.length - 2; li >= 0; li--) {
+      const revStep = (layers.length - 2) - li;
+      const rightNeurons = bpActive.slice();
+
+      // Pick random neurons in the left layer (independent of forward path)
+      const leftCount = li === 0
+        ? 1 + Math.floor(Math.random() * layers[0]) // inputs: 1 to all
+        : 2 + Math.floor(Math.random() * 2);         // hidden: 2-3
+      const leftNeurons = pickRandom(layers[li], leftCount);
+
+      // Fire red backprop lines from right → left
+      rightNeurons.forEach(rIdx => {
+        leftNeurons.forEach((lIdx, k) => {
+          setTimeout(() => {
+            fireSynapse(backLines[li][lIdx][rIdx]);
+          }, fwdDuration + revStep * BP_DELAY + k * 30);
+        });
+      });
+
+      // Pulse the left-side neurons red
+      leftNeurons.forEach((lIdx, k) => {
+        setTimeout(() => {
+          pulseNeuron(neuronCores[li][lIdx], '#ef4444');
+        }, fwdDuration + (revStep + 1) * BP_DELAY + k * 30);
+      });
+
+      bpActive = leftNeurons;
+    }
+
+    // Schedule next cycle
+    const totalDuration = fwdDuration + (layers.length - 1) * BP_DELAY + 500;
+    setTimeout(cycle, totalDuration + 400 + Math.random() * 600);
+  }
+
+  cycle();
 })();
 </script>
 
