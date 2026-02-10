@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales de Vente — FitMyCV</title>
+<link rel="icon" href="icons/logo.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a1a; color: rgba(255,255,255,0.9); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.7; }
+
+  /* Header bar */
+  .legal-header { position: sticky; top: 0; z-index: 100; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 1.5rem; }
+  .legal-header-inner { max-width: 52rem; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+  .legal-header a { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.875rem; transition: color 0.2s; }
+  .legal-header a:hover { color: #fff; }
+  .legal-header img { height: 28px; }
+  .legal-header span { color: rgba(255,255,255,0.2); }
+
+  /* Content */
+  .legal-content { max-width: 52rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .legal-content h1 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+  .legal-date { color: rgba(255,255,255,0.4); font-size: 0.8125rem; margin-bottom: 3rem; }
+  .legal-content h2 { font-size: 1.25rem; font-weight: 600; color: #6ee7b7; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  .legal-content h3 { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.85); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .legal-content p { margin-bottom: 0.75rem; font-size: 0.9375rem; }
+  .legal-content ul { margin: 0.5rem 0 1rem 1.5rem; font-size: 0.9375rem; }
+  .legal-content li { margin-bottom: 0.375rem; }
+  .legal-content a { color: #6ee7b7; text-decoration: underline; transition: color 0.2s; }
+  .legal-content a:hover { color: #a7f3d0; }
+
+  /* Sections glassmorphism */
+  .legal-section { background: rgba(255,255,255,0.06); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1rem; }
+
+  .legal-highlight { border-left: 3px solid; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; font-size: 0.9375rem; }
+  .legal-highlight strong { display: block; margin-bottom: 0.25rem; color: #fff; }
+  .highlight-warning { border-color: #f59e0b; background: rgba(245,158,11,0.12); }
+  .highlight-info { border-color: #38bdf8; background: rgba(56,189,248,0.12); }
+  .highlight-danger { border-color: #ef4444; background: rgba(239,68,68,0.12); }
+
+  .legal-infobox { background: rgba(56,189,248,0.12); border-radius: 0.5rem; padding: 1.25rem; margin: 1rem 0; white-space: pre-line; font-size: 0.9375rem; line-height: 1.8; }
+
+  /* Footer */
+  .site-footer { padding: 3rem 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-inner { max-width: 72rem; margin: 0 auto; }
+  .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; }
+  .footer-brand img { height: 32px; display: block; margin-bottom: 0.75rem; }
+  .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.875rem; line-height: 1.5; text-decoration: none; }
+  .footer-col { display: flex; flex-direction: column; gap: 0.625rem; }
+  .footer-col h4 { color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+  .footer-col a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+  .footer-col a:hover { color: #6ee7b7; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .footer-copyright { color: rgba(255,255,255,0.3); font-size: 0.8125rem; }
+  .footer-socials { display: flex; gap: 1rem; align-items: center; }
+  .footer-socials span { color: rgba(255,255,255,0.4); transition: color 0.2s ease; display: flex; cursor: default; }
+  .footer-socials span:hover { color: #6ee7b7; }
+  .footer-socials svg { width: 20px; height: 20px; }
+  @media (max-width: 768px) {
+    .footer-main { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .footer-main { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="legal-header">
+  <div class="legal-header-inner">
+    <a href="/">
+      <img src="icons/logo.png" alt="FitMyCV">
+      FitMyCV
+    </a>
+    <span>/</span>
+    <span style="color: rgba(255,255,255,0.7); font-size: 0.875rem;">Conditions Générales de Vente</span>
+  </div>
+</header>
+
+<main class="legal-content">
+  <h1>Conditions Générales de Vente</h1>
+  <p class="legal-date">Dernière mise à jour : 10 février 2025</p>
+
+  <div class="legal-section">
+  <h2>1. Acceptation des CGV</h2>
+  <p>En utilisant FitMyCV.io et en effectuant un achat de crédits, vous acceptez sans réserve les présentes Conditions Générales de Vente (CGV).</p>
+  <p>Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services payants.</p>
+  <p>L'utilisation de FitMyCV.io est réservée aux personnes de 16 ans et plus.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>2. Description des services</h2>
+  <p>FitMyCV.io est une plateforme de création et d'optimisation de CV utilisant l'intelligence artificielle.</p>
+
+  <h3>2.1. Services gratuits</h3>
+  <ul>
+    <li>Création manuelle de CV illimitée</li>
+    <li>Édition illimitée de CV</li>
+    <li>Stockage des CV dans votre espace personnel</li>
+  </ul>
+
+  <h3>2.2. Services consommant des crédits</h3>
+  <ul>
+    <li>Export PDF et DOCX</li>
+    <li>Génération et adaptation de CV par IA</li>
+    <li>Import et extraction de CV depuis PDF</li>
+    <li>Traduction automatique de CV</li>
+    <li>Optimisation de CV pour les offres d'emploi</li>
+    <li>Score de compatibilité CV/offre</li>
+  </ul>
+
+  <h3>2.3. Système de crédits</h3>
+  <p>À la création de votre compte, vous recevez un nombre de crédits par défaut vous permettant de tester les fonctionnalités de la plateforme.</p>
+  <p>Chaque fonctionnalité consomme un nombre de crédits variable selon un barème défini. Le coût en crédits de chaque fonctionnalité est affiché avant son utilisation.</p>
+  <p>Les crédits n'ont pas de date d'expiration et restent valables tant que votre compte est actif.</p>
+  <p>Lorsque vos crédits sont épuisés, vous pouvez en acheter depuis la page <a href="https://app.fitmycv.io/account/subscriptions?tab=credits">Gestion des crédits</a>.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>3. Tarifs et paiements</h2>
+  <p>Tous les prix sont affichés en euros (EUR). L'éditeur n'est pas assujetti à la TVA conformément à l'article 293 B du Code Général des Impôts.</p>
+  <p>Les paiements sont sécurisés par Stripe et acceptent les cartes bancaires, Apple Pay, Google Pay et d'autres moyens de paiement selon votre localisation.</p>
+  <p>Les tarifs des packs de crédits sont disponibles sur la page <a href="https://app.fitmycv.io/account/subscriptions?tab=credits">Gestion des crédits</a>.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>4. Droit de rétractation</h2>
+  <p>Conformément à l'article L.221-28 du Code de la consommation, l'Utilisateur reconnaît et accepte que l'exécution des Services commence immédiatement après la validation de sa commande.</p>
+  <p>En conséquence, l'Utilisateur renonce expressément à son droit de rétractation pour tout achat de crédits.</p>
+  <div class="legal-highlight highlight-warning">
+    <strong>Important :</strong>
+    La validation de la commande, après avoir coché la case de renonciation au droit de rétractation, vaut renonciation expresse à ce droit.
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>5. Politique de remboursement</h2>
+  <p>Tout achat de crédits est définitif une fois le service utilisé (génération de CV, export, traduction, etc.). En effectuant un achat, vous reconnaissez avoir pris connaissance de cette clause et l'accepter.</p>
+  <p>En cas de problème technique empêchant l'utilisation du service, contactez notre support à <a href="mailto:support@fitmycv.io">support@fitmycv.io</a>. Nous étudierons votre situation individuellement.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>6. Chargebacks et litiges bancaires</h2>
+  <p>En cas de chargeback (contestation de paiement auprès de votre banque) après utilisation du service :</p>
+  <ul>
+    <li>Le montant des crédits contestés sera retiré de votre balance, qui peut devenir négative.</li>
+    <li>Vous devrez recharger votre compte pour continuer à utiliser les services consommant des crédits.</li>
+  </ul>
+  <div class="legal-highlight highlight-warning">
+    <strong>Attention :</strong>
+    Les chargebacks abusifs peuvent entraîner la suspension définitive de votre compte.
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>7. Intelligence artificielle</h2>
+  <p>FitMyCV.io agit en qualité de « déployeur » d'un système d'intelligence artificielle au sens du règlement européen 2024/1689 (AI Act).</p>
+
+  <h3>7.1. Fonctionnalités utilisant l'IA</h3>
+  <ul>
+    <li>Génération et adaptation de CV</li>
+    <li>Optimisation de CV</li>
+    <li>Extraction d'offres d'emploi</li>
+    <li>Calcul du score de compatibilité</li>
+    <li>Traduction de CV</li>
+    <li>Import et extraction de CV depuis PDF</li>
+  </ul>
+
+  <h3>7.2. Nature des résultats</h3>
+  <p>Les résultats générés par l'IA sont des suggestions et ne constituent en aucun cas des recommandations contraignantes. L'utilisateur conserve le contrôle total sur le contenu final de ses CV.</p>
+
+  <h3>7.3. Fournisseur d'IA</h3>
+  <p>Les fonctionnalités d'IA sont fournies par OpenAI (États-Unis). Les données transmises à OpenAI ne sont pas utilisées pour entraîner leurs modèles conformément à leur politique API.</p>
+  <div class="legal-highlight highlight-info">
+    <strong>Transparence IA :</strong>
+    L'utilisateur est informé que les contenus générés proviennent d'un système d'intelligence artificielle. Ces contenus doivent être vérifiés avant utilisation.
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>8. Propriété intellectuelle</h2>
+  <p>Les CV que vous créez via FitMyCV.io vous appartiennent. Vous conservez tous les droits sur le contenu que vous fournissez.</p>
+  <p>L'interface, le code source, les algorithmes et tous les éléments de FitMyCV.io sont la propriété exclusive de l'éditeur et sont protégés par le droit d'auteur.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>9. Limitation de responsabilité</h2>
+  <p>Les services sont fournis « en l'état », sans garantie d'aucune sorte, expresse ou implicite.</p>
+  <p>FitMyCV.io ne garantit pas :</p>
+  <ul>
+    <li>La disponibilité continue et ininterrompue du service</li>
+    <li>L'absence d'erreurs techniques ou de bugs</li>
+    <li>La compatibilité des CV générés avec tous les systèmes ATS (Applicant Tracking Systems)</li>
+    <li>L'obtention d'un entretien ou d'un emploi suite à l'utilisation du service</li>
+    <li>L'exactitude ou la pertinence des contenus générés par l'IA</li>
+  </ul>
+  <p>Des opérations de maintenance peuvent être effectuées sans préavis, entraînant une interruption temporaire du service.</p>
+  <p>Notre responsabilité est limitée au montant que vous avez payé pour le service au cours des 12 derniers mois.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>10. Comportements interdits</h2>
+  <p>Sont strictement interdits :</p>
+  <ul>
+    <li>La revente ou la redistribution des services</li>
+    <li>Toute tentative d'intrusion dans les systèmes</li>
+    <li>L'usurpation d'identité</li>
+    <li>L'extraction automatisée de données (scraping)</li>
+    <li>L'utilisation de bots ou scripts automatisés</li>
+    <li>Tout usage contraire aux bonnes mœurs ou à l'ordre public</li>
+    <li>La création de contenus illégaux, diffamatoires ou portant atteinte aux droits des tiers</li>
+  </ul>
+  <div class="legal-highlight highlight-danger">
+    <strong>Sanctions :</strong>
+    En cas de violation, FitMyCV.io se réserve le droit de suspendre ou supprimer le compte sans préavis ni remboursement.
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>11. Résiliation et suppression de compte</h2>
+  <p>Vous pouvez supprimer votre compte à tout moment depuis les paramètres de votre espace personnel ou en nous contactant à <a href="mailto:support@fitmycv.io">support@fitmycv.io</a>.</p>
+  <p>La suppression du compte entraîne la suppression définitive de toutes vos données (CV, offres d'emploi, historique) conformément à notre <a href="privacy.html">politique de confidentialité</a>.</p>
+  <div class="legal-highlight highlight-warning">
+    <strong>Crédits non utilisés :</strong>
+    Les crédits restants sur votre compte sont perdus lors de la suppression et ne peuvent être ni remboursés ni transférés.
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>12. Modification des CGV</h2>
+  <p>Nous nous réservons le droit de modifier ces CGV à tout moment. Les modifications seront publiées sur cette page avec la date de mise à jour. La poursuite de l'utilisation du service après modification vaut acceptation des nouvelles conditions.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>13. Médiation de la consommation</h2>
+  <p>Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, en cas de litige, l'Utilisateur peut recourir gratuitement à un médiateur de la consommation.</p>
+  <p>Le nom et les coordonnées du médiateur compétent seront communiqués sur simple demande à <a href="mailto:contact@fitmycv.io">contact@fitmycv.io</a>.</p>
+  <div class="legal-highlight highlight-info">
+    <strong>Plateforme ODR :</strong>
+    Vous pouvez également utiliser la plateforme de règlement en ligne des litiges de la Commission européenne : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>
+  </div>
+  </div>
+
+  <div class="legal-section">
+  <h2>14. Droit applicable et juridiction</h2>
+  <p>Les présentes CGV sont régies par le droit français.</p>
+  <p>En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris seront seuls compétents.</p>
+  </div>
+
+  <div class="legal-section">
+  <h2>15. Informations légales</h2>
+  <p>Éditeur du service FitMyCV.io :</p>
+  <div class="legal-infobox">Codeglyph
+SIRET : 995 375 862 00019
+200 rue de la Croix Nivert, 75015 Paris
+Email : <a href="mailto:contact@codeglyph.fr">contact@codeglyph.fr</a>
+
+Non assujetti à la TVA (article 293 B du CGI)</div>
+
+  <h3>Hébergement</h3>
+  <p>Le service est auto-hébergé par l'éditeur.</p>
+
+  <h3>Protection des données</h3>
+  <p>Pour en savoir plus sur le traitement de vos données personnelles, consultez notre <a href="privacy.html">politique de confidentialité</a>.</p>
+  <p>Pour toute question concernant ces CGV, contactez-nous à <a href="mailto:contact@fitmycv.io">contact@fitmycv.io</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="icons/logo.png" alt="FitMyCV" height="32">
+        <p>Votre CV, optimisé par l'IA</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <a href="landing-preview.html#howItWorks">Comment ça marche</a>
+        <a href="landing-preview.html#features">Fonctionnalités</a>
+        <a href="landing-preview.html#pricing">Tarifs</a>
+        <a href="landing-preview.html#reviews">Avis</a>
+        <a href="landing-preview.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="terms.html">CGU</a>
+        <a href="privacy.html">Vie privée</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@fitmycv.io">contact@fitmycv.io</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 FitMyCV.io</p>
+      <div class="footer-socials">
+        <span aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+        <span aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.3L20 4h-2l-5.2 6.3L8 4H4z"/></svg></span>
+        <span aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
