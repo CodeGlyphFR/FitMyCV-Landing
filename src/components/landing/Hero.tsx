@@ -284,7 +284,7 @@ export default function Hero() {
           preload="auto"
           ref={videoRef}
         >
-          <source src="/background_video.webm" type="video/mp4" />
+          <source src="/background_video.webm" type="video/webm" />
         </video>
         <div className="hero-overlay" ref={overlayRef} />
 
