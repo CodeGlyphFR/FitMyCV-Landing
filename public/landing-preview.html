@@ -1777,7 +1777,7 @@
 /* ===== SECTION ===== */
 .pricing-section {
   position: relative;
-  padding: 5rem 2rem 4rem;
+  padding: 5rem 2rem 0;
   max-width: 1120px;
   margin: 0 auto;
   overflow: hidden;
@@ -2200,7 +2200,7 @@
   z-index: 1;
   text-align: center;
   margin-bottom: 0;
-  padding: 0.75rem 1rem 2.5rem;
+  padding: 0.75rem 1rem 0.5rem;
 }
 .launch-offer::before {
   content: '';
@@ -2348,7 +2348,7 @@
 
 /* ===== RESPONSIVE — MOBILE ===== */
 @media (max-width: 767px) {
-  .pricing-section { padding: 3rem 1rem 3rem; }
+  .pricing-section { padding: 3rem 1rem 0; }
   .pricing-section .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
 
   .credit-strip { gap: 0.4rem 1rem; padding: 0.75rem 1rem; }
@@ -2408,7 +2408,7 @@
   }
 
   .trust-strip { gap: 0.8rem 1.2rem; }
-  .launch-offer { padding: 2rem 1rem 2rem; }
+  .launch-offer { padding: 2rem 1rem 0.5rem; }
   .launch-buttons { gap: 0.75rem; }
   .promo-btn, .pricing-section .cta-btn { font-size: 0.85rem; padding: 0.7rem 1.25rem; }
 }
@@ -2424,6 +2424,164 @@
   .ring-fg { transition: none; }
   .pack-cta button::before { display: none; }
   @keyframes glowPulse { 0%, 100% { opacity: 0.7; } }
+}
+
+/* ==========================================================
+   REVIEWS SECTION
+   ========================================================== */
+.reviews-section {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  height: 45vh;
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel-grid-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.pixel-grid-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(10,10,26,0.5) 70%, rgba(10,10,26,0.9) 100%);
+  pointer-events: none;
+}
+
+.reviews-card {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 1.8rem 2.2rem;
+  max-width: 480px;
+  width: 90%;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 40px rgba(34,211,238,0.06),
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.reviews-card .stars-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-card .star-icon {
+  width: 28px;
+  height: 28px;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.reviews-card .star-stroke {
+  fill: none;
+  stroke: rgba(255,255,255,0.2);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.reviews-card .star-fill {
+  fill: #facc15;
+  stroke: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.reviews-card .star-icon.filled .star-fill { opacity: 1; }
+.reviews-card .star-icon.filled .star-stroke { stroke: #facc15; stroke-width: 1; }
+.reviews-card .star-icon.filled { filter: drop-shadow(0 0 6px rgba(250,204,21,0.5)); }
+.reviews-card .star-icon.filling { transform: scale(1.25); }
+
+.reviews-card .reviews-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trustpilot-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.trustpilot-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.trustpilot-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.trustpilot-star { width: 18px; height: 18px; }
+
+.trustpilot-wordmark {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.webcam-prompt {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  white-space: nowrap;
+}
+
+.webcam-prompt.visible { opacity: 1; }
+.webcam-prompt svg { width: 12px; height: 12px; opacity: 0.5; }
+
+@media (max-width: 640px) {
+  .reviews-card { padding: 2rem 1.5rem; }
+  .reviews-section { min-height: 280px; height: 40vh; }
+  .reviews-card .glow-border { --glow-border-width: 3px; --spread: 35; }
 }
 
 </style>
@@ -3117,6 +3275,53 @@
     <p class="launch-note">15 cr&eacute;dits offerts &middot; Aucune carte bancaire requise</p>
   </div>
 
+</section>
+
+<!-- ==========================================================
+     DIVIDER
+     ========================================================== -->
+<div class="section-divider" style="height: 2.5rem;">
+  <div class="divider-line">
+    <div class="divider-dot"></div>
+  </div>
+</div>
+
+<!-- ==========================================================
+     REVIEWS SECTION
+     ========================================================== -->
+<section class="reviews-section" id="reviews">
+  <canvas class="pixel-grid-canvas" id="pixelCanvas"></canvas>
+  <div class="pixel-grid-vignette"></div>
+
+  <div class="reviews-card">
+    <div class="glow-border"><div class="glow-inactive"></div><div class="glow-inner"></div></div>
+    <div class="stars-row">
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+
+    <h2 class="reviews-title">Le premier, ce sera le&nbsp;v&ocirc;tre</h2>
+
+    <div class="trustpilot-badge">
+      <span class="trustpilot-label">Bient&ocirc;t sur</span>
+      <div class="trustpilot-logo">
+        <svg class="trustpilot-star" viewBox="0 0 24 24">
+          <path fill="#00b67a" d="M12 0l3.708 7.514L24 8.718l-6 5.848L19.416 24 12 19.77 4.584 24 6 14.566 0 8.718l8.292-1.204z"/>
+        </svg>
+        <span class="trustpilot-wordmark">Trustpilot</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="webcam-prompt" id="webcamPrompt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+    </svg>
+    Votre webcam anime l'arri&egrave;re-plan
+  </div>
 </section>
 
 <!-- ==========================================================
@@ -4911,6 +5116,282 @@ if (dots.length) {
     });
   })();
 
+</script>
+
+<!-- Reviews: WebcamPixelGrid -->
+<script>
+(function() {
+  'use strict';
+
+  var CONFIG = {
+    gridCols: 48, gridRows: 20,
+    maxElevation: 12, motionSensitivity: 0.4, elevationSmoothing: 0.12,
+    bgColor: { r: 10, g: 10, b: 26 },
+    gapRatio: 0.1, darken: 0.15, borderOpacity: 0.06, mirror: true
+  };
+
+  var canvas = document.getElementById('pixelCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var promptEl = document.getElementById('webcamPrompt');
+
+  var video = null, procCanvas = null, procCtx = null, prevFrameData = null;
+  var pixels = [], useWebcam = false, fallbackTime = 0, animId = null, dpr = 1;
+  window.__webcamHeadAngle = null;
+
+  function initPixels() {
+    pixels = [];
+    for (var row = 0; row < CONFIG.gridRows; row++)
+      for (var col = 0; col < CONFIG.gridCols; col++)
+        pixels.push({ row:row, col:col, r:0, g:0, b:0, motion:0, currentElevation:0, targetElevation:0 });
+  }
+
+  function resizeCanvas() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+  }
+
+  async function initWebcam() {
+    try {
+      var stream = await navigator.mediaDevices.getUserMedia({
+        video: { width: { ideal: 320 }, height: { ideal: 240 }, facingMode: 'user' }
+      });
+      video = document.createElement('video');
+      video.srcObject = stream;
+      video.setAttribute('playsinline', '');
+      video.muted = true;
+      await video.play();
+      procCanvas = document.createElement('canvas');
+      procCanvas.width = CONFIG.gridCols;
+      procCanvas.height = CONFIG.gridRows;
+      procCtx = procCanvas.getContext('2d', { willReadFrequently: true });
+      useWebcam = true;
+      if (promptEl) promptEl.classList.add('visible');
+    } catch (e) {
+      useWebcam = false;
+    }
+  }
+
+  function captureFrame() {
+    if (!video || !procCtx) return;
+    var vw = video.videoWidth || CONFIG.gridCols;
+    var vh = video.videoHeight || CONFIG.gridRows;
+    var canvasAspect = CONFIG.gridCols / CONFIG.gridRows;
+    var videoAspect = vw / vh;
+    var sx = 0, sy = 0, sw = vw, sh = vh;
+    if (videoAspect > canvasAspect) { sw = vh * canvasAspect; sx = (vw - sw) / 2; }
+    else { sh = vw / canvasAspect; sy = (vh - sh) / 2; }
+
+    procCtx.save();
+    if (CONFIG.mirror) {
+      procCtx.scale(-1, 1);
+      procCtx.drawImage(video, sx, sy, sw, sh, -CONFIG.gridCols, 0, CONFIG.gridCols, CONFIG.gridRows);
+    } else {
+      procCtx.drawImage(video, sx, sy, sw, sh, 0, 0, CONFIG.gridCols, CONFIG.gridRows);
+    }
+    procCtx.restore();
+
+    var imageData = procCtx.getImageData(0, 0, CONFIG.gridCols, CONFIG.gridRows);
+    var data = imageData.data;
+    var darkenFactor = 1 - CONFIG.darken;
+
+    for (var i = 0; i < pixels.length; i++) {
+      var idx = i * 4;
+      var r = data[idx], g = data[idx+1], b = data[idx+2];
+      pixels[i].r = Math.round(r * darkenFactor);
+      pixels[i].g = Math.round(g * darkenFactor);
+      pixels[i].b = Math.round(b * darkenFactor);
+      if (prevFrameData) {
+        var diff = Math.abs(r - prevFrameData[idx]) + Math.abs(g - prevFrameData[idx+1]) + Math.abs(b - prevFrameData[idx+2]);
+        var motion = Math.min(1, diff / 255 / CONFIG.motionSensitivity);
+        pixels[i].motion = pixels[i].motion * 0.7 + motion * 0.3;
+      }
+      pixels[i].targetElevation = pixels[i].motion * CONFIG.maxElevation;
+    }
+    prevFrameData = new Uint8ClampedArray(data);
+
+    var sumX = 0, sumY = 0, sumW = 0;
+    for (var i = 0; i < pixels.length; i++) {
+      var m = pixels[i].motion;
+      if (m > 0.05) { var w = m * m; sumX += pixels[i].col * w; sumY += pixels[i].row * w; sumW += w; }
+    }
+    if (sumW > 0) {
+      var nx = (sumX / sumW) / CONFIG.gridCols * 2 - 1;
+      var ny = (sumY / sumW) / CONFIG.gridRows * 2 - 1;
+      window.__webcamHeadAngle = Math.atan2(nx, ny) * (180 / Math.PI);
+    }
+  }
+
+  function generateFallback(time) {
+    var colors = [{ r:34, g:211, b:238 }, { r:52, g:211, b:153 }, { r:96, g:165, b:250 }];
+    for (var i = 0; i < pixels.length; i++) {
+      var p = pixels[i], col = p.col, row = p.row;
+      var wave1 = Math.sin(col*0.15+time*0.8)*0.5+0.5;
+      var wave2 = Math.sin(row*0.2+time*0.6+1.5)*0.5+0.5;
+      var wave3 = Math.sin((col+row)*0.1+time*0.4)*0.5+0.5;
+      var combined = (wave1+wave2+wave3)/3;
+      var colorIdx = (col*0.08+time*0.3)%3;
+      var ci = Math.floor(colorIdx), cf = colorIdx-ci;
+      var c1 = colors[ci%3], c2 = colors[(ci+1)%3];
+      var brightness = combined*0.35+0.05;
+      var df = 1-CONFIG.darken;
+      p.r = Math.round((c1.r*(1-cf)+c2.r*cf)*brightness*df);
+      p.g = Math.round((c1.g*(1-cf)+c2.g*cf)*brightness*df);
+      p.b = Math.round((c1.b*(1-cf)+c2.b*cf)*brightness*df);
+      var elevWave = Math.sin(col*0.2+time*1.2)*Math.cos(row*0.15+time*0.9);
+      p.targetElevation = Math.max(0, elevWave)*CONFIG.maxElevation*0.6;
+      p.motion = Math.max(0, elevWave)*0.5;
+    }
+  }
+
+  function render() {
+    var w = canvas.width, h = canvas.height;
+    var cellSize = h / CONFIG.gridRows;
+    var gridW = cellSize * CONFIG.gridCols;
+    var gridX0 = (w - gridW) / 2;
+    var gap = cellSize * CONFIG.gapRatio;
+
+    ctx.fillStyle = 'rgb('+CONFIG.bgColor.r+','+CONFIG.bgColor.g+','+CONFIG.bgColor.b+')';
+    ctx.fillRect(0, 0, w, h);
+
+    for (var i = 0; i < pixels.length; i++) {
+      var p = pixels[i];
+      p.currentElevation += (p.targetElevation - p.currentElevation) * CONFIG.elevationSmoothing;
+      var elev = p.currentElevation;
+      var x = gridX0 + p.col * cellSize, y = p.row * cellSize;
+      var cw = cellSize - gap, ch = cellSize - gap;
+      var offsetX = -elev * 1.0 * dpr, offsetY = -elev * 1.5 * dpr;
+
+      if (p.r + p.g + p.b < 3 && elev < 0.3) continue;
+
+      if (elev > 0.5) {
+        ctx.fillStyle = 'rgba(0,0,0,'+Math.min(0.4, elev*0.03)+')';
+        ctx.fillRect(x+gap/2+elev*1.2, y+gap/2+elev*1.8, cw, ch);
+
+        ctx.fillStyle = 'rgb('+Math.max(0,p.r-60)+','+Math.max(0,p.g-60)+','+Math.max(0,p.b-60)+')';
+        ctx.beginPath();
+        ctx.moveTo(x+gap/2+cw+offsetX, y+gap/2+offsetY);
+        ctx.lineTo(x+gap/2+cw, y+gap/2);
+        ctx.lineTo(x+gap/2+cw, y+gap/2+ch);
+        ctx.lineTo(x+gap/2+cw+offsetX, y+gap/2+ch+offsetY);
+        ctx.closePath(); ctx.fill();
+
+        ctx.fillStyle = 'rgb('+Math.max(0,p.r-40)+','+Math.max(0,p.g-40)+','+Math.max(0,p.b-40)+')';
+        ctx.beginPath();
+        ctx.moveTo(x+gap/2+offsetX, y+gap/2+ch+offsetY);
+        ctx.lineTo(x+gap/2, y+gap/2+ch);
+        ctx.lineTo(x+gap/2+cw, y+gap/2+ch);
+        ctx.lineTo(x+gap/2+cw+offsetX, y+gap/2+ch+offsetY);
+        ctx.closePath(); ctx.fill();
+      }
+
+      var br = 1+elev*0.04;
+      ctx.fillStyle = 'rgb('+Math.min(255,Math.round(p.r*br))+','+Math.min(255,Math.round(p.g*br))+','+Math.min(255,Math.round(p.b*br))+')';
+      ctx.fillRect(x+gap/2+offsetX, y+gap/2+offsetY, cw, ch);
+
+      if (CONFIG.borderOpacity > 0) {
+        ctx.strokeStyle = 'rgba(255,255,255,'+Math.min(0.2, CONFIG.borderOpacity+elev*0.006)+')';
+        ctx.lineWidth = 0.5*dpr;
+        ctx.strokeRect(x+gap/2+offsetX, y+gap/2+offsetY, cw, ch);
+      }
+    }
+  }
+
+  function animate() {
+    if (useWebcam) captureFrame(); else { fallbackTime += 0.016; generateFallback(fallbackTime); }
+    render();
+    animId = requestAnimationFrame(animate);
+  }
+
+  function setupObserver() {
+    var section = document.getElementById('reviews');
+    var running = false;
+    var webcamRequested = false;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !running) {
+          running = true;
+          if (!webcamRequested) {
+            webcamRequested = true;
+            initWebcam().then(function() {
+              if (!useWebcam) { generateFallback(0); render(); }
+              animate();
+            });
+          } else {
+            animate();
+          }
+        } else if (!entry.isIntersecting && running) {
+          running = false;
+          if (animId) { cancelAnimationFrame(animId); animId = null; }
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(section);
+  }
+
+  function init() {
+    initPixels(); resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    generateFallback(0); render();
+    setupObserver();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+<!-- Reviews: Glow Border -->
+<script>
+(function() {
+  var glowEl = document.querySelector('.reviews-card .glow-border');
+  if (!glowEl) return;
+  var LERP = 0.04, angle = 0;
+  glowEl.style.setProperty('--active', '1');
+
+  function tick() {
+    if (window.__webcamHeadAngle !== null) {
+      var diff = ((window.__webcamHeadAngle - angle + 180) % 360) - 180;
+      angle += diff * LERP;
+    } else {
+      angle += 0.8;
+    }
+    glowEl.style.setProperty('--start', String(angle));
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+
+<!-- Reviews: Star Animation -->
+<script>
+(function() {
+  var stars = document.querySelectorAll('.reviews-card .star-icon');
+  if (!stars.length) return;
+  var FILL_DELAY = 350, HOLD = 2000, PAUSE = 1500;
+
+  function resetAll() { for (var j = 0; j < stars.length; j++) stars[j].classList.remove('filled','filling'); }
+
+  function fillStars(i) {
+    if (i >= stars.length) { setTimeout(function() { resetAll(); setTimeout(function() { fillStars(0); }, PAUSE); }, HOLD); return; }
+    stars[i].classList.add('filling');
+    setTimeout(function() { stars[i].classList.remove('filling'); stars[i].classList.add('filled'); }, 150);
+    setTimeout(function() { fillStars(i + 1); }, FILL_DELAY);
+  }
+
+  // Start when reviews section becomes visible
+  var section = document.getElementById('reviews');
+  if (!section) return;
+  var started = false;
+  var observer = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting && !started) { started = true; setTimeout(function() { fillStars(0); }, 600); }
+  }, { threshold: 0.3 });
+  observer.observe(section);
+})();
 </script>
 
 </body>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews Section — Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a1a;
+  --cyan: #22d3ee;
+  --green: #34d399;
+  --blue: #60a5fa;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== SECTION ===== */
+.reviews-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 80vh;
+  max-height: 900px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== PIXEL GRID CANVAS ===== */
+.pixel-grid-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Vignette overlay to fade edges */
+.pixel-grid-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at center, transparent 30%, rgba(10,10,26,0.5) 70%, rgba(10,10,26,0.9) 100%);
+  pointer-events: none;
+}
+
+/* ===== GLASSMORPHISM CARD ===== */
+.reviews-card {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 1.8rem 2.2rem;
+  max-width: 480px;
+  width: 90%;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 40px rgba(34,211,238,0.06),
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  animation: cardFadeIn 1s ease-out 0.3s both;
+}
+
+/* ===== GLOWING BORDER (from pricing) ===== */
+.glow-border {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  --start: 0;
+  --spread: 25;
+  --active: 1;
+  --glow-border-width: 2px;
+  --gradient:
+    radial-gradient(circle, #22d3ee 10%, transparent 20%),
+    radial-gradient(circle at 40% 40%, #34d399 5%, transparent 15%),
+    radial-gradient(circle at 60% 60%, #60a5fa 10%, transparent 20%),
+    radial-gradient(circle at 40% 60%, #a78bfa 10%, transparent 20%),
+    repeating-conic-gradient(
+      from 236.84deg at 50% 50%,
+      #22d3ee 0%,
+      #34d399 calc(25% / 5),
+      #60a5fa calc(50% / 5),
+      #a78bfa calc(75% / 5),
+      #22d3ee calc(100% / 5)
+    );
+}
+.glow-border .glow-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.glow-border .glow-inner::after {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--glow-border-width));
+  border: var(--glow-border-width) solid transparent;
+  border-radius: calc(1.5rem + var(--glow-border-width));
+  background: var(--gradient);
+  background-attachment: fixed;
+  opacity: var(--active);
+  transition: opacity 0.3s ease;
+  -webkit-mask-clip: padding-box, border-box;
+  mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(#0000, #0000),
+    conic-gradient(from calc((var(--start) - var(--spread)) * 1deg), #00000000 0deg, #fff, #00000000 calc(var(--spread) * 2deg));
+  mask-image:
+    linear-gradient(#0000, #0000),
+    conic-gradient(from calc((var(--start) - var(--spread)) * 1deg), #00000000 0deg, #fff, #00000000 calc(var(--spread) * 2deg));
+}
+.glow-border .glow-inactive {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ===== STARS ===== */
+.stars-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.star-icon {
+  width: 28px;
+  height: 28px;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.star-stroke {
+  fill: none;
+  stroke: rgba(255,255,255,0.2);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.star-fill {
+  fill: #facc15;
+  stroke: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.star-icon.filled .star-fill {
+  opacity: 1;
+}
+
+.star-icon.filled .star-stroke {
+  stroke: #facc15;
+  stroke-width: 1;
+}
+
+.star-icon.filled {
+  filter: drop-shadow(0 0 6px rgba(250,204,21,0.5));
+}
+
+.star-icon.filling {
+  transform: scale(1.25);
+}
+
+.star-icon.unfilling {
+  transform: scale(0.9);
+}
+
+/* ===== TEXT ===== */
+.reviews-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== TRUSTPILOT BADGE ===== */
+.trustpilot-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.trustpilot-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.trustpilot-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.trustpilot-star {
+  width: 18px;
+  height: 18px;
+}
+
+.trustpilot-wordmark {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* ===== WEBCAM PROMPT ===== */
+.webcam-prompt {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  white-space: nowrap;
+}
+
+.webcam-prompt.visible {
+  opacity: 1;
+}
+
+.webcam-prompt svg {
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .reviews-card {
+    padding: 2rem 1.5rem;
+  }
+  .reviews-section {
+    min-height: 500px;
+    height: 70vh;
+  }
+  .glow-border {
+    --glow-border-width: 3px;
+    --spread: 35;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Spacer to simulate page context -->
+<div style="height: 60vh; display: flex; align-items: center; justify-content: center;">
+  <p style="color: rgba(255,255,255,0.2); font-family: Inter, sans-serif;">↓ Scroll pour voir la section Reviews ↓</p>
+</div>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section class="reviews-section" id="reviews">
+  <canvas class="pixel-grid-canvas" id="pixelCanvas"></canvas>
+  <div class="pixel-grid-vignette"></div>
+
+  <div class="reviews-card">
+    <div class="glow-border"><div class="glow-inactive"></div><div class="glow-inner"></div></div>
+    <div class="stars-row">
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-icon" viewBox="0 0 24 24"><path class="star-fill" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path class="star-stroke" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+
+    <h2 class="reviews-title">Le premier, ce sera le&nbsp;vôtre</h2>
+
+    <div class="trustpilot-badge">
+      <span class="trustpilot-label">Bientôt sur</span>
+      <div class="trustpilot-logo">
+        <svg class="trustpilot-star" viewBox="0 0 24 24">
+          <path fill="#00b67a" d="M12 0l3.708 7.514L24 8.718l-6 5.848L19.416 24 12 19.77 4.584 24 6 14.566 0 8.718l8.292-1.204z"/>
+        </svg>
+        <span class="trustpilot-wordmark">Trustpilot</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="webcam-prompt" id="webcamPrompt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+    </svg>
+    Votre webcam anime l'arrière-plan
+  </div>
+</section>
+
+<!-- Spacer below -->
+<div style="height: 60vh;"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== CONFIG =====
+  const CONFIG = {
+    gridCols: 48,
+    gridRows: 32,
+    maxElevation: 12,
+    motionSensitivity: 0.4,
+    elevationSmoothing: 0.12,
+    bgColor: { r: 10, g: 10, b: 26 },            // #0a0a1a
+    gapRatio: 0.1,
+    darken: 0.15,
+    borderOpacity: 0.06,
+    mirror: true
+  };
+
+  // ===== STATE =====
+  const canvas = document.getElementById('pixelCanvas');
+  const ctx = canvas.getContext('2d');
+  const promptEl = document.getElementById('webcamPrompt');
+
+  let video = null;
+  let procCanvas = null;
+  let procCtx = null;
+  let prevFrameData = null;
+  let pixels = [];
+  let useWebcam = false;
+  let fallbackTime = 0;
+  let animId = null;
+  let dpr = 1;
+
+  // Expose webcam head angle for glow border
+  window.__webcamHeadAngle = null;
+
+  // ===== PIXEL GRID DATA =====
+  function initPixels() {
+    pixels = [];
+    for (let row = 0; row < CONFIG.gridRows; row++) {
+      for (let col = 0; col < CONFIG.gridCols; col++) {
+        pixels.push({
+          row, col,
+          r: 0, g: 0, b: 0,
+          motion: 0,
+          currentElevation: 0,
+          targetElevation: 0
+        });
+      }
+    }
+  }
+
+  // ===== CANVAS SIZING =====
+  function resizeCanvas() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+  }
+
+  // ===== WEBCAM INIT =====
+  async function initWebcam() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { width: { ideal: 320 }, height: { ideal: 240 }, facingMode: 'user' }
+      });
+      video = document.createElement('video');
+      video.srcObject = stream;
+      video.setAttribute('playsinline', '');
+      video.muted = true;
+      await video.play();
+
+      procCanvas = document.createElement('canvas');
+      procCanvas.width = CONFIG.gridCols;
+      procCanvas.height = CONFIG.gridRows;
+      procCtx = procCanvas.getContext('2d', { willReadFrequently: true });
+
+      useWebcam = true;
+      promptEl.classList.add('visible');
+    } catch (e) {
+      // Webcam denied or unavailable — use fallback
+      useWebcam = false;
+    }
+  }
+
+  // ===== CAPTURE WEBCAM FRAME =====
+  function captureFrame() {
+    if (!video || !procCtx) return;
+
+    const vw = video.videoWidth || CONFIG.gridCols;
+    const vh = video.videoHeight || CONFIG.gridRows;
+
+    // "Cover" crop: match canvas aspect ratio without stretching
+    const canvasAspect = CONFIG.gridCols / CONFIG.gridRows;
+    const videoAspect = vw / vh;
+    let sx = 0, sy = 0, sw = vw, sh = vh;
+
+    if (videoAspect > canvasAspect) {
+      // Video is wider — crop sides
+      sw = vh * canvasAspect;
+      sx = (vw - sw) / 2;
+    } else {
+      // Video is taller — crop top/bottom
+      sh = vw / canvasAspect;
+      sy = (vh - sh) / 2;
+    }
+
+    procCtx.save();
+    if (CONFIG.mirror) {
+      procCtx.scale(-1, 1);
+      procCtx.drawImage(video, sx, sy, sw, sh, -CONFIG.gridCols, 0, CONFIG.gridCols, CONFIG.gridRows);
+    } else {
+      procCtx.drawImage(video, sx, sy, sw, sh, 0, 0, CONFIG.gridCols, CONFIG.gridRows);
+    }
+    procCtx.restore();
+
+    const imageData = procCtx.getImageData(0, 0, CONFIG.gridCols, CONFIG.gridRows);
+    const data = imageData.data;
+    const darkenFactor = 1 - CONFIG.darken;
+
+    for (let i = 0; i < pixels.length; i++) {
+      const idx = i * 4;
+      const r = data[idx];
+      const g = data[idx + 1];
+      const b = data[idx + 2];
+
+      // Use actual webcam colors (with slight darken for contrast with overlay)
+      pixels[i].r = Math.round(r * darkenFactor);
+      pixels[i].g = Math.round(g * darkenFactor);
+      pixels[i].b = Math.round(b * darkenFactor);
+
+      // Motion detection via frame diff
+      if (prevFrameData) {
+        const diff = Math.abs(r - prevFrameData[idx])
+                   + Math.abs(g - prevFrameData[idx + 1])
+                   + Math.abs(b - prevFrameData[idx + 2]);
+        const motion = Math.min(1, diff / 255 / CONFIG.motionSensitivity);
+        pixels[i].motion = pixels[i].motion * 0.7 + motion * 0.3;
+      }
+
+      pixels[i].targetElevation = pixels[i].motion * CONFIG.maxElevation;
+    }
+
+    prevFrameData = new Uint8ClampedArray(data);
+
+    // Motion centroid → where movement is happening → angle for glow border
+    let sumX = 0, sumY = 0, sumW = 0;
+    for (let i = 0; i < pixels.length; i++) {
+      const m = pixels[i].motion;
+      if (m > 0.05) {
+        const w = m * m; // weight by motion squared for sharper focus
+        sumX += pixels[i].col * w;
+        sumY += pixels[i].row * w;
+        sumW += w;
+      }
+    }
+    if (sumW > 0) {
+      // Normalized position (-1 to 1) from grid center
+      const nx = (sumX / sumW) / CONFIG.gridCols * 2 - 1;
+      const ny = (sumY / sumW) / CONFIG.gridRows * 2 - 1;
+      window.__webcamHeadAngle = Math.atan2(nx, ny) * (180 / Math.PI);
+    }
+  }
+
+  // ===== FALLBACK: PROCEDURAL WAVE =====
+  function generateFallback(time) {
+    const colors = [
+      { r: 34, g: 211, b: 238 },  // cyan
+      { r: 52, g: 211, b: 153 },  // green
+      { r: 96, g: 165, b: 250 }   // blue
+    ];
+
+    for (let i = 0; i < pixels.length; i++) {
+      const p = pixels[i];
+      const col = p.col;
+      const row = p.row;
+
+      // Sinusoidal wave pattern
+      const wave1 = Math.sin(col * 0.15 + time * 0.8) * 0.5 + 0.5;
+      const wave2 = Math.sin(row * 0.2 + time * 0.6 + 1.5) * 0.5 + 0.5;
+      const wave3 = Math.sin((col + row) * 0.1 + time * 0.4) * 0.5 + 0.5;
+
+      const combined = (wave1 + wave2 + wave3) / 3;
+
+      // Color interpolation between brand colors
+      const colorIdx = (col * 0.08 + time * 0.3) % 3;
+      const ci = Math.floor(colorIdx);
+      const cf = colorIdx - ci;
+      const c1 = colors[ci % 3];
+      const c2 = colors[(ci + 1) % 3];
+
+      const brightness = combined * 0.35 + 0.05; // subtle, not too bright
+      const darkenFactor = 1 - CONFIG.darken;
+
+      p.r = Math.round((c1.r * (1 - cf) + c2.r * cf) * brightness * darkenFactor);
+      p.g = Math.round((c1.g * (1 - cf) + c2.g * cf) * brightness * darkenFactor);
+      p.b = Math.round((c1.b * (1 - cf) + c2.b * cf) * brightness * darkenFactor);
+
+      // Gentle elevation from wave
+      const elevWave = Math.sin(col * 0.2 + time * 1.2) * Math.cos(row * 0.15 + time * 0.9);
+      p.targetElevation = Math.max(0, elevWave) * CONFIG.maxElevation * 0.6;
+
+      // Smooth motion for elevation
+      p.motion = Math.max(0, elevWave) * 0.5;
+    }
+  }
+
+  // ===== RENDER 3D PIXEL GRID =====
+  function render() {
+    const w = canvas.width;
+    const h = canvas.height;
+
+    // Square cells based on height, centered horizontally
+    const cellSize = h / CONFIG.gridRows;
+    const gridW = cellSize * CONFIG.gridCols;
+    const gridX0 = (w - gridW) / 2; // horizontal centering offset
+    const gap = cellSize * CONFIG.gapRatio;
+
+    // Clear
+    ctx.fillStyle = `rgb(${CONFIG.bgColor.r},${CONFIG.bgColor.g},${CONFIG.bgColor.b})`;
+    ctx.fillRect(0, 0, w, h);
+
+    // Update elevations and render
+    for (let i = 0; i < pixels.length; i++) {
+      const p = pixels[i];
+
+      // Smooth elevation
+      p.currentElevation += (p.targetElevation - p.currentElevation) * CONFIG.elevationSmoothing;
+
+      const elev = p.currentElevation;
+      const x = gridX0 + p.col * cellSize;
+      const y = p.row * cellSize;
+      const cw = cellSize - gap;
+      const ch = cellSize - gap;
+
+      // Isometric offsets
+      const offsetX = -elev * 1.0 * dpr;
+      const offsetY = -elev * 1.5 * dpr;
+
+      // Skip nearly invisible pixels
+      if (p.r + p.g + p.b < 3 && elev < 0.3) continue;
+
+      // Shadow
+      if (elev > 0.5) {
+        const shadowAlpha = Math.min(0.4, elev * 0.03);
+        ctx.fillStyle = `rgba(0,0,0,${shadowAlpha})`;
+        ctx.fillRect(
+          x + gap / 2 + elev * 1.2,
+          y + gap / 2 + elev * 1.8,
+          cw, ch
+        );
+      }
+
+      // Right side face
+      if (elev > 0.5) {
+        const sideR = Math.max(0, p.r - 60);
+        const sideG = Math.max(0, p.g - 60);
+        const sideB = Math.max(0, p.b - 60);
+        ctx.fillStyle = `rgb(${sideR},${sideG},${sideB})`;
+
+        ctx.beginPath();
+        ctx.moveTo(x + gap / 2 + cw + offsetX, y + gap / 2 + offsetY);         // top-right of top face
+        ctx.lineTo(x + gap / 2 + cw, y + gap / 2);                              // top-right base
+        ctx.lineTo(x + gap / 2 + cw, y + gap / 2 + ch);                         // bottom-right base
+        ctx.lineTo(x + gap / 2 + cw + offsetX, y + gap / 2 + ch + offsetY);     // bottom-right top face
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      // Bottom side face
+      if (elev > 0.5) {
+        const btmR = Math.max(0, p.r - 40);
+        const btmG = Math.max(0, p.g - 40);
+        const btmB = Math.max(0, p.b - 40);
+        ctx.fillStyle = `rgb(${btmR},${btmG},${btmB})`;
+
+        ctx.beginPath();
+        ctx.moveTo(x + gap / 2 + offsetX, y + gap / 2 + ch + offsetY);           // bottom-left top face
+        ctx.lineTo(x + gap / 2, y + gap / 2 + ch);                                // bottom-left base
+        ctx.lineTo(x + gap / 2 + cw, y + gap / 2 + ch);                           // bottom-right base
+        ctx.lineTo(x + gap / 2 + cw + offsetX, y + gap / 2 + ch + offsetY);       // bottom-right top face
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      // Top face (main pixel)
+      const brightness = 1 + elev * 0.04;
+      const topR = Math.min(255, Math.round(p.r * brightness));
+      const topG = Math.min(255, Math.round(p.g * brightness));
+      const topB = Math.min(255, Math.round(p.b * brightness));
+      ctx.fillStyle = `rgb(${topR},${topG},${topB})`;
+      ctx.fillRect(x + gap / 2 + offsetX, y + gap / 2 + offsetY, cw, ch);
+
+      // Border
+      if (CONFIG.borderOpacity > 0) {
+        const borderAlpha = CONFIG.borderOpacity + elev * 0.006;
+        ctx.strokeStyle = `rgba(255,255,255,${Math.min(0.2, borderAlpha)})`;
+        ctx.lineWidth = 0.5 * dpr;
+        ctx.strokeRect(x + gap / 2 + offsetX, y + gap / 2 + offsetY, cw, ch);
+      }
+    }
+  }
+
+  // ===== ANIMATION LOOP =====
+  function animate() {
+    if (useWebcam) {
+      captureFrame();
+    } else {
+      fallbackTime += 0.016;
+      generateFallback(fallbackTime);
+    }
+    render();
+    animId = requestAnimationFrame(animate);
+  }
+
+  // ===== INTERSECTION OBSERVER (start/stop when visible) =====
+  function setupObserver() {
+    const section = document.getElementById('reviews');
+    let running = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !running) {
+          running = true;
+          animate();
+        } else if (!entry.isIntersecting && running) {
+          running = false;
+          if (animId) {
+            cancelAnimationFrame(animId);
+            animId = null;
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(section);
+  }
+
+  // ===== INIT =====
+  async function init() {
+    initPixels();
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    await initWebcam();
+
+    // Initial render (fallback will show immediately if webcam denied)
+    if (!useWebcam) {
+      generateFallback(0);
+      render();
+    }
+
+    setupObserver();
+  }
+
+  // Start when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+// ===== GLOWING BORDER EFFECT =====
+(function() {
+  var glowEl = document.querySelector('.reviews-card .glow-border');
+  if (!glowEl) return;
+
+  var LERP = 0.04;
+  var angle = 0;
+  glowEl.style.setProperty('--active', '1');
+
+  function tick() {
+    var target;
+
+    if (window.__webcamHeadAngle !== null) {
+      // Webcam active: follow head position
+      target = window.__webcamHeadAngle;
+    } else {
+      // Fallback: slow auto-rotate
+      angle += 0.8;
+      glowEl.style.setProperty('--start', String(angle));
+      requestAnimationFrame(tick);
+      return;
+    }
+
+    // Smooth lerp to target angle
+    var diff = ((target - angle + 180) % 360) - 180;
+    angle += diff * LERP;
+    glowEl.style.setProperty('--start', String(angle));
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+// ===== STAR RATING ANIMATION =====
+(function() {
+  var stars = document.querySelectorAll('.star-icon');
+  if (!stars.length) return;
+
+  var FILL_DELAY = 350;   // ms between each star filling
+  var HOLD = 2000;         // ms holding all 5 filled
+  var PAUSE = 1500;        // ms pause (empty) before restarting
+
+  function resetAll() {
+    for (var j = 0; j < stars.length; j++) {
+      stars[j].classList.remove('filled', 'filling');
+    }
+  }
+
+  function fillStars(i) {
+    if (i >= stars.length) {
+      setTimeout(function() {
+        resetAll();
+        setTimeout(function() { fillStars(0); }, PAUSE);
+      }, HOLD);
+      return;
+    }
+    stars[i].classList.add('filling');
+    setTimeout(function() {
+      stars[i].classList.remove('filling');
+      stars[i].classList.add('filled');
+    }, 150);
+    setTimeout(function() { fillStars(i + 1); }, FILL_DELAY);
+  }
+
+  // Start after initial card fade-in
+  setTimeout(function() { fillStars(0); }, 1200);
+})();
+</script>
+
+</body>
+</html>
