@@ -10,6 +10,7 @@ RUN npm ci && mkdir -p /app/.next && chown -R 1000:1000 /app
 # --- Stage 3: Builder ---
 FROM deps AS builder
 COPY . .
+ENV NODE_ENV=production
 RUN npm run build
 
 # --- Stage 4: Runner (production) ---
