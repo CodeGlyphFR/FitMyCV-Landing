@@ -94,8 +94,8 @@ export default function Pricing() {
   const eaCounterRef = useRef<HTMLSpanElement>(null);
 
   const [copied, setCopied] = useState(false);
-  const [eaRemaining, setEaRemaining] = useState(87);
-  const [eaMax, setEaMax] = useState(100);
+  const [eaRemaining, setEaRemaining] = useState<number | null>(null);
+  const [eaMax, setEaMax] = useState<number | null>(null);
 
   /* ── Floating Dock (Aceternity spring physics) ── */
   useEffect(() => {
@@ -793,10 +793,12 @@ export default function Pricing() {
           <h2 className="launch-title">
             {'−'}30 % avec le code <span className="highlight">LAUNCH30</span>
           </h2>
-          <p className="launch-sub">
-            <span className="ea-num" ref={eaCounterRef}>{eaRemaining}</span>
-            /{eaMax} places restantes
-          </p>
+          {eaRemaining !== null && eaMax !== null && (
+            <p className="launch-sub">
+              <span className="ea-num" ref={eaCounterRef}>{eaRemaining}</span>
+              /{eaMax} places restantes
+            </p>
+          )}
           <div className="launch-buttons">
             <button
               className={`promo-btn${copied ? ' copied' : ''}`}
