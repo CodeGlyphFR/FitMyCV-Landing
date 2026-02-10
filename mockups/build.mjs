@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const srcDir = join(__dirname, 'src');
-const outDir = __dirname;
+const outDir = join(__dirname, '..', 'public', 'mockups');
 
 // Step 1: Bundle JS
 console.log('Bundling JS...');
