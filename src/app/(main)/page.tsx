@@ -1,5 +1,5 @@
-import Showcase from '@/components/showcase/Showcase';
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return <Showcase />;
+  redirect('/landing-preview.html');
 }
