@@ -1,10 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { getAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Terms" });
-  return { title: t("metaTitle") };
+  return {
+    title: t("metaTitle"),
+    alternates: getAlternates(locale, "/terms"),
+  };
 }
 
 export default async function TermsPage() {

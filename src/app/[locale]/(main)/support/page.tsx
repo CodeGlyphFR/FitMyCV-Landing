@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { getAlternates } from "@/lib/seo";
 import SvgDefs from "@/components/landing/SvgDefs";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    alternates: { canonical: "/support" },
+    alternates: getAlternates(locale, "/support"),
   };
 }
 

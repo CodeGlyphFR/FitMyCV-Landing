@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { faqConfig } from "@/data/faq-config";
+import { getAlternates } from "@/lib/seo";
 import SvgDefs from "@/components/landing/SvgDefs";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -11,9 +12,14 @@ import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   return {
-    alternates: { canonical: "/" },
+    alternates: getAlternates(locale, "/"),
   };
 }
 
