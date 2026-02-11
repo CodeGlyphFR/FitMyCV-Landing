@@ -881,8 +881,9 @@ export default function Features() {
       const cards = vis.querySelectorAll<HTMLElement>('.exo-card');
 
       function getStep() {
-        if (cards.length < 2) return 0;
-        return cards[1].offsetTop - cards[0].offsetTop;
+        const visible = Array.from(cards).filter(c => c.offsetParent !== null);
+        if (visible.length < 2) return 0;
+        return visible[1].offsetTop - visible[0].offsetTop;
       }
 
       const { wait, cancel } = makeWait();
@@ -897,16 +898,27 @@ export default function Features() {
           await wait(800);
 
           const step = getStep();
-          cards[2].classList.add('dragging');
-          await wait(300);
-          cards[2].style.transform = `translateY(${-step}px)`;
-          cards[1].style.transform = `translateY(${step}px)`;
-          await wait(600);
+          const mobile = window.innerWidth <= 767;
 
-          cards[2].classList.remove('dragging');
-          await wait(200);
+          if (mobile) {
+            // Mobile: drag Skills down below Experience
+            cards[1].classList.add('dragging');
+            await wait(300);
+            cards[1].style.transform = `translateY(${step}px)`;
+            cards[2].style.transform = `translateY(${-step}px)`;
+            await wait(600);
+            cards[1].classList.remove('dragging');
+          } else {
+            // Desktop: drag Experience up above Skills
+            cards[2].classList.add('dragging');
+            await wait(300);
+            cards[2].style.transform = `translateY(${-step}px)`;
+            cards[1].style.transform = `translateY(${step}px)`;
+            await wait(600);
+            cards[2].classList.remove('dragging');
+          }
 
-          await wait(2000);
+          await wait(2200);
 
           cards.forEach((c) => {
             c.style.transform = '';
@@ -1303,10 +1315,8 @@ export default function Features() {
 
             {/* Card 16: Browser extension (coming soon) */}
             <div className="f-card card-lg" data-id="16">
-              <div className="c-title">
-                {t("card16Title")}
-                <span className="c-badge-soon">{t("card16Badge")}</span>
-              </div>
+              <div className="c-title">{t("card16Title")}</div>
+              <span className="c-badge-soon">{t("card16Badge")}</span>
               <div className="c-sub">{t("card16Sub")}</div>
               <div className="c-vis">
                 <div className="vis-plugin">
