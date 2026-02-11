@@ -34,7 +34,7 @@
   "HowItWorks": {
     "intro": "FitMyCV uses AI to optimize your resume to match each job posting. It adapts the content to ATS format and generates a resume that passes ATS filters and lands you more interviews.",
     "title": "Upload your resume, paste a job posting,\nget an optimized resume.",
-    "subtitle": "Upload your resume, paste a job posting, get an optimized resume.",
+    "subtitle": "A resume perfectly tailored to each posting, ready to send.",
     "phase1": "Phase 1 — Import",
     "phase2": "Phase 2 — AI Intelligence",
     "phase3": "Phase 3 — Export",
