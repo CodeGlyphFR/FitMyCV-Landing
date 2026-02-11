@@ -8,9 +8,9 @@ export default function SectionHeader() {
         Comment ça marche
       </div>
       <h2 className="md:text-5xl text-3xl lg:text-6xl font-extrabold text-center text-white relative z-20 tracking-tight leading-tight">
-        Un workflow simple,
+        Importez votre CV, collez une offre,
         <br />
-        des résultats puissants
+        récupérez un CV optimisé.
       </h2>
       <div className="w-[40rem] max-w-full h-40 relative">
         {/* Gradients — brand colors */}
@@ -33,8 +33,8 @@ export default function SectionHeader() {
         <div className="absolute inset-0 w-full h-full bg-[#0a0a1a] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]" />
       </div>
       <p className="text-white/50 text-sm md:text-base max-w-[550px] text-center leading-relaxed -mt-12 relative z-10">
-        Importez votre CV, laissez l&apos;IA l&apos;optimiser pour chaque offre,
-        et exportez un document parfaitement adapté.
+        Importez votre CV, collez une offre,
+        récupérez un CV optimisé.
       </p>
     </div>
   );

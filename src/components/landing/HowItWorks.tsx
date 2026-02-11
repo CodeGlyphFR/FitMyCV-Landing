@@ -332,13 +332,13 @@ export default function HowItWorks() {
         <p className="section-intro">
           FitMyCV optimise votre CV grâce à l&apos;IA pour matcher
           chaque offre d&apos;emploi. Il adapte le contenu au format ATS et
-          génère un document unique conçu pour passer les
-          filtres des robots RH et décrocher plus d&apos;entretiens.
+          génère un CV qui passe les filtres ATS et vous
+          décroche plus d&apos;entretiens.
         </p>
         <h2 className="section-title">
-          Un workflow simple,
+          Importez votre CV, collez une offre,
           <br />
-          des résultats puissants
+          récupérez un CV optimisé.
         </h2>
         <div className="sparkles-container">
           <div className="sparkle-line line-wide"></div>
@@ -356,8 +356,8 @@ export default function HowItWorks() {
           className="section-subtitle"
           style={{ marginTop: '-7rem', position: 'relative', zIndex: 1 }}
         >
-          Importez votre CV, laissez l’IA l’optimiser pour chaque
-          offre, et exportez un document parfaitement adapté.
+          Importez votre CV, collez une offre,
+          récupérez un CV optimisé.
         </p>
       </div>
 
@@ -435,8 +435,8 @@ export default function HowItWorks() {
             <div className="step-number">Étape 04</div>
             <h3 className="step-title">Score de compatibilité</h3>
             <p className="step-desc">
-              Un score intelligent évalue la correspondance entre votre
-              CV et l’offre ciblée. Voyez exactement où
+              Un score évalue la correspondance entre votre
+              CV et l&apos;offre ciblée. Voyez exactement où
               vous pouvez vous améliorer.
             </p>
             <span className="step-time">{'⚡'} ~10 secondes</span>
@@ -450,8 +450,8 @@ export default function HowItWorks() {
             <div className="step-number">Étape 05</div>
             <h3 className="step-title">Optimisation ciblée</h3>
             <p className="step-desc">
-              L’IA propose des optimisations précises pour
-              maximiser votre score. Sélectionnez les suggestions qui
+              L&apos;IA vous dit concrètement quoi améliorer pour
+              faire monter votre score. Sélectionnez les suggestions qui
               vous correspondent et ajoutez vos propres notes.
             </p>
             <span className="step-time">{'⚡'} ~40 secondes</span>
@@ -465,9 +465,9 @@ export default function HowItWorks() {
             <div className="step-number">Étape 06</div>
             <h3 className="step-title">Validation finale</h3>
             <p className="step-desc">
-              Revoyez les optimisations appliquées et constatez
-              l’amélioration de votre score. De 79 à 87 en
-              moyenne — chaque point compte.
+              Revoyez les optimisations appliquées et voyez
+              votre score grimper. De 79 à 87 —
+              chaque point compte.
             </p>
             <span className="step-time">{'⚡'} ~30 secondes</span>
           </div>
