@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev              # Dev server on port 3334 (Turbopack)
+npm run dev              # Dev server on port 3001 (Turbopack)
 npm run build            # Build mockups then Next.js
 npm run build:mockups    # esbuild mockup bundles only
 npm run start            # Production server on port 3333
@@ -14,7 +14,7 @@ npm run lint             # ESLint
 
 Docker:
 ```bash
-docker compose up dev    # Dev with volume mounts (port 3334)
+docker compose up dev    # Dev with volume mounts (port 3001)
 docker compose up prod   # Production standalone (port 3333)
 ```
 
