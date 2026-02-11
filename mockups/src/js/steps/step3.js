@@ -1,6 +1,5 @@
 import { $, moveToEl, clickEffect, wait } from '../dom-helpers.js';
 import { showCv, setCvIcon, updateStepIndicator } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
 
 export function setupStep3(cursor) {
   // Step 3 starts: cv-review visible, gpt icon, credits 54, score-badge visible
@@ -25,10 +24,10 @@ export async function runStep3(cursor) {
   $('score-badge').classList.add('visible');
 
   // === STEP 3: Mode Review ===
-  updateStepIndicator(3, stepLabels);
+  updateStepIndicator(3);
   await wait(800);
 
-  updateStepIndicator(3, stepLabels);
+  updateStepIndicator(3);
   moveToEl(viewport, cursor, 'summary-highlight');
   await wait(450);
   clickEffect(cursor);
@@ -43,7 +42,7 @@ export async function runStep3(cursor) {
   $('summary-highlight').classList.remove('highlight-modified');
   await wait(500);
 
-  updateStepIndicator(3, stepLabels);
+  updateStepIndicator(3);
   moveToEl(viewport, cursor, 'btn-tout-accepter');
   await wait(450);
   clickEffect(cursor);

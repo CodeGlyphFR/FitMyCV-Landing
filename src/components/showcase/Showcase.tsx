@@ -1,22 +1,16 @@
 'use client';
 
 import { useEffect, useRef, useCallback } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import './showcase.css';
 
 const MAX_LOADED = 2;
 
-const stepLabels = [
-  'Import de CV',
-  'Génération de CV',
-  'Mode Review',
-  'Calcul de Score',
-  'Optimisation du CV',
-  "Review de l'Optimisation",
-  'Export PDF/Word',
-];
-
 export default function Showcase() {
+  const t = useTranslations('Showcase');
+  const locale = useLocale();
+  const stepLabels = t.raw('stepLabels') as string[];
   const loadedQueueRef = useRef<HTMLElement[]>([]);
   const visibleSetRef = useRef<Set<HTMLElement>>(new Set());
   const unloadTimersRef = useRef<WeakMap<HTMLElement, ReturnType<typeof setTimeout>>>(new WeakMap());
@@ -169,13 +163,13 @@ export default function Showcase() {
       {/* Hero: Workflow complet */}
       <section className="hero">
         <Image src="/icons/logo.png" alt="FitMyCV" width={1080} height={319} className="hero-logo reveal" />
-        <h1 className="hero-title reveal">Workflow</h1>
+        <h1 className="hero-title reveal">{t('title')}</h1>
         <p className="hero-subtitle reveal">
-          Le parcours complet en 7 étapes : de l&apos;import PDF à l&apos;export du CV optimisé.
+          {t('subtitle')}
         </p>
         <div className="hero-mockup reveal">
           <div className="mockup-wrap">
-            <iframe data-src="/mockups/workflow-demo.html" title="Workflow complet" />
+            <iframe data-src={`/mockups/workflow-demo.html?lang=${locale}`} title={t('title')} />
           </div>
         </div>
       </section>
@@ -185,8 +179,8 @@ export default function Showcase() {
       {/* Steps: chaque étape individuelle */}
       <section className="steps-section">
         <div className="steps-header reveal">
-          <h2 className="steps-title">Workflow découpé en 7 étapes</h2>
-          <p className="steps-subtitle">Chaque étape tourne en boucle indépendamment.</p>
+          <h2 className="steps-title">{t('stepsTitle')}</h2>
+          <p className="steps-subtitle">{t('stepsSubtitle')}</p>
         </div>
 
         <div className="steps-grid">
@@ -198,14 +192,14 @@ export default function Showcase() {
             >
               <div className="step-label">{label}</div>
               <div className="mockup-wrap">
-                <iframe data-src={`/mockups/step${i + 1}.html`} title={`Étape ${i + 1}: ${label}`} />
+                <iframe data-src={`/mockups/step${i + 1}.html?lang=${locale}`} title={`${label}`} />
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <div className="footer">FitMyCV.io — Showcase interne</div>
+      <div className="footer">{t('footer')}</div>
     </>
   );
 }

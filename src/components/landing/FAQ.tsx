@@ -1,9 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { faqItems as allFaqItems } from '@/data/faq';
-
-const faqItems = allFaqItems.filter((f) => f.landing);
+import { useTranslations } from 'next-intl';
+import { faqConfig } from '@/data/faq-config';
 
 /* ── Neural network config ── */
 const NN_LAYERS = [3, 6, 7, 2];
@@ -44,6 +43,11 @@ function pickRandom(max: number, n: number): number[] {
 
 /* ── Component ── */
 export default function FAQ() {
+  const t = useTranslations('FAQ');
+  const allItems = t.raw('items') as Array<{ question: string; answer: string }>;
+  const faqItems = faqConfig
+    .filter((c) => c.landing)
+    .map((c) => ({ ...allItems[c.id], id: c.id }));
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const synapsesRef = useRef<SVGGElement>(null);
@@ -300,9 +304,9 @@ export default function FAQ() {
       <div className="faq-grid">
         <div className="faq-left">
           <h2 className="faq-title">
-            Questions
-            <br />
-            fréquentes
+            {t.raw("title").split("\n").map((line: string, i: number) => (
+              <span key={i}>{i > 0 && <br />}{line}</span>
+            ))}
           </h2>
           <div className="faq-neural">
             <svg viewBox="0 0 420 320" id="nn-svg">

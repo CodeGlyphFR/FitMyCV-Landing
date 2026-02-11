@@ -78,6 +78,7 @@ ${allCss}
 </head>
 <body>
 ${tpl.body}
+<script>var m=location.search.match(/lang=(\\w+)/);if(m)document.documentElement.lang=m[1];</script>
 <script>if(location.search.includes('embed'))document.body.classList.add('embed');</script>
 <script src="${tpl.script}?v=${cacheBust}"></script>
 </body>

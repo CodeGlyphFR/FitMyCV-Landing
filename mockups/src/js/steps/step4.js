@@ -1,6 +1,5 @@
 import { $, moveToEl, clickEffect, wait } from '../dom-helpers.js';
 import { setCvIcon, updateStepIndicator, showCv } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
 
 export function setupStep4(cursor) {
   // Step 4 starts: cv-clean visible, gpt icon, credits 54, score-badge-clean visible
@@ -16,7 +15,7 @@ export async function runStep4(cursor) {
   const viewport = $('viewport');
 
   // === STEP 4: Score de correspondance ===
-  updateStepIndicator(4, stepLabels);
+  updateStepIndicator(4);
   moveToEl(viewport, cursor, 'score-badge-clean');
   await wait(450);
   clickEffect(cursor);

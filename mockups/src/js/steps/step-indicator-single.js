@@ -1,4 +1,4 @@
-import { stepLabels } from '../step-labels.js';
+import { t } from '../i18n.js';
 
 export function createSingleStepIndicator(stepNum) {
   const dots = [1, 2, 3, 4, 5, 6, 7].map(s => {
@@ -8,11 +8,9 @@ export function createSingleStepIndicator(stepNum) {
     return `<div class="${cls}" data-step="${s}"></div>`;
   }).join('');
 
-  const label = stepLabels[stepNum] || '';
-
   return `
 <div class="step-indicator" id="step-indicator">
   ${dots}
-  <span class="step-label" id="step-label">Étape ${stepNum} — ${label}</span>
+  <span class="step-label" id="step-label">${t('stepIndicator', {n: stepNum, label: t('step.' + stepNum)})}</span>
 </div>`;
 }

@@ -1,6 +1,6 @@
 import { $, moveToEl, clickEffect, wait } from '../dom-helpers.js';
 import { showCv, setCvIcon, updateStepIndicator } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
+import { t } from '../i18n.js';
 
 export function setupStep2(cursor) {
   // Step 2 starts after import: fullstack CV visible, credits 60, dd-fullstack selected
@@ -17,7 +17,7 @@ export async function runStep2(cursor) {
   const viewport = $('viewport');
 
   // === STEP 2: Génération IA ===
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'btn-ai');
   await wait(600);
   clickEffect(cursor);
@@ -25,7 +25,7 @@ export async function runStep2(cursor) {
   $('generator-modal').classList.add('visible');
   await wait(800);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'gen-cv-select');
   await wait(600);
   clickEffect(cursor);
@@ -43,7 +43,7 @@ export async function runStep2(cursor) {
   $('gen-cv-name').innerHTML = '07/02/2026 &nbsp;Ingénieur UI/UX Front-End';
   await wait(500);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'link1-history-btn');
   await wait(600);
   clickEffect(cursor);
@@ -61,7 +61,7 @@ export async function runStep2(cursor) {
   $('link1-input').value = 'https://welcometothejungle.com/fr/companies/techvision/jobs/senior-frontend';
   await wait(500);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'add-link-btn');
   await wait(600);
   clickEffect(cursor);
@@ -69,7 +69,7 @@ export async function runStep2(cursor) {
   $('link2-row').classList.remove('hidden');
   await wait(500);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'link2-history-btn');
   await wait(600);
   clickEffect(cursor);
@@ -87,7 +87,7 @@ export async function runStep2(cursor) {
   $('link2-input').value = 'https://indeed.com/viewjob?jk=a8f3c2d1e9b74560';
   await wait(500);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   moveToEl(viewport, cursor, 'btn-valider');
   await wait(600);
   clickEffect(cursor);
@@ -99,12 +99,12 @@ export async function runStep2(cursor) {
   setCvIcon('import');
   await wait(500);
 
-  updateStepIndicator(2, stepLabels);
+  updateStepIndicator(2);
   $('import-task-item').classList.add('hidden');
   $('import-task-done').classList.remove('hidden');
   $('task1-item').classList.remove('hidden');
   $('task2-item').classList.remove('hidden');
-  $('task-footer').textContent = 'Total : 3';
+  $('task-footer').textContent = t('count.total', {n: 3});
   $('btn-tasks').classList.add('progress-btn');
   $('btn-tasks').style.setProperty('--progress', '25%');
   moveToEl(viewport, cursor, 'btn-tasks');
@@ -115,26 +115,26 @@ export async function runStep2(cursor) {
 
   await wait(300);
   $('task1-fill').style.width = '55%'; $('task1-percent').textContent = '55%';
-  $('task1-step').textContent = 'Projets 1/3';
+  $('task1-step').textContent = t('task.projects', {done: 1, total: 3});
   $('task2-fill').style.width = '30%'; $('task2-percent').textContent = '30%';
-  $('task2-step').textContent = 'Expériences 1/5';
+  $('task2-step').textContent = t('task.experiences', {done: 1, total: 5});
   $('btn-tasks').style.setProperty('--progress', '40%');
   await wait(700);
 
   $('task1-fill').style.width = '75%'; $('task1-percent').textContent = '75%';
-  $('task1-step').textContent = 'Compétences';
+  $('task1-step').textContent = t('task.skills');
   $('task2-fill').style.width = '50%'; $('task2-percent').textContent = '50%';
-  $('task2-step').textContent = 'Projets 2/3';
+  $('task2-step').textContent = t('task.projects', {done: 2, total: 3});
   $('btn-tasks').style.setProperty('--progress', '65%');
   await wait(700);
 
   $('task1-fill').style.width = '100%'; $('task1-percent').textContent = '100%';
-  $('task1-step').textContent = 'Terminé';
+  $('task1-step').textContent = t('status.done');
   $('task1-fill').classList.add('completed');
   $('task1-percent').style.color = '#34d399';
-  $('task1-percent').textContent = 'Terminé';
+  $('task1-percent').textContent = t('status.done');
   $('task2-fill').style.width = '75%'; $('task2-percent').textContent = '75%';
-  $('task2-step').textContent = 'Résumé';
+  $('task2-step').textContent = t('task.summary');
   $('btn-tasks').style.setProperty('--progress', '85%');
   await wait(800);
 }

@@ -1,6 +1,9 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-export default function RootNotFound() {
+export default function NotFound() {
+  const t = useTranslations("NotFound");
+
   return (
     <div
       style={{
@@ -22,12 +25,12 @@ export default function RootNotFound() {
           opacity: 0.3,
         }}
       >
-        404
+        {t("title")}
       </h1>
       <p
         style={{ fontSize: "1.25rem", opacity: 0.6, marginTop: "0.5rem" }}
       >
-        Page introuvable
+        {t("message")}
       </p>
       <Link
         href="/"
@@ -41,7 +44,7 @@ export default function RootNotFound() {
           textDecoration: "none",
         }}
       >
-        Retour à l&apos;accueil
+        {t("backHome")}
       </Link>
     </div>
   );

@@ -1,5 +1,6 @@
 import { $, moveCursor } from './dom-helpers.js';
 import { showCv, setCvIcon } from './ui-state.js';
+import { t } from './i18n.js';
 
 export function resetAll(cursor) {
   // Hide all overlays
@@ -19,10 +20,10 @@ export function resetAll(cursor) {
   $('import-task-fill').classList.remove('completed');
   $('import-task-percent').innerHTML = '&mdash;';
   $('import-task-percent').style.color = '#34d399';
-  $('import-task-step').textContent = 'Import PDF';
+  $('import-task-step').textContent = t('task.importPdf');
   $('task1-item').classList.remove('hidden');
   $('task2-item').classList.remove('hidden');
-  $('task-footer').textContent = 'Total : 2';
+  $('task-footer').textContent = t('count.total', {n: 2});
   $('export-selection-mode').classList.remove('hidden');
   $('export-preview-mode').classList.add('hidden');
   var exportBody = $('export-modal-body');
@@ -138,11 +139,11 @@ export function resetTaskQueue() {
   $('task1-fill').classList.remove('completed');
   $('task1-percent').textContent = '35%';
   $('task1-percent').style.color = '#34d399';
-  $('task1-step').textContent = 'Expériences 2/5';
+  $('task1-step').textContent = t('task.experiences', {done: 2, total: 5});
 
   $('task2-fill').style.width = '15%';
   $('task2-fill').classList.remove('completed');
   $('task2-percent').textContent = '15%';
   $('task2-percent').style.color = '#34d399';
-  $('task2-step').textContent = 'Classification';
+  $('task2-step').textContent = t('task.classification');
 }

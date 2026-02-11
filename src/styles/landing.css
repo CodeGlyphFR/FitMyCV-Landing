@@ -3063,3 +3063,103 @@ body {
   .footer-main { grid-template-columns: 1fr; }
 }
 
+  /* ==========================================================
+     LANGUAGE SELECTOR — Expanding flags (header desktop)
+     ========================================================== */
+  .lang-expand {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .lang-expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    transition: opacity 0.25s, border-color 0.2s, max-width 0.3s ease, margin 0.3s ease;
+  }
+  .lang-expand-btn img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  /* Active flag — always visible */
+  .lang-expand-btn.active {
+    opacity: 1;
+    border-color: #34d399;
+    border-width: 3px;
+    position: relative;
+    z-index: 1;
+  }
+  .lang-expand-btn.active:hover {
+    border-color: #6ee7b7;
+  }
+
+  /* Other flags — collapsed by default */
+  .lang-expand-btn.other {
+    max-width: 0;
+    opacity: 0;
+    margin-right: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  /* Expanded state */
+  .lang-expand.open .lang-expand-btn.other {
+    max-width: 34px;
+    opacity: 0.65;
+    margin-right: 0.4rem;
+    pointer-events: auto;
+  }
+  .lang-expand.open .lang-expand-btn.other:hover {
+    opacity: 1;
+  }
+
+  /* Mobile menu: center flags */
+  .header-mobile-menu .footer-lang {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer language flags (inline SVG flags) */
+  .footer-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer-lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    transition: border-color 0.2s, opacity 0.2s;
+    opacity: 0.5;
+    line-height: 0;
+  }
+  .footer-lang-btn img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: block;
+  }
+  .footer-lang-btn:hover {
+    opacity: 0.85;
+  }
+  .footer-lang-btn.active {
+    opacity: 1;
+    border-color: #34d399;
+    border-width: 3px;
+  }
+

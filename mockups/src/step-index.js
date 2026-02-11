@@ -1,3 +1,4 @@
+import { initLang } from './js/i18n.js';
 import { createBrowserFrame } from './html/browser-frame.js';
 import { createTopBar } from './html/topbar.js';
 import { createCvDropdown, createTaskDropdown } from './html/dropdowns.js';
@@ -24,6 +25,8 @@ const stepMap = {
   6: { setup: setupStep6, run: runStep6 },
   7: { setup: setupStep7, run: runStep7 },
 };
+
+initLang();
 
 // Read step number from data attribute
 const app = document.getElementById('app');

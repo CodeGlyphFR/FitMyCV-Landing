@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { faqItems } from "@/data/faq";
+import { getTranslations } from "next-intl/server";
+import { faqConfig } from "@/data/faq-config";
 import SvgDefs from "@/components/landing/SvgDefs";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -11,11 +11,11 @@ import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/",
-  },
-};
+export async function generateMetadata() {
+  return {
+    alternates: { canonical: "/" },
+  };
+}
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -30,37 +30,39 @@ const organizationJsonLd = {
   },
 };
 
-const softwareJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "FitMyCV",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
-  url: "https://www.fitmycv.io",
-  description:
-    "Importez votre CV, collez le lien d'une offre d'emploi, et laissez l'IA optimiser votre candidature pour maximiser vos chances.",
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "EUR",
-    lowPrice: "4.99",
-    highPrice: "35.99",
-    offerCount: "4",
-  },
-};
+export default async function Home() {
+  const t = await getTranslations("JsonLd");
+  const faqT = await getTranslations("FAQ");
+  const faqItems = faqT.raw("items") as Array<{ question: string; answer: string }>;
+  const landingFaqItems = faqConfig.filter(c => c.landing).map(c => ({ ...faqItems[c.id] }));
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems
-    .filter((f) => f.landing)
-    .map((f) => ({
+  const softwareJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "FitMyCV",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    url: "https://www.fitmycv.io",
+    description: t("softwareDescription"),
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "EUR",
+      lowPrice: "4.99",
+      highPrice: "35.99",
+      offerCount: "4",
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: landingFaqItems.map((f) => ({
       "@type": "Question" as const,
       name: f.question,
       acceptedAnswer: { "@type": "Answer" as const, text: f.answer },
     })),
-};
+  };
 
-export default function Home() {
   return (
     <>
       <script

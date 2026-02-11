@@ -1,22 +1,18 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-
-const STEP_LABELS = [
-  'Import PDF',
-  'Génération IA',
-  'Revue des modifications',
-  'Score de compatibilité',
-  'Optimisation ciblée',
-  'Validation finale',
-  'Export PDF / Word',
-];
+import { useTranslations, useLocale } from 'next-intl';
 
 const BASE_W = 960;
 const BASE_H = 600;
 const TOTAL_STEPS = 7;
 
 export default function HowItWorks() {
+  const t = useTranslations('HowItWorks');
+  const locale = useLocale();
+  const steps = t.raw('steps') as Array<{label: string; title: string; desc: string; time: string}>;
+  const STEP_LABELS = steps.map(s => s.label);
+
   const [currentStep, setCurrentStep] = useState(1);
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
@@ -58,13 +54,13 @@ export default function HowItWorks() {
     const frame = mockupFrameRef.current;
     const iframe = mockupIframeRef.current;
     if (frame) frame.classList.remove('loaded');
-    if (iframe) iframe.src = `/mockups/step${n}.html?embed`;
+    if (iframe) iframe.src = `/mockups/step${n}.html?embed&lang=${locale}`;
 
     const progress = ((n - 1) / (TOTAL_STEPS - 1)) * 100;
     if (progressFillRef.current) {
       progressFillRef.current.style.height = `${progress}%`;
     }
-  }, []);
+  }, [locale]);
 
   // Handle iframe load event
   useEffect(() => {
@@ -330,15 +326,12 @@ export default function HowItWorks() {
     <section className="how-it-works" id="howItWorks" ref={sectionRef}>
       <div className="section-header" id="sectionHeader">
         <p className="section-intro">
-          FitMyCV optimise votre CV grâce à l&apos;IA pour matcher
-          chaque offre d&apos;emploi. Il adapte le contenu au format ATS et
-          génère un CV qui passe les filtres ATS et vous
-          décroche plus d&apos;entretiens.
+          {t('intro')}
         </p>
         <h2 className="section-title">
-          Importez votre CV, collez une offre,
-          <br />
-          récupérez un CV optimisé.
+          {(t.raw('title') as string).split('\n').map((line: string, i: number) => (
+            <span key={i}>{i > 0 && <br />}{line}</span>
+          ))}
         </h2>
         <div className="sparkles-container">
           <div className="sparkle-line line-wide"></div>
@@ -356,8 +349,7 @@ export default function HowItWorks() {
           className="section-subtitle"
           style={{ marginTop: '-7rem', position: 'relative', zIndex: 1 }}
         >
-          Importez votre CV, collez une offre,
-          récupérez un CV optimisé.
+          {t('subtitle')}
         </p>
       </div>
 
@@ -376,7 +368,7 @@ export default function HowItWorks() {
           </div>
 
           <div className="phase-header">
-            <div className="phase-number">Phase 1 — Import</div>
+            <div className="phase-number">{t('phase1')}</div>
           </div>
 
           <div
@@ -384,17 +376,15 @@ export default function HowItWorks() {
             data-step="1"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 01</div>
-            <h3 className="step-title">Importez votre CV</h3>
+            <div className="step-number">{t('stepLabel')} 01</div>
+            <h3 className="step-title">{steps[0].title}</h3>
             <p className="step-desc">
-              Glissez votre PDF ou uploadez-le. L’IA extrait
-              automatiquement vos compétences, expériences et
-              formations en quelques secondes.
+              {steps[0].desc}
             </p>
           </div>
 
           <div className="phase-header">
-            <div className="phase-number">Phase 2 — Intelligence IA</div>
+            <div className="phase-number">{t('phase2')}</div>
           </div>
 
           <div
@@ -402,14 +392,12 @@ export default function HowItWorks() {
             data-step="2"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 02</div>
-            <h3 className="step-title">Génération IA</h3>
+            <div className="step-number">{t('stepLabel')} 02</div>
+            <h3 className="step-title">{steps[1].title}</h3>
             <p className="step-desc">
-              Ajoutez les URLs des offres d’emploi. L’IA
-              génère des variantes de CV taillées sur
-              mesure pour chaque poste visé.
+              {steps[1].desc}
             </p>
-            <span className="step-time">{'⚡'} ~35s en multi-offre</span>
+            {steps[1].time && <span className="step-time">{'⚡'} {steps[1].time}</span>}
           </div>
 
           <div
@@ -417,14 +405,12 @@ export default function HowItWorks() {
             data-step="3"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 03</div>
-            <h3 className="step-title">Revue des modifications</h3>
+            <div className="step-number">{t('stepLabel')} 03</div>
+            <h3 className="step-title">{steps[2].title}</h3>
             <p className="step-desc">
-              Visualisez chaque modification suggérée par
-              l’IA avec un diff clair. Acceptez, rejetez ou ajustez —
-              vous gardez le contrôle total.
+              {steps[2].desc}
             </p>
-            <span className="step-time">{'⚡'} ~1 minute</span>
+            {steps[2].time && <span className="step-time">{'⚡'} {steps[2].time}</span>}
           </div>
 
           <div
@@ -432,14 +418,12 @@ export default function HowItWorks() {
             data-step="4"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 04</div>
-            <h3 className="step-title">Score de compatibilité</h3>
+            <div className="step-number">{t('stepLabel')} 04</div>
+            <h3 className="step-title">{steps[3].title}</h3>
             <p className="step-desc">
-              Un score évalue la correspondance entre votre
-              CV et l&apos;offre ciblée. Voyez exactement où
-              vous pouvez vous améliorer.
+              {steps[3].desc}
             </p>
-            <span className="step-time">{'⚡'} ~10 secondes</span>
+            {steps[3].time && <span className="step-time">{'⚡'} {steps[3].time}</span>}
           </div>
 
           <div
@@ -447,14 +431,12 @@ export default function HowItWorks() {
             data-step="5"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 05</div>
-            <h3 className="step-title">Optimisation ciblée</h3>
+            <div className="step-number">{t('stepLabel')} 05</div>
+            <h3 className="step-title">{steps[4].title}</h3>
             <p className="step-desc">
-              L&apos;IA vous dit concrètement quoi améliorer pour
-              faire monter votre score. Sélectionnez les suggestions qui
-              vous correspondent et ajoutez vos propres notes.
+              {steps[4].desc}
             </p>
-            <span className="step-time">{'⚡'} ~40 secondes</span>
+            {steps[4].time && <span className="step-time">{'⚡'} {steps[4].time}</span>}
           </div>
 
           <div
@@ -462,18 +444,16 @@ export default function HowItWorks() {
             data-step="6"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 06</div>
-            <h3 className="step-title">Validation finale</h3>
+            <div className="step-number">{t('stepLabel')} 06</div>
+            <h3 className="step-title">{steps[5].title}</h3>
             <p className="step-desc">
-              Revoyez les optimisations appliquées et voyez
-              votre score grimper. De 79 à 87 —
-              chaque point compte.
+              {steps[5].desc}
             </p>
-            <span className="step-time">{'⚡'} ~30 secondes</span>
+            {steps[5].time && <span className="step-time">{'⚡'} {steps[5].time}</span>}
           </div>
 
           <div className="phase-header">
-            <div className="phase-number">Phase 3 — Export</div>
+            <div className="phase-number">{t('phase3')}</div>
           </div>
 
           <div
@@ -481,28 +461,26 @@ export default function HowItWorks() {
             data-step="7"
           >
             <div className="step-dot"></div>
-            <div className="step-number">Étape 07</div>
-            <h3 className="step-title">Export PDF / Word</h3>
+            <div className="step-number">{t('stepLabel')} 07</div>
+            <h3 className="step-title">{steps[6].title}</h3>
             <p className="step-desc">
-              Prévisualisez votre CV finalisé et exportez-le au
-              format de votre choix. Prêt à envoyer, parfaitement
-              formaté.
+              {steps[6].desc}
             </p>
-            <span className="step-time">{'⚡'} 1 clic</span>
+            {steps[6].time && <span className="step-time">{'⚡'} {steps[6].time}</span>}
           </div>
         </div>
 
         <div className="hiw-mockup-sticky">
           <div className="hiw-mockup-container">
             <div className="mockup-label" id="hiwMockupLabel">
-              <span className="label-step">{'É'}tape {currentStep}</span> {'—'}{' '}
+              <span className="label-step">{t('stepLabel')} {currentStep}</span> {'—'}{' '}
               {STEP_LABELS[currentStep - 1]}
             </div>
             <div className="step-dots" id="stepDots">
               <button
                 className={`swipe-arrow swipe-prev${currentStep <= 1 ? ' hidden' : ''}`}
                 id="swipePrev"
-                aria-label={'Étape précédente'}
+                aria-label={t('stepPrev')}
                 onClick={handlePrev}
               >
                 {'<'}
@@ -513,7 +491,7 @@ export default function HowItWorks() {
                     key={step}
                     className={currentStep === step ? 'active' : undefined}
                     data-step={step}
-                    aria-label={`Étape ${step}`}
+                    aria-label={t('stepN', { step })}
                     onClick={() => handleDotClick(step)}
                   />
                 )
@@ -521,7 +499,7 @@ export default function HowItWorks() {
               <button
                 className={`swipe-arrow swipe-next${currentStep >= TOTAL_STEPS ? ' hidden' : ''}`}
                 id="swipeNext"
-                aria-label={'Étape suivante'}
+                aria-label={t('stepNext')}
                 onClick={handleNext}
               >
                 {'>'}
@@ -535,7 +513,7 @@ export default function HowItWorks() {
               <iframe
                 id="hiwMockupIframe"
                 ref={mockupIframeRef}
-                src="/mockups/step1.html?embed"
+                src={`/mockups/step1.html?embed&lang=${locale}`}
                 loading="lazy"
               />
             </div>

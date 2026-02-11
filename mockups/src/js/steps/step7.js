@@ -1,6 +1,5 @@
 import { $, moveToEl, clickEffect, wait, slowScroll } from '../dom-helpers.js';
 import { showCv, setCvIcon, updateStepIndicator } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
 
 export function setupStep7(cursor) {
   // Step 7 starts: cv-clean visible, gpt icon, credits 50,
@@ -23,7 +22,7 @@ export async function runStep7(cursor) {
   const viewport = $('viewport');
 
   // === STEP 7: Export ===
-  updateStepIndicator(7, stepLabels);
+  updateStepIndicator(7);
   moveToEl(viewport, cursor, 'btn-export');
   await wait(450);
   clickEffect(cursor);
@@ -31,7 +30,7 @@ export async function runStep7(cursor) {
   $('export-modal').classList.add('visible');
   await wait(1200);
 
-  updateStepIndicator(7, stepLabels);
+  updateStepIndicator(7);
   var exportBody = $('export-modal-body');
   await slowScroll(exportBody, exportBody.scrollHeight, 1200);
   await wait(600);
@@ -46,7 +45,7 @@ export async function runStep7(cursor) {
   await slowScroll(previewScroll, previewScroll.scrollHeight, 1800);
   await wait(800);
 
-  updateStepIndicator(7, stepLabels);
+  updateStepIndicator(7);
   moveToEl(viewport, cursor, 'btn-export-final');
   await wait(500);
   clickEffect(cursor);

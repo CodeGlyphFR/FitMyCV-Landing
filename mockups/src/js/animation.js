@@ -1,7 +1,6 @@
 import { $ } from './dom-helpers.js';
 import { wait } from './dom-helpers.js';
 import { resetAll } from './reset.js';
-export { stepLabels } from './step-labels.js';
 
 import { runStep1 } from './steps/step1.js';
 import { runStep2 } from './steps/step2.js';

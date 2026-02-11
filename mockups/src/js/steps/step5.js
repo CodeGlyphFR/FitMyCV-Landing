@@ -1,6 +1,5 @@
 import { $, moveToEl, clickEffect, wait, slowScroll } from '../dom-helpers.js';
 import { setCvIcon, updateStepIndicator, showCv, typeText, animateCounter } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
 
 export function setupStep5(cursor) {
   // Step 5 starts: cv-clean visible, gpt icon, credits 52,
@@ -21,7 +20,7 @@ export async function runStep5(cursor) {
   const viewport = $('viewport');
 
   // === STEP 5: Optimisation IA ===
-  updateStepIndicator(5, stepLabels);
+  updateStepIndicator(5);
   moveToEl(viewport, cursor, 'btn-optimize-clean');
   await wait(450);
   clickEffect(cursor);
@@ -63,7 +62,7 @@ export async function runStep5(cursor) {
 
   await wait(1800);
 
-  updateStepIndicator(5, stepLabels);
+  updateStepIndicator(5);
   moveToEl(viewport, cursor, 'sug-checkbox-1');
   await wait(450);
   clickEffect(cursor);
