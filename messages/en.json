@@ -17,7 +17,8 @@
     "faq": "FAQ",
     "login": "Log in",
     "signup": "Sign Up",
-    "menu": "Menu"
+    "menu": "Menu",
+    "skipToContent": "Skip to main content"
   },
   "Hero": {
     "title": "Your resume, optimized by AI",
@@ -302,9 +303,10 @@
     "subtitle": "Everything you need to know about FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Terms of Sale — FitMyCV",
+    "metaTitle": "Terms of Sale",
+    "metaDescription": "Read FitMyCV's terms of sale: credit system, pricing, payments, refund policy, AI usage, and intellectual property.",
     "pageTitle": "Terms of Sale",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Last updated: February 10, 2025",
     "s1Title": "1. Acceptance of Terms",
     "s1p1": "By using FitMyCV.io and purchasing credits, you unconditionally accept these Terms of Sale.",
     "s1p2": "If you do not accept these terms, please do not use our paid services.",
@@ -415,9 +417,10 @@
     "s15_dataProtectionP2": "For any questions regarding these Terms, contact us at <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Privacy Policy — FitMyCV",
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "Learn how FitMyCV protects your data: GDPR compliance, data encryption, retention periods, your rights, and third-party providers.",
     "pageTitle": "Privacy Policy",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Last updated: February 10, 2025",
     "s1Title": "1. Data Controller",
     "s1p1": "Codeglyph publishes the FitMyCV.io website and, in this capacity, collects and processes personal data about you.",
     "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>",

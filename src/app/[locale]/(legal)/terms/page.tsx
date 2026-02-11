@@ -1,21 +1,38 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { getAlternates } from "@/lib/seo";
+import { getAlternates, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Terms" });
   return {
     title: t("metaTitle"),
+    description: t("metaDescription"),
     alternates: getAlternates(locale, "/terms"),
   };
 }
 
-export default async function TermsPage() {
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("Terms");
+
+  const breadcrumbJsonLd = getBreadcrumbJsonLd(locale, [
+    { name: "FitMyCV", path: "/" },
+    { name: t("metaTitle"), path: "/terms" },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <h1>{t("pageTitle")}</h1>
       <p className="legal-date">{t("lastUpdate")}</p>
 

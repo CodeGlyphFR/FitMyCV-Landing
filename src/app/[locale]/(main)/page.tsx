@@ -91,16 +91,18 @@ export default async function Home() {
       />
       <SvgDefs />
       <Header />
-      <Hero />
-      <HowItWorks />
-      <SectionDivider />
-      <StatsStrip />
-      <SectionDivider />
-      <Features />
-      <SectionDivider />
-      <Pricing />
-      {/* <Reviews /> */}
-      <FAQ />
+      <main id="main">
+        <Hero />
+        <HowItWorks />
+        <SectionDivider />
+        <StatsStrip />
+        <SectionDivider />
+        <Features />
+        <SectionDivider />
+        <Pricing />
+        {/* <Reviews /> */}
+        <FAQ />
+      </main>
       <Footer />
     </>
   );

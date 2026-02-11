@@ -1,0 +1,24 @@
+name: 🧹 Cleanup Staging
+
+on:
+  pull_request:
+    branches: ["main"]
+    types: [closed]
+
+jobs:
+  stop-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop Staging via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: 1702
+          script: |
+            cd /home/erickdesmet/STAGING_SAAS/FitMyCV/landing
+            docker compose -f docker-compose.staging.yml down
+            docker image prune -f
+            echo "✅ Staging cleané."

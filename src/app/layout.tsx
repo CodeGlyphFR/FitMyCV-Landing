@@ -27,6 +27,11 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />
+        <noscript>
+          <p style={{ padding: "2rem", textAlign: "center", color: "#fff", background: "#0a0a1a" }}>
+            JavaScript is required to use FitMyCV. Please enable JavaScript in your browser.
+          </p>
+        </noscript>
         {children}
       </body>
     </html>
