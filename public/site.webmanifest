@@ -1,0 +1,21 @@
+{
+  "name": "FitMyCV",
+  "short_name": "FitMyCV",
+  "description": "Adaptez votre CV à chaque offre d'emploi avec l'IA",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

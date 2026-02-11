@@ -38,3 +38,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/_bmad/
+/_bmad-output/
+/.claude/
+
+# mockup build output
+public/mockups/*.bundle.js
+public/mockups/*.html
