@@ -773,7 +773,11 @@ export default function Pricing() {
           </h2>
           {eaRemaining !== null && eaMax !== null && (
             <p className="launch-sub">
-              {t('launchRemaining', { remaining: eaRemaining, max: eaMax })}
+              {t.rich('launchRemaining', {
+                remaining: eaRemaining,
+                max: eaMax,
+                green: (chunks) => <span style={{ color: '#34d399' }}>{chunks}</span>,
+              })}
             </p>
           )}
           <p className="launch-note launch-note-asterisk">{t('launchNoteAsterisk')}</p>

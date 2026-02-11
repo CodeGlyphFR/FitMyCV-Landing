@@ -219,7 +219,7 @@
     ],
     "launchTag": "Oferta de lanzamiento",
     "launchTitle": "−30 % con el código <highlight>LAUNCH30</highlight>",
-    "launchRemaining": "{remaining}/{max} plazas restantes",
+    "launchRemaining": "<green>{remaining}</green>/{max} plazas restantes",
     "launchNoteAsterisk": "*Código válido solo para la primera compra",
     "ctaBtn": "Empezar gratis",
     "launchNote": "15 créditos gratis · Sin tarjeta bancaria"
