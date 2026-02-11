@@ -30,8 +30,13 @@ jobs:
     permissions: { contents: read, packages: write }
     steps:
       - uses: actions/checkout@v4
-      - uses: docker/setup-buildx-action@v3
-      
+
+      # ÉTAPE CRUCIALE : Configuration du driver pour supporter le cache export GHA
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+
       - name: Log in to Registry
         uses: docker/login-action@v3
         with:
@@ -45,13 +50,17 @@ jobs:
             echo "TAG=staging-pr-${{ github.event.number }}" >> $GITHUB_ENV
             echo "TARGET_DIR=/home/erickdesmet/STAGING_SAAS/FitMyCV/landing" >> $GITHUB_ENV
             echo "COMPOSE_FILE=docker-compose.staging.yml" >> $GITHUB_ENV
+            echo "IS_PROD=false" >> $GITHUB_ENV
           else
             echo "TAG=latest" >> $GITHUB_ENV
             echo "TARGET_DIR=/home/erickdesmet/PROD_SAAS/FitMyCV/landing" >> $GITHUB_ENV
             echo "COMPOSE_FILE=docker-compose.prod.yml" >> $GITHUB_ENV
+            echo "IS_PROD=true" >> $GITHUB_ENV
           fi
 
-      - name: Build & Push
+      # ÉTAPE 1 : Build seulement si c'est une PR (Staging)
+      - name: Build & Push Staging
+        if: env.IS_PROD == 'false'
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -60,6 +69,15 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      # ÉTAPE 2 : Promotion (Retag) seulement si c'est Main (Prod)
+      - name: Promote Image to Production
+        if: env.IS_PROD == 'true'
+        uses: akhilerm/tag-push-action@v2.1.0
+        with:
+          src: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:staging-pr-${{ github.event.pull_request.number }}
+          dst: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+      # ÉTAPE 3 : Déploiement SSH
       - name: Deploy SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -69,8 +87,11 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: 1702
           script: |
+            echo "${{ secrets.GH_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            
             cd ${{ env.TARGET_DIR }}
             IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}"
+            
             docker pull $IMAGE
             sed -i "s|image: ghcr.io/.*|image: $IMAGE|g" ${{ env.COMPOSE_FILE }}
             docker compose -f ${{ env.COMPOSE_FILE }} up -d --remove-orphans
