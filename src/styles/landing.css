@@ -796,6 +796,7 @@ body {
   .hiw-mockup-frame {
     position: relative;
     width: 100%;
+    aspect-ratio: 960 / 600;
     border-radius: 12px;
     overflow: hidden;
     background: rgba(255,255,255,0.03);
@@ -815,7 +816,9 @@ body {
   }
 
   .hiw-mockup-frame iframe {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 960px;
     height: 600px;
     border: none;

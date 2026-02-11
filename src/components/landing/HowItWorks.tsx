@@ -30,15 +30,12 @@ export default function HowItWorks() {
   const iframeLoadedRef = useRef(iframeLoaded);
   iframeLoadedRef.current = iframeLoaded;
 
-  // Update iframe scale to fit container
+  // Update iframe scale to fit container (height handled by CSS aspect-ratio)
   const updateScale = useCallback(() => {
     const frame = mockupFrameRef.current;
     const iframe = mockupIframeRef.current;
     if (!frame || !iframe) return;
-    const containerW = frame.offsetWidth;
-    const scale = containerW / BASE_W;
-    const scaledH = BASE_H * scale;
-    frame.style.height = `${scaledH}px`;
+    const scale = frame.offsetWidth / BASE_W;
     iframe.style.transform = `scale(${scale})`;
   }, []);
 
