@@ -464,7 +464,8 @@
       "Professional information: experience, education, skills",
       "Contact details: phone, address, professional links",
       "Imported documents (PDF): not retained, transmitted to OpenAI for extraction then immediately deleted",
-      "Version history of your resumes"
+      "Version history of your resumes",
+      "All resume data is encrypted at rest"
     ],
     "s4_3Title": "4.3 Browsing Data",
     "s4_3Items": [
@@ -557,6 +558,7 @@
     "s12Items": [
       "HTTPS communication (SSL/TLS)",
       "Encrypted passwords (bcrypt)",
+      "Resumes and personal data encrypted at rest (AES-256)",
       "CSRF protection and secure cookies",
       "Anti-spam protection via Google reCAPTCHA v3"
     ],

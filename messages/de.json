@@ -464,7 +464,8 @@
       "Berufliche Informationen: Erfahrungen, Ausbildungen, Kompetenzen",
       "Kontaktdaten: Telefon, Adresse, berufliche Links",
       "Importierte Dokumente (PDF): nicht gespeichert, an OpenAI zur Extraktion übermittelt und anschließend sofort gelöscht",
-      "Versionsverlauf Ihrer Lebensläufe"
+      "Versionsverlauf Ihrer Lebensläufe",
+      "Alle Lebenslauf-Daten sind im Ruhezustand verschlüsselt"
     ],
     "s4_3Title": "4.3 Navigationsdaten",
     "s4_3Items": [
@@ -557,6 +558,7 @@
     "s12Items": [
       "HTTPS-Kommunikation (SSL/TLS)",
       "Verschlüsselte Passwörter (bcrypt)",
+      "Lebensläufe und persönliche Daten im Ruhezustand verschlüsselt (AES-256)",
       "CSRF-Schutz und sichere Cookies",
       "Spam-Schutz über Google reCAPTCHA v3"
     ],

@@ -464,7 +464,8 @@
       "Información profesional: experiencias, formación, competencias",
       "Datos de contacto: teléfono, dirección, enlaces profesionales",
       "Documentos importados (PDF): no se conservan, se transmiten a OpenAI para su extracción y se eliminan inmediatamente",
-      "Historial de versiones de tus CV"
+      "Historial de versiones de tus CV",
+      "Todos los datos de CV están cifrados en reposo"
     ],
     "s4_3Title": "4.3 Datos de navegación",
     "s4_3Items": [
@@ -557,6 +558,7 @@
     "s12Items": [
       "Comunicación HTTPS (SSL/TLS)",
       "Contraseñas cifradas (bcrypt)",
+      "CV y datos personales cifrados en reposo (AES-256)",
       "Protección CSRF y cookies seguras",
       "Protección antispam mediante Google reCAPTCHA v3"
     ],
