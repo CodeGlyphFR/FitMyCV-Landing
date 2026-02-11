@@ -1,0 +1,589 @@
+{
+  "Metadata": {
+    "title": "FitMyCV — Tailor your resume to every job posting with AI",
+    "titleTemplate": "%s | FitMyCV",
+    "description": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances. PDF and Word export in seconds.",
+    "ogTitle": "FitMyCV — Tailor your resume to every job posting with AI",
+    "ogDescription": "Upload your resume, paste a job link and let AI optimize it for each position. PDF/Word export in seconds.",
+    "ogImageAlt": "FitMyCV — Your resume, optimized by AI",
+    "twitterTitle": "FitMyCV — Tailor your resume to every job posting with AI",
+    "twitterDescription": "Upload your resume, paste a job link and let AI optimize it. PDF/Word export in seconds.",
+    "keywords": "resume, CV optimization, AI, artificial intelligence, ATS, resume builder, tailor resume to job posting, resume matching score, PDF resume export, automatic application, FitMyCV"
+  },
+  "Header": {
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "signup": "Sign Up",
+    "menu": "Menu"
+  },
+  "Hero": {
+    "title": "Your resume, optimized by AI",
+    "cta": "Get started now",
+    "scrollMore": "LEARN MORE",
+    "phrases": [
+      "No more copy-pasting — just paste a URL",
+      "10 links, 10 resumes generated at once",
+      "Analyze, score, optimize — in seconds",
+      "No subscription — pay as you go",
+      "7 steps to a perfect resume"
+    ]
+  },
+  "HowItWorks": {
+    "intro": "FitMyCV uses AI to optimize your resume to match each job posting. It adapts the content to ATS format and generates a resume that passes ATS filters and lands you more interviews.",
+    "title": "Upload your resume, paste a job posting,\nget an optimized resume.",
+    "subtitle": "Upload your resume, paste a job posting, get an optimized resume.",
+    "phase1": "Phase 1 — Import",
+    "phase2": "Phase 2 — AI Intelligence",
+    "phase3": "Phase 3 — Export",
+    "stepLabel": "Step",
+    "stepPrev": "Previous step",
+    "stepNext": "Next step",
+    "stepN": "Step {step}",
+    "steps": [
+      {
+        "label": "PDF Import",
+        "title": "Upload your resume",
+        "desc": "Drag and drop your PDF or upload it. AI automatically extracts your skills, experience, and education in seconds.",
+        "time": ""
+      },
+      {
+        "label": "AI Generation",
+        "title": "AI Generation",
+        "desc": "Add job posting URLs. AI generates resume variants tailored to each target position.",
+        "time": "~35s for multi-posting"
+      },
+      {
+        "label": "Review changes",
+        "title": "Review changes",
+        "desc": "View each AI-suggested change with a clear diff. Accept, reject, or adjust — you stay in full control.",
+        "time": "~1 minute"
+      },
+      {
+        "label": "Match score",
+        "title": "Match score",
+        "desc": "A score evaluates the match between your resume and the target posting. See exactly where you can improve.",
+        "time": "~10 seconds"
+      },
+      {
+        "label": "Targeted optimization",
+        "title": "Targeted optimization",
+        "desc": "AI tells you exactly what to improve to boost your score. Select the suggestions that fit you and add your own notes.",
+        "time": "~40 seconds"
+      },
+      {
+        "label": "Final review",
+        "title": "Final review",
+        "desc": "Review the applied optimizations and watch your score climb. From 79 to 87 — every point counts.",
+        "time": "~30 seconds"
+      },
+      {
+        "label": "PDF / Word Export",
+        "title": "PDF / Word Export",
+        "desc": "Preview your finalized resume and export it in the format of your choice. Ready to send, perfectly formatted.",
+        "time": "1 click"
+      }
+    ]
+  },
+  "StatsStrip": {
+    "stats": [
+      {
+        "value": "87%",
+        "label": "match rate"
+      },
+      {
+        "value": "5",
+        "label": "languages"
+      },
+      {
+        "value": "30s",
+        "label": "to optimize"
+      },
+      {
+        "value": "0€",
+        "label": "no subscription"
+      }
+    ]
+  },
+  "Features": {
+    "title": "Everything you need to land the job",
+    "subtitle": "Built for your resumes. Not another chatbot.",
+    "card1Title": "A resume tailored to each posting",
+    "card1Sub": "Paste a link, AI does the rest",
+    "card1RefLabel": "Source resume",
+    "card1SelectText": "Full-Stack JS Developer",
+    "card1LinkLabel": "Job posting link",
+    "card1Cancel": "Cancel",
+    "card1Validate": "Submit",
+    "card2Title": "10 resumes in one click",
+    "card2Sub": "All your applications in parallel",
+    "card3Title": "A template in just a few words",
+    "card3Sub": "No link? A job title is enough",
+    "card4Title": "Import your resume in one step",
+    "card4Sub": "Drop a PDF, AI structures everything",
+    "card4UploadLabel": "Choose a PDF file",
+    "card5Title": "Optimized for ATS",
+    "card5Sub": "Every word counts",
+    "card5Originals": [
+      "Complex web project management",
+      "Agile team collaboration",
+      "Modern interface design"
+    ],
+    "card5Rewrites": [
+      "Full-stack web project leadership",
+      "Scrum methodology & agile sprints",
+      "Responsive UI/UX design (React)"
+    ],
+    "card6Title": "Your matching score",
+    "card6Sub": "Measure the impact of each optimization",
+    "card7Title": "The job posting, decoded for you",
+    "card7Sub": "Skills, processes, benefits extracted automatically",
+    "card7Tags": {
+      "teleTravail": "Remote work"
+    },
+    "card8Title": "AI guides you step by step",
+    "card8Sub": "Targeted suggestions for each posting",
+    "card8High": "High",
+    "card8Med": "Medium",
+    "card8Low": "Low",
+    "card8Reco1": "Add testing tools (Jest, Cypress)",
+    "card8Reco2": "Detail Design System experience",
+    "card8Reco3": "Mention WCAG accessibility",
+    "card9Title": "Stay in control",
+    "card9Sub": "Accept or reject each change",
+    "card9Old1": "3 years of experience",
+    "card9New1": "3+ years in web development",
+    "card9Old2": "Good knowledge of React",
+    "card9New2": "Expert in React & TypeScript",
+    "card10Title": "Travel back in time",
+    "card10Sub": "Restore your resume easily in one click",
+    "card11Title": "Edit directly in the app",
+    "card11Sub": "Every section editable in one click",
+    "card11Row1": "Professional experience",
+    "card11Row2": "Technical skills",
+    "card11Row3": "Education",
+    "card11Edit": "Edit",
+    "card11Delete": "Delete",
+    "card12Title": "Export in one click",
+    "card12Sub": "PDF, Word, the format that suits you",
+    "card12ExportBtn": "Export PDF",
+    "card13Title": "One interface, 4 languages",
+    "card13Sub": "French, English, German, Spanish",
+    "card13LangLabels": [
+      "Français",
+      "English",
+      "Deutsch",
+      "Español"
+    ],
+    "card14Title": "Translate your resume",
+    "card14Sub": "Into 4 languages, with adapted professional vocabulary",
+    "card15Title": "Your tasks run in the background",
+    "card15Sub": "Generate, leave, it's ready when you're back",
+    "card15TaskSteps": [
+      "Experience",
+      "Skills",
+      "Projects",
+      "Summary",
+      "Done"
+    ],
+    "card15Waiting": "Waiting...",
+    "card15Done": "Done",
+    "card16Title": "Browser extension",
+    "card16Badge": "Coming soon",
+    "card16Sub": "Start a generation without leaving your tab",
+    "card16CvLabel": "Full-Stack JS Dev",
+    "card16GenBtn": "Generate my resume"
+  },
+  "Pricing": {
+    "title": "<highlight>No subscription.</highlight>\nPay for what you use.",
+    "subtitle": "15 free credits on sign-up.",
+    "calcQuestion": "How many job postings are you targeting this month?",
+    "calcTotal": "Total cost",
+    "calcPerOffer": "Per posting",
+    "calcCompetition": "The competition",
+    "calcFree": "Free",
+    "calcCompetitionValue": "~37 €",
+    "calcPerMonth": "/month",
+    "calcNote1": "With the LAUNCH30 promotional offer",
+    "calcNote2": "Estimate based on the typical resume creation workflow",
+    "packBadgePopular": "Most popular",
+    "packBadgeBestValue": "Best value",
+    "creditsLabel": "credits",
+    "trustItems": [
+      "Secure Stripe payment",
+      "Credits never expire",
+      "No commitment",
+      "Visa · MC · Apple Pay"
+    ],
+    "launchTag": "Launch offer",
+    "launchTitle": "−30% with code <highlight>LAUNCH30</highlight>",
+    "launchRemaining": "<green>{remaining}</green>/{max} spots remaining",
+    "launchNoteAsterisk": "*Code valid for first purchase only",
+    "ctaBtn": "Get started for free",
+    "launchNote": "15 free credits · No credit card required"
+  },
+  "FAQ": {
+    "title": "Frequently\nasked questions",
+    "items": [
+      {
+        "question": "Will AI replace my content?",
+        "answer": "No. The AI does not fabricate skills or experiences. It works exclusively from the information you provide: it rephrases, reorganizes, and optimizes content with ATS formatting in mind. The review mode lets you validate each change, and the online editor gives you full control over the final result."
+      },
+      {
+        "question": "Will my resume be ATS-compatible?",
+        "answer": "Yes. The resume structure, keyword selection, and section hierarchy are designed to be correctly parsed by Applicant Tracking Systems (ATS). When your profile warrants it, the AI incorporates relevant terms from the job posting to strengthen the match with recruiter filters."
+      },
+      {
+        "question": "Is my data protected?",
+        "answer": "Your resumes and personal data are encrypted and never shared with third parties or used to train AI models. You can delete your account and all your data at any time. FitMyCV complies with GDPR."
+      },
+      {
+        "question": "Is there a free trial?",
+        "answer": "Yes. You receive 15 free credits when you create your account, with no credit card required. This lets you generate multiple resumes and test all features before purchasing additional credits."
+      },
+      {
+        "question": "Which job platforms are supported?",
+        "answer": "FitMyCV works with any publicly accessible job posting that doesn't require authentication: Indeed, Welcome to the Jungle, France Travail, and many other platforms. Just paste the job URL. For sites requiring login (LinkedIn, etc.), a browser extension is under development — it will let you generate a resume directly from the job page, using the source resume of your choice."
+      },
+      {
+        "question": "How is FitMyCV different from ChatGPT?",
+        "answer": "If you ask ChatGPT to tailor your resume to a job posting, it will often make things up: a skill you don't have, a task you never performed, just to match the role. You notice it when proofreading — or worse, during an interview. Then you have to fix it, re-prompt, re-check… for every single application. FitMyCV works exclusively from your actual background and shows you every change before validation. The result: a faithful, optimized resume ready to send — in minutes, not hours."
+      },
+      {
+        "question": "What formats are supported?",
+        "answer": "You can import an existing resume as a PDF via drag and drop. After generation or editing, export is available in PDF and Word (.docx), ready to be attached to an application or uploaded to a job platform."
+      },
+      {
+        "question": "How many resumes can I create?",
+        "answer": "There is no limit. Each resume generation consumes credits. Upon registration, you receive 15 free credits to try the tool. After that, you purchase credits on demand based on your needs — no subscription, no commitment."
+      },
+      {
+        "question": "In how many languages can I create my resume?",
+        "answer": "The interface and resume translation are currently available in 4 languages: French, English, Spanish, and German. More languages will be added progressively. You can translate an existing resume into another language with one click, preserving the layout and content."
+      },
+      {
+        "question": "Can I edit my resume after generation?",
+        "answer": "Yes. The online editor lets you modify each section directly in the browser. The review mode displays AI suggestions as proposals that you can accept or reject individually before finalizing your resume."
+      },
+      {
+        "question": "What is the match score?",
+        "answer": "It is a percentage indicator that measures the fit between your resume and a job posting. The algorithm compares your profile's skills, experience, and keywords against the position's requirements. Along with the score, targeted recommendations tell you how to improve the match."
+      }
+    ]
+  },
+  "Reviews": {
+    "title": "Customer reviews"
+  },
+  "Footer": {
+    "tagline": "Your resume, optimized by AI",
+    "product": "Product",
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "support": "Support",
+    "legal": "Legal",
+    "terms": "Terms of Sale",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "copyright": "© 2026 FitMyCV.io"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Page not found",
+    "backHome": "Back to home"
+  },
+  "Support": {
+    "metaTitle": "Help Center — Frequently Asked Questions",
+    "metaDescription": "Find all the answers to your questions about FitMyCV: AI-powered resume generation, ATS compatibility, formats, pricing, data protection, and more.",
+    "heading": "Help Center",
+    "subtitle": "Everything you need to know about FitMyCV"
+  },
+  "Terms": {
+    "metaTitle": "Terms of Sale — FitMyCV",
+    "pageTitle": "Terms of Sale",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Acceptance of Terms",
+    "s1p1": "By using FitMyCV.io and purchasing credits, you unconditionally accept these Terms of Sale.",
+    "s1p2": "If you do not accept these terms, please do not use our paid services.",
+    "s1p3": "Use of FitMyCV.io is restricted to individuals aged 16 and over.",
+    "s2Title": "2. Description of Services",
+    "s2p1": "FitMyCV.io is a resume creation and optimization platform powered by artificial intelligence.",
+    "s2_1Title": "2.1. Free Services",
+    "s2_1Items": [
+      "Unlimited manual resume creation",
+      "Unlimited resume editing",
+      "Resume storage in your personal workspace"
+    ],
+    "s2_2Title": "2.2. Services Consuming Credits",
+    "s2_2Items": [
+      "PDF and DOCX export",
+      "AI-powered resume generation and tailoring",
+      "Resume import and extraction from PDF",
+      "Automatic resume translation",
+      "Resume optimization for job postings",
+      "Resume/job posting match score"
+    ],
+    "s2_3Title": "2.3. Credit System",
+    "s2_3p1": "When you create your account, you receive a default number of credits allowing you to test the platform's features.",
+    "s2_3p2": "Each feature consumes a variable number of credits according to a defined rate schedule. The credit cost of each feature is displayed before use.",
+    "s2_3p3": "Credits do not expire and remain valid as long as your account is active.",
+    "s2_3p4": "When your credits run out, you can purchase more from the <creditsLink>Credit Management</creditsLink> page.",
+    "s3Title": "3. Pricing and Payments",
+    "s3p1": "All prices are displayed in euros (EUR). The publisher is exempt from VAT pursuant to Article 293 B of the French General Tax Code (Code Général des Impôts).",
+    "s3p2": "Payments are secured by Stripe and accept credit cards, Apple Pay, Google Pay, and other payment methods depending on your location.",
+    "s3p3": "Credit pack pricing is available on the <creditsLink>Credit Management</creditsLink> page.",
+    "s4Title": "4. Right of Withdrawal",
+    "s4p1": "In accordance with Article L.221-28 of the French Consumer Code, the User acknowledges and agrees that the provision of Services begins immediately upon order confirmation.",
+    "s4p2": "Consequently, the User expressly waives their right of withdrawal for any credit purchase.",
+    "s4Highlight": "<strong>Important:</strong> Confirming the order after checking the withdrawal waiver box constitutes an express waiver of this right.",
+    "s5Title": "5. Refund Policy",
+    "s5p1": "All credit purchases are final once the service has been used (resume generation, export, translation, etc.). By making a purchase, you acknowledge having read and accepted this clause.",
+    "s5p2": "In case of a technical issue preventing the use of the service, contact our support at <supportEmail>support@fitmycv.io</supportEmail>. We will review your situation on a case-by-case basis.",
+    "s6Title": "6. Chargebacks and Payment Disputes",
+    "s6p1": "In the event of a chargeback (payment dispute filed with your bank) after using the service:",
+    "s6Items": [
+      "The amount of disputed credits will be deducted from your balance, which may become negative.",
+      "You will need to top up your account to continue using credit-based services."
+    ],
+    "s6Highlight": "<strong>Warning:</strong> Abusive chargebacks may result in permanent account suspension.",
+    "s7Title": "7. Artificial Intelligence",
+    "s7p1": "FitMyCV.io acts as a \"deployer\" of an artificial intelligence system within the meaning of European Regulation 2024/1689 (AI Act).",
+    "s7_1Title": "7.1. Features Using AI",
+    "s7_1Items": [
+      "Resume generation and tailoring",
+      "Resume optimization",
+      "Job posting extraction",
+      "Match score calculation",
+      "Resume translation",
+      "Resume import and extraction from PDF"
+    ],
+    "s7_2Title": "7.2. Nature of Results",
+    "s7_2p1": "Results generated by AI are suggestions and do not constitute binding recommendations in any way. The user retains full control over the final content of their resumes.",
+    "s7_3Title": "7.3. AI Provider",
+    "s7_3p1": "AI features are provided by OpenAI (United States). Data transmitted to OpenAI is not used to train their models in accordance with their API policy.",
+    "s7Highlight": "<strong>AI Transparency:</strong> The user is informed that generated content originates from an artificial intelligence system. This content should be reviewed before use.",
+    "s8Title": "8. Intellectual Property",
+    "s8p1": "Resumes you create via FitMyCV.io belong to you. You retain all rights to the content you provide.",
+    "s8p2": "The interface, source code, algorithms, and all elements of FitMyCV.io are the exclusive property of the publisher and are protected by copyright law.",
+    "s9Title": "9. Limitation of Liability",
+    "s9p1": "Services are provided \"as is\", without warranty of any kind, express or implied.",
+    "s9p2": "FitMyCV.io does not guarantee:",
+    "s9Items": [
+      "Continuous and uninterrupted service availability",
+      "The absence of technical errors or bugs",
+      "Compatibility of generated resumes with all ATS (Applicant Tracking Systems)",
+      "Obtaining an interview or employment as a result of using the service",
+      "The accuracy or relevance of AI-generated content"
+    ],
+    "s9p3": "Maintenance operations may be performed without prior notice, resulting in temporary service interruptions.",
+    "s9p4": "Our liability is limited to the amount you have paid for the service during the past 12 months.",
+    "s10Title": "10. Prohibited Conduct",
+    "s10p1": "The following are strictly prohibited:",
+    "s10Items": [
+      "Resale or redistribution of services",
+      "Any attempt to intrude into systems",
+      "Identity theft",
+      "Automated data extraction (scraping)",
+      "Use of bots or automated scripts",
+      "Any use contrary to public decency or public order",
+      "Creation of illegal, defamatory content or content infringing on the rights of third parties"
+    ],
+    "s10Highlight": "<strong>Sanctions:</strong> In case of violation, FitMyCV.io reserves the right to suspend or delete the account without prior notice or refund.",
+    "s11Title": "11. Termination and Account Deletion",
+    "s11p1": "You can delete your account at any time from your personal settings or by contacting us at <supportEmail>support@fitmycv.io</supportEmail>.",
+    "s11p2": "Account deletion results in the permanent deletion of all your data (resumes, job postings, history) in accordance with our <privacyLink>Privacy Policy</privacyLink>.",
+    "s11Highlight": "<strong>Unused credits:</strong> Remaining credits on your account are forfeited upon deletion and cannot be refunded or transferred.",
+    "s12Title": "12. Modification of Terms",
+    "s12p1": "We reserve the right to modify these Terms at any time. Changes will be published on this page with the update date. Continued use of the service after modification constitutes acceptance of the new terms.",
+    "s13Title": "13. Consumer Mediation",
+    "s13p1": "In accordance with Articles L.616-1 and R.616-1 of the French Consumer Code, in the event of a dispute, the User may resort to a consumer mediator free of charge.",
+    "s13p2": "The name and contact details of the relevant mediator will be provided upon request at <contactEmail>contact@fitmycv.io</contactEmail>.",
+    "s13Highlight": "<strong>ODR Platform:</strong> You may also use the European Commission's Online Dispute Resolution platform: <odrLink>https://ec.europa.eu/consumers/odr</odrLink>",
+    "s14Title": "14. Applicable Law and Jurisdiction",
+    "s14p1": "These Terms are governed by French law.",
+    "s14p2": "In the event of a dispute, and after an attempt at amicable resolution, the courts of Paris shall have exclusive jurisdiction.",
+    "s15Title": "15. Legal Information",
+    "s15p1": "Publisher of the FitMyCV.io service:",
+    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nNot subject to VAT (Article 293 B of the French General Tax Code)",
+    "s15_hosting": "Hosting",
+    "s15_hostingP": "The service is self-hosted by the publisher.",
+    "s15_dataProtection": "Data Protection",
+    "s15_dataProtectionP1": "To learn more about how your personal data is processed, please see our <privacyLink>Privacy Policy</privacyLink>.",
+    "s15_dataProtectionP2": "For any questions regarding these Terms, contact us at <contactEmail>contact@fitmycv.io</contactEmail>."
+  },
+  "Privacy": {
+    "metaTitle": "Privacy Policy — FitMyCV",
+    "pageTitle": "Privacy Policy",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Data Controller",
+    "s1p1": "Codeglyph publishes the FitMyCV.io website and, in this capacity, collects and processes personal data about you.",
+    "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>",
+    "s2Title": "2. Minimum Age",
+    "s2p1": "FitMyCV.io is intended for individuals aged 16 and over. By using this service, you confirm that you meet the age requirement.",
+    "s3Title": "3. Your Rights",
+    "s3p1": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
+    "s3Rights": [
+      {
+        "title": "Access",
+        "desc": "view the personal data we hold about you"
+      },
+      {
+        "title": "Rectification",
+        "desc": "correct inaccurate or incomplete data"
+      },
+      {
+        "title": "Erasure",
+        "desc": "request the deletion of your data (\"right to be forgotten\")"
+      },
+      {
+        "title": "Restriction",
+        "desc": "restrict the processing of your data"
+      },
+      {
+        "title": "Portability",
+        "desc": "receive your data in a structured format"
+      },
+      {
+        "title": "Objection",
+        "desc": "object to processing on legitimate grounds"
+      }
+    ],
+    "s3p2": "To exercise these rights, contact us at <contactEmail>contact@codeglyph.fr</contactEmail>. We will respond within 30 days.",
+    "s3p3": "In the event of a dispute, you may file a complaint with the <cnilLink>CNIL</cnilLink> (French Data Protection Authority).",
+    "s4Title": "4. Data Collected",
+    "s4_1Title": "4.1 Identification Data",
+    "s4_1Items": [
+      "Name, email address, password (encrypted)",
+      "Profile picture (if signed in via Google, Apple, or GitHub)"
+    ],
+    "s4_2Title": "4.2 Resume Data",
+    "s4_2Items": [
+      "Professional information: experience, education, skills",
+      "Contact details: phone, address, professional links",
+      "Imported documents (PDF): not retained, transmitted to OpenAI for extraction then immediately deleted",
+      "Version history of your resumes",
+      "All resume data is encrypted at rest"
+    ],
+    "s4_3Title": "4.3 Browsing Data",
+    "s4_3Items": [
+      "IP address, browser type",
+      "Pages visited, session data"
+    ],
+    "s4_4Title": "4.4 Payment Data",
+    "s4_4Items": [
+      "Subscription and transaction history",
+      "No banking data stored (managed exclusively by Stripe)"
+    ],
+    "s4_5Title": "4.5 Usage Data",
+    "s4_5Items": [
+      "Usage events (resume creation, imports, generations)",
+      "AI call performance metrics",
+      "Error logs for diagnostics"
+    ],
+    "s5Title": "5. Purposes and Legal Bases",
+    "s5TableHeaders": [
+      "Purpose",
+      "Legal Basis"
+    ],
+    "s5TableRows": [
+      [
+        "Service provision (resume creation and generation)",
+        "Performance of contract"
+      ],
+      [
+        "Payment and subscription management",
+        "Performance of contract"
+      ],
+      [
+        "Service improvement, bug fixing",
+        "Legitimate interest"
+      ],
+      [
+        "Security and abuse prevention",
+        "Legitimate interest"
+      ],
+      [
+        "Retention of billing data",
+        "Legal obligation"
+      ]
+    ],
+    "s6Title": "6. Retention Periods",
+    "s6TableHeaders": [
+      "Data Type",
+      "Duration"
+    ],
+    "s6TableRows": [
+      [
+        "Active account",
+        "As long as the account exists"
+      ],
+      [
+        "Deleted account",
+        "Immediate deletion"
+      ],
+      [
+        "Inactive account",
+        "3 years after last login (30-day notice before deletion)"
+      ],
+      [
+        "Billing data",
+        "5 years (legal obligation)"
+      ],
+      [
+        "Email logs",
+        "12 months"
+      ]
+    ],
+    "s7Title": "7. Hosting",
+    "s7p1": "Data is hosted in France.",
+    "s8Title": "8. Third-Party AI Providers",
+    "s8p1": "FitMyCV.io uses artificial intelligence to generate and optimize your resumes. Your resume data (experience, skills, education) is transmitted to:",
+    "s8Provider": "<openaiLink>OpenAI</openaiLink> (United States)",
+    "s8p2": "OpenAI states that data transmitted via its API is not used to train its models.",
+    "s8_autoTitle": "Automated Decisions",
+    "s8_autoP": "AI is used to calculate resume-job match scores, classify your skills, and suggest improvements. These processes are decision-support tools: you retain full control over the final content of your resumes.",
+    "s9Title": "9. Payment Processing",
+    "s9p1": "Payments are processed by Stripe Payments Europe, Ltd. (Ireland). FitMyCV.io never stores complete credit card numbers.",
+    "s9Link": "<stripeLink>Stripe Privacy Policy</stripeLink>",
+    "s10Title": "10. Email Communications",
+    "s10p1": "Transactional emails (verification, password reset, confirmations) are sent via Resend.",
+    "s10Link": "<resendLink>Resend Privacy Policy</resendLink>",
+    "s11Title": "11. Cookies",
+    "s11p1": "FitMyCV.io uses essential cookies required for the site to function (session, authentication, anti-spam protection). No advertising cookies are used.",
+    "s12Title": "12. Security",
+    "s12p1": "We implement the following measures to protect your data:",
+    "s12Items": [
+      "HTTPS communication (SSL/TLS)",
+      "Encrypted passwords (bcrypt)",
+      "Resumes and personal data encrypted at rest (AES-256)",
+      "CSRF protection and secure cookies",
+      "Anti-spam protection via Google reCAPTCHA v3"
+    ],
+    "s12p2": "reCAPTCHA collects technical data (IP address, cookies, browsing behavior) to distinguish humans from bots. Google's <googlePrivacyLink>Privacy Policy</googlePrivacyLink> and Terms of Service apply.",
+    "s13Title": "13. International Transfers",
+    "s13p1": "Some data may be transferred outside the European Union (OpenAI, Resend in the United States). These transfers are governed by Standard Contractual Clauses approved by the European Commission.",
+    "s14Title": "14. Modifications",
+    "s14p1": "This policy may be modified at any time. Changes will be published on this page with the update date. In the event of a substantial modification, you will be notified by email."
+  },
+  "LegalLayout": {
+    "terms": "Terms of Sale",
+    "privacy": "Privacy Policy"
+  },
+  "LanguageSelector": {
+    "label": "Language"
+  },
+  "JsonLd": {
+    "softwareDescription": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances."
+  },
+  "Showcase": {
+    "title": "Workflow",
+    "subtitle": "The complete 7-step journey: from PDF import to optimized resume export.",
+    "stepsTitle": "Workflow broken down into 7 steps",
+    "stepsSubtitle": "Each step loops independently.",
+    "footer": "FitMyCV.io — Internal Showcase",
+    "stepLabels": ["Resume Import", "AI Generation", "Review Mode", "Score Calculation", "Resume Optimization", "Optimization Review", "PDF/Word Export"]
+  }
+}

@@ -1,9 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LanguageSelector from "./LanguageSelector";
+import FooterLanguageSelector from "./FooterLanguageSelector";
 
 export default function Header() {
+  const t = useTranslations("Header");
   const headerRef = useRef<HTMLElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -97,24 +101,25 @@ export default function Header() {
           <img src="/icons/logo.png" alt="FitMyCV" />
         </Link>
         <nav className="header-nav">
-          <Link href="/#howItWorks">Comment ça marche</Link>
-          <Link href="/#features">Fonctionnalités</Link>
-          <Link href="/#pricing">Tarifs</Link>
-          <Link href="/#faq">FAQ</Link>
+          <Link href="/#howItWorks">{t("howItWorks")}</Link>
+          <Link href="/#features">{t("features")}</Link>
+          <Link href="/#pricing">{t("pricing")}</Link>
+          <Link href="/#faq">{t("faq")}</Link>
         </nav>
         <div className="header-actions">
+          <LanguageSelector />
           <a href="https://app.fitmycv.io" className="header-btn login">
-            Log in
+            {t("login")}
           </a>
           <a href="https://app.fitmycv.io" className="header-btn signup">
-            Sign Up
+            {t("signup")}
           </a>
         </div>
         <button
           className="header-burger"
           id="headerBurger"
           ref={burgerRef}
-          aria-label="Menu"
+          aria-label={t("menu")}
         >
           <span></span>
           <span></span>
@@ -125,16 +130,17 @@ export default function Header() {
           id="headerMobileMenu"
           ref={menuRef}
         >
-          <Link href="/#howItWorks">Comment ça marche</Link>
-          <Link href="/#features">Fonctionnalités</Link>
-          <Link href="/#pricing">Tarifs</Link>
-          <Link href="/#faq">FAQ</Link>
+          <Link href="/#howItWorks">{t("howItWorks")}</Link>
+          <Link href="/#features">{t("features")}</Link>
+          <Link href="/#pricing">{t("pricing")}</Link>
+          <Link href="/#faq">{t("faq")}</Link>
+          <FooterLanguageSelector />
           <div className="mobile-divider"></div>
           <a href="https://app.fitmycv.io" className="header-btn login">
-            Log in
+            {t("login")}
           </a>
           <a href="https://app.fitmycv.io" className="header-btn signup">
-            Sign Up
+            {t("signup")}
           </a>
         </div>
       </div>

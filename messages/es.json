@@ -1,0 +1,589 @@
+{
+  "Metadata": {
+    "title": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
+    "titleTemplate": "%s | FitMyCV",
+    "description": "Importa tu CV, pega el enlace de una oferta de empleo y deja que la IA optimice tu candidatura para maximizar tus oportunidades. Exporta en PDF y Word en segundos.",
+    "ogTitle": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
+    "ogDescription": "Importa tu CV, pega el enlace de una oferta y deja que la IA lo optimice para cada puesto. Exporta en PDF/Word en segundos.",
+    "ogImageAlt": "FitMyCV — Tu CV, optimizado por IA",
+    "twitterTitle": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
+    "twitterDescription": "Importa tu CV, pega un enlace de oferta y deja que la IA lo optimice. Exporta en PDF/Word en segundos.",
+    "keywords": "CV, optimización CV, IA, inteligencia artificial, ATS, generador CV, adaptar CV oferta empleo, puntuación compatibilidad CV, exportar PDF CV, candidatura automática, FitMyCV"
+  },
+  "Header": {
+    "howItWorks": "Cómo funciona",
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "menu": "Menú"
+  },
+  "Hero": {
+    "title": "Tu CV, optimizado por IA",
+    "cta": "Empezar ahora",
+    "scrollMore": "MÁS INFORMACIÓN",
+    "phrases": [
+      "Olvídate del copiar y pegar — una URL es suficiente",
+      "10 enlaces, 10 CV generados a la vez",
+      "Analiza, puntúa, optimiza — en segundos",
+      "Sin suscripción — pago por uso",
+      "7 pasos para un CV perfecto"
+    ]
+  },
+  "HowItWorks": {
+    "intro": "FitMyCV optimiza tu CV con IA para que coincida con cada oferta de empleo. Adapta el contenido al formato ATS y genera un CV que supera los filtros ATS y te consigue más entrevistas.",
+    "title": "Importa tu CV, pega una oferta,\nobtén un CV optimizado.",
+    "subtitle": "Importa tu CV, pega una oferta, obtén un CV optimizado.",
+    "phase1": "Fase 1 — Importación",
+    "phase2": "Fase 2 — Inteligencia IA",
+    "phase3": "Fase 3 — Exportación",
+    "stepLabel": "Paso",
+    "stepPrev": "Paso anterior",
+    "stepNext": "Paso siguiente",
+    "stepN": "Paso {step}",
+    "steps": [
+      {
+        "label": "Importar PDF",
+        "title": "Importa tu CV",
+        "desc": "Arrastra tu PDF o súbelo. La IA extrae automáticamente tus competencias, experiencias y formación en segundos.",
+        "time": ""
+      },
+      {
+        "label": "Generación IA",
+        "title": "Generación IA",
+        "desc": "Añade las URLs de las ofertas de empleo. La IA genera variantes de CV personalizadas para cada puesto.",
+        "time": "~35s en multi-oferta"
+      },
+      {
+        "label": "Revisión de cambios",
+        "title": "Revisión de cambios",
+        "desc": "Visualiza cada modificación sugerida por la IA con un diff claro. Acepta, rechaza o ajusta — tú mantienes el control total.",
+        "time": "~1 minuto"
+      },
+      {
+        "label": "Puntuación de compatibilidad",
+        "title": "Puntuación de compatibilidad",
+        "desc": "Una puntuación evalúa la correspondencia entre tu CV y la oferta. Descubre exactamente dónde puedes mejorar.",
+        "time": "~10 segundos"
+      },
+      {
+        "label": "Optimización dirigida",
+        "title": "Optimización dirigida",
+        "desc": "La IA te indica concretamente qué mejorar para aumentar tu puntuación. Selecciona las sugerencias que te convengan y añade tus propias notas.",
+        "time": "~40 segundos"
+      },
+      {
+        "label": "Validación final",
+        "title": "Validación final",
+        "desc": "Revisa las optimizaciones aplicadas y observa cómo sube tu puntuación. De 79 a 87 — cada punto cuenta.",
+        "time": "~30 segundos"
+      },
+      {
+        "label": "Exportar PDF / Word",
+        "title": "Exportar PDF / Word",
+        "desc": "Previsualiza tu CV finalizado y expórtalo en el formato que prefieras. Listo para enviar, perfectamente formateado.",
+        "time": "1 clic"
+      }
+    ]
+  },
+  "StatsStrip": {
+    "stats": [
+      {
+        "value": "87%",
+        "label": "de compatibilidad"
+      },
+      {
+        "value": "5",
+        "label": "idiomas"
+      },
+      {
+        "value": "30s",
+        "label": "para optimizar"
+      },
+      {
+        "value": "0€",
+        "label": "sin suscripción"
+      }
+    ]
+  },
+  "Features": {
+    "title": "Todo lo que necesitas para conseguir el puesto",
+    "subtitle": "Diseñado para tus CVs. No es otro chatbot más.",
+    "card1Title": "Un CV adaptado a cada oferta",
+    "card1Sub": "Pega un enlace, la IA hace el resto",
+    "card1RefLabel": "CV de referencia",
+    "card1SelectText": "Desarrollador Full-Stack JS",
+    "card1LinkLabel": "Enlace oferta de empleo",
+    "card1Cancel": "Cancelar",
+    "card1Validate": "Validar",
+    "card2Title": "10 CV en un clic",
+    "card2Sub": "Todas tus candidaturas en paralelo",
+    "card3Title": "Una plantilla en pocas palabras",
+    "card3Sub": "¿Sin enlace? Un título de puesto es suficiente",
+    "card4Title": "Importa tu CV con un gesto",
+    "card4Sub": "Arrastra un PDF, la IA lo estructura todo",
+    "card4UploadLabel": "Elegir un archivo PDF",
+    "card5Title": "Optimizado para ATS",
+    "card5Sub": "Cada palabra cuenta",
+    "card5Originals": [
+      "Gestión de proyectos web complejos",
+      "Trabajo en equipo ágil",
+      "Creación de interfaces modernas"
+    ],
+    "card5Rewrites": [
+      "Dirección de proyectos web full-stack",
+      "Metodología Scrum y sprints ágiles",
+      "Diseño UI/UX responsive (React)"
+    ],
+    "card6Title": "Tu puntuación de matching",
+    "card6Sub": "Mide el impacto de cada optimización",
+    "card7Title": "La oferta descifrada para ti",
+    "card7Sub": "Skills, procesos, beneficios extraídos automáticamente",
+    "card7Tags": {
+      "teleTravail": "Teletrabajo"
+    },
+    "card8Title": "La IA te guía paso a paso",
+    "card8Sub": "Sugerencias dirigidas para cada oferta",
+    "card8High": "Alta",
+    "card8Med": "Media",
+    "card8Low": "Baja",
+    "card8Reco1": "Añadir herramientas de test (Jest, Cypress)",
+    "card8Reco2": "Detallar la experiencia en Design System",
+    "card8Reco3": "Mencionar accesibilidad WCAG",
+    "card9Title": "Mantén el control",
+    "card9Sub": "Acepta o rechaza cada modificación",
+    "card9Old1": "3 años de experiencia",
+    "card9New1": "3+ años en desarrollo web",
+    "card9Old2": "Buen dominio de React",
+    "card9New2": "Experto en React y TypeScript",
+    "card10Title": "Viaja en el tiempo",
+    "card10Sub": "Restaura fácilmente tu CV en un clic",
+    "card11Title": "Edita directamente en la app",
+    "card11Sub": "Cada sección modificable en un clic",
+    "card11Row1": "Experiencia profesional",
+    "card11Row2": "Competencias técnicas",
+    "card11Row3": "Formación",
+    "card11Edit": "Editar",
+    "card11Delete": "Eliminar",
+    "card12Title": "Exporta en un clic",
+    "card12Sub": "PDF, Word, el formato que prefieras",
+    "card12ExportBtn": "Exportar PDF",
+    "card13Title": "Una interfaz, 4 idiomas",
+    "card13Sub": "Francés, Inglés, Alemán, Español",
+    "card13LangLabels": [
+      "Français",
+      "English",
+      "Deutsch",
+      "Español"
+    ],
+    "card14Title": "Traduce tu CV",
+    "card14Sub": "En 4 idiomas, vocabulario profesional adaptado",
+    "card15Title": "Tus tareas se ejecutan en segundo plano",
+    "card15Sub": "Genera, sal de la página, estará listo a tu vuelta",
+    "card15TaskSteps": [
+      "Experiencias",
+      "Competencias",
+      "Proyectos",
+      "Resumen",
+      "Terminado"
+    ],
+    "card15Waiting": "En espera...",
+    "card15Done": "Terminado",
+    "card16Title": "Extensión de navegador",
+    "card16Badge": "Próximamente",
+    "card16Sub": "Lanza una generación sin salir de tu pestaña",
+    "card16CvLabel": "Dev Full-Stack JS",
+    "card16GenBtn": "Generar mi CV"
+  },
+  "Pricing": {
+    "title": "<highlight>Sin suscripción.</highlight>\nPaga solo lo que uses.",
+    "subtitle": "15 créditos gratis al registrarte.",
+    "calcQuestion": "¿Cuántas ofertas de empleo tienes como objetivo este mes?",
+    "calcTotal": "Coste total",
+    "calcPerOffer": "Por oferta",
+    "calcCompetition": "La competencia",
+    "calcFree": "Gratis",
+    "calcCompetitionValue": "~37 €",
+    "calcPerMonth": "/mes",
+    "calcNote1": "Con la oferta promocional LAUNCH30",
+    "calcNote2": "Estimación basada en el proceso típico de creación de un CV",
+    "packBadgePopular": "El más popular",
+    "packBadgeBestValue": "Mejor relación",
+    "creditsLabel": "créditos",
+    "trustItems": [
+      "Pago seguro con Stripe",
+      "Créditos permanentes",
+      "Sin compromiso",
+      "Visa · MC · Apple Pay"
+    ],
+    "launchTag": "Oferta de lanzamiento",
+    "launchTitle": "−30 % con el código <highlight>LAUNCH30</highlight>",
+    "launchRemaining": "<green>{remaining}</green>/{max} plazas restantes",
+    "launchNoteAsterisk": "*Código válido solo para la primera compra",
+    "ctaBtn": "Empezar gratis",
+    "launchNote": "15 créditos gratis · Sin tarjeta bancaria"
+  },
+  "FAQ": {
+    "title": "Preguntas\nfrecuentes",
+    "items": [
+      {
+        "question": "¿La IA va a reemplazar mi contenido?",
+        "answer": "No. La IA no inventa competencias ni experiencias. Trabaja exclusivamente a partir de la información que proporcionas: reformula, reorganiza y optimiza el contenido teniendo en cuenta el formato ATS. El modo de revisión te permite validar cada modificación, y el editor en línea te da un control completo sobre el resultado final."
+      },
+      {
+        "question": "¿Mi CV será compatible con ATS?",
+        "answer": "Sí. La estructura del CV, la elección de palabras clave y la jerarquía de secciones están diseñadas para ser correctamente leídas por los sistemas de seguimiento de candidaturas (ATS). Cuando tu perfil lo justifica, la IA integra los términos relevantes de la oferta de empleo para reforzar la correspondencia con los filtros de los reclutadores."
+      },
+      {
+        "question": "¿Mis datos están protegidos?",
+        "answer": "Tus CV y datos personales están cifrados y nunca se comparten con terceros ni se utilizan para entrenar modelos de IA. Puedes eliminar tu cuenta y todos tus datos en cualquier momento. FitMyCV cumple con el RGPD."
+      },
+      {
+        "question": "¿Hay una prueba gratuita?",
+        "answer": "Sí. Recibes 15 créditos gratuitos al crear tu cuenta, sin necesidad de tarjeta bancaria. Esto te permite generar varios CV y probar todas las funcionalidades antes de comprar créditos adicionales."
+      },
+      {
+        "question": "¿Qué plataformas de empleo son compatibles?",
+        "answer": "FitMyCV funciona con cualquier oferta de empleo accesible públicamente, sin autenticación requerida: Indeed, Welcome to the Jungle, Pôle Emploi y muchas otras plataformas. Solo tienes que pegar la URL de la oferta. Para los sitios que requieren inicio de sesión (LinkedIn, etc.), se está desarrollando una extensión de navegador que permitirá generar un CV directamente desde la página de la oferta, a partir del CV base que elijas."
+      },
+      {
+        "question": "¿En qué se diferencia FitMyCV de ChatGPT?",
+        "answer": "Si le pides a ChatGPT que adapte tu CV a una oferta, a menudo inventará: una competencia que no tienes, una tarea que nunca realizaste, solo para encajar con el puesto. Te das cuenta al releer — o peor, en la entrevista. Luego hay que corregir, volver a generar, verificar de nuevo… con cada candidatura. FitMyCV se basa exclusivamente en tu trayectoria real y te muestra cada modificación antes de validarla. Resultado: un CV fiel, optimizado y listo para enviar — en minutos, no en horas."
+      },
+      {
+        "question": "¿Qué formatos son compatibles?",
+        "answer": "Puedes importar un CV existente en PDF arrastrándolo y soltándolo. Después de la generación o modificación, la exportación está disponible en PDF y en Word (.docx), listos para adjuntar a una candidatura o subir a una plataforma de empleo."
+      },
+      {
+        "question": "¿Cuántos CV puedo crear?",
+        "answer": "No hay límite. Cada generación de CV consume créditos. Al registrarte, recibes 15 créditos gratuitos para probar la herramienta. Después, compras créditos según tus necesidades — sin suscripción ni compromiso."
+      },
+      {
+        "question": "¿En cuántos idiomas puedo crear mi CV?",
+        "answer": "La interfaz y la traducción de CV están actualmente disponibles en 4 idiomas: francés, inglés, español y alemán. Se irán añadiendo más idiomas progresivamente. Puedes traducir un CV existente a otro idioma en un clic, conservando el diseño y el contenido."
+      },
+      {
+        "question": "¿Puedo modificar el CV después de la generación?",
+        "answer": "Sí. El editor en línea te permite modificar cada sección directamente en el navegador. El modo de revisión muestra las sugerencias de la IA como propuestas que puedes aceptar o rechazar individualmente antes de finalizar tu CV."
+      },
+      {
+        "question": "¿Qué es la puntuación de compatibilidad?",
+        "answer": "Es un indicador en porcentaje que mide la adecuación entre tu CV y una oferta de empleo. El algoritmo compara las competencias, la experiencia y las palabras clave de tu perfil con los requisitos del puesto. Además de la puntuación, recomendaciones específicas te indican cómo mejorar la correspondencia."
+      }
+    ]
+  },
+  "Reviews": {
+    "title": "Opiniones de clientes"
+  },
+  "Footer": {
+    "tagline": "Tu CV, optimizado por IA",
+    "product": "Producto",
+    "howItWorks": "Cómo funciona",
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "support": "Soporte",
+    "legal": "Legal",
+    "terms": "Condiciones de venta",
+    "privacy": "Privacidad",
+    "contact": "Contacto",
+    "copyright": "© 2026 FitMyCV.io"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Página no encontrada",
+    "backHome": "Volver al inicio"
+  },
+  "Support": {
+    "metaTitle": "Centro de ayuda — Preguntas frecuentes",
+    "metaDescription": "Encuentra todas las respuestas a tus preguntas sobre FitMyCV: generación de CV por IA, compatibilidad ATS, formatos, precios, protección de datos y más.",
+    "heading": "Centro de ayuda",
+    "subtitle": "Todo lo que necesitas saber sobre FitMyCV"
+  },
+  "Terms": {
+    "metaTitle": "Condiciones Generales de Venta — FitMyCV",
+    "pageTitle": "Condiciones Generales de Venta",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Aceptación de las CGV",
+    "s1p1": "Al utilizar FitMyCV.io y realizar una compra de créditos, acepta sin reservas las presentes Condiciones Generales de Venta (CGV).",
+    "s1p2": "Si no acepta estas condiciones, le rogamos que no utilice nuestros servicios de pago.",
+    "s1p3": "El uso de FitMyCV.io está reservado a personas mayores de 16 años.",
+    "s2Title": "2. Descripción de los servicios",
+    "s2p1": "FitMyCV.io es una plataforma de creación y optimización de CV que utiliza inteligencia artificial.",
+    "s2_1Title": "2.1. Servicios gratuitos",
+    "s2_1Items": [
+      "Creación manual de CV ilimitada",
+      "Edición ilimitada de CV",
+      "Almacenamiento de CV en tu espacio personal"
+    ],
+    "s2_2Title": "2.2. Servicios que consumen créditos",
+    "s2_2Items": [
+      "Exportación PDF y DOCX",
+      "Generación y adaptación de CV por IA",
+      "Importación y extracción de CV desde PDF",
+      "Traducción automática de CV",
+      "Optimización de CV para ofertas de empleo",
+      "Puntuación de compatibilidad CV/oferta"
+    ],
+    "s2_3Title": "2.3. Sistema de créditos",
+    "s2_3p1": "Al crear tu cuenta, recibes un número de créditos por defecto que te permiten probar las funcionalidades de la plataforma.",
+    "s2_3p2": "Cada funcionalidad consume un número variable de créditos según una tarifa definida. El coste en créditos de cada funcionalidad se muestra antes de su uso.",
+    "s2_3p3": "Los créditos no tienen fecha de caducidad y siguen siendo válidos mientras tu cuenta esté activa.",
+    "s2_3p4": "Cuando tus créditos se agoten, puedes comprar más desde la página <creditsLink>Gestión de créditos</creditsLink>.",
+    "s3Title": "3. Precios y pagos",
+    "s3p1": "Todos los precios se muestran en euros (EUR). El editor no está sujeto al IVA de conformidad con el artículo 293 B del Código General de Impuestos francés.",
+    "s3p2": "Los pagos están protegidos por Stripe y aceptan tarjetas bancarias, Apple Pay, Google Pay y otros medios de pago según tu ubicación.",
+    "s3p3": "Las tarifas de los packs de créditos están disponibles en la página <creditsLink>Gestión de créditos</creditsLink>.",
+    "s4Title": "4. Derecho de desistimiento",
+    "s4p1": "De conformidad con el artículo L.221-28 del Código de consumo francés, el Usuario reconoce y acepta que la ejecución de los Servicios comienza inmediatamente después de la validación de su pedido.",
+    "s4p2": "En consecuencia, el Usuario renuncia expresamente a su derecho de desistimiento para toda compra de créditos.",
+    "s4Highlight": "<strong>Importante:</strong> La validación del pedido, tras haber marcado la casilla de renuncia al derecho de desistimiento, constituye una renuncia expresa a dicho derecho.",
+    "s5Title": "5. Política de reembolso",
+    "s5p1": "Toda compra de créditos es definitiva una vez utilizado el servicio (generación de CV, exportación, traducción, etc.). Al realizar una compra, reconoces haber leído y aceptado esta cláusula.",
+    "s5p2": "En caso de problema técnico que impida el uso del servicio, contacta con nuestro soporte en <supportEmail>support@fitmycv.io</supportEmail>. Estudiaremos tu situación de forma individual.",
+    "s6Title": "6. Contracargos y disputas bancarias",
+    "s6p1": "En caso de contracargo (disputa de pago ante tu banco) después de haber utilizado el servicio:",
+    "s6Items": [
+      "El importe de los créditos disputados será retirado de tu saldo, que puede volverse negativo.",
+      "Deberás recargar tu cuenta para seguir utilizando los servicios que consumen créditos."
+    ],
+    "s6Highlight": "<strong>Atención:</strong> Los contracargos abusivos pueden conllevar la suspensión definitiva de tu cuenta.",
+    "s7Title": "7. Inteligencia artificial",
+    "s7p1": "FitMyCV.io actúa en calidad de «desplegador» de un sistema de inteligencia artificial en el sentido del reglamento europeo 2024/1689 (AI Act).",
+    "s7_1Title": "7.1. Funcionalidades que utilizan IA",
+    "s7_1Items": [
+      "Generación y adaptación de CV",
+      "Optimización de CV",
+      "Extracción de ofertas de empleo",
+      "Cálculo de la puntuación de compatibilidad",
+      "Traducción de CV",
+      "Importación y extracción de CV desde PDF"
+    ],
+    "s7_2Title": "7.2. Naturaleza de los resultados",
+    "s7_2p1": "Los resultados generados por la IA son sugerencias y en ningún caso constituyen recomendaciones vinculantes. El usuario conserva el control total sobre el contenido final de sus CV.",
+    "s7_3Title": "7.3. Proveedor de IA",
+    "s7_3p1": "Las funcionalidades de IA son proporcionadas por OpenAI (Estados Unidos). Los datos transmitidos a OpenAI no se utilizan para entrenar sus modelos de conformidad con su política de API.",
+    "s7Highlight": "<strong>Transparencia IA:</strong> El usuario queda informado de que los contenidos generados provienen de un sistema de inteligencia artificial. Estos contenidos deben verificarse antes de su uso.",
+    "s8Title": "8. Propiedad intelectual",
+    "s8p1": "Los CV que creas a través de FitMyCV.io te pertenecen. Conservas todos los derechos sobre el contenido que proporcionas.",
+    "s8p2": "La interfaz, el código fuente, los algoritmos y todos los elementos de FitMyCV.io son propiedad exclusiva del editor y están protegidos por los derechos de autor.",
+    "s9Title": "9. Limitación de responsabilidad",
+    "s9p1": "Los servicios se proporcionan «tal cual», sin garantía de ningún tipo, expresa o implícita.",
+    "s9p2": "FitMyCV.io no garantiza:",
+    "s9Items": [
+      "La disponibilidad continua e ininterrumpida del servicio",
+      "La ausencia de errores técnicos o bugs",
+      "La compatibilidad de los CV generados con todos los sistemas ATS (Applicant Tracking Systems)",
+      "La obtención de una entrevista o un empleo como resultado del uso del servicio",
+      "La exactitud o pertinencia de los contenidos generados por la IA"
+    ],
+    "s9p3": "Se pueden realizar operaciones de mantenimiento sin previo aviso, causando una interrupción temporal del servicio.",
+    "s9p4": "Nuestra responsabilidad se limita al importe que hayas pagado por el servicio en los últimos 12 meses.",
+    "s10Title": "10. Comportamientos prohibidos",
+    "s10p1": "Están estrictamente prohibidos:",
+    "s10Items": [
+      "La reventa o redistribución de los servicios",
+      "Cualquier intento de intrusión en los sistemas",
+      "La suplantación de identidad",
+      "La extracción automatizada de datos (scraping)",
+      "El uso de bots o scripts automatizados",
+      "Cualquier uso contrario a las buenas costumbres o al orden público",
+      "La creación de contenidos ilegales, difamatorios o que vulneren los derechos de terceros"
+    ],
+    "s10Highlight": "<strong>Sanciones:</strong> En caso de infracción, FitMyCV.io se reserva el derecho de suspender o eliminar la cuenta sin previo aviso ni reembolso.",
+    "s11Title": "11. Resolución y eliminación de cuenta",
+    "s11p1": "Puedes eliminar tu cuenta en cualquier momento desde los ajustes de tu espacio personal o contactándonos en <supportEmail>support@fitmycv.io</supportEmail>.",
+    "s11p2": "La eliminación de la cuenta conlleva la eliminación definitiva de todos tus datos (CV, ofertas de empleo, historial) de conformidad con nuestra <privacyLink>política de privacidad</privacyLink>.",
+    "s11Highlight": "<strong>Créditos no utilizados:</strong> Los créditos restantes en tu cuenta se pierden al eliminarla y no pueden ser reembolsados ni transferidos.",
+    "s12Title": "12. Modificación de las CGV",
+    "s12p1": "Nos reservamos el derecho de modificar estas CGV en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de actualización. El uso continuado del servicio tras la modificación implica la aceptación de las nuevas condiciones.",
+    "s13Title": "13. Mediación de consumo",
+    "s13p1": "De conformidad con los artículos L.616-1 y R.616-1 del Código de consumo francés, en caso de litigio, el Usuario puede recurrir gratuitamente a un mediador de consumo.",
+    "s13p2": "El nombre y los datos de contacto del mediador competente se comunicarán previa solicitud a <contactEmail>contact@fitmycv.io</contactEmail>.",
+    "s13Highlight": "<strong>Plataforma ODR:</strong> También puedes utilizar la plataforma de resolución de litigios en línea de la Comisión Europea: <odrLink>https://ec.europa.eu/consumers/odr</odrLink>",
+    "s14Title": "14. Legislación aplicable y jurisdicción",
+    "s14p1": "Las presentes CGV se rigen por la legislación francesa.",
+    "s14p2": "En caso de litigio, y tras un intento de resolución amistosa, los tribunales de París serán los únicos competentes.",
+    "s15Title": "15. Información legal",
+    "s15p1": "Editor del servicio FitMyCV.io:",
+    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 París\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nNo sujeto al IVA (artículo 293 B del CGI francés)",
+    "s15_hosting": "Alojamiento",
+    "s15_hostingP": "El servicio está autoalojado por el editor.",
+    "s15_dataProtection": "Protección de datos",
+    "s15_dataProtectionP1": "Para obtener más información sobre el tratamiento de tus datos personales, consulta nuestra <privacyLink>política de privacidad</privacyLink>.",
+    "s15_dataProtectionP2": "Para cualquier pregunta sobre estas CGV, contáctanos en <contactEmail>contact@fitmycv.io</contactEmail>."
+  },
+  "Privacy": {
+    "metaTitle": "Política de privacidad — FitMyCV",
+    "pageTitle": "Política de privacidad",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Responsable del tratamiento",
+    "s1p1": "La sociedad Codeglyph edita el sitio FitMyCV.io y, en ese sentido, recopila y trata datos personales que le conciernen.",
+    "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 París\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>",
+    "s2Title": "2. Edad mínima",
+    "s2p1": "FitMyCV.io está destinado a personas de 16 años o más. Al utilizar este servicio, confirmas que cumples con el requisito de edad.",
+    "s3Title": "3. Tus derechos",
+    "s3p1": "De conformidad con el Reglamento General de Protección de Datos (RGPD), dispones de los siguientes derechos:",
+    "s3Rights": [
+      {
+        "title": "Acceso",
+        "desc": "consultar los datos personales que tenemos sobre ti"
+      },
+      {
+        "title": "Rectificación",
+        "desc": "corregir datos inexactos o incompletos"
+      },
+      {
+        "title": "Supresión",
+        "desc": "solicitar la eliminación de tus datos («derecho al olvido»)"
+      },
+      {
+        "title": "Limitación",
+        "desc": "restringir el tratamiento de tus datos"
+      },
+      {
+        "title": "Portabilidad",
+        "desc": "recuperar tus datos en un formato estructurado"
+      },
+      {
+        "title": "Oposición",
+        "desc": "oponerte al tratamiento por motivos legítimos"
+      }
+    ],
+    "s3p2": "Para ejercer estos derechos, contáctanos en <contactEmail>contact@codeglyph.fr</contactEmail>. Responderemos en un plazo de 30 días.",
+    "s3p3": "En caso de litigio, puedes presentar una reclamación ante la <cnilLink>CNIL</cnilLink>.",
+    "s4Title": "4. Datos recopilados",
+    "s4_1Title": "4.1 Datos de identificación",
+    "s4_1Items": [
+      "Nombre, dirección de correo electrónico, contraseña (cifrada)",
+      "Foto de perfil (si inicias sesión a través de Google, Apple o GitHub)"
+    ],
+    "s4_2Title": "4.2 Datos de CV",
+    "s4_2Items": [
+      "Información profesional: experiencias, formación, competencias",
+      "Datos de contacto: teléfono, dirección, enlaces profesionales",
+      "Documentos importados (PDF): no se conservan, se transmiten a OpenAI para su extracción y se eliminan inmediatamente",
+      "Historial de versiones de tus CV",
+      "Todos los datos de CV están cifrados en reposo"
+    ],
+    "s4_3Title": "4.3 Datos de navegación",
+    "s4_3Items": [
+      "Dirección IP, tipo de navegador",
+      "Páginas visitadas, datos de sesión"
+    ],
+    "s4_4Title": "4.4 Datos de pago",
+    "s4_4Items": [
+      "Historial de suscripciones y transacciones",
+      "Ningún dato bancario almacenado (gestionados exclusivamente por Stripe)"
+    ],
+    "s4_5Title": "4.5 Datos de uso",
+    "s4_5Items": [
+      "Eventos de uso (creación de CV, importaciones, generaciones)",
+      "Métricas de rendimiento de las llamadas IA",
+      "Logs de errores para diagnóstico"
+    ],
+    "s5Title": "5. Finalidades y bases legales",
+    "s5TableHeaders": [
+      "Finalidad",
+      "Base legal"
+    ],
+    "s5TableRows": [
+      [
+        "Prestación del servicio (creación y generación de CV)",
+        "Ejecución del contrato"
+      ],
+      [
+        "Gestión de pagos y suscripciones",
+        "Ejecución del contrato"
+      ],
+      [
+        "Mejora del servicio, corrección de errores",
+        "Interés legítimo"
+      ],
+      [
+        "Seguridad y prevención de abusos",
+        "Interés legítimo"
+      ],
+      [
+        "Conservación de datos de facturación",
+        "Obligación legal"
+      ]
+    ],
+    "s6Title": "6. Plazos de conservación",
+    "s6TableHeaders": [
+      "Tipo de datos",
+      "Plazo"
+    ],
+    "s6TableRows": [
+      [
+        "Cuenta activa",
+        "Mientras la cuenta exista"
+      ],
+      [
+        "Cuenta eliminada",
+        "Eliminación inmediata"
+      ],
+      [
+        "Cuenta inactiva",
+        "3 años tras la última conexión (notificación 30 días antes de la eliminación)"
+      ],
+      [
+        "Datos de facturación",
+        "5 años (obligación legal)"
+      ],
+      [
+        "Logs de emails",
+        "12 meses"
+      ]
+    ],
+    "s7Title": "7. Alojamiento",
+    "s7p1": "Los datos se alojan en Francia.",
+    "s8Title": "8. Proveedores de IA externos",
+    "s8p1": "FitMyCV.io utiliza inteligencia artificial para generar y optimizar tus CV. Los datos de tus CV (experiencias, competencias, formación) se transmiten a:",
+    "s8Provider": "<openaiLink>OpenAI</openaiLink> (Estados Unidos)",
+    "s8p2": "OpenAI afirma no utilizar los datos transmitidos a través de su API para entrenar sus modelos.",
+    "s8_autoTitle": "Decisiones automatizadas",
+    "s8_autoP": "La IA se utiliza para calcular puntuaciones de compatibilidad CV-oferta, clasificar tus competencias y sugerir mejoras. Estos tratamientos son ayudas a la decisión: conservas el control total sobre el contenido final de tus CV.",
+    "s9Title": "9. Procesamiento de pagos",
+    "s9p1": "Los pagos son procesados por Stripe Payments Europe, Ltd. (Irlanda). FitMyCV.io nunca almacena los números completos de tarjeta bancaria.",
+    "s9Link": "<stripeLink>Política de privacidad de Stripe</stripeLink>",
+    "s10Title": "10. Envío de emails",
+    "s10p1": "Los emails transaccionales (verificación, restablecimiento de contraseña, confirmaciones) se envían a través de Resend.",
+    "s10Link": "<resendLink>Política de privacidad de Resend</resendLink>",
+    "s11Title": "11. Cookies",
+    "s11p1": "FitMyCV.io utiliza cookies esenciales para el funcionamiento del sitio (sesión, autenticación, protección antispam). No se utilizan cookies publicitarias.",
+    "s12Title": "12. Seguridad",
+    "s12p1": "Implementamos las siguientes medidas para proteger tus datos:",
+    "s12Items": [
+      "Comunicación HTTPS (SSL/TLS)",
+      "Contraseñas cifradas (bcrypt)",
+      "CV y datos personales cifrados en reposo (AES-256)",
+      "Protección CSRF y cookies seguras",
+      "Protección antispam mediante Google reCAPTCHA v3"
+    ],
+    "s12p2": "reCAPTCHA recopila datos técnicos (dirección IP, cookies, comportamiento de navegación) para distinguir humanos de robots. La <googlePrivacyLink>Política de privacidad</googlePrivacyLink> y las Condiciones de uso de Google son aplicables.",
+    "s13Title": "13. Transferencias internacionales",
+    "s13p1": "Algunos datos pueden transferirse fuera de la Unión Europea (OpenAI, Resend en Estados Unidos). Estas transferencias están reguladas por cláusulas contractuales tipo aprobadas por la Comisión Europea.",
+    "s14Title": "14. Modificaciones",
+    "s14p1": "Esta política puede modificarse en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de actualización. En caso de modificación sustancial, se te informará por email."
+  },
+  "LegalLayout": {
+    "terms": "Condiciones Generales de Venta",
+    "privacy": "Política de privacidad"
+  },
+  "LanguageSelector": {
+    "label": "Idioma"
+  },
+  "JsonLd": {
+    "softwareDescription": "Importa tu CV, pega el enlace de una oferta de empleo y deja que la IA optimice tu candidatura para maximizar tus oportunidades."
+  },
+  "Showcase": {
+    "title": "Workflow",
+    "subtitle": "El recorrido completo en 7 pasos: de la importación PDF a la exportación del CV optimizado.",
+    "stepsTitle": "Workflow dividido en 7 pasos",
+    "stepsSubtitle": "Cada paso se repite en bucle de forma independiente.",
+    "footer": "FitMyCV.io — Showcase interno",
+    "stepLabels": ["Importar CV", "Generación IA", "Modo Revisión", "Cálculo de Puntuación", "Optimización del CV", "Revisión de la Optimización", "Exportar PDF/Word"]
+  }
+}

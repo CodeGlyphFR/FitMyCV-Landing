@@ -1,14 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useCallback } from 'react';
-
-const PHRASES = [
-  'Fini le copier-coller — une URL suffit',
-  '10 liens, 10 CV générés en même temps',
-  'Analysez, scorez, optimisez — en quelques secondes',
-  'Sans abonnement — paiement à la demande',
-  '7 étapes pour un CV parfait',
-];
+import { useTranslations, useLocale } from 'next-intl';
 
 const BASE_W = 960;
 const BASE_H = 600;
@@ -16,6 +9,12 @@ const MAX_TILT = 20;
 const VISIBLE_RATIO = 0.33;
 
 export default function Hero() {
+  const t = useTranslations('Hero');
+  const locale = useLocale();
+  const PHRASES = t.raw('phrases') as string[];
+  const phrasesRef = useRef(PHRASES);
+  phrasesRef.current = PHRASES;
+
   const sectionRef = useRef<HTMLElement>(null);
   const heroStickyRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
@@ -231,7 +230,7 @@ export default function Hero() {
 
       try {
         while (!cancelledRef.current) {
-          for (const phrase of PHRASES) {
+          for (const phrase of phrasesRef.current) {
             if (cancelledRef.current) return;
             await waitVisible();
             // Type in character by character
@@ -283,7 +282,7 @@ export default function Hero() {
         <div className="hero-overlay" ref={overlayRef} />
 
         <div className="hero-content" ref={heroContentRef}>
-          <h1 className="hero-title">Votre CV, optimis&eacute; par l&apos;IA</h1>
+          <h1 className="hero-title">{t('title')}</h1>
           <p className="hero-subtitle">
             <span ref={subtitleRef} />
             <span className="cursor" />
@@ -292,13 +291,13 @@ export default function Hero() {
             <div className="hero-cta-gradient" />
             <div className="hero-cta-noise" />
             <a href="https://app.fitmycv.io" className="hero-cta">
-              Commencer maintenant <span className="cta-arrow">{'→'}</span>
+              {t('cta')} <span className="cta-arrow">{'→'}</span>
             </a>
           </div>
         </div>
 
         <div className="scroll-indicator" ref={scrollIndicatorRef}>
-          <span>EN SAVOIR PLUS</span>
+          <span>{t('scrollMore')}</span>
           <div className="scroll-chevron" />
         </div>
 
@@ -306,7 +305,7 @@ export default function Hero() {
           <div className="hero-mockup-frame" ref={mockupFrameRef}>
             <iframe
               ref={mockupIframeRef}
-              src="/mockups/workflow-demo.html?embed"
+              src={`/mockups/workflow-demo.html?embed&lang=${locale}`}
               style={{
                 width: '960px',
                 height: '600px',

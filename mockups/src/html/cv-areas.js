@@ -1,4 +1,5 @@
 import { ICON_INFOS, ICON_FR, ICON_GB, ICON_ANALYZER } from './icons.js';
+import { t } from '../js/i18n.js';
 
 export function createCvAreas() {
   return `
@@ -279,12 +280,12 @@ export function createCvAreas() {
             <div class="section-review-bar" id="review-bar-summary">
               <span class="accept" id="btn-tout-accepter">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
-                Tout accepter
+                ${t('review.acceptAll')}
               </span>
               <span class="separator">&bull;</span>
               <span class="refuse">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Tout refuser
+                ${t('review.rejectAll')}
               </span>
             </div>
             <div class="version-selector">
@@ -300,22 +301,22 @@ export function createCvAreas() {
           </span>
           <div class="change-popover hidden" id="change-popover">
             <div>
-              <p class="popover-label">Texte précédent :</p>
+              <p class="popover-label">${t('review.previousText')}</p>
               <p class="old-text">Développeur Full-Stack JavaScript avec 4 ans d'expérience en Node.js et React. Compétent dans la conception d'APIs et le déploiement d'applications conteneurisées.</p>
             </div>
             <div class="popover-reason">
-              <span class="popover-reason-label">Raison : </span>
+              <span class="popover-reason-label">${t('review.reason')}</span>
               Recentré sur le front-end React/TypeScript et l'optimisation des performances pour correspondre au poste Senior Frontend Engineer.
             </div>
             <div class="change-actions">
               <button class="btn-accept" id="btn-accept-change">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
-                Accepter
+                ${t('review.accept')}
               </button>
               <span class="popover-separator">&bull;</span>
               <button class="btn-reject" id="btn-reject-change">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Rejeter
+                ${t('review.reject')}
               </button>
             </div>
           </div>
@@ -454,12 +455,12 @@ export function createCvAreas() {
             <div class="section-review-bar" id="review-bar-optim-summary">
               <span class="accept" id="btn-tout-accepter-optim">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
-                Tout accepter
+                ${t('review.acceptAll')}
               </span>
               <span class="separator">&bull;</span>
               <span class="refuse">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Tout refuser
+                ${t('review.rejectAll')}
               </span>
             </div>
             <div class="version-selector">
@@ -475,22 +476,22 @@ export function createCvAreas() {
           </span>
           <div class="change-popover hidden" id="optim-change-popover">
             <div>
-              <p class="popover-label">Texte précédent :</p>
+              <p class="popover-label">${t('review.previousText')}</p>
               <p class="old-text">Frontend engineer with 4+ years of experience building high-performance web applications using React and TypeScript. Specialized in performance optimization, component architecture, and delivering polished user experiences at scale.</p>
             </div>
             <div class="popover-reason">
-              <span class="popover-reason-label">Raison : </span>
+              <span class="popover-reason-label">${t('review.reason')}</span>
               Ajout de l'expertise en testing (Jest, Cypress) et monitoring de performances pour mieux correspondre aux exigences du poste.
             </div>
             <div class="change-actions">
               <button class="btn-accept" id="btn-accept-optim-change">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
-                Accepter
+                ${t('review.accept')}
               </button>
               <span class="popover-separator">&bull;</span>
               <button class="btn-reject" id="btn-reject-optim-change">
                 <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                Rejeter
+                ${t('review.reject')}
               </button>
             </div>
           </div>

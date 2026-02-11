@@ -1,6 +1,6 @@
 import { $, moveToEl, clickEffect, wait, slowScroll, moveCursor } from '../dom-helpers.js';
 import { showCv, setCvIcon, updateStepIndicator } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
+import { t } from '../i18n.js';
 
 // Step 1 starts from default resetAll state — no extra setup needed
 export function setupStep1(cursor) {
@@ -12,7 +12,7 @@ export async function runStep1(cursor) {
   const viewport = $('viewport');
 
   // === STEP 1: Import PDF ===
-  updateStepIndicator(1, stepLabels);
+  updateStepIndicator(1);
   moveToEl(viewport, cursor, 'btn-import');
   await wait(600);
   clickEffect(cursor);
@@ -21,7 +21,7 @@ export async function runStep1(cursor) {
   await wait(800);
 
   // --- Drag PDF file from outside the viewport ---
-  updateStepIndicator(1, stepLabels);
+  updateStepIndicator(1);
   moveCursor(cursor, viewport.offsetWidth + 50, 120);
   await wait(600);
   $('file-ghost').classList.add('visible');
@@ -47,7 +47,7 @@ export async function runStep1(cursor) {
   await wait(500);
 
   // --- Task manager shows import progress ---
-  updateStepIndicator(1, stepLabels);
+  updateStepIndicator(1);
   moveToEl(viewport, cursor, 'btn-tasks');
   await wait(450);
   clickEffect(cursor);
@@ -55,34 +55,34 @@ export async function runStep1(cursor) {
   $('task1-item').classList.add('hidden');
   $('task2-item').classList.add('hidden');
   $('import-task-item').classList.remove('hidden');
-  $('task-footer').textContent = 'Total : 1';
+  $('task-footer').textContent = t('count.total', {n: 1});
   $('task-dropdown').classList.add('visible');
   await wait(600);
 
   $('import-task-fill').style.width = '25%';
   $('import-task-percent').textContent = '25%';
-  $('import-task-step').textContent = 'Import PDF';
+  $('import-task-step').textContent = t('task.importPdf');
   await wait(600);
 
   $('import-task-fill').style.width = '55%';
   $('import-task-percent').textContent = '55%';
-  $('import-task-step').textContent = 'Conversion IA';
+  $('import-task-step').textContent = t('task.aiConversion');
   await wait(600);
 
   $('import-task-fill').style.width = '85%';
   $('import-task-percent').textContent = '85%';
-  $('import-task-step').textContent = 'Structuration';
+  $('import-task-step').textContent = t('task.structuring');
   await wait(600);
 
   $('import-task-fill').style.width = '100%';
   $('import-task-fill').classList.add('completed');
-  $('import-task-percent').textContent = 'Terminé';
+  $('import-task-percent').textContent = t('status.done');
   $('import-task-percent').style.color = '#34d399';
-  $('import-task-step').textContent = 'Terminé';
+  $('import-task-step').textContent = t('status.done');
   await wait(800);
 
   // --- Import complete — CV displayed ---
-  updateStepIndicator(1, stepLabels);
+  updateStepIndicator(1);
   $('task-dropdown').classList.remove('visible');
   $('import-task-item').classList.add('hidden');
   $('cv-name').innerHTML = '07/02/2026 &nbsp;Développeur Full-Stack JavaScript';

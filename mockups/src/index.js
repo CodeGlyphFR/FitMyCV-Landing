@@ -1,3 +1,4 @@
+import { initLang } from './js/i18n.js';
 import { createBrowserFrame } from './html/browser-frame.js';
 import { createTopBar } from './html/topbar.js';
 import { createCvDropdown, createTaskDropdown } from './html/dropdowns.js';
@@ -6,6 +7,8 @@ import { createGeneratorModal, createOptimizationModal, createExportModal, creat
 import { createCursor, createStepIndicator } from './html/cursor-and-indicator.js';
 import { runAnimation } from './js/animation.js';
 import { setPaused } from './js/dom-helpers.js';
+
+initLang();
 
 // Assemble viewport content
 const viewportContent = [

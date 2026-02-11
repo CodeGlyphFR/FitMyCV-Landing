@@ -1,12 +1,13 @@
 import { $, wait } from './dom-helpers.js';
 import { ICON_OPENAI_SYMBOL, ICON_ANALYZER, ICON_IMPORT } from '../html/icons.js';
+import { t } from './i18n.js';
 
 export function showCv(id) {
   document.querySelectorAll('.cv-area').forEach(el => el.classList.add('hidden'));
   $(id).classList.remove('hidden');
 }
 
-export function updateStepIndicator(step, stepLabels) {
+export function updateStepIndicator(step) {
   document.querySelectorAll('.step-dot').forEach(dot => {
     const s = parseInt(dot.dataset.step);
     dot.classList.remove('active', 'done');
@@ -14,7 +15,7 @@ export function updateStepIndicator(step, stepLabels) {
     else if (s < step) dot.classList.add('done');
   });
   const label = $('step-label');
-  if (label) label.textContent = `Étape ${step} — ${stepLabels[step]}`;
+  if (label) label.textContent = t('stepIndicator', {n: step, label: t('step.' + step)});
 }
 
 export function setCvIcon(type) {

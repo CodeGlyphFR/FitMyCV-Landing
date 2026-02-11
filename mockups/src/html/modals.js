@@ -1,4 +1,5 @@
 import { ICON_IMPORT, ICON_FR, ICON_GB, ICON_ADD } from './icons.js';
+import { t } from '../js/i18n.js';
 
 export function createGeneratorModal() {
   return `
@@ -6,12 +7,12 @@ export function createGeneratorModal() {
       <div class="modal-backdrop-bg"></div>
       <div class="modal" id="generator-content">
         <div class="modal-header">
-          <span class="modal-title">Générer un CV avec l'IA</span>
+          <span class="modal-title">${t('genModal.title')}</span>
           <button class="modal-close"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
 
         <div class="modal-body">
-          <div class="form-label">CV de référence</div>
+          <div class="form-label">${t('genModal.refCv')}</div>
           <div class="form-select" id="gen-cv-select">
             <span class="select-icon-wrap"><img src="${ICON_IMPORT}" style="width:16px;height:16px"></span>
             <span id="gen-cv-name">07/02/2026 &nbsp;Développeur Full-Stack JavaScript</span>
@@ -22,7 +23,7 @@ export function createGeneratorModal() {
               <ul>
                 <li style="color:var(--emerald-light);font-weight:500">
                   <span style="font-size:18px">&#10024;</span>
-                  <span>Créer un nouveau modèle de CV</span>
+                  <span>${t('genModal.createNew')}</span>
                 </li>
                 <li class="separator"></li>
                 <li>
@@ -47,16 +48,16 @@ export function createGeneratorModal() {
             </div>
           </div>
 
-          <div class="form-label">Liens vers les offres d'emploi</div>
+          <div class="form-label">${t('genModal.jobLinks')}</div>
 
           <div id="link-fields">
             <div class="link-input-row">
               <div class="link-history-btn" id="link1-history-btn">&#128203;</div>
-              <input class="link-input" id="link1-input" type="text" placeholder="https://... (lien vers l'offre d'emploi)" readonly>
+              <input class="link-input" id="link1-input" type="text" placeholder="${t('genModal.linkPlaceholder')}" readonly>
               <button class="link-remove">&#10005;</button>
 
               <div class="link-history-dropdown" id="link1-history">
-                <div class="lh-header">Liens récents</div>
+                <div class="lh-header">${t('genModal.recentLinks')}</div>
                 <ul>
                   <li id="lh-item-1">
                     <span class="lh-content">
@@ -92,11 +93,11 @@ export function createGeneratorModal() {
 
             <div class="link-input-row hidden" id="link2-row">
               <div class="link-history-btn" id="link2-history-btn">&#128203;</div>
-              <input class="link-input" id="link2-input" type="text" placeholder="https://... (lien vers l'offre d'emploi)" readonly>
+              <input class="link-input" id="link2-input" type="text" placeholder="${t('genModal.linkPlaceholder')}" readonly>
               <button class="link-remove">&#10005;</button>
 
               <div class="link-history-dropdown" id="link2-history">
-                <div class="lh-header">Liens récents</div>
+                <div class="lh-header">${t('genModal.recentLinks')}</div>
                 <ul>
                   <li>
                     <span class="lh-content">
@@ -134,19 +135,19 @@ export function createGeneratorModal() {
           <div style="display:flex;justify-content:flex-end">
             <div class="add-link-btn" id="add-link-btn">
               <img src="${ICON_ADD}" style="width:12px;height:12px">
-              Ajouter un lien
+              ${t('genModal.addLink')}
             </div>
           </div>
 
-          <div class="form-label">Offres d'emploi PDF</div>
+          <div class="form-label">${t('genModal.pdfOffers')}</div>
           <div class="pdf-upload">
             <img src="${ICON_IMPORT}" style="width:20px;height:20px;opacity:0.7">
-            Choisir un fichier PDF
+            ${t('genModal.choosePdf')}
           </div>
 
           <div class="modal-actions">
-            <button class="btn-cancel">Annuler</button>
-            <button class="btn-validate" id="btn-valider">Valider</button>
+            <button class="btn-cancel">${t('genModal.cancel')}</button>
+            <button class="btn-validate" id="btn-valider">${t('genModal.validate')}</button>
           </div>
         </div>
       </div>
@@ -163,7 +164,7 @@ export function createOptimizationModal() {
             <div class="optim-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
             </div>
-            <h3>Analyse et Optimisation</h3>
+            <h3>${t('optimModal.title')}</h3>
           </div>
           <button class="modal-close"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
@@ -171,7 +172,7 @@ export function createOptimizationModal() {
         <div class="optim-content">
           <div class="optim-grid">
             <div class="optim-card">
-              <h4>&#128202; Score de correspondance</h4>
+              <h4>&#128202; ${t('optimModal.matchScore')}</h4>
               <div class="score-circle-wrap">
                 <svg viewBox="0 0 128 128">
                   <defs>
@@ -193,28 +194,28 @@ export function createOptimizationModal() {
                 </div>
               </div>
 
-              <h4 style="margin-top:8px">&#128203; Détail du score</h4>
+              <h4 style="margin-top:8px">&#128203; ${t('optimModal.scoreBreakdown')}</h4>
               <div class="score-breakdown">
                 <div class="score-row">
-                  <span class="sr-left"><span class="sr-emoji">&#128187;</span><span class="sr-label">Compétences techniques</span></span>
+                  <span class="sr-left"><span class="sr-emoji">&#128187;</span><span class="sr-label">${t('optimModal.technicalSkills')}</span></span>
                   <span class="sr-value">26/35</span>
                 </div>
                 <div class="score-bar-wrap"><div class="score-bar-fill fill-blue" style="width:74%"></div></div>
 
                 <div class="score-row">
-                  <span class="sr-left"><span class="sr-emoji">&#128188;</span><span class="sr-label">Expérience</span></span>
+                  <span class="sr-left"><span class="sr-emoji">&#128188;</span><span class="sr-label">${t('optimModal.experience')}</span></span>
                   <span class="sr-value">24/30</span>
                 </div>
                 <div class="score-bar-wrap"><div class="score-bar-fill fill-purple" style="width:80%"></div></div>
 
                 <div class="score-row">
-                  <span class="sr-left"><span class="sr-emoji">&#127891;</span><span class="sr-label">Formation</span></span>
+                  <span class="sr-left"><span class="sr-emoji">&#127891;</span><span class="sr-label">${t('optimModal.education')}</span></span>
                   <span class="sr-value">17/20</span>
                 </div>
                 <div class="score-bar-wrap"><div class="score-bar-fill fill-green" style="width:85%"></div></div>
 
                 <div class="score-row">
-                  <span class="sr-left"><span class="sr-emoji">&#128172;</span><span class="sr-label">Soft skills &amp; langues</span></span>
+                  <span class="sr-left"><span class="sr-emoji">&#128172;</span><span class="sr-label">${t('optimModal.softSkillsLangs')}</span></span>
                   <span class="sr-value">11/15</span>
                 </div>
                 <div class="score-bar-wrap"><div class="score-bar-fill fill-orange" style="width:73%"></div></div>
@@ -222,15 +223,15 @@ export function createOptimizationModal() {
             </div>
 
             <div class="optim-card">
-              <h4>&#128161; Suggestions d'amélioration</h4>
+              <h4>&#128161; ${t('optimModal.suggestions')}</h4>
 
               <div class="suggestion-item high" id="suggestion-1">
                 <div class="sug-header">
                   <div class="sug-left">
                     <div class="sug-checkbox" id="sug-checkbox-1"></div>
-                    <span class="sug-badge high">&#128293; Haute</span>
+                    <span class="sug-badge high">&#128293; ${t('optimModal.high')}</span>
                   </div>
-                  <span class="sug-points">+5 points</span>
+                  <span class="sug-points">${t('optimModal.points', {n: 5})}</span>
                 </div>
                 <h5>Highlight Testing &amp; Performance Tools</h5>
                 <p>Add specific experience with testing frameworks (Jest, Cypress) and performance monitoring tools (Lighthouse, Web Vitals) to better match the job requirements.</p>
@@ -241,9 +242,9 @@ export function createOptimizationModal() {
                 <div class="sug-header">
                   <div class="sug-left">
                     <div class="sug-checkbox"></div>
-                    <span class="sug-badge medium">&#9889; Moyenne</span>
+                    <span class="sug-badge medium">&#9889; ${t('optimModal.medium')}</span>
                   </div>
-                  <span class="sug-points">+3 points</span>
+                  <span class="sug-points">${t('optimModal.points', {n: 3})}</span>
                 </div>
                 <h5>Detail Design System Experience</h5>
                 <p>Include explicit examples of building or contributing to design systems and component libraries to align with the role's frontend architecture expectations.</p>
@@ -254,7 +255,7 @@ export function createOptimizationModal() {
 
           <div class="optim-grid">
             <div class="missing-skills-card">
-              <h4>&#10060; Compétences manquantes</h4>
+              <h4>&#10060; ${t('optimModal.missingSkills')}</h4>
               <div class="skills-tags">
                 <span class="skill-tag missing">Web Vitals</span>
                 <span class="skill-tag missing">Cypress</span>
@@ -264,24 +265,24 @@ export function createOptimizationModal() {
               </div>
             </div>
             <div class="matching-skills-card">
-              <h4>&#9989; Compétences correspondantes</h4>
+              <h4>&#9989; ${t('optimModal.matchingSkills')}</h4>
               <div class="skills-tags">
                 <span class="skill-tag matching"><span class="check">&#10003;</span> React</span>
                 <span class="skill-tag matching"><span class="check">&#10003;</span> TypeScript</span>
                 <span class="skill-tag matching"><span class="check">&#10003;</span> Component Architecture</span>
                 <span class="skill-tag matching"><span class="check">&#10003;</span> Performance Optimization</span>
                 <span class="skill-tag matching"><span class="check">&#10003;</span> REST APIs</span>
-                <span class="skill-tag matching" style="opacity:0.6">+7 autres</span>
+                <span class="skill-tag matching" style="opacity:0.6">${t('optimModal.moreOthers', {n: 7})}</span>
               </div>
             </div>
           </div>
 
           <div class="optim-footer-section">
             <button class="btn-improve" id="btn-improve-cv">
-              Améliorer le CV
+              ${t('optimModal.improveCv')}
               <span class="improve-count" id="improve-count">1</span>
             </button>
-            <button class="btn-cancel">Fermer</button>
+            <button class="btn-cancel">${t('optimModal.close')}</button>
           </div>
         </div>
       </div>
@@ -296,38 +297,38 @@ export function createExportModal() {
 
         <div id="export-selection-mode">
           <div class="modal-header">
-            <span class="modal-title">Exporter le CV</span>
+            <span class="modal-title">${t('exportModal.title')}</span>
             <button class="modal-close"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
           </div>
 
           <div class="export-modal-body" id="export-modal-body">
-            <div class="form-label">Nom du fichier</div>
+            <div class="form-label">${t('exportModal.filename')}</div>
             <input class="export-filename" type="text" value="Senior_Frontend_Engineer_TechVision" readonly>
 
-            <div class="form-label" style="margin-top:12px">Template</div>
+            <div class="form-label" style="margin-top:12px">${t('exportModal.template')}</div>
             <div class="export-template-row">
               <div class="export-template-select">
                 <span>Standard Export</span>
                 <span style="opacity:0.5;font-size:10px">&#9660;</span>
               </div>
-              <div class="export-template-btn" title="Sauvegarder">
+              <div class="export-template-btn" title="${t('exportModal.save')}">
                 <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
               </div>
-              <div class="export-template-btn" title="Réinitialiser">
+              <div class="export-template-btn" title="${t('exportModal.reset')}">
                 <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
               </div>
             </div>
 
             <div class="export-quick-btns" style="margin-top:12px">
-              <div class="export-quick-btn">Tout sélectionner</div>
-              <div class="export-quick-btn">Tout désélectionner</div>
+              <div class="export-quick-btn">${t('exportModal.selectAll')}</div>
+              <div class="export-quick-btn">${t('exportModal.deselectAll')}</div>
             </div>
 
-            <div class="form-label" style="margin-top:12px">Sections <span style="font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.4);font-size:11px">— Glisser pour réordonner</span></div>
+            <div class="form-label" style="margin-top:12px">${t('exportModal.sections')} <span style="font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.4);font-size:11px">${t('exportModal.dragHint')}</span></div>
 
             <div class="export-section-card header-card">
               <span class="export-section-name" style="color:rgba(255,255,255,0.6)">Header</span>
-              <span class="export-section-count" style="font-style:italic">Toujours inclus</span>
+              <span class="export-section-count" style="font-style:italic">${t('exportModal.alwaysIncluded')}</span>
             </div>
 
             ${['Summary|1 élément', 'Skills|6 éléments', 'Experience|2/2', 'Education|1/1', 'Languages|3 éléments', 'Projects|2/3'].map(s => {
@@ -346,10 +347,10 @@ export function createExportModal() {
           </div>
 
           <div class="export-footer">
-            <button class="btn-cancel" style="margin-right:auto">Annuler</button>
+            <button class="btn-cancel" style="margin-right:auto">${t('exportModal.cancel')}</button>
             <button class="btn-preview-export" id="btn-preview-export">
               <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              Prévisualiser
+              ${t('exportModal.preview')}
             </button>
             <button class="btn-word">Word</button>
             <button class="btn-pdf">PDF</button>
@@ -358,7 +359,7 @@ export function createExportModal() {
 
         <div id="export-preview-mode" class="hidden">
           <div class="modal-header">
-            <span class="modal-title">Prévisualisation PDF</span>
+            <span class="modal-title">${t('exportModal.previewTitle')}</span>
             <button class="modal-close"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
           </div>
 
@@ -413,7 +414,7 @@ export function createExportModal() {
               </div>
 
               <div class="pdf-page-break">
-                <span>Saut de page</span>
+                <span>${t('exportModal.pageBreak')}</span>
               </div>
 
               <div class="pdf-exp-entry" style="margin-top:14px">
@@ -470,9 +471,9 @@ export function createExportModal() {
           <div class="export-footer">
             <button class="export-preview-back" style="margin-right:auto">
               <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-              Retour aux options
+              ${t('exportModal.backToOptions')}
             </button>
-            <button class="btn-export-final" id="btn-export-final">Exporter</button>
+            <button class="btn-export-final" id="btn-export-final">${t('exportModal.export')}</button>
           </div>
         </div>
 
@@ -486,33 +487,33 @@ export function createImportModal() {
       <div class="modal-backdrop-bg"></div>
       <div class="modal">
         <div class="modal-header">
-          <span class="modal-title">Importer un CV PDF</span>
+          <span class="modal-title">${t('importModal.title')}</span>
           <button class="modal-close"><svg style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
         <div class="modal-body">
           <div style="font-size:13px;color:rgba(255,255,255,0.9);margin-bottom:14px">
-            Importez un CV au format PDF pour le convertir automatiquement en utilisant l'intelligence artificielle.
+            ${t('importModal.desc')}
           </div>
-          <div class="form-label">FICHIER PDF</div>
+          <div class="form-label">${t('importModal.fileLabel')}</div>
           <div class="import-upload-btn" id="import-upload-btn">
             <svg style="width:18px;height:18px" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
             </svg>
-            <span style="font-weight:500">Choisir un fichier PDF</span>
+            <span style="font-weight:500">${t('importModal.choosePdf')}</span>
           </div>
           <div class="import-file-selected" id="import-file-selected">
             <svg style="width:14px;height:14px;color:#6ee7b7;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             <div style="flex:1;min-width:0">
-              <div style="font-weight:600;font-size:12px">Fichier sélectionné :</div>
+              <div style="font-weight:600;font-size:12px">${t('importModal.fileSelected')}</div>
               <div style="opacity:0.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Thomas_Lefevre_CV.pdf</div>
             </div>
           </div>
 
           <div class="modal-actions">
-            <button class="btn-cancel">Annuler</button>
-            <button class="btn-import-submit disabled" id="btn-import-submit">Importer</button>
+            <button class="btn-cancel">${t('importModal.cancel')}</button>
+            <button class="btn-import-submit disabled" id="btn-import-submit">${t('importModal.import')}</button>
           </div>
         </div>
       </div>

@@ -1,20 +1,21 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Footer from "@/components/landing/Footer";
-
-const titles: Record<string, string> = {
-  "/terms": "Conditions Générales de Vente",
-  "/privacy": "Politique de confidentialité",
-};
 
 export default function LegalLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const t = useTranslations("LegalLayout");
   const pathname = usePathname();
+  const titles: Record<string, string> = {
+    "/terms": t("terms"),
+    "/privacy": t("privacy"),
+  };
   const title = titles[pathname] ?? "";
 
   return (

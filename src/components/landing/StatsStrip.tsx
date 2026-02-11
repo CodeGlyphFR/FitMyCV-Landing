@@ -1,25 +1,21 @@
-export default function StatsStrip() {
+import { Fragment } from "react";
+import { getTranslations } from "next-intl/server";
+
+export default async function StatsStrip() {
+  const t = await getTranslations("StatsStrip");
+  const stats = t.raw("stats") as Array<{ value: string; label: string }>;
+
   return (
     <div className="stats-strip">
-      <div className="stat-item">
-        <div className="stat-value">87%</div>
-        <div className="stat-label">de correspondance</div>
-      </div>
-      <div className="stat-separator"></div>
-      <div className="stat-item">
-        <div className="stat-value">5</div>
-        <div className="stat-label">langues</div>
-      </div>
-      <div className="stat-separator"></div>
-      <div className="stat-item">
-        <div className="stat-value">30s</div>
-        <div className="stat-label">pour optimiser</div>
-      </div>
-      <div className="stat-separator"></div>
-      <div className="stat-item">
-        <div className="stat-value">0€</div>
-        <div className="stat-label">sans abonnement</div>
-      </div>
+      {stats.map((stat, i) => (
+        <Fragment key={i}>
+          {i > 0 && <div className="stat-separator"></div>}
+          <div className="stat-item">
+            <div className="stat-value">{stat.value}</div>
+            <div className="stat-label">{stat.label}</div>
+          </div>
+        </Fragment>
+      ))}
     </div>
   );
 }

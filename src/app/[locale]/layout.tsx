@@ -1,0 +1,92 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  const ogLocaleMap: Record<string, string> = {
+    fr: "fr_FR",
+    en: "en_US",
+    es: "es_ES",
+    de: "de_DE",
+  };
+
+  return {
+    metadataBase: new URL("https://www.fitmycv.io"),
+    title: {
+      default: t("title"),
+      template: t("titleTemplate"),
+    },
+    description: t("description"),
+    applicationName: "FitMyCV",
+    keywords: t("keywords").split(", "),
+    authors: [{ name: "FitMyCV", url: "https://www.fitmycv.io" }],
+    creator: "FitMyCV",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icons/logo.png", type: "image/png" },
+      ],
+      apple: [
+        { url: "/apple-touch-icon.png", sizes: "180x180" },
+        { url: "/apple-touch-icon-512.png", sizes: "512x512" },
+      ],
+    },
+    manifest: "/site.webmanifest",
+    openGraph: {
+      type: "website",
+      locale: ogLocaleMap[locale] || "fr_FR",
+      siteName: "FitMyCV",
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      url: "https://www.fitmycv.io",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: t("ogImageAlt"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitterTitle"),
+      images: ["/og-image.png"],
+      description: t("twitterDescription"),
+    },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
+}

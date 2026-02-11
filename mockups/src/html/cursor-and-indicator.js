@@ -1,3 +1,5 @@
+import { t } from '../js/i18n.js';
+
 export function createCursor() {
   return `
     <div class="cursor" id="cursor" style="left:450px;top:300px">
@@ -26,6 +28,6 @@ export function createStepIndicator() {
   <div class="step-dot" data-step="5"></div>
   <div class="step-dot" data-step="6"></div>
   <div class="step-dot" data-step="7"></div>
-  <span class="step-label" id="step-label">Étape 1 — Ouverture de l'import PDF</span>
+  <span class="step-label" id="step-label">${t('stepIndicator', {n: 1, label: t('step.1')})}</span>
 </div>`;
 }

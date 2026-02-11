@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 
 /* ── Data ── */
 
@@ -15,20 +16,6 @@ interface PackData {
   perCredit: string;
   savings?: string;
 }
-
-const packs: PackData[] = [
-  { tier: 1, credits: 15, ringPct: 10, name: 'Starter', price: '4,99', perCredit: '0,33 €/crédit' },
-  { tier: 2, credits: 50, ringPct: 33, name: 'Pro', badge: 'Le plus populaire', badgeClass: 'popular', price: '14,99', perCredit: '0,30 €/crédit', savings: '−10 %' },
-  { tier: 3, credits: 100, ringPct: 67, name: 'Expert', price: '26,99', perCredit: '0,27 €/crédit', savings: '−20 %' },
-  { tier: 4, credits: 150, ringPct: 100, name: 'Ultimate', badge: 'Meilleur rapport', badgeClass: 'best-value', price: '35,99', perCredit: '0,24 €/crédit', savings: '−30 %' },
-];
-
-const trustItems = [
-  { icon: '🔒', text: 'Paiement sécurisé Stripe' },
-  { icon: '♾️', text: 'Crédits permanents' },
-  { icon: '🚫', text: 'Sans engagement' },
-  { icon: '💳', text: 'Visa · MC · Apple Pay' },
-];
 
 /* ── Constants ── */
 const CIRCUMFERENCE = 2 * Math.PI * 35; // ~220
@@ -96,6 +83,23 @@ function CheckIcon() {
 
 /* ── Component ── */
 export default function Pricing() {
+  const t = useTranslations('Pricing');
+
+  const packs: PackData[] = [
+    { tier: 1, credits: 15, ringPct: 10, name: 'Starter', price: '4,99', perCredit: '0,33 €/crédit' },
+    { tier: 2, credits: 50, ringPct: 33, name: 'Pro', badge: t('packBadgePopular'), badgeClass: 'popular', price: '14,99', perCredit: '0,30 €/crédit', savings: '−10 %' },
+    { tier: 3, credits: 100, ringPct: 67, name: 'Expert', price: '26,99', perCredit: '0,27 €/crédit', savings: '−20 %' },
+    { tier: 4, credits: 150, ringPct: 100, name: 'Ultimate', badge: t('packBadgeBestValue'), badgeClass: 'best-value', price: '35,99', perCredit: '0,24 €/crédit', savings: '−30 %' },
+  ];
+
+  const trustLabels = t.raw('trustItems') as string[];
+  const trustItems = [
+    { icon: '🔒', text: trustLabels[0] },
+    { icon: '♾️', text: trustLabels[1] },
+    { icon: '🚫', text: trustLabels[2] },
+    { icon: '💳', text: trustLabels[3] },
+  ];
+
   const sectionRef = useRef<HTMLElement>(null);
   const packsGridRef = useRef<HTMLDivElement>(null);
   const promoBtnRef = useRef<HTMLButtonElement>(null);
@@ -647,16 +651,16 @@ export default function Pricing() {
         {/* Header */}
         <div className="section-header">
           <h2 className="section-title">
-            <span className="title-highlight">Pas d&apos;abonnement.</span>
-            <br />
-            Payez ce que vous utilisez.
+            {t.rich('title', {
+              highlight: (chunks) => (<><span className="title-highlight">{chunks}</span><br /></>),
+            })}
           </h2>
-          <p className="section-subtitle">15 crédits offerts à l&apos;inscription.</p>
+          <p className="section-subtitle">{t('subtitle')}</p>
         </div>
 
         {/* Cost Calculator */}
         <div className="cost-calc">
-          <p className="cost-calc-q">Combien d&apos;offres d&apos;emploi ciblez-vous ce mois-ci&nbsp;?</p>
+          <p className="cost-calc-q">{t('calcQuestion')}</p>
           <div className="cost-calc-slider">
             <input
               type="range"
@@ -674,25 +678,25 @@ export default function Pricing() {
           </div>
           <div className="cost-calc-metrics">
             <div className="cost-calc-metric">
-              <span className="label">Coût total<sup>1</sup></span>
+              <span className="label">{t('calcTotal')}<sup>1</sup></span>
               <span className="value green" key={`t-${applications}`}>
-                {cost.total === 0 ? 'Gratuit' : fmtPrice(cost.total)}
+                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.total)}
               </span>
             </div>
             <div className="cost-calc-metric">
-              <span className="label">Par offre<sup>2</sup></span>
+              <span className="label">{t('calcPerOffer')}<sup>2</sup></span>
               <span className="value cyan" key={`p-${applications}`}>
-                {cost.total === 0 ? 'Gratuit' : fmtPrice(cost.perOffer)}
+                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.perOffer)}
               </span>
             </div>
             <div className="cost-calc-metric">
-              <span className="label">La concurrence</span>
-              <span className="value red">~37&nbsp;€<span className="approx">/mois</span></span>
+              <span className="label">{t('calcCompetition')}</span>
+              <span className="value red">{t('calcCompetitionValue')}<span className="approx">{t('calcPerMonth')}</span></span>
             </div>
           </div>
           <div className="cost-calc-notes">
-            <p><sup>1</sup>Avec l&apos;offre promotionnelle LAUNCH30</p>
-            <p><sup>2</sup>Estimation basée sur le parcours type de création d&apos;un CV</p>
+            <p><sup>1</sup>{t('calcNote1')}</p>
+            <p><sup>2</sup>{t('calcNote2')}</p>
           </div>
         </div>
 
@@ -729,7 +733,7 @@ export default function Pricing() {
                   </svg>
                   <div className="ring-number">
                     <span className="ring-count counter" data-target={pack.credits}>0</span>
-                    <span className="ring-label">crédits</span>
+                    <span className="ring-label">{t('creditsLabel')}</span>
                   </div>
                 </div>
                 <div className="pack-price">
@@ -761,17 +765,22 @@ export default function Pricing() {
 
         {/* Launch offer */}
         <div className="launch-offer">
-          <div className="launch-tag">Offre de lancement</div>
+          <div className="launch-tag">{t('launchTag')}</div>
           <h2 className="launch-title">
-            {'−'}30 % avec le code <span className="highlight">LAUNCH30</span><sup className="launch-asterisk">*</sup>
+            {t.rich('launchTitle', {
+              highlight: (chunks) => <span className="highlight">{chunks}</span>,
+            })}<sup className="launch-asterisk">*</sup>
           </h2>
           {eaRemaining !== null && eaMax !== null && (
             <p className="launch-sub">
-              <span className="ea-num" ref={eaCounterRef}>{eaRemaining}</span>
-              /{eaMax} places restantes
+              {t.rich('launchRemaining', {
+                remaining: eaRemaining,
+                max: eaMax,
+                green: (chunks) => <span style={{ color: '#34d399' }}>{chunks}</span>,
+              })}
             </p>
           )}
-          <p className="launch-note launch-note-asterisk">*Code valable pour le premier achat uniquement</p>
+          <p className="launch-note launch-note-asterisk">{t('launchNoteAsterisk')}</p>
           <div className="launch-buttons">
             <button
               className={`promo-btn${copied ? ' copied' : ''}`}
@@ -787,11 +796,11 @@ export default function Pricing() {
               <div className="cta-gradient" />
               <div className="cta-noise" />
               <button className="cta-btn">
-                Commencer gratuitement <span className="cta-arrow">{'→'}</span>
+                {t('ctaBtn')} <span className="cta-arrow">{'→'}</span>
               </button>
             </div>
           </div>
-          <p className="launch-note">15 crédits offerts {'·'} Aucune carte bancaire requise</p>
+          <p className="launch-note">{t('launchNote')}</p>
         </div>
       </section>
     </>

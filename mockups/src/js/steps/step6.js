@@ -1,6 +1,5 @@
 import { $, moveToEl, clickEffect, wait } from '../dom-helpers.js';
 import { showCv, setCvIcon, updateStepIndicator } from '../ui-state.js';
-import { stepLabels } from '../step-labels.js';
 
 export function setupStep6(cursor) {
   // Step 6 starts: cv-optim-review visible, gpt icon, credits 50, score-badge-optim visible
@@ -19,7 +18,7 @@ export async function runStep6(cursor) {
   $('optim-modal').classList.remove('visible');
 
   // === STEP 6: Review optimisation ===
-  updateStepIndicator(6, stepLabels);
+  updateStepIndicator(6);
   await wait(400);
 
   showCv('cv-optim-review');
@@ -27,7 +26,7 @@ export async function runStep6(cursor) {
   $('credits').textContent = '50';
   $('credit-bar-fill').style.width = '50%';
 
-  updateStepIndicator(6, stepLabels);
+  updateStepIndicator(6);
   moveToEl(viewport, cursor, 'optim-summary-highlight');
   await wait(450);
   clickEffect(cursor);
@@ -41,7 +40,7 @@ export async function runStep6(cursor) {
   $('optim-change-popover').classList.add('hidden');
   $('optim-summary-highlight').classList.remove('highlight-modified');
 
-  updateStepIndicator(6, stepLabels);
+  updateStepIndicator(6);
   moveToEl(viewport, cursor, 'btn-tout-accepter-optim');
   await wait(450);
   clickEffect(cursor);
@@ -56,7 +55,7 @@ export async function runStep6(cursor) {
   $('btn-optimize-clean').classList.add('hidden');
   await wait(1000);
 
-  updateStepIndicator(6, stepLabels);
+  updateStepIndicator(6);
   $('score-refresh-clean').classList.add('hidden');
   $('score-refresh-clean').classList.remove('spinning');
   $('score-num-clean').textContent = '87';

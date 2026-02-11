@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import type { FaqItem } from "@/data/faq";
+import { useTranslations } from "next-intl";
 
-export default function SupportAccordion({ items }: { items: FaqItem[] }) {
+export default function SupportAccordion() {
+  const t = useTranslations("FAQ");
+  const items = t.raw("items") as Array<{ question: string; answer: string }>;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggle = useCallback((i: number) => {

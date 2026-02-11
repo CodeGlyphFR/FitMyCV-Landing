@@ -1,0 +1,589 @@
+{
+  "Metadata": {
+    "title": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
+    "titleTemplate": "%s | FitMyCV",
+    "description": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI Ihre Bewerbung optimieren, um Ihre Chancen zu maximieren. PDF- und Word-Export in wenigen Sekunden.",
+    "ogTitle": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
+    "ogDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI ihn für jede Position optimieren. PDF/Word-Export in Sekunden.",
+    "ogImageAlt": "FitMyCV — Ihr Lebenslauf, KI-optimiert",
+    "twitterTitle": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
+    "twitterDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie einen Stellenlink ein und lassen Sie die KI ihn optimieren. PDF/Word-Export in Sekunden.",
+    "keywords": "Lebenslauf, Lebenslauf-Optimierung, KI, künstliche Intelligenz, ATS, Lebenslauf-Generator, Lebenslauf an Stellenanzeige anpassen, Matching-Score Lebenslauf, PDF-Export Lebenslauf, automatische Bewerbung, FitMyCV"
+  },
+  "Header": {
+    "howItWorks": "So funktioniert's",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "menu": "Menü"
+  },
+  "Hero": {
+    "title": "Ihr Lebenslauf, KI-optimiert",
+    "cta": "Jetzt starten",
+    "scrollMore": "MEHR ERFAHREN",
+    "phrases": [
+      "Schluss mit Copy-Paste — eine URL genügt",
+      "10 Links, 10 Lebensläufe gleichzeitig erstellt",
+      "Analysieren, bewerten, optimieren — in Sekunden",
+      "Ohne Abo — zahlen Sie nach Bedarf",
+      "7 Schritte zum perfekten Lebenslauf"
+    ]
+  },
+  "HowItWorks": {
+    "intro": "FitMyCV optimiert Ihren Lebenslauf mithilfe von KI, um jede Stellenanzeige zu matchen. Es passt den Inhalt an das ATS-Format an und erstellt einen Lebenslauf, der die ATS-Filter besteht und Ihnen mehr Vorstellungsgespräche verschafft.",
+    "title": "Importieren Sie Ihren Lebenslauf, fügen Sie eine Stellenanzeige ein,\nerhalten Sie einen optimierten Lebenslauf.",
+    "subtitle": "Importieren Sie Ihren Lebenslauf, fügen Sie eine Stellenanzeige ein, erhalten Sie einen optimierten Lebenslauf.",
+    "phase1": "Phase 1 — Import",
+    "phase2": "Phase 2 — KI-Intelligenz",
+    "phase3": "Phase 3 — Export",
+    "stepLabel": "Schritt",
+    "stepPrev": "Vorheriger Schritt",
+    "stepNext": "Nächster Schritt",
+    "stepN": "Schritt {step}",
+    "steps": [
+      {
+        "label": "PDF-Import",
+        "title": "Importieren Sie Ihren Lebenslauf",
+        "desc": "Ziehen Sie Ihr PDF herein oder laden Sie es hoch. Die KI extrahiert automatisch Ihre Kompetenzen, Erfahrungen und Ausbildungen in wenigen Sekunden.",
+        "time": ""
+      },
+      {
+        "label": "KI-Generierung",
+        "title": "KI-Generierung",
+        "desc": "Fügen Sie die URLs der Stellenanzeigen hinzu. Die KI generiert maßgeschneiderte Lebenslauf-Varianten für jede angestrebte Position.",
+        "time": "~35s bei mehreren Anzeigen"
+      },
+      {
+        "label": "Änderungsübersicht",
+        "title": "Änderungsübersicht",
+        "desc": "Sehen Sie jede von der KI vorgeschlagene Änderung in einem übersichtlichen Diff. Akzeptieren, ablehnen oder anpassen — Sie behalten die volle Kontrolle.",
+        "time": "~1 Minute"
+      },
+      {
+        "label": "Kompatibilitäts-Score",
+        "title": "Kompatibilitäts-Score",
+        "desc": "Ein Score bewertet die Übereinstimmung zwischen Ihrem Lebenslauf und der Zielstelle. Sehen Sie genau, wo Sie sich verbessern können.",
+        "time": "~10 Sekunden"
+      },
+      {
+        "label": "Gezielte Optimierung",
+        "title": "Gezielte Optimierung",
+        "desc": "Die KI zeigt Ihnen konkret, was Sie verbessern können, um Ihren Score zu steigern. Wählen Sie die passenden Vorschläge aus und ergänzen Sie eigene Anmerkungen.",
+        "time": "~40 Sekunden"
+      },
+      {
+        "label": "Finale Validierung",
+        "title": "Finale Validierung",
+        "desc": "Überprüfen Sie die angewandten Optimierungen und beobachten Sie, wie Ihr Score steigt. Von 79 auf 87 — jeder Punkt zählt.",
+        "time": "~30 Sekunden"
+      },
+      {
+        "label": "Export PDF / Word",
+        "title": "Export PDF / Word",
+        "desc": "Sehen Sie eine Vorschau Ihres fertigen Lebenslaufs und exportieren Sie ihn im gewünschten Format. Versandfertig, perfekt formatiert.",
+        "time": "1 Klick"
+      }
+    ]
+  },
+  "StatsStrip": {
+    "stats": [
+      {
+        "value": "87%",
+        "label": "Übereinstimmung"
+      },
+      {
+        "value": "5",
+        "label": "Sprachen"
+      },
+      {
+        "value": "30s",
+        "label": "zur Optimierung"
+      },
+      {
+        "value": "0€",
+        "label": "ohne Abo"
+      }
+    ]
+  },
+  "Features": {
+    "title": "Alles, was Sie brauchen, um die Stelle zu bekommen",
+    "subtitle": "Entwickelt für Ihre Lebensläufe. Kein weiterer Chatbot.",
+    "card1Title": "Ein Lebenslauf, zugeschnitten auf jede Stelle",
+    "card1Sub": "Fügen Sie einen Link ein, die KI erledigt den Rest",
+    "card1RefLabel": "Referenz-Lebenslauf",
+    "card1SelectText": "Full-Stack JS-Entwickler",
+    "card1LinkLabel": "Link zur Stellenanzeige",
+    "card1Cancel": "Abbrechen",
+    "card1Validate": "Bestätigen",
+    "card2Title": "10 Lebensläufe mit einem Klick",
+    "card2Sub": "Alle Ihre Bewerbungen parallel",
+    "card3Title": "Ein Template in wenigen Worten",
+    "card3Sub": "Kein Link? Ein Jobtitel genügt",
+    "card4Title": "Importieren Sie Ihren Lebenslauf mit einer Geste",
+    "card4Sub": "Ziehen Sie ein PDF herein, die KI strukturiert alles",
+    "card4UploadLabel": "PDF-Datei auswählen",
+    "card5Title": "ATS-optimiert",
+    "card5Sub": "Jedes Wort zählt",
+    "card5Originals": [
+      "Verwaltung komplexer Webprojekte",
+      "Teamarbeit in agiler Umgebung",
+      "Erstellung moderner Oberflächen"
+    ],
+    "card5Rewrites": [
+      "Leitung von Full-Stack-Webprojekten",
+      "Scrum-Methodik & agile Sprints",
+      "UI/UX-Design responsive (React)"
+    ],
+    "card6Title": "Ihr Matching-Score",
+    "card6Sub": "Messen Sie die Wirkung jeder Optimierung",
+    "card7Title": "Die Stellenanzeige für Sie entschlüsselt",
+    "card7Sub": "Skills, Prozesse, Vorteile automatisch extrahiert",
+    "card7Tags": {
+      "teleTravail": "Homeoffice"
+    },
+    "card8Title": "Die KI leitet Sie Schritt für Schritt",
+    "card8Sub": "Gezielte Vorschläge für jede Stelle",
+    "card8High": "Hoch",
+    "card8Med": "Mittel",
+    "card8Low": "Niedrig",
+    "card8Reco1": "Testtools hinzufügen (Jest, Cypress)",
+    "card8Reco2": "Design-System-Erfahrung detaillieren",
+    "card8Reco3": "Barrierefreiheit WCAG erwähnen",
+    "card9Title": "Behalten Sie die Kontrolle",
+    "card9Sub": "Akzeptieren oder lehnen Sie jede Änderung ab",
+    "card9Old1": "3 Jahre Erfahrung",
+    "card9New1": "3+ Jahre Webentwicklung",
+    "card9Old2": "Gute React-Kenntnisse",
+    "card9New2": "Experte für React & TypeScript",
+    "card10Title": "Reisen Sie in der Zeit zurück",
+    "card10Sub": "Stellen Sie Ihren Lebenslauf einfach mit einem Klick wieder her",
+    "card11Title": "Direkt in der App bearbeiten",
+    "card11Sub": "Jeder Abschnitt mit einem Klick bearbeitbar",
+    "card11Row1": "Berufserfahrung",
+    "card11Row2": "Technische Kompetenzen",
+    "card11Row3": "Ausbildung",
+    "card11Edit": "Bearbeiten",
+    "card11Delete": "Löschen",
+    "card12Title": "Export mit einem Klick",
+    "card12Sub": "PDF, Word — das Format Ihrer Wahl",
+    "card12ExportBtn": "PDF exportieren",
+    "card13Title": "Eine Oberfläche, 4 Sprachen",
+    "card13Sub": "Französisch, Englisch, Deutsch, Spanisch",
+    "card13LangLabels": [
+      "Français",
+      "English",
+      "Deutsch",
+      "Español"
+    ],
+    "card14Title": "Übersetzen Sie Ihren Lebenslauf",
+    "card14Sub": "In 4 Sprachen, mit angepasstem Fachvokabular",
+    "card15Title": "Ihre Aufgaben laufen im Hintergrund",
+    "card15Sub": "Generieren, weggehen, bei Rückkehr ist alles fertig",
+    "card15TaskSteps": [
+      "Erfahrungen",
+      "Kompetenzen",
+      "Projekte",
+      "Zusammenfassung",
+      "Abgeschlossen"
+    ],
+    "card15Waiting": "Wartend...",
+    "card15Done": "Abgeschlossen",
+    "card16Title": "Browser-Erweiterung",
+    "card16Badge": "Demnächst",
+    "card16Sub": "Starten Sie eine Generierung, ohne Ihren Tab zu verlassen",
+    "card16CvLabel": "Full-Stack JS-Entwickler",
+    "card16GenBtn": "Meinen Lebenslauf generieren"
+  },
+  "Pricing": {
+    "title": "<highlight>Kein Abo.</highlight>\nZahlen Sie nur, was Sie nutzen.",
+    "subtitle": "15 Gratis-Credits bei der Registrierung.",
+    "calcQuestion": "Auf wie viele Stellenanzeigen bewerben Sie sich diesen Monat?",
+    "calcTotal": "Gesamtkosten",
+    "calcPerOffer": "Pro Anzeige",
+    "calcCompetition": "Die Konkurrenz",
+    "calcFree": "Kostenlos",
+    "calcCompetitionValue": "~37 €",
+    "calcPerMonth": "/Monat",
+    "calcNote1": "Mit dem Aktionsangebot LAUNCH30",
+    "calcNote2": "Schätzung basierend auf dem typischen Ablauf einer Lebenslauferstellung",
+    "packBadgePopular": "Am beliebtesten",
+    "packBadgeBestValue": "Bestes Preis-Leistungs-Verhältnis",
+    "creditsLabel": "Credits",
+    "trustItems": [
+      "Sichere Zahlung über Stripe",
+      "Credits ohne Ablaufdatum",
+      "Ohne Verpflichtung",
+      "Visa · MC · Apple Pay"
+    ],
+    "launchTag": "Einführungsangebot",
+    "launchTitle": "−30 % mit dem Code <highlight>LAUNCH30</highlight>",
+    "launchRemaining": "<green>{remaining}</green>/{max} Plätze verfügbar",
+    "launchNoteAsterisk": "*Code nur für den ersten Kauf gültig",
+    "ctaBtn": "Kostenlos starten",
+    "launchNote": "15 Gratis-Credits · Keine Kreditkarte erforderlich"
+  },
+  "FAQ": {
+    "title": "Häufig gestellte\nFragen",
+    "items": [
+      {
+        "question": "Wird die KI meine Inhalte ersetzen?",
+        "answer": "Nein. Die KI erfindet weder Kompetenzen noch Erfahrungen. Sie arbeitet ausschließlich mit den von Ihnen bereitgestellten Informationen: Sie formuliert um, strukturiert neu und optimiert den Inhalt unter Berücksichtigung des ATS-Formats. Der Überprüfungsmodus ermöglicht es Ihnen, jede Änderung zu validieren, und der Online-Editor gibt Ihnen die volle Kontrolle über das Endergebnis."
+      },
+      {
+        "question": "Wird mein Lebenslauf ATS-kompatibel sein?",
+        "answer": "Ja. Die Struktur des Lebenslaufs, die Auswahl der Schlüsselwörter und die Gliederung der Abschnitte sind so gestaltet, dass sie von Bewerbermanagementsystemen (ATS) korrekt gelesen werden. Wenn Ihr Profil es rechtfertigt, integriert die KI relevante Begriffe aus der Stellenanzeige, um die Übereinstimmung mit den Filtern der Recruiter zu verbessern."
+      },
+      {
+        "question": "Sind meine Daten geschützt?",
+        "answer": "Ihre Lebensläufe und persönlichen Daten sind verschlüsselt und werden niemals an Dritte weitergegeben oder zum Training von KI-Modellen verwendet. Sie können Ihr Konto und alle Ihre Daten jederzeit löschen. FitMyCV ist DSGVO-konform."
+      },
+      {
+        "question": "Gibt es eine kostenlose Testphase?",
+        "answer": "Ja. Sie erhalten 15 kostenlose Credits bei der Erstellung Ihres Kontos, ohne Kreditkarte. So können Sie mehrere Lebensläufe generieren und alle Funktionen testen, bevor Sie zusätzliche Credits kaufen."
+      },
+      {
+        "question": "Welche Jobplattformen werden unterstützt?",
+        "answer": "FitMyCV funktioniert mit jeder öffentlich zugänglichen Stellenanzeige, ohne Anmeldung: Indeed, Welcome to the Jungle, Arbeitsagentur und viele weitere Plattformen. Fügen Sie einfach die URL der Anzeige ein. Für Websites, die eine Anmeldung erfordern (LinkedIn usw.), wird derzeit eine Browser-Erweiterung entwickelt — sie wird es ermöglichen, einen Lebenslauf direkt von der Stellenseite aus zu generieren, basierend auf dem Quell-Lebenslauf Ihrer Wahl."
+      },
+      {
+        "question": "Worin unterscheidet sich FitMyCV von ChatGPT?",
+        "answer": "Wenn Sie ChatGPT bitten, Ihren Lebenslauf an eine Stelle anzupassen, erfindet es oft etwas dazu: eine Kompetenz, die Sie nicht haben, eine Aufgabe, die Sie nie ausgeführt haben — nur um zur Stelle zu passen. Das fällt Ihnen beim Korrekturlesen auf — oder schlimmer noch, im Vorstellungsgespräch. Dann müssen Sie korrigieren, neu generieren, erneut überprüfen… bei jeder Bewerbung. FitMyCV stützt sich ausschließlich auf Ihren echten Werdegang und zeigt Ihnen jede Änderung vor der Validierung. Ergebnis: ein originalgetreuer, optimierter und versandfertiger Lebenslauf — in wenigen Minuten, nicht in Stunden."
+      },
+      {
+        "question": "Welche Formate werden unterstützt?",
+        "answer": "Sie können einen bestehenden Lebenslauf als PDF per Drag-and-Drop importieren. Nach der Generierung oder Bearbeitung ist der Export als PDF und Word (.docx) verfügbar, bereit zum Anhängen an eine Bewerbung oder zum Hochladen auf eine Jobplattform."
+      },
+      {
+        "question": "Wie viele Lebensläufe kann ich erstellen?",
+        "answer": "Es gibt kein Limit. Jede Lebenslauf-Generierung verbraucht Credits. Bei der Registrierung erhalten Sie 15 kostenlose Credits zum Testen des Tools. Danach kaufen Sie Credits nach Bedarf — ohne Abo und ohne Verpflichtung."
+      },
+      {
+        "question": "In wie vielen Sprachen kann ich meinen Lebenslauf erstellen?",
+        "answer": "Die Benutzeroberfläche und die Lebenslauf-Übersetzung sind derzeit in 4 Sprachen verfügbar: Französisch, Englisch, Spanisch und Deutsch. Weitere Sprachen werden nach und nach hinzugefügt. Sie können einen bestehenden Lebenslauf mit einem Klick in eine andere Sprache übersetzen, wobei Layout und Inhalt erhalten bleiben."
+      },
+      {
+        "question": "Kann ich den Lebenslauf nach der Generierung bearbeiten?",
+        "answer": "Ja. Der Online-Editor ermöglicht es Ihnen, jeden Abschnitt direkt im Browser zu bearbeiten. Der Überprüfungsmodus zeigt die Vorschläge der KI als Empfehlungen an, die Sie einzeln akzeptieren oder ablehnen können, bevor Sie Ihren Lebenslauf finalisieren."
+      },
+      {
+        "question": "Was ist der Kompatibilitäts-Score?",
+        "answer": "Das ist ein prozentualer Indikator, der die Übereinstimmung zwischen Ihrem Lebenslauf und einer Stellenanzeige misst. Der Algorithmus vergleicht die Kompetenzen, Erfahrungen und Schlüsselwörter Ihres Profils mit den Anforderungen der Stelle. Neben dem Score zeigen Ihnen gezielte Empfehlungen, wie Sie die Übereinstimmung verbessern können."
+      }
+    ]
+  },
+  "Reviews": {
+    "title": "Kundenbewertungen"
+  },
+  "Footer": {
+    "tagline": "Ihr Lebenslauf, KI-optimiert",
+    "product": "Produkt",
+    "howItWorks": "So funktioniert's",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "support": "Support",
+    "legal": "Rechtliches",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "contact": "Kontakt",
+    "copyright": "© 2026 FitMyCV.io"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Seite nicht gefunden",
+    "backHome": "Zurück zur Startseite"
+  },
+  "Support": {
+    "metaTitle": "Hilfezentrum — Häufig gestellte Fragen",
+    "metaDescription": "Finden Sie alle Antworten auf Ihre Fragen zu FitMyCV: KI-gestützte Lebenslauf-Erstellung, ATS-Kompatibilität, Formate, Preise, Datenschutz und mehr.",
+    "heading": "Hilfezentrum",
+    "subtitle": "Alles, was Sie über FitMyCV wissen müssen"
+  },
+  "Terms": {
+    "metaTitle": "Allgemeine Geschäftsbedingungen — FitMyCV",
+    "pageTitle": "Allgemeine Geschäftsbedingungen",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Annahme der AGB",
+    "s1p1": "Durch die Nutzung von FitMyCV.io und den Kauf von Credits akzeptieren Sie diese Allgemeinen Geschäftsbedingungen (AGB) vorbehaltlos.",
+    "s1p2": "Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie bitte nicht unsere kostenpflichtigen Dienste.",
+    "s1p3": "Die Nutzung von FitMyCV.io ist Personen ab 16 Jahren vorbehalten.",
+    "s2Title": "2. Beschreibung der Dienste",
+    "s2p1": "FitMyCV.io ist eine Plattform zur Erstellung und Optimierung von Lebensläufen mithilfe künstlicher Intelligenz.",
+    "s2_1Title": "2.1. Kostenlose Dienste",
+    "s2_1Items": [
+      "Unbegrenzte manuelle Lebenslauferstellung",
+      "Unbegrenzte Lebenslaufbearbeitung",
+      "Speicherung der Lebensläufe in Ihrem persönlichen Bereich"
+    ],
+    "s2_2Title": "2.2. Dienste, die Credits verbrauchen",
+    "s2_2Items": [
+      "Export als PDF und DOCX",
+      "KI-gestützte Generierung und Anpassung von Lebensläufen",
+      "Import und Extraktion von Lebensläufen aus PDF",
+      "Automatische Lebenslauf-Übersetzung",
+      "Optimierung von Lebensläufen für Stellenanzeigen",
+      "Kompatibilitäts-Score Lebenslauf/Stelle"
+    ],
+    "s2_3Title": "2.3. Credit-System",
+    "s2_3p1": "Bei der Erstellung Ihres Kontos erhalten Sie eine Standardanzahl an Credits, mit denen Sie die Funktionen der Plattform testen können.",
+    "s2_3p2": "Jede Funktion verbraucht eine variable Anzahl an Credits gemäß einer festgelegten Preistabelle. Die Credit-Kosten jeder Funktion werden vor der Nutzung angezeigt.",
+    "s2_3p3": "Credits haben kein Ablaufdatum und bleiben gültig, solange Ihr Konto aktiv ist.",
+    "s2_3p4": "Wenn Ihre Credits aufgebraucht sind, können Sie über die Seite <creditsLink>Credit-Verwaltung</creditsLink> neue kaufen.",
+    "s3Title": "3. Preise und Zahlungen",
+    "s3p1": "Alle Preise sind in Euro (EUR) angegeben. Der Herausgeber ist gemäß Artikel 293 B des französischen Steuergesetzbuchs (Code Général des Impôts) von der Mehrwertsteuer befreit.",
+    "s3p2": "Die Zahlungen werden über Stripe abgesichert und akzeptieren Kreditkarten, Apple Pay, Google Pay und weitere Zahlungsmethoden je nach Ihrem Standort.",
+    "s3p3": "Die Preise der Credit-Pakete finden Sie auf der Seite <creditsLink>Credit-Verwaltung</creditsLink>.",
+    "s4Title": "4. Widerrufsrecht",
+    "s4p1": "Gemäß Artikel L.221-28 des französischen Verbrauchergesetzbuchs erkennt der Nutzer an und akzeptiert, dass die Ausführung der Dienste unmittelbar nach der Bestätigung seiner Bestellung beginnt.",
+    "s4p2": "Folglich verzichtet der Nutzer ausdrücklich auf sein Widerrufsrecht für jeden Kauf von Credits.",
+    "s4Highlight": "<strong>Wichtig:</strong> Die Bestätigung der Bestellung nach Ankreuzen des Verzichts auf das Widerrufsrecht gilt als ausdrücklicher Verzicht auf dieses Recht.",
+    "s5Title": "5. Erstattungsrichtlinie",
+    "s5p1": "Jeder Credit-Kauf ist endgültig, sobald der Dienst genutzt wurde (Lebenslauf-Generierung, Export, Übersetzung usw.). Mit dem Kauf bestätigen Sie, diese Klausel zur Kenntnis genommen und akzeptiert zu haben.",
+    "s5p2": "Bei technischen Problemen, die die Nutzung des Dienstes verhindern, kontaktieren Sie unseren Support unter <supportEmail>support@fitmycv.io</supportEmail>. Wir werden Ihre Situation individuell prüfen.",
+    "s6Title": "6. Chargebacks und Zahlungsstreitigkeiten",
+    "s6p1": "Im Falle eines Chargebacks (Zahlungsanfechtung bei Ihrer Bank) nach Nutzung des Dienstes:",
+    "s6Items": [
+      "Der Betrag der angefochtenen Credits wird von Ihrem Guthaben abgezogen, das negativ werden kann.",
+      "Sie müssen Ihr Konto aufladen, um die creditverbrauchenden Dienste weiter nutzen zu können."
+    ],
+    "s6Highlight": "<strong>Achtung:</strong> Missbräuchliche Chargebacks können zur dauerhaften Sperrung Ihres Kontos führen.",
+    "s7Title": "7. Künstliche Intelligenz",
+    "s7p1": "FitMyCV.io handelt als Deployer eines Systems der künstlichen Intelligenz im Sinne der europäischen Verordnung 2024/1689 (AI Act).",
+    "s7_1Title": "7.1. Funktionen mit KI",
+    "s7_1Items": [
+      "Generierung und Anpassung von Lebensläufen",
+      "Optimierung von Lebensläufen",
+      "Extraktion von Stellenanzeigen",
+      "Berechnung des Kompatibilitäts-Scores",
+      "Übersetzung von Lebensläufen",
+      "Import und Extraktion von Lebensläufen aus PDF"
+    ],
+    "s7_2Title": "7.2. Art der Ergebnisse",
+    "s7_2p1": "Die von der KI generierten Ergebnisse sind Vorschläge und stellen in keinem Fall verbindliche Empfehlungen dar. Der Nutzer behält die volle Kontrolle über den endgültigen Inhalt seiner Lebensläufe.",
+    "s7_3Title": "7.3. KI-Anbieter",
+    "s7_3p1": "Die KI-Funktionen werden von OpenAI (Vereinigte Staaten) bereitgestellt. Die an OpenAI übermittelten Daten werden gemäß deren API-Richtlinien nicht zum Training ihrer Modelle verwendet.",
+    "s7Highlight": "<strong>KI-Transparenz:</strong> Der Nutzer wird darüber informiert, dass die generierten Inhalte von einem System der künstlichen Intelligenz stammen. Diese Inhalte müssen vor der Verwendung überprüft werden.",
+    "s8Title": "8. Geistiges Eigentum",
+    "s8p1": "Die über FitMyCV.io erstellten Lebensläufe gehören Ihnen. Sie behalten alle Rechte an den von Ihnen bereitgestellten Inhalten.",
+    "s8p2": "Die Benutzeroberfläche, der Quellcode, die Algorithmen und alle Elemente von FitMyCV.io sind ausschließliches Eigentum des Herausgebers und urheberrechtlich geschützt.",
+    "s9Title": "9. Haftungsbeschränkung",
+    "s9p1": "Die Dienste werden im Ist-Zustand bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Garantie.",
+    "s9p2": "FitMyCV.io garantiert nicht:",
+    "s9Items": [
+      "Die ununterbrochene und durchgehende Verfügbarkeit des Dienstes",
+      "Das Fehlen technischer Fehler oder Bugs",
+      "Die Kompatibilität der generierten Lebensläufe mit allen ATS-Systemen (Applicant Tracking Systems)",
+      "Den Erhalt eines Vorstellungsgesprächs oder einer Stelle durch die Nutzung des Dienstes",
+      "Die Genauigkeit oder Relevanz der von der KI generierten Inhalte"
+    ],
+    "s9p3": "Wartungsarbeiten können ohne Vorankündigung durchgeführt werden und zu einer vorübergehenden Unterbrechung des Dienstes führen.",
+    "s9p4": "Unsere Haftung ist auf den Betrag begrenzt, den Sie in den letzten 12 Monaten für den Dienst bezahlt haben.",
+    "s10Title": "10. Verbotene Verhaltensweisen",
+    "s10p1": "Strengstens untersagt sind:",
+    "s10Items": [
+      "Der Weiterverkauf oder die Weiterverbreitung der Dienste",
+      "Jeder Einbruchsversuch in die Systeme",
+      "Identitätsdiebstahl",
+      "Automatisierte Datenextraktion (Scraping)",
+      "Die Verwendung von Bots oder automatisierten Skripten",
+      "Jede Nutzung, die gegen die guten Sitten oder die öffentliche Ordnung verstößt",
+      "Die Erstellung illegaler, verleumderischer oder die Rechte Dritter verletzender Inhalte"
+    ],
+    "s10Highlight": "<strong>Sanktionen:</strong> Bei Verstößen behält sich FitMyCV.io das Recht vor, das Konto ohne Vorankündigung und ohne Erstattung zu sperren oder zu löschen.",
+    "s11Title": "11. Kündigung und Kontolöschung",
+    "s11p1": "Sie können Ihr Konto jederzeit über die Einstellungen Ihres persönlichen Bereichs oder durch Kontaktaufnahme unter <supportEmail>support@fitmycv.io</supportEmail> löschen.",
+    "s11p2": "Die Kontolöschung führt zur endgültigen Löschung aller Ihrer Daten (Lebensläufe, Stellenanzeigen, Verlauf) gemäß unserer <privacyLink>Datenschutzrichtlinie</privacyLink>.",
+    "s11Highlight": "<strong>Nicht verwendete Credits:</strong> Verbleibende Credits auf Ihrem Konto gehen bei der Löschung verloren und können weder erstattet noch übertragen werden.",
+    "s12Title": "12. Änderung der AGB",
+    "s12p1": "Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden auf dieser Seite mit dem Aktualisierungsdatum veröffentlicht. Die fortgesetzte Nutzung des Dienstes nach einer Änderung gilt als Annahme der neuen Bedingungen.",
+    "s13Title": "13. Verbraucherschlichtung",
+    "s13p1": "Gemäß den Artikeln L.616-1 und R.616-1 des französischen Verbrauchergesetzbuchs kann der Nutzer im Streitfall kostenlos einen Verbraucherschlichter einschalten.",
+    "s13p2": "Name und Kontaktdaten des zuständigen Schlichters werden auf einfache Anfrage an <contactEmail>contact@fitmycv.io</contactEmail> mitgeteilt.",
+    "s13Highlight": "<strong>ODR-Plattform:</strong> Sie können auch die Online-Streitbeilegungsplattform der Europäischen Kommission nutzen: <odrLink>https://ec.europa.eu/consumers/odr</odrLink>",
+    "s14Title": "14. Anwendbares Recht und Gerichtsstand",
+    "s14p1": "Diese AGB unterliegen dem französischen Recht.",
+    "s14p2": "Im Streitfall und nach einem gütlichen Einigungsversuch sind ausschließlich die Gerichte in Paris zuständig.",
+    "s15Title": "15. Impressum",
+    "s15p1": "Herausgeber des Dienstes FitMyCV.io:",
+    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nE-Mail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nVon der Mehrwertsteuer befreit (Artikel 293 B des CGI)",
+    "s15_hosting": "Hosting",
+    "s15_hostingP": "Der Dienst wird vom Herausgeber selbst gehostet.",
+    "s15_dataProtection": "Datenschutz",
+    "s15_dataProtectionP1": "Weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <privacyLink>Datenschutzrichtlinie</privacyLink>.",
+    "s15_dataProtectionP2": "Bei Fragen zu diesen AGB kontaktieren Sie uns unter <contactEmail>contact@fitmycv.io</contactEmail>."
+  },
+  "Privacy": {
+    "metaTitle": "Datenschutzrichtlinie — FitMyCV",
+    "pageTitle": "Datenschutzrichtlinie",
+    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "s1Title": "1. Verantwortlicher für die Datenverarbeitung",
+    "s1p1": "Die Firma Codeglyph betreibt die Website FitMyCV.io und erhebt und verarbeitet in diesem Zusammenhang personenbezogene Daten, die Sie betreffen.",
+    "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nE-Mail: <contactEmail>contact@codeglyph.fr</contactEmail>",
+    "s2Title": "2. Mindestalter",
+    "s2p1": "FitMyCV.io ist für Personen ab 16 Jahren bestimmt. Durch die Nutzung dieses Dienstes bestätigen Sie, das erforderliche Alter zu haben.",
+    "s3Title": "3. Ihre Rechte",
+    "s3p1": "Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie folgende Rechte:",
+    "s3Rights": [
+      {
+        "title": "Auskunft",
+        "desc": "Einsicht in die personenbezogenen Daten, die wir über Sie gespeichert haben"
+      },
+      {
+        "title": "Berichtigung",
+        "desc": "Korrektur unrichtiger oder unvollständiger Daten"
+      },
+      {
+        "title": "Löschung",
+        "desc": "Löschung Ihrer Daten verlangen (‚Recht auf Vergessenwerden')"
+      },
+      {
+        "title": "Einschränkung",
+        "desc": "Einschränkung der Verarbeitung Ihrer Daten"
+      },
+      {
+        "title": "Datenübertragbarkeit",
+        "desc": "Ihre Daten in einem strukturierten Format erhalten"
+      },
+      {
+        "title": "Widerspruch",
+        "desc": "der Verarbeitung aus berechtigten Gründen widersprechen"
+      }
+    ],
+    "s3p2": "Um diese Rechte auszuüben, kontaktieren Sie uns unter <contactEmail>contact@codeglyph.fr</contactEmail>. Wir antworten innerhalb von 30 Tagen.",
+    "s3p3": "Im Streitfall können Sie eine Beschwerde bei der <cnilLink>zuständigen Datenschutzbehörde</cnilLink> einreichen.",
+    "s4Title": "4. Erhobene Daten",
+    "s4_1Title": "4.1 Identifikationsdaten",
+    "s4_1Items": [
+      "Name, E-Mail-Adresse, Passwort (verschlüsselt)",
+      "Profilbild (bei Anmeldung über Google, Apple oder GitHub)"
+    ],
+    "s4_2Title": "4.2 Lebenslauf-Daten",
+    "s4_2Items": [
+      "Berufliche Informationen: Erfahrungen, Ausbildungen, Kompetenzen",
+      "Kontaktdaten: Telefon, Adresse, berufliche Links",
+      "Importierte Dokumente (PDF): nicht gespeichert, an OpenAI zur Extraktion übermittelt und anschließend sofort gelöscht",
+      "Versionsverlauf Ihrer Lebensläufe",
+      "Alle Lebenslauf-Daten sind im Ruhezustand verschlüsselt"
+    ],
+    "s4_3Title": "4.3 Navigationsdaten",
+    "s4_3Items": [
+      "IP-Adresse, Browsertyp",
+      "Besuchte Seiten, Sitzungsdaten"
+    ],
+    "s4_4Title": "4.4 Zahlungsdaten",
+    "s4_4Items": [
+      "Abonnement- und Transaktionsverlauf",
+      "Keine Bankdaten gespeichert (ausschließlich von Stripe verwaltet)"
+    ],
+    "s4_5Title": "4.5 Nutzungsdaten",
+    "s4_5Items": [
+      "Nutzungsereignisse (Lebenslauferstellung, Importe, Generierungen)",
+      "Performance-Metriken der KI-Aufrufe",
+      "Fehlerprotokolle zur Diagnose"
+    ],
+    "s5Title": "5. Zwecke und Rechtsgrundlagen",
+    "s5TableHeaders": [
+      "Zweck",
+      "Rechtsgrundlage"
+    ],
+    "s5TableRows": [
+      [
+        "Bereitstellung des Dienstes (Erstellung und Generierung von Lebensläufen)",
+        "Vertragserfüllung"
+      ],
+      [
+        "Verwaltung von Zahlungen und Abonnements",
+        "Vertragserfüllung"
+      ],
+      [
+        "Verbesserung des Dienstes, Fehlerbehebung",
+        "Berechtigtes Interesse"
+      ],
+      [
+        "Sicherheit und Missbrauchsprävention",
+        "Berechtigtes Interesse"
+      ],
+      [
+        "Aufbewahrung von Rechnungsdaten",
+        "Gesetzliche Pflicht"
+      ]
+    ],
+    "s6Title": "6. Aufbewahrungsfristen",
+    "s6TableHeaders": [
+      "Art der Daten",
+      "Dauer"
+    ],
+    "s6TableRows": [
+      [
+        "Aktives Konto",
+        "Solange das Konto besteht"
+      ],
+      [
+        "Gelöschtes Konto",
+        "Sofortige Löschung"
+      ],
+      [
+        "Inaktives Konto",
+        "3 Jahre nach letzter Anmeldung (Benachrichtigung 30 Tage vor Löschung)"
+      ],
+      [
+        "Rechnungsdaten",
+        "5 Jahre (gesetzliche Pflicht)"
+      ],
+      [
+        "E-Mail-Logs",
+        "12 Monate"
+      ]
+    ],
+    "s7Title": "7. Hosting",
+    "s7p1": "Die Daten werden in Frankreich gehostet.",
+    "s8Title": "8. KI-Drittanbieter",
+    "s8p1": "FitMyCV.io verwendet künstliche Intelligenz zur Generierung und Optimierung Ihrer Lebensläufe. Die Daten Ihrer Lebensläufe (Erfahrungen, Kompetenzen, Ausbildungen) werden übermittelt an:",
+    "s8Provider": "<openaiLink>OpenAI</openaiLink> (Vereinigte Staaten)",
+    "s8p2": "OpenAI gibt an, die über seine API übermittelten Daten nicht zum Training seiner Modelle zu verwenden.",
+    "s8_autoTitle": "Automatisierte Entscheidungen",
+    "s8_autoP": "Die KI wird verwendet, um Kompatibilitäts-Scores zwischen Lebenslauf und Stelle zu berechnen, Ihre Kompetenzen zu klassifizieren und Verbesserungen vorzuschlagen. Diese Verarbeitungen sind Entscheidungshilfen: Sie behalten die volle Kontrolle über den endgültigen Inhalt Ihrer Lebensläufe.",
+    "s9Title": "9. Zahlungsabwicklung",
+    "s9p1": "Die Zahlungen werden von Stripe Payments Europe, Ltd. (Irland) abgewickelt. FitMyCV.io speichert niemals vollständige Kreditkartennummern.",
+    "s9Link": "<stripeLink>Datenschutzrichtlinie von Stripe</stripeLink>",
+    "s10Title": "10. E-Mail-Versand",
+    "s10p1": "Transaktionale E-Mails (Verifizierung, Passwort-Zurücksetzung, Bestätigungen) werden über Resend versendet.",
+    "s10Link": "<resendLink>Datenschutzrichtlinie von Resend</resendLink>",
+    "s11Title": "11. Cookies",
+    "s11p1": "FitMyCV.io verwendet essentielle Cookies für den Betrieb der Website (Sitzung, Authentifizierung, Spam-Schutz). Es werden keine Werbe-Cookies verwendet.",
+    "s12Title": "12. Sicherheit",
+    "s12p1": "Wir setzen folgende Maßnahmen zum Schutz Ihrer Daten um:",
+    "s12Items": [
+      "HTTPS-Kommunikation (SSL/TLS)",
+      "Verschlüsselte Passwörter (bcrypt)",
+      "Lebensläufe und persönliche Daten im Ruhezustand verschlüsselt (AES-256)",
+      "CSRF-Schutz und sichere Cookies",
+      "Spam-Schutz über Google reCAPTCHA v3"
+    ],
+    "s12p2": "reCAPTCHA erfasst technische Daten (IP-Adresse, Cookies, Surfverhalten), um Menschen von Bots zu unterscheiden. Die <googlePrivacyLink>Datenschutzrichtlinie</googlePrivacyLink> und die Nutzungsbedingungen von Google gelten.",
+    "s13Title": "13. Internationale Datenübermittlungen",
+    "s13p1": "Bestimmte Daten können außerhalb der Europäischen Union übermittelt werden (OpenAI, Resend in den Vereinigten Staaten). Diese Übermittlungen sind durch von der Europäischen Kommission genehmigte Standardvertragsklauseln abgesichert.",
+    "s14Title": "14. Änderungen",
+    "s14p1": "Diese Richtlinie kann jederzeit geändert werden. Änderungen werden auf dieser Seite mit dem Aktualisierungsdatum veröffentlicht. Bei wesentlichen Änderungen werden Sie per E-Mail informiert."
+  },
+  "LegalLayout": {
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzrichtlinie"
+  },
+  "LanguageSelector": {
+    "label": "Sprache"
+  },
+  "JsonLd": {
+    "softwareDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI Ihre Bewerbung optimieren, um Ihre Chancen zu maximieren."
+  },
+  "Showcase": {
+    "title": "Workflow",
+    "subtitle": "Der komplette 7-Schritte-Prozess: vom PDF-Import bis zum Export des optimierten Lebenslaufs.",
+    "stepsTitle": "Workflow in 7 Schritten aufgeteilt",
+    "stepsSubtitle": "Jeder Schritt läuft unabhängig in einer Schleife.",
+    "footer": "FitMyCV.io — Internes Showcase",
+    "stepLabels": ["Lebenslauf-Import", "KI-Generierung", "Review-Modus", "Score-Berechnung", "Lebenslauf-Optimierung", "Optimierungs-Review", "Export PDF/Word"]
+  }
+}

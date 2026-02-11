@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 
 /* ── Flag data URIs ── */
 const FLAG_FR =
@@ -20,7 +21,16 @@ const FLAG_FR_CARD1 =
   "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22c%22%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22256%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23c)%22%3E%3Crect%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23002395%22%2F%3E%3Crect%20x%3D%22170%22%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%22340%22%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23ED2939%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 export default function Features() {
+  const t = useTranslations("Features");
   const sectionRef = useRef<HTMLElement>(null);
+
+  /* ── Translated arrays & labels used inside useEffect ── */
+  const atsOriginals = t.raw("card5Originals") as string[];
+  const atsRewrites = t.raw("card5Rewrites") as string[];
+  const taskSteps = t.raw("card15TaskSteps") as string[];
+  const langLabels = t.raw("card13LangLabels") as string[];
+  const taskDoneLabel = t("card15Done");
+  const taskWaitingLabel = t("card15Waiting");
 
   /* ── Shared wait helper (returns a promise that the cleanup can reject) ── */
   const makeWait = useCallback(() => {
@@ -613,17 +623,6 @@ export default function Features() {
     });
 
     /* ── Card 5: ATS rewrite ── */
-    const atsRewrites = [
-      'Pilotage de projets web full-stack',
-      'Méthodologie Scrum & sprints agiles',
-      'Conception UI/UX responsive (React)',
-    ];
-    const atsOriginals = [
-      'Gestion de projets web complexes',
-      'Travail en équipe agile',
-      "Création d'interfaces modernes",
-    ];
-
     section.querySelectorAll<HTMLElement>('.vis-ats').forEach((vis) => {
       const lines = vis.querySelectorAll<HTMLElement>('.ats-line');
 
@@ -882,8 +881,9 @@ export default function Features() {
       const cards = vis.querySelectorAll<HTMLElement>('.exo-card');
 
       function getStep() {
-        if (cards.length < 2) return 0;
-        return cards[1].offsetTop - cards[0].offsetTop;
+        const visible = Array.from(cards).filter(c => c.offsetParent !== null);
+        if (visible.length < 2) return 0;
+        return visible[1].offsetTop - visible[0].offsetTop;
       }
 
       const { wait, cancel } = makeWait();
@@ -898,16 +898,27 @@ export default function Features() {
           await wait(800);
 
           const step = getStep();
-          cards[2].classList.add('dragging');
-          await wait(300);
-          cards[2].style.transform = `translateY(${-step}px)`;
-          cards[1].style.transform = `translateY(${step}px)`;
-          await wait(600);
+          const mobile = window.innerWidth <= 767;
 
-          cards[2].classList.remove('dragging');
-          await wait(200);
+          if (mobile) {
+            // Mobile: drag Skills down below Experience
+            cards[1].classList.add('dragging');
+            await wait(300);
+            cards[1].style.transform = `translateY(${step}px)`;
+            cards[2].style.transform = `translateY(${-step}px)`;
+            await wait(600);
+            cards[1].classList.remove('dragging');
+          } else {
+            // Desktop: drag Experience up above Skills
+            cards[2].classList.add('dragging');
+            await wait(300);
+            cards[2].style.transform = `translateY(${-step}px)`;
+            cards[1].style.transform = `translateY(${step}px)`;
+            await wait(600);
+            cards[2].classList.remove('dragging');
+          }
 
-          await wait(2000);
+          await wait(2200);
 
           cards.forEach((c) => {
             c.style.transform = '';
@@ -922,8 +933,6 @@ export default function Features() {
     });
 
     /* ── Card 13: Language badge cycling ── */
-    const langLabels = ['Français', 'English', 'Deutsch', 'Español'];
-
     section.querySelectorAll<HTMLElement>('.vis-lang-btn').forEach((vis) => {
       const flags = vis.querySelectorAll<HTMLElement>('.lang-flag');
       const label = vis.querySelector<HTMLElement>('.lang-label');
@@ -979,8 +988,6 @@ export default function Features() {
     });
 
     /* ── Card 15: Task manager ── */
-    const taskSteps = ['Expériences', 'Compétences', 'Projets', 'Résumé', 'Terminé'];
-
     section.querySelectorAll<HTMLElement>('.vis-tasks').forEach((vis) => {
       const items = [...vis.querySelectorAll<HTMLElement>('.tsk-item')];
 
@@ -1000,7 +1007,7 @@ export default function Features() {
           fill.style.width = target + '%';
           pct.textContent = target + '%';
           if (target >= 100) {
-            pct.textContent = 'Terminé';
+            pct.textContent = taskDoneLabel;
             pct.classList.add('done');
             fill.classList.add('done');
           }
@@ -1022,7 +1029,7 @@ export default function Features() {
               pct.textContent = '0%';
               pct.classList.remove('done');
             }
-            if (step) step.textContent = 'En attente...';
+            if (step) step.textContent = taskWaitingLabel;
           });
           await wait(800);
 
@@ -1131,7 +1138,7 @@ export default function Features() {
         row.removeEventListener('mousedown', handler);
       });
     };
-  }, [makeWait]);
+  }, [makeWait, atsOriginals, atsRewrites, taskSteps, langLabels, taskDoneLabel, taskWaitingLabel]);
 
   return (
     <>
@@ -1147,8 +1154,8 @@ export default function Features() {
 
       <section className="features-section" id="features" ref={sectionRef}>
         <div className="section-header">
-          <h2 className="section-title">Tout ce qu&apos;il faut pour d&eacute;crocher le poste</h2>
-          <p className="section-subtitle">Con&ccedil;u pour vos CVs. Pas un &eacute;ni&egrave;me chatbot.</p>
+          <h2 className="section-title">{t("title")}</h2>
+          <p className="section-subtitle">{t("subtitle")}</p>
         </div>
 
         <div className="marquee-grid">
@@ -1158,12 +1165,12 @@ export default function Features() {
 
             {/* Card 1: Generator */}
             <div className="f-card card-lg" data-id="1">
-              <div className="c-title">Un CV taillé pour chaque offre</div>
-              <div className="c-sub">Collez un lien, l&apos;IA fait le reste</div>
+              <div className="c-title">{t("card1Title")}</div>
+              <div className="c-sub">{t("card1Sub")}</div>
               <div className="c-vis">
                 <div className="vis-gen" id="vis-gen">
                   <div className="gm-body">
-                    <div className="gm-label">CV de référence</div>
+                    <div className="gm-label">{t("card1RefLabel")}</div>
                     <div className="gm-select">
                       <svg className="gm-doc-icon" viewBox="0 0 24 24">
                         <path
@@ -1172,18 +1179,18 @@ export default function Features() {
                         />
                       </svg>
                       <span className="gm-select-date">07/02</span>
-                      <span className="gm-select-text">Développeur Full-Stack JS</span>
+                      <span className="gm-select-text">{t("card1SelectText")}</span>
                       <img className="gm-flag" src={FLAG_FR_CARD1} alt="FR" />
                       <span className="gm-arrow">&#9662;</span>
                     </div>
-                    <div className="gm-label">Lien offre d&apos;emploi</div>
+                    <div className="gm-label">{t("card1LinkLabel")}</div>
                     <div className="gm-link-row">
                       <div className="gm-history-btn">&#128203;</div>
                       <div className="gm-input" id="gm-link"></div>
                     </div>
                     <div className="gm-actions">
-                      <span className="gm-cancel">Annuler</span>
-                      <span className="gm-validate" id="gm-validate">Valider</span>
+                      <span className="gm-cancel">{t("card1Cancel")}</span>
+                      <span className="gm-validate" id="gm-validate">{t("card1Validate")}</span>
                     </div>
                   </div>
                   <div className="gm-cursor" id="gm-cursor">
@@ -1197,21 +1204,21 @@ export default function Features() {
 
             {/* Card 5: ATS */}
             <div className="f-card card-sm" data-id="5">
-              <div className="c-title">Optimisé pour les ATS</div>
-              <div className="c-sub">Chaque mot compte</div>
+              <div className="c-title">{t("card5Title")}</div>
+              <div className="c-sub">{t("card5Sub")}</div>
               <div className="c-vis">
                 <div className="vis-ats">
-                  <div className="ats-line old">Gestion de projets web complexes</div>
-                  <div className="ats-line old">Travail en équipe agile</div>
-                  <div className="ats-line old">Création d&apos;interfaces modernes</div>
+                  <div className="ats-line old">{(t.raw("card5Originals") as string[])[0]}</div>
+                  <div className="ats-line old">{(t.raw("card5Originals") as string[])[1]}</div>
+                  <div className="ats-line old">{(t.raw("card5Originals") as string[])[2]}</div>
                 </div>
               </div>
             </div>
 
             {/* Card 4: Import */}
             <div className="f-card card-md" data-id="4">
-              <div className="c-title">Importez votre CV en un geste</div>
-              <div className="c-sub">Glissez un PDF, l&apos;IA structure tout</div>
+              <div className="c-title">{t("card4Title")}</div>
+              <div className="c-sub">{t("card4Sub")}</div>
               <div className="c-vis">
                 <div className="vis-import">
                   <div className="imp-zone">
@@ -1228,7 +1235,7 @@ export default function Features() {
                         d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                       />
                     </svg>
-                    <span className="imp-label">Choisir un fichier PDF</span>
+                    <span className="imp-label">{t("card4UploadLabel")}</span>
                     <div className="imp-done">
                       <svg
                         style={{ width: '12px', height: '12px', color: '#6ee7b7', flexShrink: 0 }}
@@ -1260,8 +1267,8 @@ export default function Features() {
 
             {/* Card 2: Batch */}
             <div className="f-card card-md" data-id="2">
-              <div className="c-title">10 CV en un clic</div>
-              <div className="c-sub">Toutes vos candidatures en parallèle</div>
+              <div className="c-title">{t("card2Title")}</div>
+              <div className="c-sub">{t("card2Sub")}</div>
               <div className="c-vis">
                 <div className="vis-batch">
                   <div className="batch-docs">
@@ -1284,8 +1291,8 @@ export default function Features() {
 
             {/* Card 3: Template */}
             <div className="f-card card-md" data-id="3">
-              <div className="c-title">Un template en quelques mots</div>
-              <div className="c-sub">Pas de lien ? Un titre de poste suffit</div>
+              <div className="c-title">{t("card3Title")}</div>
+              <div className="c-sub">{t("card3Sub")}</div>
               <div className="c-vis">
                 <div className="vis-tpl">
                   <div className="tpl-search">
@@ -1308,11 +1315,9 @@ export default function Features() {
 
             {/* Card 16: Browser extension (coming soon) */}
             <div className="f-card card-lg" data-id="16">
-              <div className="c-title">
-                Extension navigateur
-                <span className="c-badge-soon">Bientôt</span>
-              </div>
-              <div className="c-sub">Lancez une génération sans quitter votre onglet</div>
+              <div className="c-title">{t("card16Title")}</div>
+              <span className="c-badge-soon">{t("card16Badge")}</span>
+              <div className="c-sub">{t("card16Sub")}</div>
               <div className="c-vis">
                 <div className="vis-plugin">
                   <div className="plg-browser">
@@ -1342,9 +1347,9 @@ export default function Features() {
                       <svg className="plg-doc-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zm7 1.5L18.5 9H14a1 1 0 01-1-1V3.5z"/>
                       </svg>
-                      <span>Dev Full-Stack JS</span>
+                      <span>{t("card16CvLabel")}</span>
                     </div>
-                    <div className="plg-popup-btn">Générer mon CV</div>
+                    <div className="plg-popup-btn">{t("card16GenBtn")}</div>
                   </div>
                 </div>
               </div>
@@ -1357,8 +1362,8 @@ export default function Features() {
 
             {/* Card 7: Fiche offre */}
             <div className="f-card card-md" data-id="7">
-              <div className="c-title">L&apos;offre décryptée pour vous</div>
-              <div className="c-sub">Skills, process, bénéfices extraits automatiquement</div>
+              <div className="c-title">{t("card7Title")}</div>
+              <div className="c-sub">{t("card7Sub")}</div>
               <div className="c-vis">
                 <div className="vis-fiche">
                   <div className="fiche-tags">
@@ -1376,14 +1381,14 @@ export default function Features() {
 
             {/* Card 9: Review */}
             <div className="f-card card-md" data-id="9">
-              <div className="c-title">Gardez le contrôle</div>
-              <div className="c-sub">Acceptez ou refusez chaque modification</div>
+              <div className="c-title">{t("card9Title")}</div>
+              <div className="c-sub">{t("card9Sub")}</div>
               <div className="c-vis">
                 <div className="vis-review">
                   <div className="rev-change">
                     <div className="rev-diff">
-                      <span className="rev-old">3 ans d&apos;expérience</span>
-                      <span className="rev-new">3+ ans en développement web</span>
+                      <span className="rev-old">{t("card9Old1")}</span>
+                      <span className="rev-new">{t("card9New1")}</span>
                     </div>
                     <div className="rev-actions">
                       <span className="rev-btn rev-accept">&#10003;</span>
@@ -1392,8 +1397,8 @@ export default function Features() {
                   </div>
                   <div className="rev-change">
                     <div className="rev-diff">
-                      <span className="rev-old">Bonne maîtrise de React</span>
-                      <span className="rev-new">Expert React &amp; TypeScript</span>
+                      <span className="rev-old">{t("card9Old2")}</span>
+                      <span className="rev-new">{t("card9New2")}</span>
                     </div>
                     <div className="rev-actions">
                       <span className="rev-btn rev-accept">&#10003;</span>
@@ -1406,30 +1411,30 @@ export default function Features() {
 
             {/* Card 8: Reco */}
             <div className="f-card card-lg" data-id="8">
-              <div className="c-title">L&apos;IA vous guide pas à pas</div>
-              <div className="c-sub">Suggestions ciblées pour chaque offre</div>
+              <div className="c-title">{t("card8Title")}</div>
+              <div className="c-sub">{t("card8Sub")}</div>
               <div className="c-vis">
                 <div className="vis-reco">
                   <div className="reco-item">
                     <div className="reco-header">
-                      <span className="reco-badge high">Haute</span>
+                      <span className="reco-badge high">{t("card8High")}</span>
                       <span className="reco-pts">+5 pts</span>
                     </div>
-                    <div className="reco-text">Ajouter outils de test (Jest, Cypress)</div>
+                    <div className="reco-text">{t("card8Reco1")}</div>
                   </div>
                   <div className="reco-item">
                     <div className="reco-header">
-                      <span className="reco-badge med">Moyenne</span>
+                      <span className="reco-badge med">{t("card8Med")}</span>
                       <span className="reco-pts">+4 pts</span>
                     </div>
-                    <div className="reco-text">Détailler l&apos;expérience Design System</div>
+                    <div className="reco-text">{t("card8Reco2")}</div>
                   </div>
                   <div className="reco-item">
                     <div className="reco-header">
-                      <span className="reco-badge low">Faible</span>
+                      <span className="reco-badge low">{t("card8Low")}</span>
                       <span className="reco-pts">+2 pts</span>
                     </div>
-                    <div className="reco-text">Mentionner accessibilité WCAG</div>
+                    <div className="reco-text">{t("card8Reco3")}</div>
                   </div>
                 </div>
               </div>
@@ -1437,8 +1442,8 @@ export default function Features() {
 
             {/* Card 6: Score */}
             <div className="f-card card-sm" data-id="6">
-              <div className="c-title">Votre score de matching</div>
-              <div className="c-sub">Mesurez l&apos;impact de chaque optimisation</div>
+              <div className="c-title">{t("card6Title")}</div>
+              <div className="c-sub">{t("card6Sub")}</div>
               <div className="c-vis">
                 <div className="vis-score">
                   <div className="sc-badge sc-old">
@@ -1467,8 +1472,8 @@ export default function Features() {
 
             {/* Card 10: History */}
             <div className="f-card card-sm" data-id="10">
-              <div className="c-title">Voyagez dans le temps</div>
-              <div className="c-sub">Restaurez facilement votre CV en un clic</div>
+              <div className="c-title">{t("card10Title")}</div>
+              <div className="c-sub">{t("card10Sub")}</div>
               <div className="c-vis">
                 <div className="vis-history">
                   <div className="hist-row">
@@ -1494,8 +1499,8 @@ export default function Features() {
 
             {/* Card 13: Language badge */}
             <div className="f-card card-sm" data-id="13">
-              <div className="c-title">Une interface, 4 langues</div>
-              <div className="c-sub">Français, Anglais, Allemand, Espagnol</div>
+              <div className="c-title">{t("card13Title")}</div>
+              <div className="c-sub">{t("card13Sub")}</div>
               <div className="c-vis">
                 <div className="vis-lang-btn">
                   <div className="lang-badge">
@@ -1504,15 +1509,15 @@ export default function Features() {
                     <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" />
                     <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" />
                   </div>
-                  <div className="lang-label">Français</div>
+                  <div className="lang-label">{(t.raw("card13LangLabels") as string[])[0]}</div>
                 </div>
               </div>
             </div>
 
             {/* Card 14: Translate */}
             <div className="f-card card-lg" data-id="14">
-              <div className="c-title">Traduisez votre CV</div>
-              <div className="c-sub">Dans 4 langues, vocabulaire professionnel adapté</div>
+              <div className="c-title">{t("card14Title")}</div>
+              <div className="c-sub">{t("card14Sub")}</div>
               <div className="c-vis">
                 <div className="vis-translate">
                   <div className="tr-carousel">
@@ -1535,8 +1540,8 @@ export default function Features() {
 
             {/* Card 15: Tasks */}
             <div className="f-card card-lg" data-id="15">
-              <div className="c-title">Vos tâches tournent en arrière-plan</div>
-              <div className="c-sub">Générez, partez, c&apos;est prêt à votre retour</div>
+              <div className="c-title">{t("card15Title")}</div>
+              <div className="c-sub">{t("card15Sub")}</div>
               <div className="c-vis">
                 <div className="vis-tasks">
                   <div className="tsk-item">
@@ -1547,7 +1552,7 @@ export default function Features() {
                     <div className="tsk-bar">
                       <div className="tsk-fill" data-end="100"></div>
                     </div>
-                    <div className="tsk-step">En attente...</div>
+                    <div className="tsk-step">{t("card15Waiting")}</div>
                   </div>
                   <div className="tsk-item">
                     <div className="tsk-line1">
@@ -1557,7 +1562,7 @@ export default function Features() {
                     <div className="tsk-bar">
                       <div className="tsk-fill" data-end="100"></div>
                     </div>
-                    <div className="tsk-step">En attente...</div>
+                    <div className="tsk-step">{t("card15Waiting")}</div>
                   </div>
                 </div>
               </div>
@@ -1565,24 +1570,24 @@ export default function Features() {
 
             {/* Card 11: Inline edit */}
             <div className="f-card card-md" data-id="11">
-              <div className="c-title">Éditez directement dans l&apos;app</div>
-              <div className="c-sub">Chaque section modifiable en un clic</div>
+              <div className="c-title">{t("card11Title")}</div>
+              <div className="c-sub">{t("card11Sub")}</div>
               <div className="c-vis">
                 <div className="vis-inline">
                   <div className="inl-row">
-                    <div className="inl-text">Expérience professionnelle</div>
+                    <div className="inl-text">{t("card11Row1")}</div>
                     <div className="inl-kebab">&#8942;</div>
                     <div className="inl-menu">
-                      <div className="inl-opt edit">&#9998; Modifier</div>
-                      <div className="inl-opt del">&#10005; Supprimer</div>
+                      <div className="inl-opt edit">&#9998; {t("card11Edit")}</div>
+                      <div className="inl-opt del">&#10005; {t("card11Delete")}</div>
                     </div>
                   </div>
                   <div className="inl-row">
-                    <div className="inl-text">Compétences techniques</div>
+                    <div className="inl-text">{t("card11Row2")}</div>
                     <div className="inl-kebab">&#8942;</div>
                   </div>
                   <div className="inl-row">
-                    <div className="inl-text">Formation</div>
+                    <div className="inl-text">{t("card11Row3")}</div>
                     <div className="inl-kebab">&#8942;</div>
                   </div>
                 </div>
@@ -1591,8 +1596,8 @@ export default function Features() {
 
             {/* Card 12: Export order */}
             <div className="f-card card-md" data-id="12">
-              <div className="c-title">Exportez en un clic</div>
-              <div className="c-sub">PDF, Word, le format qui vous convient</div>
+              <div className="c-title">{t("card12Title")}</div>
+              <div className="c-sub">{t("card12Sub")}</div>
               <div className="c-vis">
                 <div className="vis-export-order">
                   <div className="exo-card" data-idx="0">
@@ -1610,7 +1615,7 @@ export default function Features() {
                     <span className="exo-check">&#10003;</span>
                     <span className="exo-name">Experience</span>
                   </div>
-                  <div className="exo-btn">Exporter PDF</div>
+                  <div className="exo-btn">{t("card12ExportBtn")}</div>
                 </div>
               </div>
             </div>

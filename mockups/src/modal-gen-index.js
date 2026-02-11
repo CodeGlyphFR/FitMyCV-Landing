@@ -1,6 +1,9 @@
+import { initLang } from './js/i18n.js';
 import { createGeneratorModal } from './html/modals.js';
 import { createCursor } from './html/cursor-and-indicator.js';
 import { $, moveToEl, clickEffect, wait } from './js/dom-helpers.js';
+
+initLang();
 
 /**
  * Standalone mockup: generator modal at fixed 420×402px.

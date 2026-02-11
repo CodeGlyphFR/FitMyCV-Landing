@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NotFound() {
+export default function RootNotFound() {
   return (
     <div
       style={{
@@ -14,10 +14,19 @@ export default function NotFound() {
         fontFamily: "Inter, sans-serif",
       }}
     >
-      <h1 style={{ fontSize: "6rem", fontWeight: 700, margin: 0, opacity: 0.3 }}>
+      <h1
+        style={{
+          fontSize: "6rem",
+          fontWeight: 700,
+          margin: 0,
+          opacity: 0.3,
+        }}
+      >
         404
       </h1>
-      <p style={{ fontSize: "1.25rem", opacity: 0.6, marginTop: "0.5rem" }}>
+      <p
+        style={{ fontSize: "1.25rem", opacity: 0.6, marginTop: "0.5rem" }}
+      >
         Page introuvable
       </p>
       <Link
