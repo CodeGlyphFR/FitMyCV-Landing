@@ -17,29 +17,19 @@ const pages: {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.flatMap((page) => {
+    // getPathname already includes the locale prefix for non-default locales
+    // (e.g. "/fr", "/fr/support") so we must NOT prepend /${locale} again.
     const alternates: Record<string, string> = {};
     for (const locale of routing.locales) {
-      const pathname = getPathname({ locale, href: page.path });
-      alternates[locale] =
-        locale === routing.defaultLocale
-          ? `${base}${pathname}`
-          : `${base}/${locale}${pathname}`;
+      alternates[locale] = `${base}${getPathname({ locale, href: page.path })}`;
     }
 
-    return routing.locales.map((locale) => {
-      const pathname = getPathname({ locale, href: page.path });
-      const url =
-        locale === routing.defaultLocale
-          ? `${base}${pathname}`
-          : `${base}/${locale}${pathname}`;
-
-      return {
-        url,
-        lastModified: new Date(),
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-        alternates: { languages: alternates },
-      };
-    });
+    return routing.locales.map((locale) => ({
+      url: `${base}${getPathname({ locale, href: page.path })}`,
+      lastModified: new Date(),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: { languages: alternates },
+    }));
   });
 }

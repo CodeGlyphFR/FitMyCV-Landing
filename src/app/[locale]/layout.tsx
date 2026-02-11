@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { getOgUrl } from "@/lib/seo";
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a1a",
+};
 
 type Props = {
   children: React.ReactNode;
@@ -63,7 +68,7 @@ export async function generateMetadata({
       siteName: "FitMyCV",
       title: t("ogTitle"),
       description: t("ogDescription"),
-      url: "https://www.fitmycv.io",
+      url: getOgUrl(locale, "/"),
       images: [
         {
           url: "/og-image.png",
