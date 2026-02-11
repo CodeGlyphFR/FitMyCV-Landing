@@ -46,6 +46,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PAT }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
 
       # 1 DÉFINITION DES VARIABLES SELON LA STRUCTURE RÉELLE
       - name: Set Environment Variables
