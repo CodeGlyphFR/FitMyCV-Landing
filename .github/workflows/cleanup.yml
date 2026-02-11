@@ -1,13 +1,15 @@
-name: 🛑 Stop Staging
+name: 🧹 Cleanup Staging
 
 on:
-  workflow_dispatch: # Permet le bouton manuel dans l'onglet Actions
+  pull_request:
+    branches: ["main"]
+    types: [closed]
 
 jobs:
-  stop:
+  stop-staging:
     runs-on: ubuntu-latest
     steps:
-      - name: Stop Container via SSH
+      - name: Stop Staging via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -18,4 +20,5 @@ jobs:
           script: |
             cd /home/erickdesmet/STAGING_SAAS/FitMyCV/landing
             docker compose -f docker-compose.staging.yml down
-            echo "Staging arrêté."
+            docker image prune -f
+            echo "✅ Staging cleané."
