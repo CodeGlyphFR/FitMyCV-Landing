@@ -302,7 +302,8 @@
     "subtitle": "Everything you need to know about FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Terms of Sale — FitMyCV",
+    "metaTitle": "Terms of Sale",
+    "metaDescription": "Read FitMyCV's terms of sale: credit system, pricing, payments, refund policy, AI usage, and intellectual property.",
     "pageTitle": "Terms of Sale",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Acceptance of Terms",
@@ -415,7 +416,8 @@
     "s15_dataProtectionP2": "For any questions regarding these Terms, contact us at <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Privacy Policy — FitMyCV",
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "Learn how FitMyCV protects your data: GDPR compliance, data encryption, retention periods, your rights, and third-party providers.",
     "pageTitle": "Privacy Policy",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Data Controller",

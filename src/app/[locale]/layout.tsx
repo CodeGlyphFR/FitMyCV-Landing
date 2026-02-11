@@ -65,13 +65,16 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: ogLocaleMap[locale] || "fr_FR",
+      alternateLocale: Object.values(ogLocaleMap).filter(
+        (l) => l !== ogLocaleMap[locale]
+      ),
       siteName: "FitMyCV",
       title: t("ogTitle"),
       description: t("ogDescription"),
       url: getOgUrl(locale, "/"),
       images: [
         {
-          url: "/og-image.png",
+          url: "/og-image.webp",
           width: 1200,
           height: 630,
           alt: t("ogImageAlt"),
@@ -81,7 +84,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: t("twitterTitle"),
-      images: ["/og-image.png"],
+      images: ["/og-image.webp"],
       description: t("twitterDescription"),
     },
   };

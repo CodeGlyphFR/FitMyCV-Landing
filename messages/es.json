@@ -302,7 +302,8 @@
     "subtitle": "Todo lo que necesitas saber sobre FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Condiciones Generales de Venta — FitMyCV",
+    "metaTitle": "Condiciones Generales de Venta",
+    "metaDescription": "Consulta las condiciones generales de venta de FitMyCV: sistema de créditos, precios, pagos, política de reembolso, uso de IA y propiedad intelectual.",
     "pageTitle": "Condiciones Generales de Venta",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Aceptación de las CGV",
@@ -415,7 +416,8 @@
     "s15_dataProtectionP2": "Para cualquier pregunta sobre estas CGV, contáctanos en <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Política de privacidad — FitMyCV",
+    "metaTitle": "Política de privacidad",
+    "metaDescription": "Descubre cómo FitMyCV protege tus datos: conformidad RGPD, cifrado de datos, plazos de conservación, tus derechos y proveedores externos.",
     "pageTitle": "Política de privacidad",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Responsable del tratamiento",

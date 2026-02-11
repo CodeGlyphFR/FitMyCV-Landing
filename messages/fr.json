@@ -15,8 +15,8 @@
     "features": "Fonctionnalités",
     "pricing": "Tarifs",
     "faq": "FAQ",
-    "login": "Log in",
-    "signup": "Sign Up",
+    "login": "Se connecter",
+    "signup": "S'inscrire",
     "menu": "Menu"
   },
   "Hero": {
@@ -302,7 +302,8 @@
     "subtitle": "Tout ce que vous devez savoir sur FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Conditions Générales de Vente — FitMyCV",
+    "metaTitle": "Conditions Générales de Vente",
+    "metaDescription": "Consultez les conditions générales de vente de FitMyCV : système de crédits, tarifs, paiements, politique de remboursement, utilisation de l'IA et propriété intellectuelle.",
     "pageTitle": "Conditions Générales de Vente",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Acceptation des CGV",
@@ -415,7 +416,8 @@
     "s15_dataProtectionP2": "Pour toute question concernant ces CGV, contactez-nous à <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Politique de confidentialité — FitMyCV",
+    "metaTitle": "Politique de confidentialité",
+    "metaDescription": "Découvrez comment FitMyCV protège vos données : conformité RGPD, chiffrement des données, durées de conservation, vos droits et prestataires tiers.",
     "pageTitle": "Politique de confidentialité",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
     "s1Title": "1. Responsable du traitement",
