@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -6,34 +8,14 @@ export default function Footer() {
           <div className="footer-brand">
             <img src="icons/logo.png" alt="FitMyCV" height={32} />
             <p>Votre CV, optimisé par l&apos;IA</p>
-            <p
-              style={{
-                marginTop: "0.5rem",
-                fontSize: "0.8rem",
-                color: "rgba(255,255,255,0.25)",
-              }}
-            >
-              Fait avec{" "}
-              <img
-                src="icons/pixel_heart.svg"
-                alt="♥"
-                style={{
-                  display: "inline-block",
-                  height: "0.85em",
-                  verticalAlign: "-0.05em",
-                  margin: "0 0.15em",
-                }}
-              />{" "}
-              par un seul dev
-            </p>
           </div>
           <div className="footer-col">
             <h4>Produit</h4>
-            <a href="#howItWorks">Comment ça marche</a>
-            <a href="#features">Fonctionnalités</a>
-            <a href="#pricing">Tarifs</a>
-            <a href="#reviews">Avis</a>
-            <a href="#faq">FAQ</a>
+            <Link href="/#howItWorks">Comment ça marche</Link>
+            <Link href="/#features">Fonctionnalités</Link>
+            <Link href="/#pricing">Tarifs</Link>
+            <Link href="/#faq">FAQ</Link>
+            <Link href="/support">Support</Link>
           </div>
           <div className="footer-col">
             <h4>Légal</h4>

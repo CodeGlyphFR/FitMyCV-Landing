@@ -1,23 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 
 /* ── Data ── */
-
-interface DockItemData {
-  tooltip: string;
-  type: 'img' | 'svg';
-  src?: string;
-  alt?: string;
-}
-
-const dockItems: DockItemData[] = [
-  { tooltip: 'Génération IA · 3 Cr', type: 'img', src: '/icons/openai-symbol.svg', alt: 'Génération' },
-  { tooltip: 'Optimisation · 2 Cr', type: 'img', src: '/icons/analyzer.svg', alt: 'Optimisation' },
-  { tooltip: 'Import CV · 2 Cr', type: 'img', src: '/icons/import.svg', alt: 'Import' },
-  { tooltip: 'Score · 1 Cr', type: 'svg', alt: 'Score' },
-  { tooltip: 'Export PDF · 1 Cr', type: 'img', src: '/icons/export.svg', alt: 'Export' },
-];
 
 interface PackData {
   tier: number;
@@ -55,15 +40,39 @@ function randomString(len: number): string {
   return s;
 }
 
-/* ── Score SVG Icon ── */
-function ScoreIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="23 4 23 10 17 10" />
-      <polyline points="1 20 1 14 7 14" />
-      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-    </svg>
-  );
+/* ── Cost Calculator Logic ── */
+const CREDITS_IMPORT = 2;     // import CV — once
+const CREDITS_PER_OFFER = 7;  // per job offer: generate(3) + score(1) + optimize(2) + export(1)
+const FREE_CREDITS = 15;
+const LAUNCH_DISCOUNT = 0.70; // -30% first purchase
+
+const CALC_PACKS = [
+  { name: 'Starter', credits: 15, price: 499 },
+  { name: 'Pro', credits: 50, price: 1499 },
+  { name: 'Expert', credits: 100, price: 2699 },
+  { name: 'Ultimate', credits: 150, price: 3599 },
+];
+
+function computeCost(n: number): { total: number; perOffer: number; packName: string; fullPrice: number } {
+  if (n <= 0) return { total: 0, perOffer: 0, packName: '', fullPrice: 0 };
+
+  const creditsNeeded = CREDITS_IMPORT + n * CREDITS_PER_OFFER;
+  const packCreditsNeeded = Math.max(0, creditsNeeded - FREE_CREDITS);
+
+  if (packCreditsNeeded === 0) {
+    return { total: 0, perOffer: 0, packName: '', fullPrice: 0 };
+  }
+
+  const pack = CALC_PACKS.find(p => p.credits >= packCreditsNeeded) || CALC_PACKS[CALC_PACKS.length - 1];
+  const fullPrice = pack.price / 100;
+  const discounted = Math.round(pack.price * LAUNCH_DISCOUNT) / 100;
+  const perOffer = (discounted / pack.credits) * CREDITS_PER_OFFER;
+
+  return { total: discounted, perOffer, packName: pack.name, fullPrice };
+}
+
+function fmtPrice(v: number): string {
+  return v.toFixed(2).replace('.', ',') + '\u00a0€';
 }
 
 /* ── Copy Icon ── */
@@ -88,7 +97,6 @@ function CheckIcon() {
 /* ── Component ── */
 export default function Pricing() {
   const sectionRef = useRef<HTMLElement>(null);
-  const dockRef = useRef<HTMLDivElement>(null);
   const packsGridRef = useRef<HTMLDivElement>(null);
   const promoBtnRef = useRef<HTMLButtonElement>(null);
   const eaCounterRef = useRef<HTMLSpanElement>(null);
@@ -96,143 +104,116 @@ export default function Pricing() {
   const [copied, setCopied] = useState(false);
   const [eaRemaining, setEaRemaining] = useState<number | null>(null);
   const [eaMax, setEaMax] = useState<number | null>(null);
+  const [applications, setApplications] = useState(5);
+  const cost = useMemo(() => computeCost(applications), [applications]);
+  const recommendedTier = useMemo(() => {
+    if (!cost.packName) return null;
+    return packs.find(p => p.name === cost.packName)?.tier ?? null;
+  }, [cost.packName]);
 
-  /* ── Floating Dock (Aceternity spring physics) ── */
+  const [hoveredTier, setHoveredTier] = useState<number | null>(null);
+  const userTouchingCarouselRef = useRef(false);
+
+  /* ── Sync active card: dimmed/recommended + hover effect ── */
   useEffect(() => {
-    const dock = dockRef.current;
-    if (!dock) return;
-    const items = Array.from(dock.querySelectorAll('.dock-item')) as HTMLElement[];
+    const grid = packsGridRef.current;
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.pack-card')) as HTMLElement[];
 
-    const SPRING = { mass: 0.1, stiffness: 150, damping: 12 };
-    const BASE = 36, MAX = 56, BASE_ICON = 18, MAX_ICON = 28;
-
-    function lerp(dist: number, minD: number, maxD: number, minV: number, maxV: number): number {
-      const t = Math.max(0, Math.min(1, (dist - minD) / (maxD - minD)));
-      return minV + (maxV - minV) * t;
+    function activateCard(card: HTMLElement) {
+      card.classList.add('hovered');
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', Math.round(r.width / 2) + 'px');
+      card.style.setProperty('--my', Math.round(r.height / 2) + 'px');
+      const str = randomString(3000);
+      const ch = card.querySelector('.ev-chars');
+      const chH = card.querySelector('.ev-chars-hover');
+      if (ch) ch.textContent = str;
+      if (chH) chH.textContent = str;
+      const glow = card.querySelector('.glow-border') as HTMLElement | null;
+      if (glow) glow.style.setProperty('--active', '1');
     }
 
-    function getTargetSize(distance: number): number {
-      const d = Math.abs(distance);
-      if (d >= 150) return BASE;
-      return lerp(d, 0, 150, MAX, BASE);
+    function deactivateCard(card: HTMLElement) {
+      card.classList.remove('hovered');
+      const glow = card.querySelector('.glow-border') as HTMLElement | null;
+      if (glow) glow.style.setProperty('--active', '0');
     }
 
-    function getTargetIconSize(distance: number): number {
-      const d = Math.abs(distance);
-      if (d >= 150) return BASE_ICON;
-      return lerp(d, 0, 150, MAX_ICON, BASE_ICON);
-    }
+    cards.forEach((card) => {
+      const tier = parseInt(card.dataset.tier || '0');
 
-    const state = items.map(() => ({
-      size: BASE, sizeV: 0,
-      iconSize: BASE_ICON, iconSizeV: 0,
-      targetSize: BASE, targetIconSize: BASE_ICON,
-    }));
-
-    let animating = false;
-    let rafId: number | null = null;
-
-    function springStep(current: number, velocity: number, target: number, dt: number) {
-      const { stiffness, damping, mass } = SPRING;
-      const subDt = dt / 4;
-      let pos = current, vel = velocity;
-      for (let sub = 0; sub < 4; sub++) {
-        const accel = (-stiffness * (pos - target) - damping * vel) / mass;
-        vel += accel * subDt;
-        pos += vel * subDt;
-      }
-      return { pos, vel };
-    }
-
-    function animate() {
-      const dt = 1 / 60;
-      let settled = true;
-
-      items.forEach((item, i) => {
-        const s = state[i];
-
-        const sz = springStep(s.size, s.sizeV, s.targetSize, dt);
-        s.size = Math.max(BASE, Math.min(MAX, sz.pos));
-        s.sizeV = sz.vel;
-
-        const ic = springStep(s.iconSize, s.iconSizeV, s.targetIconSize, dt);
-        s.iconSize = Math.max(BASE_ICON, Math.min(MAX_ICON, ic.pos));
-        s.iconSizeV = ic.vel;
-
-        item.style.width = s.size + 'px';
-        item.style.height = s.size + 'px';
-        const inner = item.querySelector('.dock-item-inner') as HTMLElement | null;
-        if (inner) {
-          inner.style.width = s.iconSize + 'px';
-          inner.style.height = s.iconSize + 'px';
-        }
-
-        if (Math.abs(s.size - s.targetSize) > 0.1 || Math.abs(s.sizeV) > 0.1 ||
-            Math.abs(s.iconSize - s.targetIconSize) > 0.1 || Math.abs(s.iconSizeV) > 0.1) {
-          settled = false;
-        }
-      });
-
-      if (!settled) {
-        rafId = requestAnimationFrame(animate);
-      } else {
-        animating = false;
-      }
-    }
-
-    function startAnim() {
-      if (!animating) {
-        animating = true;
-        rafId = requestAnimationFrame(animate);
-      }
-    }
-
-    function updateFromX(pageX: number) {
-      items.forEach((item, i) => {
-        const rect = item.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const distance = pageX - centerX;
-
-        state[i].targetSize = getTargetSize(distance);
-        state[i].targetIconSize = getTargetIconSize(distance);
-
-        if (Math.abs(distance) < 30) {
-          item.classList.add('hovered');
+      if (hoveredTier !== null) {
+        // Hover mode: no dimming, only Evervault effect on hovered card
+        card.classList.remove('dimmed', 'recommended');
+        if (tier === hoveredTier) {
+          activateCard(card);
         } else {
-          item.classList.remove('hovered');
+          deactivateCard(card);
         }
-      });
-      startAnim();
+      } else {
+        // Slider mode: recommended highlighted, others dimmed
+        if (recommendedTier !== null && tier === recommendedTier) {
+          card.classList.add('recommended');
+          card.classList.remove('dimmed');
+          activateCard(card);
+        } else {
+          card.classList.remove('recommended');
+          card.classList.add('dimmed');
+          deactivateCard(card);
+        }
+      }
+    });
+
+    // Mobile: scroll carousel to recommended card (only in slider mode)
+    if (window.innerWidth < 768 && recommendedTier !== null && hoveredTier === null) {
+      const target = grid.querySelector(`[data-tier="${recommendedTier}"]`) as HTMLElement | null;
+      if (target) {
+        const scrollLeft = target.offsetLeft - (grid.offsetWidth - target.offsetWidth) / 2;
+        grid.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
     }
+  }, [hoveredTier, recommendedTier]);
 
-    function resetAll() {
-      items.forEach((item, i) => {
-        item.classList.remove('hovered');
-        state[i].targetSize = BASE;
-        state[i].targetIconSize = BASE_ICON;
-      });
-      startAnim();
-    }
+  /* ── Mobile: manual scroll overrides slider mode ── */
+  useEffect(() => {
+    const grid = packsGridRef.current;
+    if (!grid || window.innerWidth >= 768) return;
 
-    const handleMouseMove = (e: MouseEvent) => updateFromX(e.pageX);
-    const handleMouseLeave = () => resetAll();
-    const handleTouchStart = (e: TouchEvent) => { updateFromX(e.touches[0].pageX); };
-    const handleTouchMove = (e: TouchEvent) => { e.preventDefault(); updateFromX(e.touches[0].pageX); };
-    const handleTouchEnd = () => { resetAll(); };
+    const cards = Array.from(grid.querySelectorAll('.pack-card')) as HTMLElement[];
+    let scrollTimer: ReturnType<typeof setTimeout> | null = null;
 
-    dock.addEventListener('mousemove', handleMouseMove);
-    dock.addEventListener('mouseleave', handleMouseLeave);
-    dock.addEventListener('touchstart', handleTouchStart, { passive: true });
-    dock.addEventListener('touchmove', handleTouchMove, { passive: false });
-    dock.addEventListener('touchend', handleTouchEnd);
+    const handleTouchStart = () => {
+      userTouchingCarouselRef.current = true;
+      // Remove dimming instantly so user doesn't see a flash
+      cards.forEach((card) => card.classList.remove('dimmed', 'recommended'));
+    };
+
+    const handleScroll = () => {
+      if (!userTouchingCarouselRef.current) return;
+
+      if (scrollTimer) clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const gridRect = grid.getBoundingClientRect();
+        const centerX = gridRect.left + gridRect.width / 2;
+        let closest = 0, closestDist = Infinity;
+        cards.forEach((card, i) => {
+          const r = card.getBoundingClientRect();
+          const dist = Math.abs(r.left + r.width / 2 - centerX);
+          if (dist < closestDist) { closestDist = dist; closest = i; }
+        });
+        const snappedTier = parseInt(cards[closest]?.dataset.tier || '0');
+        setHoveredTier(snappedTier);
+      }, 150);
+    };
+
+    grid.addEventListener('touchstart', handleTouchStart, { passive: true });
+    grid.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      if (rafId !== null) cancelAnimationFrame(rafId);
-      dock.removeEventListener('mousemove', handleMouseMove);
-      dock.removeEventListener('mouseleave', handleMouseLeave);
-      dock.removeEventListener('touchstart', handleTouchStart);
-      dock.removeEventListener('touchmove', handleTouchMove);
-      dock.removeEventListener('touchend', handleTouchEnd);
+      grid.removeEventListener('touchstart', handleTouchStart);
+      grid.removeEventListener('scroll', handleScroll);
+      if (scrollTimer) clearTimeout(scrollTimer);
     };
   }, []);
 
@@ -271,23 +252,11 @@ export default function Pricing() {
 
     grid.addEventListener('mousemove', handleMouseMove);
 
-    // Hover class
-    const hasHover = window.matchMedia('(hover: hover)').matches;
-    const enterHandlers: Array<() => void> = [];
-    const leaveHandlers: Array<() => void> = [];
+    // Touch devices: tap to toggle hover
     const clickHandlers: Array<(e: Event) => void> = [];
+    const isTouch = !window.matchMedia('(hover: hover)').matches;
 
-    if (hasHover) {
-      cards.forEach((card, i) => {
-        const enter = () => { card.classList.add('hovered'); };
-        const leave = () => { card.classList.remove('hovered'); };
-        enterHandlers[i] = enter;
-        leaveHandlers[i] = leave;
-        card.addEventListener('mouseenter', enter);
-        card.addEventListener('mouseleave', leave);
-      });
-    } else {
-      // Touch devices
+    if (isTouch) {
       cards.forEach((card, i) => {
         const handler = () => {
           if (window.innerWidth < 768) return;
@@ -314,31 +283,11 @@ export default function Pricing() {
         clickHandlers[i] = handler;
         card.addEventListener('click', handler);
       });
-
-      // Pre-select popular card on landscape touch
-      if (window.innerWidth >= 768) {
-        const popular = grid.querySelector('.pack-card[data-tier="2"]') as HTMLElement | null;
-        if (popular) {
-          popular.classList.add('hovered');
-          const r = popular.getBoundingClientRect();
-          popular.style.setProperty('--mx', Math.round(r.width / 2) + 'px');
-          popular.style.setProperty('--my', Math.round(r.height / 2) + 'px');
-          const str = randomString(3000);
-          const ch = popular.querySelector('.ev-chars');
-          const chH = popular.querySelector('.ev-chars-hover');
-          if (ch) ch.textContent = str;
-          if (chH) chH.textContent = str;
-          const glow = popular.querySelector('.glow-border') as HTMLElement | null;
-          if (glow) glow.style.setProperty('--active', '1');
-        }
-      }
     }
 
     return () => {
       grid.removeEventListener('mousemove', handleMouseMove);
       cards.forEach((card, i) => {
-        if (enterHandlers[i]) card.removeEventListener('mouseenter', enterHandlers[i]);
-        if (leaveHandlers[i]) card.removeEventListener('mouseleave', leaveHandlers[i]);
         if (clickHandlers[i]) card.removeEventListener('click', clickHandlers[i]);
       });
     };
@@ -505,6 +454,9 @@ export default function Pricing() {
 
     const cards = Array.from(grid.querySelectorAll('.pack-card')) as HTMLElement[];
     const timers: ReturnType<typeof setTimeout>[] = [];
+
+    // Hide cards for animation — only runs client-side, SSR keeps them visible
+    cards.forEach((card) => card.classList.add('will-animate'));
 
     function animateCounter(el: HTMLElement, target: number, duration = 900) {
       const start = performance.now();
@@ -702,26 +654,45 @@ export default function Pricing() {
           <p className="section-subtitle">15 crédits offerts à l&apos;inscription.</p>
         </div>
 
-        {/* Floating dock - credit costs */}
-        <div className="floating-dock-wrapper">
-          <div className="floating-dock" id="floatingDock" ref={dockRef}>
-            {dockItems.map((item, i) => (
-              <div className="dock-item" key={i}>
-                <div className="dock-tooltip">{item.tooltip}</div>
-                <div className="dock-item-inner">
-                  {item.type === 'svg' ? (
-                    <ScoreIcon />
-                  ) : (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={item.src}
-                      alt={item.alt || ''}
-                      style={{ filter: 'brightness(0) invert(1)', opacity: 0.85 }}
-                    />
-                  )}
-                </div>
-              </div>
-            ))}
+        {/* Cost Calculator */}
+        <div className="cost-calc">
+          <p className="cost-calc-q">Combien d&apos;offres d&apos;emploi ciblez-vous ce mois-ci&nbsp;?</p>
+          <div className="cost-calc-slider">
+            <input
+              type="range"
+              min={1}
+              max={20}
+              value={applications}
+              onChange={(e) => {
+                userTouchingCarouselRef.current = false;
+                setHoveredTier(null);
+                setApplications(parseInt(e.target.value));
+              }}
+              style={{ '--range-pct': `${((applications - 1) / 19) * 100}%` } as React.CSSProperties}
+            />
+            <span className="cost-calc-val">{applications}</span>
+          </div>
+          <div className="cost-calc-metrics">
+            <div className="cost-calc-metric">
+              <span className="label">Coût total<sup>1</sup></span>
+              <span className="value green" key={`t-${applications}`}>
+                {cost.total === 0 ? 'Gratuit' : fmtPrice(cost.total)}
+              </span>
+            </div>
+            <div className="cost-calc-metric">
+              <span className="label">Par offre<sup>2</sup></span>
+              <span className="value cyan" key={`p-${applications}`}>
+                {cost.total === 0 ? 'Gratuit' : fmtPrice(cost.perOffer)}
+              </span>
+            </div>
+            <div className="cost-calc-metric">
+              <span className="label">La concurrence</span>
+              <span className="value red">~37&nbsp;€<span className="approx">/mois</span></span>
+            </div>
+          </div>
+          <div className="cost-calc-notes">
+            <p><sup>1</sup>Avec l&apos;offre promotionnelle LAUNCH30</p>
+            <p><sup>2</sup>Estimation basée sur le parcours type de création d&apos;un CV</p>
           </div>
         </div>
 
@@ -735,6 +706,8 @@ export default function Pricing() {
                 data-tier={pack.tier}
                 data-credits={pack.credits}
                 data-ring-pct={pack.ringPct}
+                onMouseEnter={() => setHoveredTier(pack.tier)}
+                onMouseLeave={() => setHoveredTier(null)}
               >
                 <div className="ev-pattern">
                   <div className="ev-chars" />
@@ -759,7 +732,6 @@ export default function Pricing() {
                     <span className="ring-label">crédits</span>
                   </div>
                 </div>
-                <div className="pack-divider" />
                 <div className="pack-price">
                   <span className="currency">€</span>
                   {pack.price}
@@ -791,7 +763,7 @@ export default function Pricing() {
         <div className="launch-offer">
           <div className="launch-tag">Offre de lancement</div>
           <h2 className="launch-title">
-            {'−'}30 % avec le code <span className="highlight">LAUNCH30</span>
+            {'−'}30 % avec le code <span className="highlight">LAUNCH30</span><sup className="launch-asterisk">*</sup>
           </h2>
           {eaRemaining !== null && eaMax !== null && (
             <p className="launch-sub">
@@ -799,6 +771,7 @@ export default function Pricing() {
               /{eaMax} places restantes
             </p>
           )}
+          <p className="launch-note launch-note-asterisk">*Code valable pour le premier achat uniquement</p>
           <div className="launch-buttons">
             <button
               className={`promo-btn${copied ? ' copied' : ''}`}

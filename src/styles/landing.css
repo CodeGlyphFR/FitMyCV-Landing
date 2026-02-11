@@ -2014,9 +2014,27 @@ body {
   text-align: center;
   overflow: visible;
   user-select: none;
-  /* Scroll reveal */
+  /* Visible by default for SSR/SEO; JS adds .will-animate then .visible */
+  opacity: 1;
+  transform: translateY(0);
+}
+.pack-card.will-animate {
   opacity: 0;
   transform: translateY(24px);
+}
+.pack-card.recommended,
+.pack-card.visible.recommended {
+  opacity: 1;
+  transform: translateY(0) scale(1.02);
+  filter: none;
+  transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+}
+.pack-card.dimmed,
+.pack-card.visible.dimmed {
+  opacity: 0.3;
+  filter: saturate(0.3);
+  transform: scale(0.97);
+  transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
 }
 .pack-card.visible {
   opacity: 1;
@@ -2239,6 +2257,7 @@ body {
   font-weight: 800;
   color: #fff;
   line-height: 1;
+  margin-top: 0.5rem;
   position: relative; z-index: 2;
 }
 .pack-price .currency {
@@ -2324,6 +2343,11 @@ body {
   line-height: 1.15;
   margin-bottom: 0.5rem;
 }
+.launch-asterisk {
+  font-size: 0.45em;
+  vertical-align: super;
+  opacity: 0.6;
+}
 .launch-title .highlight {
   background: linear-gradient(135deg, var(--green), var(--cyan));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -2332,12 +2356,148 @@ body {
 .launch-sub {
   font-size: 0.92rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 0.15rem;
 }
 .launch-sub .ea-num {
   color: var(--cyan);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+/* ── Cost Calculator ── */
+.cost-calc {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255,255,255,0.03);
+  border: none;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+.cost-calc-q {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.cost-calc-slider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.cost-calc-slider input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cyan) 0%, var(--green) var(--range-pct, 17%), rgba(255,255,255,0.1) var(--range-pct, 17%));
+  outline: none;
+  cursor: pointer;
+}
+.cost-calc-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  border: 2px solid #0a0a1a;
+  box-shadow: 0 0 8px rgba(34,211,238,0.4);
+  cursor: pointer;
+}
+.cost-calc-slider input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  border: 2px solid #0a0a1a;
+  box-shadow: 0 0 8px rgba(34,211,238,0.4);
+  cursor: pointer;
+}
+.cost-calc-val {
+  min-width: 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.cost-calc-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.cost-calc-metric {
+  text-align: center;
+  flex: 1;
+}
+.cost-calc-metric .label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.cost-calc-metric .value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.cost-calc-metric .value.green {
+  color: var(--green);
+  animation: calc-pop 0.2s ease-out;
+}
+.cost-calc-metric .value.cyan {
+  color: var(--cyan);
+  animation: calc-pop 0.2s ease-out;
+}
+.cost-calc-metric .value.red {
+  color: #f87171;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.cost-calc-metric .value.red .approx {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.cost-calc-pack {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.cost-calc-pack .old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.cost-calc-pack .new-price {
+  color: var(--green);
+  font-weight: 600;
+}
+.cost-calc-note {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  opacity: 0.7;
+  margin-top: 0.35rem;
+}
+.cost-calc-notes {
+  margin-top: 0.75rem;
+  text-align: left;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  opacity: 0.7;
+  line-height: 1.5;
+}
+.cost-calc-notes sup {
+  font-size: 0.55rem;
+  margin-right: 0.15rem;
+}
+@keyframes calc-pop {
+  0% { opacity: 0.6; transform: translateY(2px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 .launch-buttons {
   display: flex;
@@ -2437,6 +2597,12 @@ body {
   color: var(--text-dim);
   margin-top: 1.25rem;
 }
+.launch-note-asterisk {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-top: 0.15rem;
+  margin-bottom: 1rem;
+}
 
 /* ===== RESPONSIVE — TABLET ===== */
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -2506,6 +2672,10 @@ body {
   }
 
   .trust-strip { gap: 0.8rem 1.2rem; }
+  .cost-calc { padding: 1.25rem 1rem; margin-bottom: 1.5rem; }
+  .cost-calc-metrics { gap: 1rem; }
+  .cost-calc-metric .value { font-size: 1.1rem; }
+
   .launch-offer { padding: 2rem 1rem 0.5rem; }
   .launch-buttons { gap: 0.75rem; }
   .promo-btn, .pricing-section .cta-btn { font-size: 0.85rem; padding: 0.7rem 1.25rem; }
@@ -2689,6 +2859,17 @@ body {
   .faq-left { position: static; }
   .faq-title { text-align: center; }
   .faq-neural { display: none; }
+}
+
+/* ==========================================================
+   SUPPORT PAGE
+   ========================================================== */
+.support-page { max-width: 800px; margin: 0 auto; padding: 5rem 1.5rem; }
+.support-page h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; text-align: center; margin-bottom: 0.5rem; }
+.support-subtitle { text-align: center; color: rgba(255,255,255,0.5); font-size: 1.125rem; margin-bottom: 3rem; }
+.support-list { display: flex; flex-direction: column; }
+@media (max-width: 768px) {
+  .support-page { padding: 3rem 1rem; }
 }
 
 /* ==========================================================

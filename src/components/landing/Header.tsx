@@ -97,10 +97,10 @@ export default function Header() {
           <img src="/icons/logo.png" alt="FitMyCV" />
         </Link>
         <nav className="header-nav">
-          <a href="#howItWorks">Comment ça marche</a>
-          <a href="#features">Fonctionnalités</a>
-          <a href="#pricing">Tarifs</a>
-          <a href="#faq">FAQ</a>
+          <Link href="/#howItWorks">Comment ça marche</Link>
+          <Link href="/#features">Fonctionnalités</Link>
+          <Link href="/#pricing">Tarifs</Link>
+          <Link href="/#faq">FAQ</Link>
         </nav>
         <div className="header-actions">
           <a href="https://app.fitmycv.io" className="header-btn login">
@@ -125,10 +125,10 @@ export default function Header() {
           id="headerMobileMenu"
           ref={menuRef}
         >
-          <a href="#howItWorks">Comment ça marche</a>
-          <a href="#features">Fonctionnalités</a>
-          <a href="#pricing">Tarifs</a>
-          <a href="#faq">FAQ</a>
+          <Link href="/#howItWorks">Comment ça marche</Link>
+          <Link href="/#features">Fonctionnalités</Link>
+          <Link href="/#pricing">Tarifs</Link>
+          <Link href="/#faq">FAQ</Link>
           <div className="mobile-divider"></div>
           <a href="https://app.fitmycv.io" className="header-btn login">
             Log in
