@@ -1,0 +1,103 @@
+name: CI/CD Pipeline (Prod & Staging)
+
+on:
+  push:
+    branches: ["main", "dev"] # Se déclenche sur MAIN et DEV
+
+env:
+  REGISTRY: ghcr.io
+  # Ton nom d'image en minuscules
+  IMAGE_NAME: eds-78/fitmycv-landing
+
+jobs:
+  # --- JOB 1 : QUALITÉ (Commun à tout le monde) ---
+  quality-check:
+    name: 🛡️ Check Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: 'npm' }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  # --- JOB 2 : BUILD & DEPLOY (Dynamique) ---
+  deploy:
+    name: 🚀 Deploy
+    needs: quality-check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # 1 DÉFINITION DES VARIABLES SELON LA STRUCTURE RÉELLE
+      - name: Set Environment Variables
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "🔍 Branche MAIN détectée -> Déploiement PROD"
+            echo "TAG=latest" >> $GITHUB_ENV
+            # Chemin corrigé pour la PROD
+            echo "TARGET_DIR=/home/erickdesmet/PROD_SAAS/FitMyCV/landing" >> $GITHUB_ENV
+            echo "COMPOSE_FILE=docker-compose.prod.yml" >> $GITHUB_ENV
+          
+          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+            echo "🔍 Branche DEV détectée -> Déploiement STAGING"
+            echo "TAG=dev" >> $GITHUB_ENV
+            # Chemin corrigé pour le STAGING
+            echo "TARGET_DIR=/home/erickdesmet/STAGING_SAAS/FitMyCV/landing" >> $GITHUB_ENV
+            echo "COMPOSE_FILE=docker-compose.staging.yml" >> $GITHUB_ENV
+          fi
+
+      # 2. CONSTRUCTION DE L'IMAGE (Tag dev ou latest)
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          # Utilise le TAG défini juste au-dessus
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # 3. DÉPLOIEMENT SSH
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # On récupère les variables définies par GitHub Actions
+            TARGET_DIR="${{ env.TARGET_DIR }}"
+            TAG="${{ env.TAG }}"
+            FILE="${{ env.COMPOSE_FILE }}"
+            IMAGE="ghcr.io/${{ env.IMAGE_NAME }}:$TAG"
+            
+            echo "🚀 Déploiement en cours sur $TARGET_DIR..."
+            
+            cd $TARGET_DIR
+            
+            # Tirer l'image spécifique (dev ou latest)
+            docker pull $IMAGE
+            
+            # Mettre à jour le docker-compose si l'image a changé de nom (sécurité)
+            # On s'assure que le fichier pointe bien vers le bon tag
+            sed -i "s|image: ghcr.io/.*|image: $IMAGE|g" $FILE
+            
+            # Relancer le service
+            docker compose -f $FILE up -d --remove-orphans
+            
+            # Nettoyer
+            docker image prune -f

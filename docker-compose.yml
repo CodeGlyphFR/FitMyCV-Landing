@@ -10,17 +10,7 @@ services:
       - /app/node_modules
       - /app/.next
     ports:
-      - "127.0.0.1:3001:3001"
+      - "127.0.0.1:3002:3001"
     env_file: .env.local
     environment:
       - NODE_ENV=development
-
-  prod:
-    build:
-      context: .
-      target: runner
-    ports:
-      - "127.0.0.1:3333:3333"
-    env_file: .env.local
-    environment:
-      - NODE_ENV=production
