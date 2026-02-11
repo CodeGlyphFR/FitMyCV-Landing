@@ -81,11 +81,6 @@ export async function generateMetadata({
         },
       ],
     },
-    other: {
-      "og:locale:alternate": Object.values(ogLocaleMap).filter(
-        (l) => l !== (ogLocaleMap[locale] || "fr_FR")
-      ),
-    },
     twitter: {
       card: "summary_large_image",
       title: t("twitterTitle"),

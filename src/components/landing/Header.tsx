@@ -102,7 +102,7 @@ export default function Header() {
       <div className="header-inner">
         <Link href="/" className="header-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/logo.png" alt="FitMyCV" />
+          <img src="/icons/logo.png" alt="FitMyCV" width={120} height={36} />
         </Link>
         <nav className="header-nav">
           <Link href="/#howItWorks">{t("howItWorks")}</Link>
