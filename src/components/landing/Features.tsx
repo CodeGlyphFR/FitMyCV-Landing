@@ -1036,6 +1036,58 @@ export default function Features() {
       cycle();
     });
 
+    /* ── Card 16: Browser extension popup ── */
+    const pluginUrl = 'linkedin.com/jobs/senior-frontend';
+
+    section.querySelectorAll<HTMLElement>('.vis-plugin').forEach((vis) => {
+      const urlEl = vis.querySelector<HTMLElement>('.plg-url');
+      const extIcon = vis.querySelector<HTMLElement>('.plg-ext-icon');
+      const popup = vis.querySelector<HTMLElement>('.plg-popup');
+      const btn = vis.querySelector<HTMLElement>('.plg-popup-btn');
+      if (!urlEl || !extIcon || !popup || !btn) return;
+
+      const { wait, cancel } = makeWait();
+      cancellers.push(cancel);
+
+      async function cycle() {
+        try {
+          popup!.classList.remove('visible');
+          urlEl!.textContent = '';
+          urlEl!.classList.remove('typing');
+          extIcon!.classList.remove('glow');
+          btn!.classList.remove('flash');
+          await wait(800);
+
+          urlEl!.classList.add('typing');
+          for (let i = 0; i <= pluginUrl.length; i++) {
+            urlEl!.textContent = pluginUrl.slice(0, i);
+            await wait(25);
+          }
+          urlEl!.classList.remove('typing');
+          await wait(600);
+
+          extIcon!.classList.add('glow');
+          await wait(400);
+
+          popup!.classList.add('visible');
+          await wait(800);
+
+          btn!.classList.add('flash');
+          await wait(1500);
+
+          btn!.classList.remove('flash');
+          popup!.classList.remove('visible');
+          extIcon!.classList.remove('glow');
+          urlEl!.textContent = '';
+          await wait(500);
+        } catch {
+          return;
+        }
+        scheduleCycle(cycle, 400);
+      }
+      cycle();
+    });
+
     /* ======================================================================
        CLEANUP
        ====================================================================== */
@@ -1143,50 +1195,15 @@ export default function Features() {
               </div>
             </div>
 
-            {/* Card 2: Batch */}
-            <div className="f-card card-md" data-id="2">
-              <div className="c-title">10 CV en un clic</div>
-              <div className="c-sub">Toutes vos candidatures en parallèle</div>
+            {/* Card 5: ATS */}
+            <div className="f-card card-sm" data-id="5">
+              <div className="c-title">Optimisé pour les ATS</div>
+              <div className="c-sub">Chaque mot compte</div>
               <div className="c-vis">
-                <div className="vis-batch">
-                  <div className="batch-docs">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <div className="batch-doc" key={i}>
-                        <div className="bd-l"></div>
-                        <div className="bd-l sh"></div>
-                        <div className="bd-l"></div>
-                        <div className="bd-l sh"></div>
-                        <div className="bd-check">&#10003;</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="batch-counter">
-                    <span className="bc-num">0</span>/10
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Template */}
-            <div className="f-card card-md" data-id="3">
-              <div className="c-title">Un template en quelques mots</div>
-              <div className="c-sub">Pas de lien ? Un titre de poste suffit</div>
-              <div className="c-vis">
-                <div className="vis-tpl">
-                  <div className="tpl-search">
-                    <svg
-                      className="tpl-search-icon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
-                    <span className="tpl-search-text"></span>
-                  </div>
+                <div className="vis-ats">
+                  <div className="ats-line old">Gestion de projets web complexes</div>
+                  <div className="ats-line old">Travail en équipe agile</div>
+                  <div className="ats-line old">Création d&apos;interfaces modernes</div>
                 </div>
               </div>
             </div>
@@ -1241,15 +1258,94 @@ export default function Features() {
               </div>
             </div>
 
-            {/* Card 5: ATS */}
-            <div className="f-card card-sm" data-id="5">
-              <div className="c-title">Optimisé pour les ATS</div>
-              <div className="c-sub">Chaque mot compte</div>
+            {/* Card 2: Batch */}
+            <div className="f-card card-md" data-id="2">
+              <div className="c-title">10 CV en un clic</div>
+              <div className="c-sub">Toutes vos candidatures en parallèle</div>
               <div className="c-vis">
-                <div className="vis-ats">
-                  <div className="ats-line old">Gestion de projets web complexes</div>
-                  <div className="ats-line old">Travail en équipe agile</div>
-                  <div className="ats-line old">Création d&apos;interfaces modernes</div>
+                <div className="vis-batch">
+                  <div className="batch-docs">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <div className="batch-doc" key={i}>
+                        <div className="bd-l"></div>
+                        <div className="bd-l sh"></div>
+                        <div className="bd-l"></div>
+                        <div className="bd-l sh"></div>
+                        <div className="bd-check">&#10003;</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="batch-counter">
+                    <span className="bc-num">0</span>/10
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Template */}
+            <div className="f-card card-md" data-id="3">
+              <div className="c-title">Un template en quelques mots</div>
+              <div className="c-sub">Pas de lien ? Un titre de poste suffit</div>
+              <div className="c-vis">
+                <div className="vis-tpl">
+                  <div className="tpl-search">
+                    <svg
+                      className="tpl-search-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <span className="tpl-search-text"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 16: Browser extension (coming soon) */}
+            <div className="f-card card-lg" data-id="16">
+              <div className="c-title">
+                Extension navigateur
+                <span className="c-badge-soon">Bientôt</span>
+              </div>
+              <div className="c-sub">Lancez une génération sans quitter votre onglet</div>
+              <div className="c-vis">
+                <div className="vis-plugin">
+                  <div className="plg-browser">
+                    <div className="plg-bar">
+                      <div className="plg-lock">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10">
+                          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 3c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3z"/>
+                        </svg>
+                      </div>
+                      <div className="plg-url"></div>
+                      <div className="plg-ext-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5a2.5 2.5 0 00-5 0V5H4c-1.1 0-2 .9-2 2v3.8h1.5a2.5 2.5 0 010 5H2V20c0 1.1.9 2 2 2h3.8v-1.5a2.5 2.5 0 015 0V22H17c1.1 0 2-.9 2-2v-4h1.5a2.5 2.5 0 000-5z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="plg-page">
+                      <div className="plg-line"></div>
+                      <div className="plg-line short"></div>
+                      <div className="plg-line"></div>
+                      <div className="plg-line med"></div>
+                    </div>
+                  </div>
+                  <div className="plg-popup">
+                    <div className="plg-popup-header">FitMyCV</div>
+                    <div className="plg-popup-cv">
+                      <svg className="plg-doc-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zm7 1.5L18.5 9H14a1 1 0 01-1-1V3.5z"/>
+                      </svg>
+                      <span>Dev Full-Stack JS</span>
+                    </div>
+                    <div className="plg-popup-btn">Générer mon CV</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1273,6 +1369,36 @@ export default function Features() {
                     <span className="fiche-tag skill">Node.js</span>
                     <span className="fiche-tag benefit">50-60k&euro;</span>
                     <span className="fiche-tag method">CI/CD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 9: Review */}
+            <div className="f-card card-md" data-id="9">
+              <div className="c-title">Gardez le contrôle</div>
+              <div className="c-sub">Acceptez ou refusez chaque modification</div>
+              <div className="c-vis">
+                <div className="vis-review">
+                  <div className="rev-change">
+                    <div className="rev-diff">
+                      <span className="rev-old">3 ans d&apos;expérience</span>
+                      <span className="rev-new">3+ ans en développement web</span>
+                    </div>
+                    <div className="rev-actions">
+                      <span className="rev-btn rev-accept">&#10003;</span>
+                      <span className="rev-btn rev-reject">&#10005;</span>
+                    </div>
+                  </div>
+                  <div className="rev-change">
+                    <div className="rev-diff">
+                      <span className="rev-old">Bonne maîtrise de React</span>
+                      <span className="rev-new">Expert React &amp; TypeScript</span>
+                    </div>
+                    <div className="rev-actions">
+                      <span className="rev-btn rev-accept">&#10003;</span>
+                      <span className="rev-btn rev-reject">&#10005;</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1304,36 +1430,6 @@ export default function Features() {
                       <span className="reco-pts">+2 pts</span>
                     </div>
                     <div className="reco-text">Mentionner accessibilité WCAG</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 9: Review */}
-            <div className="f-card card-md" data-id="9">
-              <div className="c-title">Gardez le contrôle</div>
-              <div className="c-sub">Acceptez ou refusez chaque modification</div>
-              <div className="c-vis">
-                <div className="vis-review">
-                  <div className="rev-change">
-                    <div className="rev-diff">
-                      <span className="rev-old">3 ans d&apos;expérience</span>
-                      <span className="rev-new">3+ ans en développement web</span>
-                    </div>
-                    <div className="rev-actions">
-                      <span className="rev-btn rev-accept">&#10003;</span>
-                      <span className="rev-btn rev-reject">&#10005;</span>
-                    </div>
-                  </div>
-                  <div className="rev-change">
-                    <div className="rev-diff">
-                      <span className="rev-old">Bonne maîtrise de React</span>
-                      <span className="rev-new">Expert React &amp; TypeScript</span>
-                    </div>
-                    <div className="rev-actions">
-                      <span className="rev-btn rev-accept">&#10003;</span>
-                      <span className="rev-btn rev-reject">&#10005;</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -1396,6 +1492,77 @@ export default function Features() {
           {/* ROW 3: scroll left slow */}
           <div className="marquee-row scroll-left-slow" id="row3">
 
+            {/* Card 13: Language badge */}
+            <div className="f-card card-sm" data-id="13">
+              <div className="c-title">Une interface, 4 langues</div>
+              <div className="c-sub">Français, Anglais, Allemand, Espagnol</div>
+              <div className="c-vis">
+                <div className="vis-lang-btn">
+                  <div className="lang-badge">
+                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" />
+                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" />
+                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" />
+                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" />
+                  </div>
+                  <div className="lang-label">Français</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 14: Translate */}
+            <div className="f-card card-lg" data-id="14">
+              <div className="c-title">Traduisez votre CV</div>
+              <div className="c-sub">Dans 4 langues, vocabulaire professionnel adapté</div>
+              <div className="c-vis">
+                <div className="vis-translate">
+                  <div className="tr-carousel">
+                    <div className="tr-flag" data-pos="-1">
+                      <img src={FLAG_ES} alt="ES" />
+                    </div>
+                    <div className="tr-flag" data-pos="0">
+                      <img src={FLAG_FR} alt="FR" />
+                    </div>
+                    <div className="tr-flag" data-pos="1">
+                      <img src={FLAG_GB} alt="GB" />
+                    </div>
+                    <div className="tr-flag" data-pos="2">
+                      <img src={FLAG_DE} alt="DE" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 15: Tasks */}
+            <div className="f-card card-lg" data-id="15">
+              <div className="c-title">Vos tâches tournent en arrière-plan</div>
+              <div className="c-sub">Générez, partez, c&apos;est prêt à votre retour</div>
+              <div className="c-vis">
+                <div className="vis-tasks">
+                  <div className="tsk-item">
+                    <div className="tsk-line1">
+                      <span className="tsk-title">Senior Frontend Engineer</span>
+                      <span className="tsk-pct" data-end="100">0%</span>
+                    </div>
+                    <div className="tsk-bar">
+                      <div className="tsk-fill" data-end="100"></div>
+                    </div>
+                    <div className="tsk-step">En attente...</div>
+                  </div>
+                  <div className="tsk-item">
+                    <div className="tsk-line1">
+                      <span className="tsk-title">Product Manager</span>
+                      <span className="tsk-pct" data-end="100">0%</span>
+                    </div>
+                    <div className="tsk-bar">
+                      <div className="tsk-fill" data-end="100"></div>
+                    </div>
+                    <div className="tsk-step">En attente...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Card 11: Inline edit */}
             <div className="f-card card-md" data-id="11">
               <div className="c-title">Éditez directement dans l&apos;app</div>
@@ -1444,77 +1611,6 @@ export default function Features() {
                     <span className="exo-name">Experience</span>
                   </div>
                   <div className="exo-btn">Exporter PDF</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 13: Language badge */}
-            <div className="f-card card-sm" data-id="13">
-              <div className="c-title">Une interface, 4 langues</div>
-              <div className="c-sub">Français, Anglais, Allemand, Espagnol</div>
-              <div className="c-vis">
-                <div className="vis-lang-btn">
-                  <div className="lang-badge">
-                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" />
-                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" />
-                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" />
-                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" />
-                  </div>
-                  <div className="lang-label">Français</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 15: Tasks */}
-            <div className="f-card card-lg" data-id="15">
-              <div className="c-title">Vos tâches tournent en arrière-plan</div>
-              <div className="c-sub">Générez, partez, c&apos;est prêt à votre retour</div>
-              <div className="c-vis">
-                <div className="vis-tasks">
-                  <div className="tsk-item">
-                    <div className="tsk-line1">
-                      <span className="tsk-title">Senior Frontend Engineer</span>
-                      <span className="tsk-pct" data-end="100">0%</span>
-                    </div>
-                    <div className="tsk-bar">
-                      <div className="tsk-fill" data-end="100"></div>
-                    </div>
-                    <div className="tsk-step">En attente...</div>
-                  </div>
-                  <div className="tsk-item">
-                    <div className="tsk-line1">
-                      <span className="tsk-title">Product Manager</span>
-                      <span className="tsk-pct" data-end="100">0%</span>
-                    </div>
-                    <div className="tsk-bar">
-                      <div className="tsk-fill" data-end="100"></div>
-                    </div>
-                    <div className="tsk-step">En attente...</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 14: Translate */}
-            <div className="f-card card-lg" data-id="14">
-              <div className="c-title">Traduisez votre CV</div>
-              <div className="c-sub">Dans 4 langues, vocabulaire professionnel adapté</div>
-              <div className="c-vis">
-                <div className="vis-translate">
-                  <div className="tr-carousel">
-                    <div className="tr-flag" data-pos="-1">
-                      <img src={FLAG_ES} alt="ES" />
-                    </div>
-                    <div className="tr-flag" data-pos="0">
-                      <img src={FLAG_FR} alt="FR" />
-                    </div>
-                    <div className="tr-flag" data-pos="1">
-                      <img src={FLAG_GB} alt="GB" />
-                    </div>
-                    <div className="tr-flag" data-pos="2">
-                      <img src={FLAG_DE} alt="DE" />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
