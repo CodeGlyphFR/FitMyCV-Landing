@@ -17,7 +17,8 @@
     "faq": "FAQ",
     "login": "Se connecter",
     "signup": "S'inscrire",
-    "menu": "Menu"
+    "menu": "Menu",
+    "skipToContent": "Aller au contenu principal"
   },
   "Hero": {
     "title": "Votre CV, optimisé par l'IA",

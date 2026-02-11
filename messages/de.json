@@ -17,7 +17,8 @@
     "faq": "FAQ",
     "login": "Anmelden",
     "signup": "Registrieren",
-    "menu": "Menü"
+    "menu": "Menü",
+    "skipToContent": "Zum Hauptinhalt springen"
   },
   "Hero": {
     "title": "Ihr Lebenslauf, KI-optimiert",
@@ -305,7 +306,7 @@
     "metaTitle": "Allgemeine Geschäftsbedingungen",
     "metaDescription": "Lesen Sie die Allgemeinen Geschäftsbedingungen von FitMyCV: Credit-System, Preise, Zahlungen, Erstattungsrichtlinie, KI-Nutzung und geistiges Eigentum.",
     "pageTitle": "Allgemeine Geschäftsbedingungen",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Zuletzt aktualisiert: 10. Februar 2025",
     "s1Title": "1. Annahme der AGB",
     "s1p1": "Durch die Nutzung von FitMyCV.io und den Kauf von Credits akzeptieren Sie diese Allgemeinen Geschäftsbedingungen (AGB) vorbehaltlos.",
     "s1p2": "Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie bitte nicht unsere kostenpflichtigen Dienste.",
@@ -419,7 +420,7 @@
     "metaTitle": "Datenschutzrichtlinie",
     "metaDescription": "Erfahren Sie, wie FitMyCV Ihre Daten schützt: DSGVO-Konformität, Datenverschlüsselung, Aufbewahrungsfristen, Ihre Rechte und Drittanbieter.",
     "pageTitle": "Datenschutzrichtlinie",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Zuletzt aktualisiert: 10. Februar 2025",
     "s1Title": "1. Verantwortlicher für die Datenverarbeitung",
     "s1p1": "Die Firma Codeglyph betreibt die Website FitMyCV.io und erhebt und verarbeitet in diesem Zusammenhang personenbezogene Daten, die Sie betreffen.",
     "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nE-Mail: <contactEmail>contact@codeglyph.fr</contactEmail>",

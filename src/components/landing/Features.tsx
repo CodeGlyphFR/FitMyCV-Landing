@@ -1168,7 +1168,7 @@ export default function Features() {
               <div className="c-title">{t("card1Title")}</div>
               <div className="c-sub">{t("card1Sub")}</div>
               <div className="c-vis">
-                <div className="vis-gen" id="vis-gen">
+                <div className="vis-gen">
                   <div className="gm-body">
                     <div className="gm-label">{t("card1RefLabel")}</div>
                     <div className="gm-select">
@@ -1180,20 +1180,20 @@ export default function Features() {
                       </svg>
                       <span className="gm-select-date">07/02</span>
                       <span className="gm-select-text">{t("card1SelectText")}</span>
-                      <img className="gm-flag" src={FLAG_FR_CARD1} alt="FR" />
+                      <img className="gm-flag" src={FLAG_FR_CARD1} alt="FR" loading="lazy" />
                       <span className="gm-arrow">&#9662;</span>
                     </div>
                     <div className="gm-label">{t("card1LinkLabel")}</div>
                     <div className="gm-link-row">
                       <div className="gm-history-btn">&#128203;</div>
-                      <div className="gm-input" id="gm-link"></div>
+                      <div className="gm-input"></div>
                     </div>
                     <div className="gm-actions">
                       <span className="gm-cancel">{t("card1Cancel")}</span>
-                      <span className="gm-validate" id="gm-validate">{t("card1Validate")}</span>
+                      <span className="gm-validate">{t("card1Validate")}</span>
                     </div>
                   </div>
-                  <div className="gm-cursor" id="gm-cursor">
+                  <div className="gm-cursor">
                     <svg width="12" height="16" viewBox="0 0 12 16">
                       <path d="M1 1l10 7-5 1.5-2.5 5.5z" fill="#fff" stroke="#222" strokeWidth="0.8" />
                     </svg>
@@ -1504,10 +1504,10 @@ export default function Features() {
               <div className="c-vis">
                 <div className="vis-lang-btn">
                   <div className="lang-badge">
-                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" />
-                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" />
-                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" />
-                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" />
+                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" loading="lazy" />
+                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" loading="lazy" />
+                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" loading="lazy" />
+                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" loading="lazy" />
                   </div>
                   <div className="lang-label">{(t.raw("card13LangLabels") as string[])[0]}</div>
                 </div>
@@ -1522,16 +1522,16 @@ export default function Features() {
                 <div className="vis-translate">
                   <div className="tr-carousel">
                     <div className="tr-flag" data-pos="-1">
-                      <img src={FLAG_ES} alt="ES" />
+                      <img src={FLAG_ES} alt="ES" loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="0">
-                      <img src={FLAG_FR} alt="FR" />
+                      <img src={FLAG_FR} alt="FR" loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="1">
-                      <img src={FLAG_GB} alt="GB" />
+                      <img src={FLAG_GB} alt="GB" loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="2">
-                      <img src={FLAG_DE} alt="DE" />
+                      <img src={FLAG_DE} alt="DE" loading="lazy" />
                     </div>
                   </div>
                 </div>

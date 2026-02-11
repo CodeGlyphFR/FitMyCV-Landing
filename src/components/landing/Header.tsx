@@ -94,6 +94,10 @@ export default function Header() {
   }, []);
 
   return (
+    <>
+    <a href="#main" className="skip-to-content">
+      {t("skipToContent")}
+    </a>
     <header className="site-header" id="siteHeader" ref={headerRef}>
       <div className="header-inner">
         <Link href="/" className="header-logo">
@@ -145,5 +149,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }

@@ -766,11 +766,11 @@ export default function Pricing() {
         {/* Launch offer */}
         <div className="launch-offer">
           <div className="launch-tag">{t('launchTag')}</div>
-          <h2 className="launch-title">
+          <div className="launch-title">
             {t.rich('launchTitle', {
               highlight: (chunks) => <span className="highlight">{chunks}</span>,
             })}<sup className="launch-asterisk">*</sup>
-          </h2>
+          </div>
           {eaRemaining !== null && eaMax !== null && (
             <p className="launch-sub">
               {t.rich('launchRemaining', {

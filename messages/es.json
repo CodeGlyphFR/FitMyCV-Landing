@@ -17,7 +17,8 @@
     "faq": "FAQ",
     "login": "Iniciar sesión",
     "signup": "Registrarse",
-    "menu": "Menú"
+    "menu": "Menú",
+    "skipToContent": "Ir al contenido principal"
   },
   "Hero": {
     "title": "Tu CV, optimizado por IA",
@@ -305,7 +306,7 @@
     "metaTitle": "Condiciones Generales de Venta",
     "metaDescription": "Consulta las condiciones generales de venta de FitMyCV: sistema de créditos, precios, pagos, política de reembolso, uso de IA y propiedad intelectual.",
     "pageTitle": "Condiciones Generales de Venta",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Última actualización: 10 de febrero de 2025",
     "s1Title": "1. Aceptación de las CGV",
     "s1p1": "Al utilizar FitMyCV.io y realizar una compra de créditos, acepta sin reservas las presentes Condiciones Generales de Venta (CGV).",
     "s1p2": "Si no acepta estas condiciones, le rogamos que no utilice nuestros servicios de pago.",
@@ -419,7 +420,7 @@
     "metaTitle": "Política de privacidad",
     "metaDescription": "Descubre cómo FitMyCV protege tus datos: conformidad RGPD, cifrado de datos, plazos de conservación, tus derechos y proveedores externos.",
     "pageTitle": "Política de privacidad",
-    "lastUpdate": "Dernière mise à jour : 10 février 2025",
+    "lastUpdate": "Última actualización: 10 de febrero de 2025",
     "s1Title": "1. Responsable del tratamiento",
     "s1p1": "La sociedad Codeglyph edita el sitio FitMyCV.io y, en ese sentido, recopila y trata datos personales que le conciernen.",
     "s1Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 París\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>",

@@ -274,7 +274,7 @@ export default function Hero() {
           autoPlay
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           ref={videoRef}
         >
           <source src="/background_video.webm" type="video/webm" />

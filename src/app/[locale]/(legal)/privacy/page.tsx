@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { getAlternates } from "@/lib/seo";
+import { getAlternates, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -11,11 +11,27 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function PrivacyPage() {
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("Privacy");
+
+  const breadcrumbJsonLd = getBreadcrumbJsonLd(locale, [
+    { name: "FitMyCV", path: "/" },
+    { name: t("metaTitle"), path: "/privacy" },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <h1>{t("pageTitle")}</h1>
       <p className="legal-date">{t("lastUpdate")}</p>
 
