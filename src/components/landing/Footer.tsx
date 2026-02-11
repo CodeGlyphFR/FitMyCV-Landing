@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-main">
           <div className="footer-brand">
-            <img src="icons/logo.png" alt="FitMyCV" height={32} />
+            <img src="/icons/logo.png" alt="FitMyCV" height={32} />
             <p>{t("tagline")}</p>
           </div>
           <div className="footer-col">
