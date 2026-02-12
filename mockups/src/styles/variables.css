@@ -29,7 +29,9 @@
   --slate-900: rgba(15,23,42,0.95);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+* { margin:0; padding:0; box-sizing:border-box; touch-action: none; }
+
+html, body { overflow: hidden; }
 
 body {
   background: #0a0a1a;
