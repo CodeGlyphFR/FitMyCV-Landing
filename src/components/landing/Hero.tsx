@@ -28,6 +28,7 @@ export default function Hero() {
   const subtitleRef = useRef<HTMLSpanElement>(null);
 
   const rafIdRef = useRef(0);
+  const introStartRef = useRef(0);
   const demoStartedRef = useRef(false);
   const demoPausedRef = useRef(false);
   const cancelledRef = useRef(false);
@@ -90,12 +91,40 @@ export default function Hero() {
     const discoverBottom = vh - currentY + 16;
     scrollIndicator.style.bottom = `${discoverBottom}px`;
 
-    const titleY = currentY / 2;
+    let titleY = currentY * 0.55;
+
+    // Lire les hauteurs pour l'anti-chevauchement
+    const contentH = heroContent.offsetHeight;
+    const indicatorH = scrollIndicator.offsetHeight;
+
+    // Anti-chevauchement : clamper hero-content au-dessus du scroll-indicator
+    if (contentH > 0) {
+      const OVERLAP_PADDING = 24;
+      const contentBottom = titleY + contentH * 0.55;
+      const indicatorTop = vh - discoverBottom - indicatorH;
+
+      if (contentBottom + OVERLAP_PADDING > indicatorTop) {
+        titleY = indicatorTop - OVERLAP_PADDING - contentH * 0.55;
+      }
+    }
+
+    // Intro animation (fade-in + slide-up over 1.5s, driven by JS)
+    const now = performance.now();
+    if (!introStartRef.current) introStartRef.current = now;
+    const introT = Math.min(1, (now - introStartRef.current) / 2500);
+    const introEase = 1 - Math.pow(1 - introT, 3); // ease-out cubic
+    const introOffsetY = (1 - introEase) * 30;
+
     heroContent.style.top = `${titleY}px`;
-    heroContent.style.transform = 'translate(-50%, -45%)';
+    heroContent.style.transform = `translate(-50%, -45%) translateY(${introOffsetY}px)`;
 
     const fadeOut = Math.max(0, 1 - progress * 2.5);
-    heroContent.style.opacity = String(fadeOut);
+    heroContent.style.opacity = String(fadeOut * introEase);
+
+    // Continue RAF loop during intro
+    if (introT < 1 && !rafIdRef.current) {
+      rafIdRef.current = requestAnimationFrame(update);
+    }
     scrollIndicator.style.opacity = String(fadeOut);
 
     heroVideo.style.transform = `translateY(${-progress * vh * 0.4}px)`;

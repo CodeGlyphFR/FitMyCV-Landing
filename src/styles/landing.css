@@ -272,7 +272,7 @@ body {
     z-index: 3;
     text-align: center;
     width: 90%;
-    animation: fadeInUp 1.5s ease-out;
+    opacity: 0;
   }
 
   .hero-title {
