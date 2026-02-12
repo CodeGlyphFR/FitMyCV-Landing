@@ -440,6 +440,7 @@ body {
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    pointer-events: none;
     top: 0;
     left: 0;
     width: 960px;
