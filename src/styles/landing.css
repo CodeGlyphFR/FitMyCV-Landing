@@ -1727,7 +1727,7 @@ body {
   }
   .tr-flag[data-pos="-2"] { left:-2.6rem; transform:scale(0.6); opacity:0; }
   .tr-flag[data-pos="-1"] { left:0; transform:scale(0.75); opacity:0.5; }
-  .tr-flag[data-pos="0"]  { left:50%; margin-left:-1.3rem; transform:scale(1.15);
+  .tr-flag[data-pos="0"]  { left:calc(50% - 1.3rem); transform:scale(1.15); z-index:1;
     border-color:rgba(34,211,238,0.5); box-shadow:0 0 14px rgba(34,211,238,0.25); }
   .tr-flag[data-pos="1"]  { left:calc(100% - 2.6rem); transform:scale(0.75); opacity:0.5; }
   .tr-flag[data-pos="2"]  { left:calc(100% + 0.5rem); transform:scale(0.6); opacity:0; }
