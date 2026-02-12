@@ -92,7 +92,7 @@ export default function Hero() {
 
     const titleY = currentY / 2;
     heroContent.style.top = `${titleY}px`;
-    heroContent.style.transform = 'translate(-50%, -50%)';
+    heroContent.style.transform = 'translate(-50%, -45%)';
 
     const fadeOut = Math.max(0, 1 - progress * 2.5);
     heroContent.style.opacity = String(fadeOut);
@@ -144,31 +144,11 @@ export default function Hero() {
     }
   }, [update]);
 
-  // Video setup: ready class + ended handler
+  // Video setup
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
     video.loop = false;
-
-    const onCanPlay = () => video.classList.add('ready');
-    const onEnded = () => {
-      video.style.transition = 'opacity 1s';
-      video.style.opacity = '0.6';
-    };
-
-    if (video.readyState >= 3) {
-      video.classList.add('ready');
-    } else {
-      video.addEventListener('canplay', onCanPlay, { once: true });
-    }
-
-    video.addEventListener('ended', onEnded);
-
-    return () => {
-      video.removeEventListener('canplay', onCanPlay);
-      video.removeEventListener('ended', onEnded);
-    };
   }, []);
 
   // Scroll-synced animation: RAF loop on scroll/resize

@@ -162,7 +162,7 @@ export default function Showcase() {
     <>
       {/* Hero: Workflow complet */}
       <section className="hero">
-        <Image src="/icons/logo.png" alt="FitMyCV" width={1080} height={319} className="hero-logo reveal" />
+        <Image src="/icons/logo_small.png" alt="FitMyCV" width={360} height={106} className="hero-logo reveal" />
         <h1 className="hero-title reveal">{t('title')}</h1>
         <p className="hero-subtitle reveal">
           {t('subtitle')}

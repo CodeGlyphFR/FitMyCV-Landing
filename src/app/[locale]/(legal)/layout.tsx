@@ -23,7 +23,7 @@ export default function LegalLayout({
       <header className="legal-header">
         <div className="legal-header-inner">
           <Link href="/">
-            <img src="/icons/logo.png" alt="FitMyCV" width={120} height={36} />
+            <img src="/icons/logo_small.png" alt="FitMyCV" width={95} height={28} />
             FitMyCV
           </Link>
           <span>/</span>

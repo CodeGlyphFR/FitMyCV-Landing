@@ -12,6 +12,13 @@ export default function Header() {
   const burgerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  // Strip URL hash on page load so refresh always starts at the top
+  useEffect(() => {
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, []);
+
   // Header scroll effect: add 'scrolled' class on scroll, hide on mobile scroll-down
   useEffect(() => {
     const header = headerRef.current;
@@ -102,7 +109,7 @@ export default function Header() {
       <div className="header-inner">
         <Link href="/" className="header-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/logo.png" alt="FitMyCV" width={120} height={36} />
+          <img src="/icons/logo_small.png" alt="FitMyCV" width={120} height={36} />
         </Link>
         <nav className="header-nav">
           <Link href="/#howItWorks">{t("howItWorks")}</Link>

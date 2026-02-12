@@ -28,7 +28,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "FitMyCV",
   url: "https://www.fitmycv.io",
-  logo: "https://www.fitmycv.io/icons/logo.png",
+  logo: "https://www.fitmycv.io/icons/logo_small.png",
   contactPoint: {
     "@type": "ContactPoint",
     email: "contact@fitmycv.io",
