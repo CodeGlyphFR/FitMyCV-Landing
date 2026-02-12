@@ -2047,7 +2047,7 @@ body {
     .tr-carousel { width:6.5rem; height:2.6rem; }
     .tr-flag { width:1.8rem; height:1.8rem; margin-top:-0.9rem; padding:0.15rem; }
     .tr-flag[data-pos="-2"] { left:-1.8rem; }
-    .tr-flag[data-pos="0"] { margin-left:-0.9rem; }
+    .tr-flag[data-pos="0"] { left:calc(50% - 0.9rem); }
     .tr-flag[data-pos="1"] { left:calc(100% - 1.8rem); }
     .sc-badge { width:2.4rem; height:2.4rem; border-width:2px; }
     .features-section .sc-num { font-size:0.75rem; }
