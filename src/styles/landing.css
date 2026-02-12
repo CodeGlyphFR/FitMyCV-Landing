@@ -10,7 +10,7 @@
   color: #0a0a1a;
   font-weight: 600;
 }
-.skip-to-content:focus {
+.skip-to-content:focus-visible {
   left: 0.5rem;
   top: 0.5rem;
 }
