@@ -1132,11 +1132,11 @@ body {
   }
 
   .features-section .section-title {
-    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
     background: linear-gradient(135deg, var(--cyan), var(--green), var(--blue));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; line-height: 1.2; margin-bottom: 0.6rem;
+    background-clip: text; line-height: 1.15; margin-bottom: 0.6rem;
   }
 
   .features-section .section-subtitle {
@@ -2799,13 +2799,13 @@ body {
 /* ===== RESPONSIVE — TABLET ===== */
 @media (max-width: 1023px) and (min-width: 768px) {
   .packs-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .pricing-section .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+  .pricing-section .section-title { font-size: clamp(2rem, 4vw, 3.2rem); }
 }
 
 /* ===== RESPONSIVE — MOBILE ===== */
 @media (max-width: 767px) {
   .pricing-section { padding: 3rem 1rem 0; }
-  .pricing-section .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+  .pricing-section .section-title { font-size: clamp(2rem, 4vw, 3.2rem); }
 
   .credit-strip { gap: 0.4rem 1rem; padding: 0.75rem 1rem; }
   .cr-sep { display: none; }

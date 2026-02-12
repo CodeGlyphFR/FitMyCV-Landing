@@ -22,7 +22,7 @@ export function getAlternates(locale: string, pathname: string) {
         ? `${BASE_URL}${pathname}`
         : `${BASE_URL}/${loc}${suffix}`;
   }
-  languages["x-default"] = `${BASE_URL}${pathname}`;
+  languages["x-default"] = `${BASE_URL}/en${suffix}`;
 
   return { canonical, languages };
 }
