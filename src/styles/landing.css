@@ -47,6 +47,10 @@ body {
     background: rgba(10, 10, 26, 0.65);
   }
 
+  .site-header:has(.header-burger.open) {
+    background: rgb(10, 10, 26);
+  }
+
   .header-inner {
     max-width: 1120px;
     margin: 0 auto;
@@ -161,21 +165,26 @@ body {
 
   /* Mobile menu panel */
   .header-mobile-menu {
-    display: none;
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(10,10,26,0.95);
-    backdrop-filter: blur(16px);
+    background: rgb(10,10,26);
     border-bottom: 1px solid rgba(255,255,255,0.06);
     padding: 1rem 1.5rem 1.25rem;
     flex-direction: column;
     gap: 0.25rem;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .header-mobile-menu.open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .header-mobile-menu a {
