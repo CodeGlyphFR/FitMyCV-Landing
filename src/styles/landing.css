@@ -152,6 +152,7 @@ body {
 
   .header-burger.open span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
 
   .header-burger.open span:nth-child(3) {
@@ -1707,7 +1708,7 @@ body {
     position:relative; width:9rem; height:3.5rem;
   }
   .tr-flag {
-    position:absolute; width:2.6rem; height:2.6rem;
+    position:absolute; left:0; width:2.6rem; height:2.6rem;
     top:50%; margin-top:-1.3rem;
     border-radius:50%;
     background:rgba(255,255,255,0.2);
@@ -1716,21 +1717,22 @@ body {
     box-shadow:0 4px 16px rgba(0,0,0,0.25);
     display:flex; align-items:center; justify-content:center;
     padding:0.25rem; overflow:hidden;
+    will-change:transform, opacity;
   }
   .tr-flag img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
   .tr-flag.tr-move {
-    transition: left 0.5s cubic-bezier(0.4,0,0.2,1),
-                transform 0.5s cubic-bezier(0.4,0,0.2,1),
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1),
                 opacity 0.5s ease,
                 border-color 0.5s ease,
                 box-shadow 0.5s ease;
   }
-  .tr-flag[data-pos="-2"] { left:-2.6rem; transform:scale(0.6); opacity:0; }
-  .tr-flag[data-pos="-1"] { left:0; transform:scale(0.75); opacity:0.5; }
-  .tr-flag[data-pos="0"]  { left:calc(50% - 1.3rem); transform:scale(1.15); z-index:1;
+  /* carousel 9rem, flag 2.6rem → center at 3.2rem */
+  .tr-flag[data-pos="-2"] { transform:translateX(-2.6rem) scale(0.6); opacity:0; }
+  .tr-flag[data-pos="-1"] { transform:translateX(0) scale(0.75); opacity:0.5; }
+  .tr-flag[data-pos="0"]  { transform:translateX(3.2rem) scale(1.15); z-index:1;
     border-color:rgba(34,211,238,0.5); box-shadow:0 0 14px rgba(34,211,238,0.25); }
-  .tr-flag[data-pos="1"]  { left:calc(100% - 2.6rem); transform:scale(0.75); opacity:0.5; }
-  .tr-flag[data-pos="2"]  { left:calc(100% + 0.5rem); transform:scale(0.6); opacity:0; }
+  .tr-flag[data-pos="1"]  { transform:translateX(6.4rem) scale(0.75); opacity:0.5; }
+  .tr-flag[data-pos="2"]  { transform:translateX(9.5rem) scale(0.6); opacity:0; }
 
   /* Task manager card */
   .vis-tasks {
@@ -2045,10 +2047,13 @@ body {
     }
 
     .tr-carousel { width:6.5rem; height:2.6rem; }
-    .tr-flag { width:1.8rem; height:1.8rem; margin-top:-0.9rem; padding:0.15rem; }
-    .tr-flag[data-pos="-2"] { left:-1.8rem; }
-    .tr-flag[data-pos="0"] { left:calc(50% - 0.9rem); }
-    .tr-flag[data-pos="1"] { left:calc(100% - 1.8rem); }
+    .tr-flag { width:1.8rem; height:1.8rem; margin-top:-0.9rem; padding:0.15rem; backdrop-filter:blur(8px); }
+    /* carousel 6.5rem, flag 1.8rem → center at 2.35rem */
+    .tr-flag[data-pos="-2"] { transform:translateX(-1.8rem) scale(0.6); }
+    .tr-flag[data-pos="-1"] { transform:translateX(0) scale(0.75); }
+    .tr-flag[data-pos="0"]  { transform:translateX(2.35rem) scale(1.15); }
+    .tr-flag[data-pos="1"]  { transform:translateX(4.7rem) scale(0.75); }
+    .tr-flag[data-pos="2"]  { transform:translateX(7rem) scale(0.6); }
     .sc-badge { width:2.4rem; height:2.4rem; border-width:2px; }
     .features-section .sc-num { font-size:0.75rem; }
     .sc-arrow { font-size:0.8rem; }
