@@ -7,6 +7,8 @@ import { getOgUrl } from "@/lib/seo";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a1a",
+  maximumScale: 1,
+  userScalable: false,
 };
 
 type Props = {
@@ -54,7 +56,7 @@ export async function generateMetadata({
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },
-        { url: "/icons/logo.png", type: "image/png" },
+        { url: "/icons/logo_small.png", type: "image/png" },
       ],
       apple: [
         { url: "/apple-touch-icon.png", sizes: "180x180" },

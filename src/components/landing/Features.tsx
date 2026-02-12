@@ -961,8 +961,12 @@ export default function Features() {
     /* ── Card 14: Translate carousel ── */
     section.querySelectorAll<HTMLElement>('.vis-translate').forEach((vis) => {
       const flags = [...vis.querySelectorAll<HTMLElement>('.tr-flag')];
+      let isRotating = false;
 
       function rotate() {
+        if (isRotating) return;
+        isRotating = true;
+
         flags.forEach((f) => f.classList.add('tr-move'));
 
         flags.forEach((f) => {
@@ -972,11 +976,12 @@ export default function Features() {
         });
 
         setTimeout(() => {
-          const offLeft = flags.find((f) => f.dataset.pos === '-2');
+          const offLeft = flags.find((f) => parseInt(f.dataset.pos || '0') <= -2);
           if (offLeft) {
             offLeft.classList.remove('tr-move');
             offLeft.dataset.pos = '2';
           }
+          isRotating = false;
         }, 550);
       }
 

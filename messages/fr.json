@@ -33,7 +33,7 @@
     ]
   },
   "HowItWorks": {
-    "intro": "FitMyCV optimise votre CV grâce à l'IA pour matcher chaque offre d'emploi. Il adapte le contenu au format ATS et génère un CV qui passe les filtres ATS et vous décroche plus d'entretiens.",
+    "intro": "FitMyCV adapte votre CV à chaque offre d'emploi en quelques secondes. Contenu reformulé, format ATS respecté — pour décrocher plus d'entretiens.",
     "title": "Importez votre CV, collez une offre,\nrécupérez un CV optimisé.",
     "subtitle": "Un CV parfaitement adapté à chaque offre, prêt à envoyer.",
     "phase1": "Phase 1 — Import",
@@ -91,11 +91,11 @@
   "StatsStrip": {
     "stats": [
       {
-        "value": "87%",
+        "value": "92%",
         "label": "de correspondance"
       },
       {
-        "value": "5",
+        "value": "4",
         "label": "langues"
       },
       {

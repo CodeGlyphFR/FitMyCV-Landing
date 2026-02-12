@@ -91,11 +91,11 @@
   "StatsStrip": {
     "stats": [
       {
-        "value": "87%",
+        "value": "92%",
         "label": "match rate"
       },
       {
-        "value": "5",
+        "value": "4",
         "label": "languages"
       },
       {
