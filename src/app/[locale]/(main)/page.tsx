@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { faqConfig } from "@/data/faq-config";
 import { getAlternates } from "@/lib/seo";
 import SvgDefs from "@/components/landing/SvgDefs";
@@ -11,6 +12,10 @@ import Features from "@/components/landing/Features";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
