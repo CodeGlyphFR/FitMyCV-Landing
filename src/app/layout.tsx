@@ -29,7 +29,12 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <noscript>
           <p style={{ padding: "2rem", textAlign: "center", color: "#fff", background: "#0a0a1a" }}>
-            JavaScript is required to use FitMyCV. Please enable JavaScript in your browser.
+            {{
+              fr: "JavaScript est requis pour utiliser FitMyCV. Veuillez activer JavaScript dans votre navigateur.",
+              en: "JavaScript is required to use FitMyCV. Please enable JavaScript in your browser.",
+              es: "Se requiere JavaScript para usar FitMyCV. Por favor, active JavaScript en su navegador.",
+              de: "JavaScript ist erforderlich, um FitMyCV zu nutzen. Bitte aktivieren Sie JavaScript in Ihrem Browser.",
+            }[locale as "fr" | "en" | "es" | "de"] ?? "JavaScript is required to use FitMyCV. Please enable JavaScript in your browser."}
           </p>
         </noscript>
         {children}
