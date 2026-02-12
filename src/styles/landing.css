@@ -216,7 +216,7 @@ body {
     display: block;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .header-nav { display: none; }
     .header-actions { display: none; }
     .header-burger { display: flex; }
@@ -435,13 +435,19 @@ body {
     -webkit-backface-visibility: hidden;
   }
 
+  .hero-mockup-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
   .hero-mockup-frame iframe {
     position: absolute;
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
-    touch-action: none;
     top: 0;
     left: 0;
     width: 960px;
@@ -855,12 +861,12 @@ body {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 1;
     background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.04) 50%, transparent 70%);
     background-size: 200% 100%;
     animation: shimmer 2s ease-in-out infinite;
     opacity: 1;
     transition: opacity 0.5s ease;
-    pointer-events: none;
   }
 
   .hiw-mockup-frame.loaded::after { opacity: 0; }

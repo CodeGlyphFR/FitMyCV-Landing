@@ -56,7 +56,6 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  touch-action: none;
 }
 
 .mockup-wrap iframe {
