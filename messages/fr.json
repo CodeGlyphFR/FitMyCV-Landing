@@ -21,15 +21,16 @@
     "skipToContent": "Aller au contenu principal"
   },
   "Hero": {
-    "title": "Votre CV, optimisé par l'IA",
+    "title": "Un CV chirurgical pour chaque offre.",
     "cta": "Commencer maintenant",
     "scrollMore": "EN SAVOIR PLUS",
     "phrases": [
-      "Fini le copier-coller — une URL suffit",
-      "10 liens, 10 CV générés en même temps",
-      "Analysez, scorez, optimisez — en quelques secondes",
-      "Sans abonnement — paiement à la demande",
-      "7 étapes pour un CV parfait"
+      "Collez l'URL, récupérez votre CV.",
+      "Un format que les ATS acceptent.",
+      "Acceptez, refusez, mot par mot.",
+      "Des suggestions ciblées pour monter votre score.",
+      "10 offres, 10 CV, en un clic.",
+      "De l'offre au CV en 30 secondes."
     ]
   },
   "HowItWorks": {
