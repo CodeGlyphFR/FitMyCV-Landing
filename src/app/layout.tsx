@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import "./globals.css";
 import "../styles/landing.css";
 import { Inter } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+
+export const metadata: Metadata = {
+  description:
+    "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA. Importez votre CV, collez le lien d'une offre et laissez l'IA optimiser votre candidature.",
+};
 
 const inter = Inter({
   subsets: ["latin"],
