@@ -53,6 +53,7 @@ jobs:
             echo "TAG=staging-pr-${{ github.event.number }}" >> $GITHUB_ENV
             echo "TARGET_DIR=/home/erickdesmet/STAGING_SAAS/FitMyCV/landing" >> $GITHUB_ENV
             echo "COMPOSE_FILE=docker-compose.staging.yml" >> $GITHUB_ENV
+            echo "COMPOSE_PROJECT=landing-staging" >> $GITHUB_ENV
             echo "IS_PROD=false" >> $GITHUB_ENV
           else
             # On cherche le numéro de la PR dans le message de commit (ex: "Merge pull request #6")
@@ -61,6 +62,7 @@ jobs:
             echo "SRC_TAG=staging-pr-$PR_NUMBER" >> $GITHUB_ENV
             echo "TARGET_DIR=/home/erickdesmet/PROD_SAAS/FitMyCV/landing" >> $GITHUB_ENV
             echo "COMPOSE_FILE=docker-compose.prod.yml" >> $GITHUB_ENV
+            echo "COMPOSE_PROJECT=landing-prod" >> $GITHUB_ENV
             echo "IS_PROD=true" >> $GITHUB_ENV
           fi
 
@@ -98,5 +100,5 @@ jobs:
             IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}"
             docker pull $IMAGE
             sed -i "s|image: ghcr.io/.*|image: $IMAGE|g" ${{ env.COMPOSE_FILE }}
-            docker compose -f ${{ env.COMPOSE_FILE }} up -d --remove-orphans
+            docker compose -p ${{ env.COMPOSE_PROJECT }} -f ${{ env.COMPOSE_FILE }} up -d --remove-orphans
             docker image prune -f
