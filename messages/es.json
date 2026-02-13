@@ -21,15 +21,16 @@
     "skipToContent": "Ir al contenido principal"
   },
   "Hero": {
-    "title": "Tu CV, optimizado por IA",
+    "title": "El fit perfecto para cada oferta",
     "cta": "Empezar ahora",
     "scrollMore": "MÁS INFORMACIÓN",
     "phrases": [
-      "Olvídate del copiar y pegar — una URL es suficiente",
-      "10 enlaces, 10 CV generados a la vez",
-      "Analiza, puntúa, optimiza — en segundos",
-      "Sin suscripción — pago por uso",
-      "7 pasos para un CV perfecto"
+      "Pega el enlace de la oferta, recibe tu CV",
+      "Un formato que los ATS aceptan",
+      "Cero sorpresas: tú controlas cada cambio",
+      "Sugerencias precisas para subir tu puntuación",
+      "10 ofertas, 10 CVs, un solo clic",
+      "De la oferta al CV en 30 segundos"
     ]
   },
   "HowItWorks": {

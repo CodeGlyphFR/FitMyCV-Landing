@@ -21,15 +21,16 @@
     "skipToContent": "Skip to main content"
   },
   "Hero": {
-    "title": "Your resume, optimized by AI",
+    "title": "The perfect fit for every job",
     "cta": "Get started now",
     "scrollMore": "LEARN MORE",
     "phrases": [
-      "No more copy-pasting — just paste a URL",
-      "10 links, 10 resumes generated at once",
-      "Analyze, score, optimize — in seconds",
-      "No subscription — pay as you go",
-      "7 steps to a perfect resume"
+      "Paste the job link, get your resume",
+      "A format built for ATS",
+      "Zero surprises: you control every change",
+      "Targeted tips to boost your score",
+      "10 jobs, 10 resumes, one click",
+      "From listing to resume in 30 seconds"
     ]
   },
   "HowItWorks": {

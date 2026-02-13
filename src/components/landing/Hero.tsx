@@ -293,9 +293,12 @@ export default function Hero() {
 
         <div className="hero-content" ref={heroContentRef}>
           <h1 className="hero-title">{t('title')}</h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle" aria-hidden="true">
             <span ref={subtitleRef} />
             <span className="cursor" />
+          </p>
+          <p className="sr-only">
+            {PHRASES.join(' — ')}
           </p>
           <div className="hero-cta-wrapper">
             <div className="hero-cta-gradient" />
