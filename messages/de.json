@@ -567,10 +567,27 @@
       "Spam-Schutz über Google reCAPTCHA v3"
     ],
     "s12p2": "reCAPTCHA erfasst technische Daten (IP-Adresse, Cookies, Surfverhalten), um Menschen von Bots zu unterscheiden. Die <googlePrivacyLink>Datenschutzrichtlinie</googlePrivacyLink> und die Nutzungsbedingungen von Google gelten.",
-    "s13Title": "13. Internationale Datenübermittlungen",
-    "s13p1": "Bestimmte Daten können außerhalb der Europäischen Union übermittelt werden (OpenAI, Resend in den Vereinigten Staaten). Diese Übermittlungen sind durch von der Europäischen Kommission genehmigte Standardvertragsklauseln abgesichert.",
-    "s14Title": "14. Änderungen",
-    "s14p1": "Diese Richtlinie kann jederzeit geändert werden. Änderungen werden auf dieser Seite mit dem Aktualisierungsdatum veröffentlicht. Bei wesentlichen Änderungen werden Sie per E-Mail informiert."
+    "s13Title": "13. Browser-Erweiterung",
+    "s13p1": "FitMyCV bietet eine Browser-Erweiterung für Chrome, Edge, Brave und Firefox an, mit der Sie Stellenangebote direkt von Jobportalen erfassen können.",
+    "s13_1Title": "13.1 Von der Erweiterung erfasste Daten",
+    "s13_1Items": [
+      "URLs der Stellenangebote, die Sie erfassen möchten",
+      "Textinhalt der Stellenangebote (Titel, Beschreibung, Standort), der von der besuchten Seite extrahiert wird",
+      "Authentifizierungstoken, das lokal im Browser gespeichert wird, um Ihre Sitzung aufrechtzuerhalten"
+    ],
+    "s13_2Title": "13.2 Funktionsweise",
+    "s13_2Items": [
+      "Die Erweiterung erfasst keine Daten außerhalb von Stellenangebots-Seiten, auf denen Sie aktiv auf die Schaltfläche « FitMyCV + » klicken",
+      "Extrahierte Inhalte werden ausschließlich zur Lebenslauf-Erstellung an unsere Server übermittelt und wie über die Website eingereichte Angebote verarbeitet",
+      "Erfasste Angebote werden vorübergehend im lokalen Speicher des Browsers gespeichert, bis sie gesendet werden",
+      "Es wird kein Browserverlauf erfasst oder übermittelt"
+    ],
+    "s13_3Title": "13.3 Berechtigungen",
+    "s13_3p1": "Die Erweiterung benötigt folgende Berechtigungen: Zugriff auf den aktiven Tab (zur Erkennung von Stellenangeboten), lokaler Speicher (zum Speichern Ihrer Angebote und Einstellungen), Cookies (zur Authentifizierung mit Ihrem FitMyCV-Konto).",
+    "s14Title": "14. Internationale Datenübermittlungen",
+    "s14p1": "Bestimmte Daten können außerhalb der Europäischen Union übermittelt werden (OpenAI, Resend in den Vereinigten Staaten). Diese Übermittlungen sind durch von der Europäischen Kommission genehmigte Standardvertragsklauseln abgesichert.",
+    "s15Title": "15. Änderungen",
+    "s15p1": "Diese Richtlinie kann jederzeit geändert werden. Änderungen werden auf dieser Seite mit dem Aktualisierungsdatum veröffentlicht. Bei wesentlichen Änderungen werden Sie per E-Mail informiert."
   },
   "LegalLayout": {
     "terms": "Allgemeine Geschäftsbedingungen",

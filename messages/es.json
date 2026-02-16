@@ -567,10 +567,27 @@
       "Protección antispam mediante Google reCAPTCHA v3"
     ],
     "s12p2": "reCAPTCHA recopila datos técnicos (dirección IP, cookies, comportamiento de navegación) para distinguir humanos de robots. La <googlePrivacyLink>Política de privacidad</googlePrivacyLink> y las Condiciones de uso de Google son aplicables.",
-    "s13Title": "13. Transferencias internacionales",
-    "s13p1": "Algunos datos pueden transferirse fuera de la Unión Europea (OpenAI, Resend en Estados Unidos). Estas transferencias están reguladas por cláusulas contractuales tipo aprobadas por la Comisión Europea.",
-    "s14Title": "14. Modificaciones",
-    "s14p1": "Esta política puede modificarse en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de actualización. En caso de modificación sustancial, se te informará por email."
+    "s13Title": "13. Extensión del navegador",
+    "s13p1": "FitMyCV ofrece una extensión para los navegadores Chrome, Edge, Brave y Firefox que permite capturar ofertas de empleo directamente desde los portales de empleo.",
+    "s13_1Title": "13.1 Datos recopilados por la extensión",
+    "s13_1Items": [
+      "URL de las ofertas de empleo que elijas capturar",
+      "Contenido textual de las ofertas de empleo (título, descripción, ubicación) extraído de la página visitada",
+      "Token de autenticación almacenado localmente en el navegador para mantener tu sesión"
+    ],
+    "s13_2Title": "13.2 Funcionamiento",
+    "s13_2Items": [
+      "La extensión no recopila ningún dato fuera de las páginas de ofertas de empleo en las que haces clic activamente en el botón « FitMyCV + »",
+      "El contenido extraído se transmite a nuestros servidores únicamente para la generación de CV y se trata de la misma manera que las ofertas enviadas a través del sitio web",
+      "Las ofertas capturadas se almacenan temporalmente en el almacenamiento local del navegador hasta su envío",
+      "No se recopila ni transmite ningún historial de navegación"
+    ],
+    "s13_3Title": "13.3 Permisos",
+    "s13_3p1": "La extensión requiere los siguientes permisos: acceso a la pestaña activa (para detectar ofertas de empleo), almacenamiento local (para guardar tus ofertas y preferencias), cookies (para la autenticación con tu cuenta FitMyCV).",
+    "s14Title": "14. Transferencias internacionales",
+    "s14p1": "Algunos datos pueden transferirse fuera de la Unión Europea (OpenAI, Resend en Estados Unidos). Estas transferencias están reguladas por cláusulas contractuales tipo aprobadas por la Comisión Europea.",
+    "s15Title": "15. Modificaciones",
+    "s15p1": "Esta política puede modificarse en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de actualización. En caso de modificación sustancial, se te informará por email."
   },
   "LegalLayout": {
     "terms": "Condiciones Generales de Venta",

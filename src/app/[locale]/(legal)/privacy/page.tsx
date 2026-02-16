@@ -264,11 +264,30 @@ export default async function PrivacyPage({
       <div className="legal-section">
         <h2>{t("s13Title")}</h2>
         <p>{t("s13p1")}</p>
+        <h3>{t("s13_1Title")}</h3>
+        <ul>
+          {(t.raw("s13_1Items") as string[]).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+        <h3>{t("s13_2Title")}</h3>
+        <ul>
+          {(t.raw("s13_2Items") as string[]).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+        <h3>{t("s13_3Title")}</h3>
+        <p>{t("s13_3p1")}</p>
       </div>
 
       <div className="legal-section">
         <h2>{t("s14Title")}</h2>
         <p>{t("s14p1")}</p>
+      </div>
+
+      <div className="legal-section">
+        <h2>{t("s15Title")}</h2>
+        <p>{t("s15p1")}</p>
       </div>
     </>
   );
