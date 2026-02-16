@@ -193,7 +193,6 @@
     "card15Waiting": "Waiting...",
     "card15Done": "Done",
     "card16Title": "Browser extension",
-    "card16Badge": "Coming soon",
     "card16Sub": "Start a generation without leaving your tab",
     "card16CvLabel": "Full-Stack JS Dev",
     "card16GenBtn": "Generate my resume"
@@ -247,7 +246,7 @@
       },
       {
         "question": "Which job platforms are supported?",
-        "answer": "FitMyCV works with any publicly accessible job posting that doesn't require authentication: Indeed, Welcome to the Jungle, France Travail, and many other platforms. Just paste the job URL. For sites requiring login (LinkedIn, etc.), a browser extension is under development — it will let you generate a resume directly from the job page, using the source resume of your choice."
+        "answer": "FitMyCV works with any publicly accessible job posting that doesn't require authentication: Indeed, Welcome to the Jungle, France Travail, and many other platforms. Just paste the job URL. For sites requiring login (LinkedIn, etc.), a browser extension is available — it lets you generate a resume directly from the job page, using the source resume of your choice."
       },
       {
         "question": "How is FitMyCV different from ChatGPT?",

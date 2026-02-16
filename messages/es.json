@@ -193,7 +193,6 @@
     "card15Waiting": "En espera...",
     "card15Done": "Terminado",
     "card16Title": "Extensión de navegador",
-    "card16Badge": "Próximamente",
     "card16Sub": "Lanza una generación sin salir de tu pestaña",
     "card16CvLabel": "Dev Full-Stack JS",
     "card16GenBtn": "Generar mi CV"
@@ -247,7 +246,7 @@
       },
       {
         "question": "¿Qué plataformas de empleo son compatibles?",
-        "answer": "FitMyCV funciona con cualquier oferta de empleo accesible públicamente, sin autenticación requerida: Indeed, Welcome to the Jungle, Pôle Emploi y muchas otras plataformas. Solo tienes que pegar la URL de la oferta. Para los sitios que requieren inicio de sesión (LinkedIn, etc.), se está desarrollando una extensión de navegador que permitirá generar un CV directamente desde la página de la oferta, a partir del CV base que elijas."
+        "answer": "FitMyCV funciona con cualquier oferta de empleo accesible públicamente, sin autenticación requerida: Indeed, Welcome to the Jungle, Pôle Emploi y muchas otras plataformas. Solo tienes que pegar la URL de la oferta. Para los sitios que requieren inicio de sesión (LinkedIn, etc.), hay una extensión de navegador disponible que permite generar un CV directamente desde la página de la oferta, a partir del CV base que elijas."
       },
       {
         "question": "¿En qué se diferencia FitMyCV de ChatGPT?",

@@ -193,7 +193,6 @@
     "card15Waiting": "Wartend...",
     "card15Done": "Abgeschlossen",
     "card16Title": "Browser-Erweiterung",
-    "card16Badge": "Demnächst",
     "card16Sub": "Starten Sie eine Generierung, ohne Ihren Tab zu verlassen",
     "card16CvLabel": "Full-Stack JS-Entwickler",
     "card16GenBtn": "Meinen Lebenslauf generieren"
@@ -247,7 +246,7 @@
       },
       {
         "question": "Welche Jobplattformen werden unterstützt?",
-        "answer": "FitMyCV funktioniert mit jeder öffentlich zugänglichen Stellenanzeige, ohne Anmeldung: Indeed, Welcome to the Jungle, Arbeitsagentur und viele weitere Plattformen. Fügen Sie einfach die URL der Anzeige ein. Für Websites, die eine Anmeldung erfordern (LinkedIn usw.), wird derzeit eine Browser-Erweiterung entwickelt — sie wird es ermöglichen, einen Lebenslauf direkt von der Stellenseite aus zu generieren, basierend auf dem Quell-Lebenslauf Ihrer Wahl."
+        "answer": "FitMyCV funktioniert mit jeder öffentlich zugänglichen Stellenanzeige, ohne Anmeldung: Indeed, Welcome to the Jungle, Arbeitsagentur und viele weitere Plattformen. Fügen Sie einfach die URL der Anzeige ein. Für Websites, die eine Anmeldung erfordern (LinkedIn usw.), ist eine Browser-Erweiterung verfügbar — sie ermöglicht es, einen Lebenslauf direkt von der Stellenseite aus zu generieren, basierend auf dem Quell-Lebenslauf Ihrer Wahl."
       },
       {
         "question": "Worin unterscheidet sich FitMyCV von ChatGPT?",
