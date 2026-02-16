@@ -193,7 +193,6 @@
     "card15Waiting": "Waiting...",
     "card15Done": "Done",
     "card16Title": "Browser extension",
-    "card16Badge": "Coming soon",
     "card16Sub": "Start a generation without leaving your tab",
     "card16CvLabel": "Full-Stack JS Dev",
     "card16GenBtn": "Generate my resume"
@@ -247,7 +246,7 @@
       },
       {
         "question": "Which job platforms are supported?",
-        "answer": "FitMyCV works with any publicly accessible job posting that doesn't require authentication: Indeed, Welcome to the Jungle, France Travail, and many other platforms. Just paste the job URL. For sites requiring login (LinkedIn, etc.), a browser extension is under development — it will let you generate a resume directly from the job page, using the source resume of your choice."
+        "answer": "FitMyCV works with any publicly accessible job posting that doesn't require authentication: Indeed, Welcome to the Jungle, France Travail, and many other platforms. Just paste the job URL. For sites requiring login (LinkedIn, etc.), a browser extension is available — it lets you generate a resume directly from the job page, using the source resume of your choice."
       },
       {
         "question": "How is FitMyCV different from ChatGPT?",
@@ -567,10 +566,27 @@
       "Anti-spam protection via Google reCAPTCHA v3"
     ],
     "s12p2": "reCAPTCHA collects technical data (IP address, cookies, browsing behavior) to distinguish humans from bots. Google's <googlePrivacyLink>Privacy Policy</googlePrivacyLink> and Terms of Service apply.",
-    "s13Title": "13. International Transfers",
-    "s13p1": "Some data may be transferred outside the European Union (OpenAI, Resend in the United States). These transfers are governed by Standard Contractual Clauses approved by the European Commission.",
-    "s14Title": "14. Modifications",
-    "s14p1": "This policy may be modified at any time. Changes will be published on this page with the update date. In the event of a substantial modification, you will be notified by email."
+    "s13Title": "13. Browser Extension",
+    "s13p1": "FitMyCV offers a browser extension for Chrome, Edge, Brave, and Firefox that allows you to capture job offers directly from job boards.",
+    "s13_1Title": "13.1 Data Collected by the Extension",
+    "s13_1Items": [
+      "URLs of job offers you choose to capture",
+      "Text content of job offers (title, description, location) extracted from the visited page",
+      "Authentication token stored locally in the browser to maintain your session"
+    ],
+    "s13_2Title": "13.2 How It Works",
+    "s13_2Items": [
+      "The extension does not collect any data outside of job offer pages where you actively click the \"FitMyCV +\" button",
+      "Extracted content is transmitted to our servers solely for CV generation and is processed in the same way as offers submitted through the website",
+      "Captured offers are temporarily stored in the browser's local storage until they are sent",
+      "No browsing history is collected or transmitted"
+    ],
+    "s13_3Title": "13.3 Permissions",
+    "s13_3p1": "The extension requires the following permissions: active tab access (to detect job offers), local storage (to save your offers and preferences), cookies (for authentication with your FitMyCV account).",
+    "s14Title": "14. International Transfers",
+    "s14p1": "Some data may be transferred outside the European Union (OpenAI, Resend in the United States). These transfers are governed by Standard Contractual Clauses approved by the European Commission.",
+    "s15Title": "15. Modifications",
+    "s15p1": "This policy may be modified at any time. Changes will be published on this page with the update date. In the event of a substantial modification, you will be notified by email."
   },
   "LegalLayout": {
     "terms": "Terms of Sale",

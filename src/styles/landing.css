@@ -1857,20 +1857,7 @@ body {
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
   }
 
-  /* Card 16: Browser extension teaser */
-  .c-badge-soon {
-    display: inline-block;
-    padding: 0.15rem 0.5rem;
-    margin-bottom: 0.3rem;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #0a0a1a;
-    background: linear-gradient(135deg, var(--cyan), var(--green));
-    border-radius: 999px;
-    position: relative; z-index: 2;
-  }
+
   .vis-plugin {
     height: 100%;
     display: flex;
@@ -2005,7 +1992,6 @@ body {
     .f-card .c-title { font-size: 0.75rem; margin-bottom: 0.15rem; }
     .card-sm .c-title, .card-lg .c-title, .card-wide .c-title { font-size: 0.75rem; }
     .f-card .c-sub { display: none; }
-    .c-badge-soon { font-size: 0.5rem; padding: 0.1rem 0.35rem; margin-bottom: 0.15rem; }
     .f-card .c-vis { margin-top: 0.35rem; border-radius: 0.3rem; overflow: hidden; }
 
     .f-card .c-vis > * { transform: scale(0.6); transform-origin: center center; }

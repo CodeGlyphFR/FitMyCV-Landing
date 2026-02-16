@@ -1318,10 +1318,9 @@ export default function Features() {
               </div>
             </div>
 
-            {/* Card 16: Browser extension (coming soon) */}
+            {/* Card 16: Browser extension */}
             <div className="f-card card-lg" data-id="16">
               <div className="c-title">{t("card16Title")}</div>
-              <span className="c-badge-soon">{t("card16Badge")}</span>
               <div className="c-sub">{t("card16Sub")}</div>
               <div className="c-vis">
                 <div className="vis-plugin">
