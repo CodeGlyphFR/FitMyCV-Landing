@@ -2,13 +2,13 @@
   "Metadata": {
     "title": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI Ihre Bewerbung optimieren, um Ihre Chancen zu maximieren. PDF- und Word-Export in wenigen Sekunden.",
+    "description": "Lebenslauf per KI an jede Stellenanzeige anpassen. ATS-Optimierung, gezielte Schlüsselwörter, Matching-Score und PDF/Word-Export. Mehr Vorstellungsgespräche.",
     "ogTitle": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
-    "ogDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI ihn für jede Position optimieren. PDF/Word-Export in Sekunden.",
+    "ogDescription": "Stellenlink einfügen, die KI passt Ihren Lebenslauf mit den richtigen ATS-Schlüsselwörtern an. Matching-Score, PDF/Word-Export in Sekunden.",
     "ogImageAlt": "FitMyCV — Ihr Lebenslauf, KI-optimiert",
     "twitterTitle": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
-    "twitterDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie einen Stellenlink ein und lassen Sie die KI ihn optimieren. PDF/Word-Export in Sekunden.",
-    "keywords": "Lebenslauf, Lebenslauf-Optimierung, KI, künstliche Intelligenz, ATS, Lebenslauf-Generator, Lebenslauf an Stellenanzeige anpassen, Matching-Score Lebenslauf, PDF-Export Lebenslauf, automatische Bewerbung, FitMyCV"
+    "twitterDescription": "Stellenlink einfügen, die KI optimiert Ihren Lebenslauf für ATS-Filter. Score, Schlüsselwörter und PDF/Word-Export in Sekunden.",
+    "keywords": "Lebenslauf, Lebenslauf-Optimierung, KI, künstliche Intelligenz, ATS, ATS-kompatibel, ATS-Score, Lebenslauf-Generator, Lebenslauf an Stellenanzeige anpassen, Lebenslauf Schlüsselwörter, Matching-Score Lebenslauf, PDF-Export Lebenslauf, automatische Bewerbung, Vorstellungsgespräch, Recruiter, FitMyCV"
   },
   "Header": {
     "howItWorks": "So funktioniert's",

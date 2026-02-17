@@ -2,13 +2,13 @@
   "Metadata": {
     "title": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Importez votre CV, collez le lien d'une offre d'emploi, et laissez l'IA optimiser votre candidature pour maximiser vos chances. Export PDF et Word en quelques secondes.",
+    "description": "Adaptez votre CV à chaque offre d'emploi grâce à l'IA. Optimisation ATS, mots-clés ciblés, score de matching et export PDF/Word. Décrochez plus d'entretiens.",
     "ogTitle": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
-    "ogDescription": "Importez votre CV, collez le lien d'une offre et laissez l'IA l'optimiser pour chaque poste. Export PDF/Word en secondes.",
+    "ogDescription": "Collez le lien d'une offre, l'IA adapte votre CV avec les bons mots-clés ATS. Score de matching, export PDF/Word en secondes.",
     "ogImageAlt": "FitMyCV — Votre CV, optimisé par l'IA",
     "twitterTitle": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
-    "twitterDescription": "Importez votre CV, collez un lien d'offre et laissez l'IA l'optimiser. Export PDF/Word en secondes.",
-    "keywords": "CV, optimisation CV, IA, intelligence artificielle, ATS, générateur CV, adapter CV offre emploi, score matching CV, export PDF CV, candidature automatique, FitMyCV"
+    "twitterDescription": "Collez une offre, l'IA optimise votre CV pour les filtres ATS. Score, mots-clés et export PDF/Word en secondes.",
+    "keywords": "CV, optimisation CV, IA, intelligence artificielle, ATS, compatible ATS, filtres ATS, générateur CV, adapter CV offre emploi, mots-clés CV, score matching CV, export PDF CV, candidature automatique, entretien, recruteur, FitMyCV"
   },
   "Header": {
     "howItWorks": "Comment ça marche",
