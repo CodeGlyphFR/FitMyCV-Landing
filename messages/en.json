@@ -2,13 +2,13 @@
   "Metadata": {
     "title": "FitMyCV — Tailor your resume to every job posting with AI",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances. PDF and Word export in seconds.",
+    "description": "Tailor your resume to every job description with AI. ATS optimization, targeted keywords, match score & PDF/Word export in seconds. Land more interviews.",
     "ogTitle": "FitMyCV — Tailor your resume to every job posting with AI",
-    "ogDescription": "Upload your resume, paste a job link and let AI optimize it for each position. PDF/Word export in seconds.",
+    "ogDescription": "Paste a job link, AI tailors your resume with the right ATS keywords. Match score, PDF/Word export in seconds.",
     "ogImageAlt": "FitMyCV — Your resume, optimized by AI",
     "twitterTitle": "FitMyCV — Tailor your resume to every job posting with AI",
-    "twitterDescription": "Upload your resume, paste a job link and let AI optimize it. PDF/Word export in seconds.",
-    "keywords": "resume, CV optimization, AI, artificial intelligence, ATS, resume builder, tailor resume to job posting, resume matching score, PDF resume export, automatic application, FitMyCV"
+    "twitterDescription": "Paste a job link, AI optimizes your resume for ATS filters. Score, keywords & PDF/Word export in seconds.",
+    "keywords": "resume, CV optimization, AI, artificial intelligence, ATS, ATS-friendly, ATS score, resume builder, tailor resume to job posting, resume keywords, resume matching score, PDF resume export, automatic application, job interview, recruiter, FitMyCV"
   },
   "Header": {
     "howItWorks": "How It Works",

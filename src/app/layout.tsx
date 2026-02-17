@@ -18,10 +18,6 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <meta
-          name="description"
-          content="FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA. Importez votre CV, collez le lien d'une offre et laissez l'IA optimiser votre candidature."
-        />
         <link rel="preconnect" href="https://app.fitmycv.io" />
         <script
           dangerouslySetInnerHTML={{

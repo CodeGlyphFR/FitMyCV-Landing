@@ -2,13 +2,13 @@
   "Metadata": {
     "title": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Importa tu CV, pega el enlace de una oferta de empleo y deja que la IA optimice tu candidatura para maximizar tus oportunidades. Exporta en PDF y Word en segundos.",
+    "description": "Adapta tu CV a cada oferta de empleo con IA. Optimización ATS, palabras clave, puntuación de compatibilidad y exportación PDF/Word. Consigue más entrevistas.",
     "ogTitle": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
-    "ogDescription": "Importa tu CV, pega el enlace de una oferta y deja que la IA lo optimice para cada puesto. Exporta en PDF/Word en segundos.",
+    "ogDescription": "Pega el enlace de una oferta, la IA adapta tu CV con las palabras clave ATS. Puntuación, exportación PDF/Word en segundos.",
     "ogImageAlt": "FitMyCV — Tu CV, optimizado por IA",
     "twitterTitle": "FitMyCV — Adapta tu CV a cada oferta de empleo con IA",
-    "twitterDescription": "Importa tu CV, pega un enlace de oferta y deja que la IA lo optimice. Exporta en PDF/Word en segundos.",
-    "keywords": "CV, optimización CV, IA, inteligencia artificial, ATS, generador CV, adaptar CV oferta empleo, puntuación compatibilidad CV, exportar PDF CV, candidatura automática, FitMyCV"
+    "twitterDescription": "Pega una oferta, la IA optimiza tu CV para los filtros ATS. Puntuación, palabras clave y exportación PDF/Word en segundos.",
+    "keywords": "CV, optimización CV, IA, inteligencia artificial, ATS, compatible ATS, filtros ATS, generador CV, adaptar CV oferta empleo, palabras clave CV, puntuación compatibilidad CV, exportar PDF CV, candidatura automática, entrevista, reclutador, FitMyCV"
   },
   "Header": {
     "howItWorks": "Cómo funciona",
