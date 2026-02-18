@@ -74,6 +74,20 @@ export default async function Home() {
     })),
   };
 
+  const videoJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: t("videoName"),
+    description: t("videoDescription"),
+    thumbnailUrl: "https://www.fitmycv.io/hero-poster.webp",
+    uploadDate: "2025-02-10",
+    contentUrl: "https://www.fitmycv.io/background_video.webm",
+    duration: "PT8S",
+    width: 1280,
+    height: 720,
+    encodingFormat: "video/webm",
+  };
+
   return (
     <>
       <script
@@ -92,6 +106,12 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoJsonLd),
         }}
       />
       <SvgDefs />

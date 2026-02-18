@@ -303,7 +303,7 @@
     "subtitle": "Tout ce que vous devez savoir sur FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Conditions Générales de Vente",
+    "metaTitle": "Conditions Générales de Vente — Crédits et Tarifs",
     "metaDescription": "Consultez les conditions générales de vente de FitMyCV : système de crédits, tarifs, paiements, politique de remboursement, utilisation de l'IA et propriété intellectuelle.",
     "pageTitle": "Conditions Générales de Vente",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
@@ -417,7 +417,7 @@
     "s15_dataProtectionP2": "Pour toute question concernant ces CGV, contactez-nous à <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Politique de confidentialité",
+    "metaTitle": "Politique de confidentialité — Protection des données",
     "metaDescription": "Découvrez comment FitMyCV protège vos données : conformité RGPD, chiffrement des données, durées de conservation, vos droits et prestataires tiers.",
     "pageTitle": "Politique de confidentialité",
     "lastUpdate": "Dernière mise à jour : 10 février 2025",
@@ -596,7 +596,9 @@
     "label": "Langue"
   },
   "JsonLd": {
-    "softwareDescription": "Importez votre CV, collez le lien d'une offre d'emploi, et laissez l'IA optimiser votre candidature pour maximiser vos chances."
+    "softwareDescription": "Importez votre CV, collez le lien d'une offre d'emploi, et laissez l'IA optimiser votre candidature pour maximiser vos chances.",
+    "videoName": "FitMyCV — Optimisation de CV par IA en action",
+    "videoDescription": "Découvrez comment FitMyCV adapte votre CV à chaque offre d'emploi en quelques secondes : importez votre CV, collez un lien d'offre et obtenez un CV optimisé ATS prêt à envoyer."
   },
   "Showcase": {
     "title": "Workflow",

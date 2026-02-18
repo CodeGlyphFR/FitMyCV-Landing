@@ -660,13 +660,14 @@ export default function Pricing() {
 
         {/* Cost Calculator */}
         <div className="cost-calc">
-          <p className="cost-calc-q">{t('calcQuestion')}</p>
+          <p className="cost-calc-q" id="calc-question">{t('calcQuestion')}</p>
           <div className="cost-calc-slider">
             <input
               type="range"
               min={1}
               max={20}
               value={applications}
+              aria-labelledby="calc-question"
               onChange={(e) => {
                 userTouchingCarouselRef.current = false;
                 setHoveredTier(null);

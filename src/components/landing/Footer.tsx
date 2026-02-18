@@ -11,11 +11,11 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-main">
           <div className="footer-brand">
-            <img src="/icons/logo_small.png" alt="FitMyCV" height={32} loading="lazy" />
+            <img src="/icons/logo_small.png" alt="FitMyCV" width={109} height={32} />
             <p>{t("tagline")}</p>
           </div>
           <div className="footer-col">
-            <h4>{t("product")}</h4>
+            <span className="footer-heading">{t("product")}</span>
             <Link href="/#howItWorks">{t("howItWorks")}</Link>
             <Link href="/#features">{t("features")}</Link>
             <Link href="/#pricing">{t("pricing")}</Link>
@@ -23,12 +23,12 @@ export default function Footer() {
             <Link href="/support">{t("support")}</Link>
           </div>
           <div className="footer-col">
-            <h4>{t("legal")}</h4>
+            <span className="footer-heading">{t("legal")}</span>
             <Link href="/terms">{t("terms")}</Link>
             <Link href="/privacy">{t("privacy")}</Link>
           </div>
           <div className="footer-col">
-            <h4>{t("contact")}</h4>
+            <span className="footer-heading">{t("contact")}</span>
             <a href="mailto:contact@fitmycv.io">contact@fitmycv.io</a>
           </div>
         </div>

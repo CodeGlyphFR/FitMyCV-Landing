@@ -7,8 +7,6 @@ import { getOgUrl } from "@/lib/seo";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a1a",
-  maximumScale: 1,
-  userScalable: false,
 };
 
 type Props = {

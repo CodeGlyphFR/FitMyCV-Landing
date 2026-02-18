@@ -1185,7 +1185,7 @@ export default function Features() {
                       </svg>
                       <span className="gm-select-date">07/02</span>
                       <span className="gm-select-text">{t("card1SelectText")}</span>
-                      <img className="gm-flag" src={FLAG_FR_CARD1} alt="FR" loading="lazy" />
+                      <img className="gm-flag" src={FLAG_FR_CARD1} alt="FR" width={24} height={24} loading="lazy" />
                       <span className="gm-arrow">&#9662;</span>
                     </div>
                     <div className="gm-label">{t("card1LinkLabel")}</div>
@@ -1508,10 +1508,10 @@ export default function Features() {
               <div className="c-vis">
                 <div className="vis-lang-btn">
                   <div className="lang-badge">
-                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" loading="lazy" />
-                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" loading="lazy" />
-                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" loading="lazy" />
-                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" loading="lazy" />
+                    <img className="lang-flag" data-lang="0" src={FLAG_FR} alt="FR" width={24} height={24} loading="lazy" />
+                    <img className="lang-flag" data-lang="1" src={FLAG_GB} alt="GB" width={24} height={24} loading="lazy" />
+                    <img className="lang-flag" data-lang="2" src={FLAG_DE} alt="DE" width={24} height={24} loading="lazy" />
+                    <img className="lang-flag" data-lang="3" src={FLAG_ES} alt="ES" width={24} height={24} loading="lazy" />
                   </div>
                   <div className="lang-label">{(t.raw("card13LangLabels") as string[])[0]}</div>
                 </div>
@@ -1526,16 +1526,16 @@ export default function Features() {
                 <div className="vis-translate">
                   <div className="tr-carousel">
                     <div className="tr-flag" data-pos="-1">
-                      <img src={FLAG_ES} alt="ES" loading="lazy" />
+                      <img src={FLAG_ES} alt="ES" width={24} height={24} loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="0">
-                      <img src={FLAG_FR} alt="FR" loading="lazy" />
+                      <img src={FLAG_FR} alt="FR" width={24} height={24} loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="1">
-                      <img src={FLAG_GB} alt="GB" loading="lazy" />
+                      <img src={FLAG_GB} alt="GB" width={24} height={24} loading="lazy" />
                     </div>
                     <div className="tr-flag" data-pos="2">
-                      <img src={FLAG_DE} alt="DE" loading="lazy" />
+                      <img src={FLAG_DE} alt="DE" width={24} height={24} loading="lazy" />
                     </div>
                   </div>
                 </div>

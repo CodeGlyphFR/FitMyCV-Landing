@@ -3128,7 +3128,7 @@ body {
 .footer-brand img { height: 32px; display: block; margin-bottom: 0.75rem; }
 .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.875rem; line-height: 1.5; }
 .footer-col { display: flex; flex-direction: column; gap: 0.625rem; }
-.footer-col h4 { color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.footer-col .footer-heading { color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
 .footer-col a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
 .footer-col a:hover { color: #6ee7b7; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }

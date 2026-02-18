@@ -41,7 +41,7 @@ export default function FooterLanguageSelector() {
           aria-label={LABELS[loc]}
           title={LABELS[loc]}
         >
-          <img src={FLAG_SRC[loc]} alt={LABELS[loc]} width={24} height={24} loading="lazy" />
+          <img src={FLAG_SRC[loc]} alt={LABELS[loc]} width={24} height={24} />
         </button>
       ))}
     </div>

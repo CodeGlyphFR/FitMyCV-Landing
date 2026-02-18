@@ -30,7 +30,7 @@ export default function SupportAccordion() {
                 <path d="M5 12h14" />
               </svg>
             </div>
-            <h3 className="faq-question">{item.question}</h3>
+            <h2 className="faq-question">{item.question}</h2>
           </div>
           <div className="faq-answer">
             <p>{item.answer}</p>

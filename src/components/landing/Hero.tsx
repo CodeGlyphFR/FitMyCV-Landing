@@ -319,6 +319,7 @@ export default function Hero() {
             <iframe
               ref={mockupIframeRef}
               src={`/mockups/workflow-demo.html?embed&lang=${locale}`}
+              title="FitMyCV workflow demo"
               style={{
                 width: '960px',
                 height: '600px',

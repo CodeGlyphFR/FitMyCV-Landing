@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
+    "title": "FitMyCV — Lebenslauf mit KI an jede Stellenanzeige anpassen",
     "titleTemplate": "%s | FitMyCV",
     "description": "Lebenslauf per KI an jede Stellenanzeige anpassen. ATS-Optimierung, gezielte Schlüsselwörter, Matching-Score und PDF/Word-Export. Mehr Vorstellungsgespräche.",
     "ogTitle": "FitMyCV — Passen Sie Ihren Lebenslauf mit KI an jede Stellenanzeige an",
@@ -417,7 +417,7 @@
     "s15_dataProtectionP2": "Bei Fragen zu diesen AGB kontaktieren Sie uns unter <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Datenschutzrichtlinie",
+    "metaTitle": "Datenschutzrichtlinie — Datenschutz und Ihre Rechte",
     "metaDescription": "Erfahren Sie, wie FitMyCV Ihre Daten schützt: DSGVO-Konformität, Datenverschlüsselung, Aufbewahrungsfristen, Ihre Rechte und Drittanbieter.",
     "pageTitle": "Datenschutzrichtlinie",
     "lastUpdate": "Zuletzt aktualisiert: 10. Februar 2025",
@@ -596,7 +596,9 @@
     "label": "Sprache"
   },
   "JsonLd": {
-    "softwareDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI Ihre Bewerbung optimieren, um Ihre Chancen zu maximieren."
+    "softwareDescription": "Importieren Sie Ihren Lebenslauf, fügen Sie den Link einer Stellenanzeige ein und lassen Sie die KI Ihre Bewerbung optimieren, um Ihre Chancen zu maximieren.",
+    "videoName": "FitMyCV — KI-gestützte Lebenslauf-Optimierung in Aktion",
+    "videoDescription": "Sehen Sie, wie FitMyCV Ihren Lebenslauf in Sekunden an jede Stellenanzeige anpasst: Lebenslauf importieren, Stellenlink einfügen und einen ATS-optimierten Lebenslauf erhalten."
   },
   "Showcase": {
     "title": "Workflow",

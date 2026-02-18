@@ -303,8 +303,8 @@
     "subtitle": "Everything you need to know about FitMyCV"
   },
   "Terms": {
-    "metaTitle": "Terms of Sale",
-    "metaDescription": "Read FitMyCV's terms of sale: credit system, pricing, payments, refund policy, AI usage, and intellectual property.",
+    "metaTitle": "Terms of Sale — Credits, Pricing & Refunds",
+    "metaDescription": "Read FitMyCV's terms of sale: credit system, pricing, payments, refund policy, AI-powered resume generation, and intellectual property rights.",
     "pageTitle": "Terms of Sale",
     "lastUpdate": "Last updated: February 10, 2025",
     "s1Title": "1. Acceptance of Terms",
@@ -417,7 +417,7 @@
     "s15_dataProtectionP2": "For any questions regarding these Terms, contact us at <contactEmail>contact@fitmycv.io</contactEmail>."
   },
   "Privacy": {
-    "metaTitle": "Privacy Policy",
+    "metaTitle": "Privacy Policy — Data Protection & Your Rights",
     "metaDescription": "Learn how FitMyCV protects your data: GDPR compliance, data encryption, retention periods, your rights, and third-party providers.",
     "pageTitle": "Privacy Policy",
     "lastUpdate": "Last updated: February 10, 2025",
@@ -596,7 +596,9 @@
     "label": "Language"
   },
   "JsonLd": {
-    "softwareDescription": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances."
+    "softwareDescription": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances.",
+    "videoName": "FitMyCV — AI-powered resume optimization workflow",
+    "videoDescription": "See how FitMyCV tailors your resume to any job posting in seconds: import your CV, paste a job link, and get an ATS-optimized resume ready to send."
   },
   "Showcase": {
     "title": "Workflow",

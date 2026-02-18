@@ -51,6 +51,6 @@ export function getBreadcrumbJsonLd(locale: string, crumbs: { name: string; path
 export function getOgUrl(locale: string, pathname: string) {
   const suffix = pathname === "/" ? "" : pathname;
   return locale === routing.defaultLocale
-    ? `${BASE_URL}/`
+    ? `${BASE_URL}${pathname}`
     : `${BASE_URL}/${locale}${suffix}`;
 }

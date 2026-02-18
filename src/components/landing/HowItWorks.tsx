@@ -480,7 +480,7 @@ export default function HowItWorks() {
                 aria-label={t('stepPrev')}
                 onClick={handlePrev}
               >
-                {'<'}
+                <span aria-hidden="true">{'<'}</span>
               </button>
               {Array.from({ length: TOTAL_STEPS }, (_, i) => i + 1).map(
                 (step) => (
@@ -499,7 +499,7 @@ export default function HowItWorks() {
                 aria-label={t('stepNext')}
                 onClick={handleNext}
               >
-                {'>'}
+                <span aria-hidden="true">{'>'}</span>
               </button>
             </div>
             <div
@@ -511,6 +511,9 @@ export default function HowItWorks() {
                 id="hiwMockupIframe"
                 ref={mockupIframeRef}
                 src={`/mockups/step1.html?embed&lang=${locale}`}
+                title="FitMyCV step demo"
+                width={960}
+                height={600}
                 loading="lazy"
               />
             </div>
