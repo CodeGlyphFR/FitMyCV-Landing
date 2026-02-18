@@ -45,6 +45,13 @@ export function getBreadcrumbJsonLd(locale: string, crumbs: { name: string; path
   };
 }
 
+/** Default Open Graph image shared across all pages. */
+export const OG_IMAGE = {
+  url: "/og-image.webp",
+  width: 1200,
+  height: 630,
+} as const;
+
 /**
  * Build the locale-aware og:url for the current page.
  */

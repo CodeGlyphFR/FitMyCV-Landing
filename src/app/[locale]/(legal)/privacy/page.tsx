@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { getAlternates, getBreadcrumbJsonLd, getOgUrl } from "@/lib/seo";
+import { getAlternates, getBreadcrumbJsonLd, getOgUrl, OG_IMAGE } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: getAlternates(locale, "/privacy"),
-    openGraph: { url: getOgUrl(locale, "/privacy") },
+    openGraph: { url: getOgUrl(locale, "/privacy"), images: [OG_IMAGE] },
   };
 }
 
