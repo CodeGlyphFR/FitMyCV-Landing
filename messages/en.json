@@ -212,6 +212,7 @@
     "packBadgePopular": "Most popular",
     "packBadgeBestValue": "Best value",
     "creditsLabel": "credits",
+    "exclTax": "excl. VAT",
     "trustItems": [
       "Secure Stripe payment",
       "Credits never expire",
