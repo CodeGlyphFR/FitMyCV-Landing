@@ -58,8 +58,8 @@ function computeCost(n: number): { total: number; perOffer: number; packName: st
   return { total: discounted, perOffer, packName: pack.name, fullPrice };
 }
 
-function fmtPrice(v: number): string {
-  return v.toFixed(2).replace('.', ',') + '\u00a0€';
+function fmtPrice(v: number, suffix?: string): string {
+  return v.toFixed(2).replace('.', ',') + '\u00a0€' + (suffix ? '\u00a0' + suffix : '');
 }
 
 /* ── Copy Icon ── */
@@ -680,13 +680,13 @@ export default function Pricing() {
             <div className="cost-calc-metric">
               <span className="label">{t('calcTotal')}<sup>1</sup></span>
               <span className="value green" key={`t-${applications}`}>
-                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.total)}
+                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.total, t('exclTax'))}
               </span>
             </div>
             <div className="cost-calc-metric">
               <span className="label">{t('calcPerOffer')}<sup>2</sup></span>
               <span className="value cyan" key={`p-${applications}`}>
-                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.perOffer)}
+                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.perOffer, t('exclTax'))}
               </span>
             </div>
             <div className="cost-calc-metric">
@@ -739,8 +739,9 @@ export default function Pricing() {
                 <div className="pack-price">
                   <span className="currency">€</span>
                   {pack.price}
+                  <span className="pack-price-ht">{t('exclTax')}</span>
                 </div>
-                <div className="pack-per-credit">{pack.perCredit}</div>
+                <div className="pack-per-credit">{pack.perCredit} {t('exclTax')}</div>
                 {pack.savings && <div className="pack-savings">{pack.savings}</div>}
               </div>
             ))}

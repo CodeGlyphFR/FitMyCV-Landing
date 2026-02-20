@@ -2475,6 +2475,13 @@ body {
   vertical-align: super;
   margin-right: 2px;
 }
+.pack-price-ht {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-left: 4px;
+  vertical-align: baseline;
+}
 
 /* ===== PER CREDIT ===== */
 .pack-per-credit {

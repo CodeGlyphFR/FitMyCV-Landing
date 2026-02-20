@@ -212,6 +212,7 @@
     "packBadgePopular": "El más popular",
     "packBadgeBestValue": "Mejor relación",
     "creditsLabel": "créditos",
+    "exclTax": "sin IVA",
     "trustItems": [
       "Pago seguro con Stripe",
       "Créditos permanentes",

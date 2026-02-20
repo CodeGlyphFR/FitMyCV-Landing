@@ -212,6 +212,7 @@
     "packBadgePopular": "Am beliebtesten",
     "packBadgeBestValue": "Bestes Preis-Leistungs-Verhältnis",
     "creditsLabel": "Credits",
+    "exclTax": "zzgl. MwSt.",
     "trustItems": [
       "Sichere Zahlung über Stripe",
       "Credits ohne Ablaufdatum",
