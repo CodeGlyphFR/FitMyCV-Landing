@@ -38,7 +38,6 @@ export async function generateMetadata({
       template: t("titleTemplate"),
     },
     description: t("description"),
-    applicationName: "FitMyCV",
     keywords: t("keywords").split(", "),
     authors: [{ name: "FitMyCV", url: "https://www.fitmycv.io" }],
     creator: "FitMyCV",
