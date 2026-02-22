@@ -1,13 +1,13 @@
 {
   "Metadata": {
-    "title": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
+    "title": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Adaptez votre CV à chaque offre d'emploi grâce à l'IA. Optimisation ATS, mots-clés ciblés, score de matching et export PDF/Word. Décrochez plus d'entretiens.",
-    "ogTitle": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
-    "ogDescription": "Collez le lien d'une offre, l'IA adapte votre CV avec les bons mots-clés ATS. Score de matching, export PDF/Word en secondes.",
+    "description": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
+    "ogTitle": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
+    "ogDescription": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
     "ogImageAlt": "FitMyCV — Votre CV, optimisé par l'IA",
-    "twitterTitle": "FitMyCV — Adaptez votre CV à chaque offre d'emploi avec l'IA",
-    "twitterDescription": "Collez une offre, l'IA optimise votre CV pour les filtres ATS. Score, mots-clés et export PDF/Word en secondes.",
+    "twitterTitle": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
+    "twitterDescription": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
     "keywords": "CV, optimisation CV, IA, intelligence artificielle, ATS, compatible ATS, filtres ATS, générateur CV, adapter CV offre emploi, mots-clés CV, score matching CV, export PDF CV, candidature automatique, entretien, recruteur, FitMyCV"
   },
   "Header": {
