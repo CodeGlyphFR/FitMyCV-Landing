@@ -212,6 +212,7 @@
     "packBadgePopular": "Le plus populaire",
     "packBadgeBestValue": "Meilleur rapport",
     "creditsLabel": "crédits",
+    "exclTax": "HT",
     "trustItems": [
       "Paiement sécurisé Stripe",
       "Crédits permanents",
