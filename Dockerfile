@@ -11,6 +11,10 @@ RUN npm ci && mkdir -p /app/.next && chown -R 1000:1000 /app
 FROM deps AS builder
 COPY . .
 ENV NODE_ENV=production
+ARG NEXT_PUBLIC_POSTHOG_KEY
+ARG NEXT_PUBLIC_POSTHOG_HOST
+ENV NEXT_PUBLIC_POSTHOG_KEY=$NEXT_PUBLIC_POSTHOG_KEY
+ENV NEXT_PUBLIC_POSTHOG_HOST=$NEXT_PUBLIC_POSTHOG_HOST
 RUN npm run build
 
 # --- Stage 4: Runner (production) ---
