@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
+import { usePostHog } from "posthog-js/react";
 import { Link } from "@/i18n/navigation";
 import LanguageSelector from "./LanguageSelector";
 import FooterLanguageSelector from "./FooterLanguageSelector";
 
 export default function Header() {
   const t = useTranslations("Header");
+  const posthog = usePostHog();
   const headerRef = useRef<HTMLElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -119,10 +121,10 @@ export default function Header() {
         </nav>
         <div className="header-actions">
           <LanguageSelector />
-          <a href="https://app.fitmycv.io" className="header-btn login">
+          <a href="https://app.fitmycv.io" className="header-btn login" onClick={() => posthog?.capture('cta_click', { cta: 'login', location: 'header' })}>
             {t("login")}
           </a>
-          <a href="https://app.fitmycv.io" className="header-btn signup">
+          <a href="https://app.fitmycv.io" className="header-btn signup" onClick={() => posthog?.capture('cta_click', { cta: 'signup', location: 'header' })}>
             {t("signup")}
           </a>
         </div>
@@ -147,10 +149,10 @@ export default function Header() {
           <Link href="/#faq">{t("faq")}</Link>
           <FooterLanguageSelector />
           <div className="mobile-divider"></div>
-          <a href="https://app.fitmycv.io" className="header-btn login">
+          <a href="https://app.fitmycv.io" className="header-btn login" onClick={() => posthog?.capture('cta_click', { cta: 'login', location: 'header' })}>
             {t("login")}
           </a>
-          <a href="https://app.fitmycv.io" className="header-btn signup">
+          <a href="https://app.fitmycv.io" className="header-btn signup" onClick={() => posthog?.capture('cta_click', { cta: 'signup', location: 'header' })}>
             {t("signup")}
           </a>
         </div>
