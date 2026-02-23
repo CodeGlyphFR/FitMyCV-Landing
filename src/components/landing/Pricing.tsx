@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
+import { usePostHog } from 'posthog-js/react';
 
 /* ── Data ── */
 
@@ -84,6 +85,7 @@ function CheckIcon() {
 /* ── Component ── */
 export default function Pricing() {
   const t = useTranslations('Pricing');
+  const posthog = usePostHog();
 
   const packs: PackData[] = [
     { tier: 1, credits: 15, ringPct: 10, name: 'Starter', price: '4,99', perCredit: '0,33 €/crédit' },
@@ -796,9 +798,9 @@ export default function Pricing() {
             <div className="cta-wrapper">
               <div className="cta-gradient" />
               <div className="cta-noise" />
-              <button className="cta-btn">
+              <a href="https://app.fitmycv.io" className="cta-btn" onClick={() => posthog?.capture('cta_click', { cta: 'start', location: 'pricing' })}>
                 {t('ctaBtn')} <span className="cta-arrow">{'→'}</span>
-              </button>
+              </a>
             </div>
           </div>
           <p className="launch-note">{t('launchNote')}</p>

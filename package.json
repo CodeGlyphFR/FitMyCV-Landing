@@ -10,6 +10,7 @@
     "build:mockups": "node mockups/build.mjs"
   },
   "dependencies": {
+    "@posthog/react": "^1.8.0",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
@@ -17,6 +18,7 @@
     "motion": "^12.33.0",
     "next": "^15.3.0",
     "next-intl": "^4.8.2",
+    "posthog-js": "^1.352.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "stripe": "^20.3.1",

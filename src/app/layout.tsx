@@ -2,7 +2,7 @@ import "./globals.css";
 import "../styles/landing.css";
 import { Inter } from "next/font/google";
 import { getLocale } from "next-intl/server";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import PostHogProvider from "@/components/PostHogProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <GoogleAnalytics />
+        <PostHogProvider>
         <noscript>
           <p style={{ padding: "2rem", textAlign: "center", color: "#fff", background: "#0a0a1a" }}>
             {{
@@ -38,6 +38,7 @@ export default async function RootLayout({
           </p>
         </noscript>
         {children}
+        </PostHogProvider>
       </body>
     </html>
   );

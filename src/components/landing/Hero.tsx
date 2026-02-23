@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { usePostHog } from 'posthog-js/react';
 
 const BASE_W = 960;
 const BASE_H = 600;
@@ -11,6 +12,7 @@ const VISIBLE_RATIO = 0.33;
 export default function Hero() {
   const t = useTranslations('Hero');
   const locale = useLocale();
+  const posthog = usePostHog();
   const PHRASES = t.raw('phrases') as string[];
   const phrasesRef = useRef(PHRASES);
   phrasesRef.current = PHRASES;
@@ -275,7 +277,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section" ref={sectionRef}>
+    <section className="hero-section" id="hero" ref={sectionRef}>
       <div className="hero-sticky" ref={heroStickyRef}>
 
         <video
@@ -303,7 +305,7 @@ export default function Hero() {
           <div className="hero-cta-wrapper">
             <div className="hero-cta-gradient" />
             <div className="hero-cta-noise" />
-            <a href="https://app.fitmycv.io" className="hero-cta">
+            <a href="https://app.fitmycv.io" className="hero-cta" onClick={() => posthog?.capture('cta_click', { cta: 'get_started', location: 'hero' })}>
               {t('cta')} <span className="cta-arrow">{'→'}</span>
             </a>
           </div>

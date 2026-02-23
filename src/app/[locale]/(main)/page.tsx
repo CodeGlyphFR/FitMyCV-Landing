@@ -12,6 +12,7 @@ import Features from "@/components/landing/Features";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
+import SectionTracker from "@/components/landing/SectionTracker";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -94,6 +95,7 @@ export default async function Home() {
           __html: JSON.stringify(faqJsonLd),
         }}
       />
+      <SectionTracker />
       <SvgDefs />
       <Header />
       <main id="main">
