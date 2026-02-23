@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Analytics:** PostHog (EU region) — tracking is disabled in development (`NODE_ENV !== 'production'`).
+
 ## Commands
 
 ```bash
