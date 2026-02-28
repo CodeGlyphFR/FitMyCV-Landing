@@ -591,7 +591,28 @@
   },
   "LegalLayout": {
     "terms": "Allgemeine Geschäftsbedingungen",
-    "privacy": "Datenschutzrichtlinie"
+    "privacy": "Datenschutzrichtlinie",
+    "contact": "Kontakt"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Kontaktieren Sie das FitMyCV-Team bei Fragen zur KI-Lebenslauf-Optimierung, ATS-Kompatibilität oder Ihrem Konto.",
+    "pageTitle": "Kontaktieren Sie uns",
+    "intro": "Haben Sie eine Frage, ein technisches Problem oder einen Vorschlag? Schreiben Sie uns über das folgende Formular.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Ihr Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "ihre@email.com",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",
+    "submitBtn": "Senden",
+    "sending": "Wird gesendet...",
+    "successTitle": "Nachricht gesendet!",
+    "successMsg": "Wir werden uns so schnell wie möglich bei Ihnen melden.",
+    "errorMsg": "Ein Fehler ist aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns unter contact@fitmycv.io.",
+    "rateLimitMsg": "Sie haben zu viele Nachrichten gesendet. Versuchen Sie es in einer Stunde erneut.",
+    "infoTitle": "Kontaktdaten",
+    "infoBox": "Codeglyph\nE-Mail: contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 Paris"
   },
   "LanguageSelector": {
     "label": "Sprache"

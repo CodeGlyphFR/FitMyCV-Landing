@@ -29,6 +29,13 @@ export async function generateMetadata({
   };
 }
 
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "FitMyCV",
+  url: "https://www.fitmycv.io",
+};
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -46,20 +53,23 @@ export default async function Home() {
   const t = await getTranslations("JsonLd");
   const faqT = await getTranslations("FAQ");
   const faqItems = faqT.raw("items") as Array<{ question: string; answer: string }>;
-  const landingFaqItems = faqConfig.filter(c => c.landing).map(c => ({ ...faqItems[c.id] }));
+  const allFaqItems = faqConfig.map(c => ({ ...faqItems[c.id] }));
 
   const softwareJsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "FitMyCV",
     applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Resume Builder",
     operatingSystem: "Web",
     url: "https://www.fitmycv.io",
     description: t("softwareDescription"),
+    inLanguage: ["fr", "en", "es", "de"],
+    browserRequirements: "Requires Chrome, Firefox, Edge, or Brave",
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "EUR",
-      lowPrice: "4.99",
+      lowPrice: "0",
       highPrice: "35.99",
       offerCount: "4",
     },
@@ -68,7 +78,7 @@ export default async function Home() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: landingFaqItems.map((f) => ({
+    mainEntity: allFaqItems.map((f) => ({
       "@type": "Question" as const,
       name: f.question,
       acceptedAnswer: { "@type": "Answer" as const, text: f.answer },
@@ -77,6 +87,12 @@ export default async function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webSiteJsonLd),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

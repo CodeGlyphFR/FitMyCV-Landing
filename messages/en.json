@@ -2,12 +2,12 @@
   "Metadata": {
     "title": "Tailor Your ATS Resume to Any Job Description with AI | FitMyCV",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Generate an ATS-optimized resume from any job posting with our Chrome & Firefox extension. Match score, keywords & PDF/Word export.",
+    "description": "Optimize your resume with AI for any job posting. ATS-compatible, match score, targeted suggestions & PDF/Word export. Try free.",
     "ogTitle": "Tailor Your ATS Resume to Any Job Description with AI | FitMyCV",
-    "ogDescription": "Generate an ATS-optimized resume from any job posting with our Chrome & Firefox extension. Match score, keywords & PDF/Word export.",
+    "ogDescription": "Optimize your resume with AI for any job posting. ATS-compatible, match score, targeted suggestions & PDF/Word export. Try free.",
     "ogImageAlt": "FitMyCV — Your resume, optimized by AI",
     "twitterTitle": "Tailor Your ATS Resume to Any Job Description with AI | FitMyCV",
-    "twitterDescription": "Generate an ATS-optimized resume from any job posting with our Chrome & Firefox extension. Match score, keywords & PDF/Word export.",
+    "twitterDescription": "Optimize your resume with AI for any job posting. ATS-compatible, match score, targeted suggestions & PDF/Word export. Try free.",
     "keywords": "resume, CV optimization, AI, artificial intelligence, ATS, ATS-friendly, ATS score, resume builder, tailor resume to job posting, resume keywords, resume matching score, PDF resume export, automatic application, job interview, recruiter, FitMyCV"
   },
   "Header": {
@@ -21,7 +21,7 @@
     "skipToContent": "Skip to main content"
   },
   "Hero": {
-    "title": "The perfect fit for every job",
+    "title": "Optimize your resume for every job with AI",
     "cta": "Get started now",
     "scrollMore": "LEARN MORE",
     "phrases": [
@@ -35,7 +35,7 @@
   },
   "HowItWorks": {
     "intro": "FitMyCV uses AI to optimize your resume to match each job posting. It adapts the content to ATS format and generates a resume that passes ATS filters and lands you more interviews.",
-    "title": "Upload your resume, paste a job posting,\nget an optimized resume.",
+    "title": "Upload your resume, paste a job posting,\nget an AI-optimized resume.",
     "subtitle": "A resume perfectly tailored to each posting, ready to send.",
     "phase1": "Phase 1 — Import",
     "phase2": "Phase 2 — AI Intelligence",
@@ -110,7 +110,7 @@
     ]
   },
   "Features": {
-    "title": "Everything you need to land the job",
+    "title": "All the features for an ATS-optimized resume",
     "subtitle": "Built for your resumes. Not another chatbot.",
     "card1Title": "A resume tailored to each posting",
     "card1Sub": "Paste a link, AI does the rest",
@@ -138,7 +138,7 @@
       "Scrum methodology & agile sprints",
       "Responsive UI/UX design (React)"
     ],
-    "card6Title": "Your matching score",
+    "card6Title": "Your match score",
     "card6Sub": "Measure the impact of each optimization",
     "card7Title": "The job posting, decoded for you",
     "card7Sub": "Skills, processes, benefits extracted automatically",
@@ -591,13 +591,34 @@
   },
   "LegalLayout": {
     "terms": "Terms of Sale",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contact the FitMyCV team for any questions about AI resume optimization, ATS compatibility, or your account.",
+    "pageTitle": "Contact us",
+    "intro": "Have a question, a technical issue, or a suggestion? Write to us using the form below.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your request...",
+    "submitBtn": "Send",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successMsg": "We'll get back to you as soon as possible.",
+    "errorMsg": "An error occurred. Please try again or contact us at contact@fitmycv.io.",
+    "rateLimitMsg": "Too many messages sent. Please try again in one hour.",
+    "infoTitle": "Contact info",
+    "infoBox": "Codeglyph\nEmail: contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 Paris"
   },
   "LanguageSelector": {
     "label": "Language"
   },
   "JsonLd": {
-    "softwareDescription": "Upload your resume, paste a job posting link, and let AI optimize your application to maximize your chances."
+    "softwareDescription": "AI resume builder: upload your resume, paste a job posting link, and get an ATS-optimized resume to maximize your interview chances."
   },
   "Showcase": {
     "title": "Workflow",

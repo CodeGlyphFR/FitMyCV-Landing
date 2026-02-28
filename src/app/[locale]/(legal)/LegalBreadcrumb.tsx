@@ -9,6 +9,7 @@ export default function LegalBreadcrumb() {
   const titles: Record<string, string> = {
     "/terms": t("terms"),
     "/privacy": t("privacy"),
+    "/contact": t("contact"),
   };
 
   return (

@@ -2,13 +2,13 @@
   "Metadata": {
     "title": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
     "titleTemplate": "%s | FitMyCV",
-    "description": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
+    "description": "Optimisez votre CV avec l'IA pour chaque offre d'emploi. CV compatible ATS, score de correspondance, suggestions ciblées et export PDF/Word. Essai gratuit.",
     "ogTitle": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
-    "ogDescription": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
-    "ogImageAlt": "FitMyCV — Votre CV, optimisé par l'IA",
+    "ogDescription": "Optimisez votre CV avec l'IA pour chaque offre d'emploi. CV compatible ATS, score de correspondance, suggestions ciblées et export PDF/Word. Essai gratuit.",
+    "ogImageAlt": "FitMyCV — Générateur de CV optimisé par l'IA, compatible ATS",
     "twitterTitle": "Adaptez votre CV ATS à chaque offre d'emploi avec l'IA | FitMyCV",
-    "twitterDescription": "Générez un CV ATS optimisé depuis n'importe quelle offre grâce à notre extension Chrome et Firefox. Score de matching, mots-clés et export PDF/Word.",
-    "keywords": "CV, optimisation CV, IA, intelligence artificielle, ATS, compatible ATS, filtres ATS, générateur CV, adapter CV offre emploi, mots-clés CV, score matching CV, export PDF CV, candidature automatique, entretien, recruteur, FitMyCV"
+    "twitterDescription": "Optimisez votre CV avec l'IA pour chaque offre d'emploi. CV compatible ATS, score de correspondance, suggestions ciblées et export PDF/Word. Essai gratuit.",
+    "keywords": "CV, optimiser CV IA, générateur CV IA, CV compatible ATS, adapter CV offre emploi, créer CV IA, CV ATS, personnaliser CV offre emploi, CV sur mesure, optimisation CV, intelligence artificielle, générateur CV automatique, score de correspondance CV, mots-clés CV, export PDF CV, candidature automatique, entretien, recruteur, FitMyCV"
   },
   "Header": {
     "howItWorks": "Comment ça marche",
@@ -21,21 +21,21 @@
     "skipToContent": "Aller au contenu principal"
   },
   "Hero": {
-    "title": "Un CV qui fit chaque offre",
+    "title": "Optimisez votre CV pour chaque offre avec l'IA",
     "cta": "Commencer maintenant",
     "scrollMore": "EN SAVOIR PLUS",
     "phrases": [
-      "Collez le lien de l'offre, récupérez votre CV",
-      "Un format que les ATS acceptent",
-      "Zéro surprise : vous contrôlez chaque modification",
-      "Des suggestions ciblées pour monter votre score",
-      "10 offres, 10 CV, en un clic",
-      "De l'offre au CV en 30 secondes"
+      "Collez le lien de l'offre, récupérez un CV optimisé",
+      "Un CV compatible ATS, généré par l'IA",
+      "Vous contrôlez chaque modification de votre CV",
+      "Des suggestions ciblées pour optimiser votre score",
+      "10 offres, 10 CV sur mesure, en un clic",
+      "De l'offre au CV adapté en 30 secondes"
     ]
   },
   "HowItWorks": {
-    "intro": "FitMyCV adapte votre CV à chaque offre d'emploi en quelques secondes. Contenu reformulé, format ATS respecté — pour décrocher plus d'entretiens.",
-    "title": "Importez votre CV, collez une offre,\nrécupérez un CV optimisé.",
+    "intro": "FitMyCV utilise l'IA pour optimiser votre CV et l'adapter à chaque offre d'emploi. Contenu reformulé, format compatible ATS — pour décrocher plus d'entretiens.",
+    "title": "Importez votre CV, collez une offre,\nrécupérez un CV optimisé par l'IA.",
     "subtitle": "Un CV parfaitement adapté à chaque offre, prêt à envoyer.",
     "phase1": "Phase 1 — Import",
     "phase2": "Phase 2 — Intelligence IA",
@@ -110,8 +110,8 @@
     ]
   },
   "Features": {
-    "title": "Tout ce qu'il faut pour décrocher le poste",
-    "subtitle": "Conçu pour vos CVs. Pas un énième chatbot.",
+    "title": "Toutes les fonctionnalités pour un CV ATS optimisé",
+    "subtitle": "Un générateur de CV par IA, conçu pour vos candidatures. Pas un énième chatbot.",
     "card1Title": "Un CV taillé pour chaque offre",
     "card1Sub": "Collez un lien, l'IA fait le reste",
     "card1RefLabel": "CV de référence",
@@ -138,7 +138,7 @@
       "Méthodologie Scrum & sprints agiles",
       "Conception UI/UX responsive (React)"
     ],
-    "card6Title": "Votre score de matching",
+    "card6Title": "Votre score de correspondance",
     "card6Sub": "Mesurez l'impact de chaque optimisation",
     "card7Title": "L'offre décryptée pour vous",
     "card7Sub": "Skills, process, bénéfices extraits automatiquement",
@@ -230,11 +230,11 @@
     "title": "Questions\nfréquentes",
     "items": [
       {
-        "question": "L'IA va-t-elle remplacer mon contenu ?",
+        "question": "L'IA modifie-t-elle le contenu de mon CV ?",
         "answer": "Non. L'IA ne fabrique ni compétences ni expériences. Elle travaille exclusivement à partir des informations que vous fournissez : elle reformule, réorganise et optimise le contenu en tenant compte du format ATS. Le mode révision vous permet de valider chaque modification, et l'éditeur en ligne vous donne un contrôle complet sur le résultat final."
       },
       {
-        "question": "Mon CV sera-t-il compatible ATS ?",
+        "question": "Comment rendre mon CV compatible ATS ?",
         "answer": "Oui. La structure du CV, le choix des mots-clés et la hiérarchie des sections sont conçus pour être correctement lus par les systèmes de suivi des candidatures (ATS). Lorsque votre profil le justifie, l'IA intègre les termes pertinents de l'offre d'emploi pour renforcer la correspondance avec les filtres des recruteurs."
       },
       {
@@ -250,7 +250,7 @@
         "answer": "FitMyCV fonctionne avec toute offre d'emploi accessible publiquement, sans authentification requise : Indeed, Welcome to the Jungle, Pôle Emploi, et de nombreuses autres plateformes. Il suffit de coller l'URL de l'offre. Pour les sites nécessitant une connexion (LinkedIn, etc.), une extension navigateur est disponible — elle permet de générer un CV directement depuis la page de l'offre, à partir du CV source de votre choix."
       },
       {
-        "question": "En quoi FitMyCV est différent de ChatGPT ?",
+        "question": "Quelle différence entre un générateur de CV IA et ChatGPT ?",
         "answer": "Si vous demandez à ChatGPT d'adapter votre CV à une offre, il va souvent inventer : une compétence que vous n'avez pas, une tâche que vous n'avez jamais réalisée, juste pour coller au poste. Vous vous en rendez compte à la relecture — ou pire, en entretien. Ensuite il faut corriger, relancer, revérifier… à chaque candidature. FitMyCV s'appuie exclusivement sur votre parcours réel et vous montre chaque modification avant validation. Résultat : un CV fidèle, optimisé et prêt à envoyer — en quelques minutes, pas en quelques heures."
       },
       {
@@ -270,7 +270,7 @@
         "answer": "Oui. L'éditeur en ligne vous permet de modifier chaque section directement dans le navigateur. Le mode révision affiche les suggestions de l'IA sous forme de propositions que vous pouvez accepter ou rejeter individuellement avant de finaliser votre CV."
       },
       {
-        "question": "Qu'est-ce que le score de correspondance ?",
+        "question": "Comment fonctionne le score de correspondance CV / offre d'emploi ?",
         "answer": "C'est un indicateur en pourcentage qui mesure l'adéquation entre votre CV et une offre d'emploi. L'algorithme compare les compétences, l'expérience et les mots-clés de votre profil avec les exigences du poste. En plus du score, des recommandations ciblées vous indiquent comment améliorer la correspondance."
       }
     ]
@@ -279,7 +279,7 @@
     "title": "Avis clients"
   },
   "Footer": {
-    "tagline": "Votre CV, optimisé par l'IA",
+    "tagline": "Votre CV optimisé par l'IA, compatible ATS",
     "product": "Produit",
     "howItWorks": "Comment ça marche",
     "features": "Fonctionnalités",
@@ -591,13 +591,34 @@
   },
   "LegalLayout": {
     "terms": "Conditions Générales de Vente",
-    "privacy": "Politique de confidentialité"
+    "privacy": "Politique de confidentialité",
+    "contact": "Contact"
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez l'équipe FitMyCV pour toute question sur l'optimisation de CV par IA, la compatibilité ATS ou votre compte.",
+    "pageTitle": "Contactez-nous",
+    "intro": "Une question, un problème technique ou une suggestion ? Écrivez-nous via le formulaire ci-dessous.",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Décrivez votre demande...",
+    "submitBtn": "Envoyer",
+    "sending": "Envoi en cours...",
+    "successTitle": "Message envoyé !",
+    "successMsg": "Nous vous répondrons dans les plus brefs délais.",
+    "errorMsg": "Une erreur est survenue. Réessayez ou contactez-nous à contact@fitmycv.io.",
+    "rateLimitMsg": "Vous avez envoyé trop de messages. Réessayez dans une heure.",
+    "infoTitle": "Coordonnées",
+    "infoBox": "Codeglyph\nEmail : contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 Paris"
   },
   "LanguageSelector": {
     "label": "Langue"
   },
   "JsonLd": {
-    "softwareDescription": "Importez votre CV, collez le lien d'une offre d'emploi, et laissez l'IA optimiser votre candidature pour maximiser vos chances."
+    "softwareDescription": "Générateur de CV par IA : importez votre CV, collez le lien d'une offre d'emploi, et obtenez un CV ATS optimisé pour maximiser vos chances de décrocher un entretien."
   },
   "Showcase": {
     "title": "Workflow",
