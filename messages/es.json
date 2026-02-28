@@ -591,7 +591,27 @@
   },
   "LegalLayout": {
     "terms": "Condiciones Generales de Venta",
-    "privacy": "Política de privacidad"
+    "privacy": "Política de privacidad",
+    "contact": "Contacto"
+  },
+  "Contact": {
+    "metaTitle": "Contacto",
+    "metaDescription": "Contacta con el equipo de FitMyCV para cualquier pregunta sobre la optimización de CV con IA, compatibilidad ATS o tu cuenta.",
+    "pageTitle": "Contáctanos",
+    "intro": "¿Tienes una pregunta, un problema técnico o una sugerencia? Escríbenos a través del formulario.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Describe tu solicitud...",
+    "submitBtn": "Enviar",
+    "sending": "Enviando...",
+    "successTitle": "¡Mensaje enviado!",
+    "successMsg": "Te responderemos lo antes posible.",
+    "errorMsg": "Se produjo un error. Inténtalo de nuevo o contacta con nosotros en contact@fitmycv.io.",
+    "infoTitle": "Datos de contacto",
+    "infoBox": "Codeglyph\nEmail: contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 París"
   },
   "LanguageSelector": {
     "label": "Idioma"

@@ -591,7 +591,27 @@
   },
   "LegalLayout": {
     "terms": "Terms of Sale",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contact the FitMyCV team for any questions about AI resume optimization, ATS compatibility, or your account.",
+    "pageTitle": "Contact us",
+    "intro": "Have a question, a technical issue, or a suggestion? Write to us using the form below.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your request...",
+    "submitBtn": "Send",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successMsg": "We'll get back to you as soon as possible.",
+    "errorMsg": "An error occurred. Please try again or contact us at contact@fitmycv.io.",
+    "infoTitle": "Contact info",
+    "infoBox": "Codeglyph\nEmail: contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 Paris"
   },
   "LanguageSelector": {
     "label": "Language"
