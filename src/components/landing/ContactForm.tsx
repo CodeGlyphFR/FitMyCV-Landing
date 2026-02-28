@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "sending" | "success" | "error" | "ratelimited";
 
 export default function ContactForm() {
   const t = useTranslations("Contact");
@@ -28,6 +28,10 @@ export default function ContactForm() {
         }),
       });
 
+      if (res.status === 429) {
+        setStatus("ratelimited");
+        return;
+      }
       if (!res.ok) throw new Error();
       setStatus("success");
       form.reset();
@@ -90,7 +94,11 @@ export default function ContactForm() {
         <p className="contact-error">{t("errorMsg")}</p>
       )}
 
-      <button type="submit" className="contact-submit" disabled={status === "sending"}>
+      {status === "ratelimited" && (
+        <p className="contact-error">{t("rateLimitMsg")}</p>
+      )}
+
+      <button type="submit" className="contact-submit" disabled={status === "sending" || status === "ratelimited"}>
         {status === "sending" ? t("sending") : t("submitBtn")}
       </button>
     </form>

@@ -610,6 +610,7 @@
     "successTitle": "Nachricht gesendet!",
     "successMsg": "Wir werden uns so schnell wie möglich bei Ihnen melden.",
     "errorMsg": "Ein Fehler ist aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns unter contact@fitmycv.io.",
+    "rateLimitMsg": "Sie haben zu viele Nachrichten gesendet. Versuchen Sie es in einer Stunde erneut.",
     "infoTitle": "Kontaktdaten",
     "infoBox": "Codeglyph\nE-Mail: contact@fitmycv.io\n200 rue de la Croix Nivert, 75015 Paris"
   },

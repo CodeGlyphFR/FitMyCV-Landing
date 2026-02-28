@@ -1,8 +1,34 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
+const MAX_REQUESTS = 3;
+const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const rateMap = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (rateMap.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
+  rateMap.set(ip, timestamps);
+
+  if (timestamps.length >= MAX_REQUESTS) return true;
+  timestamps.push(now);
+  return false;
+}
+
 export async function POST(request: Request) {
   try {
+    const ip =
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+      request.headers.get("x-real-ip") ??
+      "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests" },
+        { status: 429 }
+      );
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
