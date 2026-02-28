@@ -11,6 +11,7 @@ const pages: {
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/support", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", changeFrequency: "monthly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "monthly", priority: 0.3 },
 ];
