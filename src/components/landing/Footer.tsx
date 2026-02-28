@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>{t("contact")}</h4>
-            <Link href="/contact">contact@fitmycv.io</Link>
+            <Link href="/contact">{t("contact")}</Link>
           </div>
         </div>
         <div className="footer-bottom">
