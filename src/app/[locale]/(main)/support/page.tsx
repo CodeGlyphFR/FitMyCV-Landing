@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { getAlternates, getBreadcrumbJsonLd } from "@/lib/seo";
+import { getAlternates, getBreadcrumbJsonLd, getOgUrl } from "@/lib/seo";
 import SvgDefs from "@/components/landing/SvgDefs";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("metaTitle"),
     description: t("metaDescription"),
     alternates: getAlternates(locale, "/support"),
+    openGraph: { url: getOgUrl(locale, "/support") },
   };
 }
 
