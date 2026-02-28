@@ -12,11 +12,16 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { name, email, message } = body as {
+    const { name, email, message, website } = body as {
       name: string;
       email: string;
       message: string;
+      website?: string;
     };
+
+    if (website) {
+      return NextResponse.json({ ok: true });
+    }
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
       return NextResponse.json(

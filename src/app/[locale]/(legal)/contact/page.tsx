@@ -44,17 +44,6 @@ export default async function ContactPage({
       <div className="legal-section">
         <ContactForm />
       </div>
-
-      <div className="legal-section">
-        <h2>{t("infoTitle")}</h2>
-        <div className="legal-infobox">
-          {t.rich("infoBox", {
-            contactEmail: (chunks) => (
-              <a href="mailto:contact@fitmycv.io">{chunks}</a>
-            ),
-          })}
-        </div>
-      </div>
     </>
   );
 }
