@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import FooterLanguageSelector from "./FooterLanguageSelector";
@@ -11,16 +12,16 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-main">
           <div className="footer-brand">
-            <img src="/icons/logo_small.png" alt="FitMyCV" height={32} loading="lazy" />
+            <Image src="/icons/logo_small.webp" alt="FitMyCV" width={108} height={32} loading="lazy" />
             <p>{t("tagline")}</p>
           </div>
           <div className="footer-col">
             <h4>{t("product")}</h4>
-            <Link href="/#howItWorks">{t("howItWorks")}</Link>
-            <Link href="/#features">{t("features")}</Link>
-            <Link href="/#pricing">{t("pricing")}</Link>
-            <Link href="/#faq">{t("faq")}</Link>
+            <Link href="/how-it-works">{t("howItWorks")}</Link>
+            <Link href="/features">{t("features")}</Link>
+            <Link href="/pricing">{t("pricing")}</Link>
             <Link href="/support">{t("support")}</Link>
+            <Link href="/blog">{t("blog")}</Link>
           </div>
           <div className="footer-col">
             <h4>{t("legal")}</h4>

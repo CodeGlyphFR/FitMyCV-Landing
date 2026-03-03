@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { usePathnameOverrides } from "@/components/PathnameOverrides";
 
 const FLAG_SRC: Record<string, string> = {
   fr: "/icons/fr.svg",
@@ -23,12 +24,14 @@ export default function FooterLanguageSelector() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const overrides = usePathnameOverrides();
 
   const switchLocale = useCallback(
     (newLocale: string) => {
-      router.replace(pathname, { locale: newLocale as "fr" | "en" | "es" | "de" });
+      const target = overrides[newLocale] ?? pathname;
+      router.replace(target, { locale: newLocale as "fr" | "en" | "es" | "de" });
     },
-    [router, pathname]
+    [router, pathname, overrides]
   );
 
   return (
