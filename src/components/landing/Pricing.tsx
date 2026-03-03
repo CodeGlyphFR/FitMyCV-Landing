@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePostHog } from 'posthog-js/react';
+import { Link } from '@/i18n/navigation';
 
 /* ── Data ── */
 
@@ -804,6 +805,9 @@ export default function Pricing() {
             </div>
           </div>
           <p className="launch-note">{t('launchNote')}</p>
+        </div>
+        <div className="section-learn-more">
+          <Link href="/pricing">{t('learnMore')}</Link>
         </div>
       </section>
     </>

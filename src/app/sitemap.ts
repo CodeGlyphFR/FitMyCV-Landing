@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getPathname } from "@/i18n/navigation";
+import { getAllSlugs, getAlternateBlogPaths } from "@/lib/blog";
 
 const base = "https://www.fitmycv.io";
 
@@ -10,27 +11,70 @@ const pages: {
   priority: number;
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
+  { path: "/how-it-works", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/features", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
   { path: "/support", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", changeFrequency: "monthly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "monthly", priority: 0.3 },
 ];
 
+function buildLocaleEntries(
+  path: Parameters<typeof getPathname>[0]["href"],
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"],
+  priority: number,
+  locales: readonly string[] = routing.locales,
+): MetadataRoute.Sitemap {
+  const alternates: Record<string, string> = {};
+  for (const locale of locales) {
+    alternates[locale] = `${base}${getPathname({ locale, href: path })}`;
+  }
+  return locales.map((locale) => ({
+    url: `${base}${getPathname({ locale, href: path })}`,
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+    alternates: { languages: alternates },
+  }));
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.flatMap((page) => {
-    // getPathname already includes the locale prefix for non-default locales
-    // (e.g. "/fr", "/fr/support") so we must NOT prepend /${locale} again.
-    const alternates: Record<string, string> = {};
-    for (const locale of routing.locales) {
-      alternates[locale] = `${base}${getPathname({ locale, href: page.path })}`;
+  const staticEntries = pages.flatMap((page) =>
+    buildLocaleEntries(page.path, page.changeFrequency, page.priority),
+  );
+
+  const blogSlugs = getAllSlugs();
+  const blogEntries = blogSlugs.map(({ locale, slug, translationKey }) => {
+    const blogPath = `/blog/${slug}`;
+    const url =
+      locale === routing.defaultLocale
+        ? `${base}${blogPath}`
+        : `${base}/${locale}${blogPath}`;
+
+    const languages: Record<string, string> = {};
+    if (translationKey) {
+      const altPaths = getAlternateBlogPaths(translationKey);
+      for (const loc of routing.locales) {
+        const altPath = altPaths[loc] ?? blogPath;
+        languages[loc] =
+          loc === routing.defaultLocale
+            ? `${base}${altPath}`
+            : `${base}/${loc}${altPath}`;
+      }
     }
 
-    return routing.locales.map((locale) => ({
-      url: `${base}${getPathname({ locale, href: page.path })}`,
+    return {
+      url,
       lastModified: new Date(),
-      changeFrequency: page.changeFrequency,
-      priority: page.priority,
-      alternates: { languages: alternates },
-    }));
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+      ...(Object.keys(languages).length > 0 && {
+        alternates: { languages },
+      }),
+    };
   });
+
+  return [...staticEntries, ...blogEntries];
 }

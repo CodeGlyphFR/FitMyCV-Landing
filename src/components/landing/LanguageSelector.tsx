@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { usePathnameOverrides } from "@/components/PathnameOverrides";
 
 const FLAG_SRC: Record<string, string> = {
   fr: "/icons/fr.svg",
@@ -23,6 +24,7 @@ export default function LanguageSelector() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const overrides = usePathnameOverrides();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,10 +44,11 @@ export default function LanguageSelector() {
 
   const switchLocale = useCallback(
     (newLocale: string) => {
-      router.replace(pathname, { locale: newLocale as "fr" | "en" | "es" | "de" });
+      const target = overrides[newLocale] ?? pathname;
+      router.replace(target, { locale: newLocale as "fr" | "en" | "es" | "de" });
       close();
     },
-    [router, pathname, close]
+    [router, pathname, overrides, close]
   );
 
   // Inactive locales ordered to the left of the active one

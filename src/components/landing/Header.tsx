@@ -1,15 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { usePostHog } from "posthog-js/react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSelector from "./LanguageSelector";
 import FooterLanguageSelector from "./FooterLanguageSelector";
 
 export default function Header() {
   const t = useTranslations("Header");
   const posthog = usePostHog();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const headerRef = useRef<HTMLElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -110,14 +113,13 @@ export default function Header() {
     <header className="site-header" id="siteHeader" ref={headerRef}>
       <div className="header-inner">
         <Link href="/" className="header-logo">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/logo_small.png" alt="FitMyCV" width={120} height={36} />
+          <Image src="/icons/logo_small.webp" alt="FitMyCV" width={120} height={36} priority />
         </Link>
         <nav className="header-nav">
-          <Link href="/#howItWorks">{t("howItWorks")}</Link>
-          <Link href="/#features">{t("features")}</Link>
-          <Link href="/#pricing">{t("pricing")}</Link>
-          <Link href="/#faq">{t("faq")}</Link>
+          <Link href={isHome ? "/#howItWorks" : "/how-it-works"}>{t("howItWorks")}</Link>
+          <Link href={isHome ? "/#features" : "/features"}>{t("features")}</Link>
+          <Link href={isHome ? "/#pricing" : "/pricing"}>{t("pricing")}</Link>
+          <Link href={isHome ? "/#faq" : "/support"}>{t("faq")}</Link>
         </nav>
         <div className="header-actions">
           <LanguageSelector />
@@ -143,10 +145,10 @@ export default function Header() {
           id="headerMobileMenu"
           ref={menuRef}
         >
-          <Link href="/#howItWorks">{t("howItWorks")}</Link>
-          <Link href="/#features">{t("features")}</Link>
-          <Link href="/#pricing">{t("pricing")}</Link>
-          <Link href="/#faq">{t("faq")}</Link>
+          <Link href={isHome ? "/#howItWorks" : "/how-it-works"}>{t("howItWorks")}</Link>
+          <Link href={isHome ? "/#features" : "/features"}>{t("features")}</Link>
+          <Link href={isHome ? "/#pricing" : "/pricing"}>{t("pricing")}</Link>
+          <Link href={isHome ? "/#faq" : "/support"}>{t("faq")}</Link>
           <FooterLanguageSelector />
           <div className="mobile-divider"></div>
           <a href="https://app.fitmycv.io" className="header-btn login" onClick={() => posthog?.capture('cta_click', { cta: 'login', location: 'header' })}>
