@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { getPathname } from "@/i18n/navigation";
-import { getAllSlugs } from "@/lib/blog";
+import { getAllSlugs, getAlternateBlogPaths } from "@/lib/blog";
 
 const base = "https://www.fitmycv.io";
 
@@ -46,17 +46,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const blogSlugs = getAllSlugs();
-  const blogEntries = blogSlugs.flatMap(({ locale, slug }) => {
-    const path = `/blog/${slug}`;
+  const blogEntries = blogSlugs.map(({ locale, slug, translationKey }) => {
+    const blogPath = `/blog/${slug}`;
     const url =
       locale === routing.defaultLocale
-        ? `${base}${path}`
-        : `${base}/${locale}${path}`;
+        ? `${base}${blogPath}`
+        : `${base}/${locale}${blogPath}`;
+
+    const languages: Record<string, string> = {};
+    if (translationKey) {
+      const altPaths = getAlternateBlogPaths(translationKey);
+      for (const loc of routing.locales) {
+        const altPath = altPaths[loc] ?? blogPath;
+        languages[loc] =
+          loc === routing.defaultLocale
+            ? `${base}${altPath}`
+            : `${base}/${loc}${altPath}`;
+      }
+    }
+
     return {
       url,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.6,
+      ...(Object.keys(languages).length > 0 && {
+        alternates: { languages },
+      }),
     };
   });
 

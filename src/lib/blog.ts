@@ -87,8 +87,8 @@ export function getAlternateBlogPaths(
   return result;
 }
 
-export function getAllSlugs(): { locale: string; slug: string }[] {
-  const results: { locale: string; slug: string }[] = [];
+export function getAllSlugs(): { locale: string; slug: string; translationKey?: string }[] {
+  const results: { locale: string; slug: string; translationKey?: string }[] = [];
   const locales = ["fr", "en", "es", "de"];
 
   for (const locale of locales) {
@@ -96,7 +96,13 @@ export function getAllSlugs(): { locale: string; slug: string }[] {
     if (!fs.existsSync(dir)) continue;
     for (const filename of fs.readdirSync(dir)) {
       if (filename.endsWith(".md")) {
-        results.push({ locale, slug: filename.replace(/\.md$/, "") });
+        const raw = fs.readFileSync(path.join(dir, filename), "utf-8");
+        const { data } = matter(raw);
+        results.push({
+          locale,
+          slug: filename.replace(/\.md$/, ""),
+          translationKey: data.translationKey,
+        });
       }
     }
   }
