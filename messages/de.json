@@ -44,6 +44,7 @@
     "stepPrev": "Vorheriger Schritt",
     "stepNext": "Nächster Schritt",
     "stepN": "Schritt {step}",
+    "learnMore": "Mehr erfahren →",
     "steps": [
       {
         "label": "PDF-Import",
@@ -195,7 +196,8 @@
     "card16Title": "Browser-Erweiterung",
     "card16Sub": "Starten Sie eine Generierung, ohne Ihren Tab zu verlassen",
     "card16CvLabel": "Full-Stack JS-Entwickler",
-    "card16GenBtn": "Meinen Lebenslauf generieren"
+    "card16GenBtn": "Meinen Lebenslauf generieren",
+    "learnMore": "Alle Funktionen ansehen →"
   },
   "Pricing": {
     "title": "<highlight>Kein Abo.</highlight>\nZahlen Sie nur, was Sie nutzen.",
@@ -224,7 +226,8 @@
     "launchRemaining": "<green>{remaining}</green>/{max} Plätze verfügbar",
     "launchNoteAsterisk": "*Code nur für den ersten Kauf gültig",
     "ctaBtn": "Kostenlos starten",
-    "launchNote": "15 Gratis-Credits · Keine Kreditkarte erforderlich"
+    "launchNote": "15 Gratis-Credits · Keine Kreditkarte erforderlich",
+    "learnMore": "Detaillierte Preise ansehen →"
   },
   "FAQ": {
     "title": "Häufig gestellte\nFragen",
@@ -286,6 +289,7 @@
     "pricing": "Preise",
     "faq": "FAQ",
     "support": "Support",
+    "blog": "Blog",
     "legal": "Rechtliches",
     "terms": "AGB",
     "privacy": "Datenschutz",
@@ -627,5 +631,141 @@
     "stepsSubtitle": "Jeder Schritt läuft unabhängig in einer Schleife.",
     "footer": "FitMyCV.io — Internes Showcase",
     "stepLabels": ["Lebenslauf-Import", "KI-Generierung", "Review-Modus", "Score-Berechnung", "Lebenslauf-Optimierung", "Optimierungs-Review", "Export PDF/Word"]
+  },
+  "HowItWorksPage": {
+    "metaTitle": "So optimieren Sie Ihren Lebenslauf mit KI — Anleitung in 7 Schritten",
+    "metaDescription": "Erfahren Sie, wie FitMyCV KI nutzt, um Ihren Lebenslauf in 7 Schritten an jede Stellenanzeige anzupassen: Import, Analyse, Optimierung und PDF/Word-Export.",
+    "pageTitle": "So funktioniert's",
+    "pageSubtitle": "Vom Import Ihres Lebenslaufs bis zum optimierten Export — entdecken Sie den vollständigen Prozess in 7 Schritten.",
+    "intro": "FitMyCV nutzt künstliche Intelligenz, um Ihren Lebenslauf zu analysieren und an jede Stellenanzeige anzupassen. Der Prozess ist einfach, schnell und Sie behalten die volle Kontrolle über jede Änderung. So verwandeln Sie Ihren Lebenslauf in ein leistungsstarkes Bewerbungstool.",
+    "step1Title": "Schritt 1 — Lebenslauf importieren",
+    "step1P1": "Beginnen Sie mit dem Import Ihres bestehenden Lebenslaufs im PDF-Format. Ziehen Sie die Datei einfach per Drag & Drop oder wählen Sie sie von Ihrem Computer aus. Die KI analysiert automatisch die Struktur Ihres Dokuments und extrahiert Ihre Kompetenzen, Berufserfahrung, Ausbildung und Kontaktdaten.",
+    "step1P2": "Das System erkennt die verschiedenen Abschnitte Ihres Lebenslaufs, auch wenn sie in einem unkonventionellen Format präsentiert werden. Ihre Daten werden strukturiert und sind in wenigen Sekunden zur Optimierung bereit.",
+    "step1P3": "Nach dem Import finden Sie Ihren gesamten Werdegang in einem intuitiven Online-Editor. Sie können überprüfen, ob alle Informationen korrekt extrahiert wurden, bevor Sie zum nächsten Schritt übergehen.",
+    "step2Title": "Schritt 2 — KI-Generierung",
+    "step2P1": "Fügen Sie den Link der Stellenanzeige ein, auf die Sie sich bewerben möchten. Die KI analysiert den Inhalt der Anzeige: geforderte Kompetenzen, genannte Technologien, erwartete Soft Skills und spezifische Stellenanforderungen. Auf dieser Grundlage erstellt sie eine auf diese Stelle zugeschnittene Version Ihres Lebenslaufs.",
+    "step2P2": "Sie können bis zu 10 Stellenanzeigen gleichzeitig bearbeiten. FitMyCV erstellt dann 10 Versionen Ihres Lebenslaufs, jede für eine andere Stelle optimiert. Die Multi-Anzeigen-Verarbeitung erfolgt parallel für maximale Zeitersparnis.",
+    "step2P3": "Die KI erfindet niemals fiktive Inhalte. Sie formuliert um, ordnet neu und hebt Ihre tatsächlichen Kompetenzen hervor, basierend auf dem, was der Recruiter sucht. Ihr Werdegang bleibt realitätsgetreu.",
+    "step3Title": "Schritt 3 — Änderungen überprüfen",
+    "step3P1": "Jede von der KI vorgeschlagene Änderung wird als Diff dargestellt, ähnlich wie in einem Code-Review-Tool. Sie sehen klar das Vorher und Nachher jedes geänderten Abschnitts: Erfahrung, Kompetenzen, professionelle Zusammenfassung.",
+    "step3P2": "Akzeptieren, ablehnen oder passen Sie jeden Vorschlag einzeln an. Sie behalten die volle Kontrolle über den endgültigen Inhalt Ihres Lebenslaufs. Keine Änderung wird ohne Ihre ausdrückliche Genehmigung übernommen.",
+    "step4Title": "Schritt 4 — Matching-Score",
+    "step4P1": "Ein Algorithmus bewertet die Übereinstimmung zwischen Ihrem Lebenslauf und der Ziel-Stellenanzeige. Der Score berücksichtigt technische Kompetenzen, relevante Schlüsselwörter, ATS-Struktur und die Gesamtpassung Ihres Profils zu den Stellenanforderungen.",
+    "step4P2": "Der Score wird als Prozentsatz mit einer Aufschlüsselung nach Kategorien angezeigt. Sie sehen genau, welche Aspekte Ihres Lebenslaufs zur Anzeige passen und welche verbessert werden können. Jede Optimierung aktualisiert den Score in Echtzeit.",
+    "step5Title": "Schritt 5 — Gezielte Optimierung",
+    "step5P1": "Die KI liefert konkrete Empfehlungen zur Verbesserung Ihres Matching-Scores. Jeder Vorschlag ist nach Auswirkung klassifiziert (hoch, mittel, niedrig) und erklärt genau, was in Ihrem Lebenslauf hinzugefügt oder geändert werden sollte.",
+    "step5P2": "Wählen Sie die Vorschläge aus, die zu Ihrem tatsächlichen Profil passen, und fügen Sie Ihre eigenen Anmerkungen hinzu. Die KI generiert dann die betroffenen Abschnitte mit Ihren Entscheidungen neu. Ihr Matching-Score steigt mit jeder angewandten Optimierung.",
+    "step6Title": "Schritt 6 — Finale Überprüfung",
+    "step6P1": "Überprüfen Sie alle angewandten Optimierungen und verifizieren Sie das Endergebnis. Ihr Matching-Score spiegelt alle vorgenommenen Verbesserungen wider. Sie können jederzeit noch Abschnitte über den Online-Editor anpassen.",
+    "step6P2": "Dieser Schritt stellt sicher, dass Ihr Lebenslauf genau Ihren Vorstellungen entspricht, bevor Sie ihn exportieren. Jede Änderung ist nachvollziehbar und rückgängig zu machen.",
+    "step7Title": "Schritt 7 — PDF / Word Export",
+    "step7P1": "Sehen Sie eine Vorschau Ihres fertigen Lebenslaufs im gewünschten Format. Der Export ist in PDF und Word (.docx) verfügbar, bereit zum Anhängen an eine Bewerbung oder zum Hochladen auf eine Jobplattform.",
+    "step7P2": "Das Format ist für ATS-Systeme optimiert: klares Layout, lesbare Schriften, Standardstruktur. Ihr Lebenslauf besteht automatisierte Filter und bleibt gleichzeitig elegant und professionell für menschliche Recruiter.",
+    "ctaTitle": "Bereit, Ihren Lebenslauf zu optimieren?",
+    "ctaText": "Erstellen Sie Ihr kostenloses Konto und erhalten Sie 15 Credits, um alle Funktionen zu testen.",
+    "ctaButton": "Kostenlos starten"
+  },
+  "FeaturesPage": {
+    "metaTitle": "Funktionen — KI-Lebenslauf-Generator mit ATS-Optimierung",
+    "metaDescription": "Entdecken Sie alle FitMyCV-Funktionen: KI-Lebenslauf-Generierung, ATS-Matching-Score, gezielte Optimierung, PDF/Word-Export und mehr.",
+    "pageTitle": "Alle Funktionen",
+    "pageSubtitle": "Ein KI-Lebenslauf-Generator, der für Ihre Bewerbungen entwickelt wurde. Jede Funktion wurde konzipiert, um Ihnen Zeit zu sparen und mehr Vorstellungsgespräche zu erhalten.",
+    "category1Title": "Import & Generierung",
+    "category1Desc": "Von Ihrem bestehenden Lebenslauf zu einer optimierten Version für jede Stellenanzeige.",
+    "feat1Title": "Intelligenter PDF-Import",
+    "feat1Desc": "Ziehen Sie Ihren PDF-Lebenslauf per Drag & Drop. Die KI extrahiert automatisch Ihre Kompetenzen, Berufserfahrung, Ausbildung und Kontaktdaten. Die Struktur Ihres Dokuments wird in Sekunden analysiert und in bearbeitbare Daten umgewandelt.",
+    "feat2Title": "Multi-Anzeigen-Generierung",
+    "feat2Desc": "Fügen Sie bis zu 10 Stellenanzeigen-Links hinzu und generieren Sie ebenso viele angepasste Lebenslauf-Versionen parallel. Jede Version wird für eine bestimmte Anzeige optimiert, mit den erwarteten Schlüsselwörtern und der vom Recruiter gewünschten Struktur.",
+    "feat3Title": "Generierung nach Jobtitel",
+    "feat3Desc": "Kein Link? Geben Sie einfach einen Jobtitel ein und die KI generiert einen Lebenslauf, der auf das typische Profil für diese Position zugeschnitten ist. Ideal für Initiativbewerbungen.",
+    "feat4Title": "Browser-Erweiterung",
+    "feat4Desc": "Starten Sie eine Lebenslauf-Generierung direkt von der Stellenanzeigen-Seite, ohne Ihren Tab zu verlassen. Kompatibel mit Chrome, Edge, Brave und Firefox. Perfekt für Seiten, die eine Anmeldung erfordern, wie LinkedIn.",
+    "category2Title": "Analyse & Optimierung",
+    "category2Desc": "Die KI analysiert, vergleicht und führt Sie, um Ihre Chancen zu maximieren.",
+    "feat5Title": "Matching-Score",
+    "feat5Desc": "Ein Prozentsatz misst die Übereinstimmung zwischen Ihrem Lebenslauf und der Zielanzeige. Der Score schlüsselt die Übereinstimmung nach Kategorien auf: technische Kompetenzen, Erfahrung, ATS-Schlüsselwörter. Jede Optimierung aktualisiert den Score in Echtzeit.",
+    "feat6Title": "ATS-Optimierung",
+    "feat6Desc": "Die KI formuliert Ihre Erfahrungen mit den von Applicant Tracking Systems (ATS) erwarteten Begriffen um. Struktur, Schlüsselwörter und Abschnittshierarchie werden optimiert, um automatisierte Filter zu bestehen.",
+    "feat7Title": "Stellenanzeigen-Analyse",
+    "feat7Desc": "Die Anzeige wird automatisch analysiert: geforderte Kompetenzen, genannte Technologien, Vorteile, Bewerbungsprozess. Sie sehen genau, was der Recruiter sucht.",
+    "feat8Title": "Gezielte Vorschläge",
+    "feat8Desc": "Die KI sagt Ihnen konkret, was Sie verbessern sollten, um Ihren Score zu erhöhen. Jede Empfehlung ist nach Auswirkung klassifiziert und erklärt genau, was hinzugefügt oder geändert werden sollte. Wählen Sie die aus, die zu Ihrem echten Profil passen.",
+    "category3Title": "Kontrolle & Bearbeitung",
+    "category3Desc": "Sie behalten die volle Kontrolle über jede Änderung.",
+    "feat9Title": "Review-Modus",
+    "feat9Desc": "Jede KI-Änderung wird als Diff präsentiert. Akzeptieren, ablehnen oder passen Sie jeden Vorschlag einzeln an. Keine Änderung wird ohne Ihre ausdrückliche Genehmigung übernommen.",
+    "feat10Title": "Online-Editor",
+    "feat10Desc": "Bearbeiten Sie jeden Abschnitt Ihres Lebenslaufs direkt im Browser. Erfahrung, Kompetenzen, Ausbildung, Zusammenfassung — alles ist mit einem Klick bearbeitbar, mit sofortiger Score-Aktualisierung.",
+    "feat11Title": "Versionshistorie",
+    "feat11Desc": "Reisen Sie in der Zeit zurück und stellen Sie eine frühere Version Ihres Lebenslaufs mit einem Klick wieder her. Jede Änderung wird automatisch gespeichert.",
+    "category4Title": "Export & Mehrsprachigkeit",
+    "category4Desc": "Exportieren und übersetzen Sie Ihren Lebenslauf in Format und Sprache Ihrer Wahl.",
+    "feat12Title": "PDF & Word Export",
+    "feat12Desc": "Exportieren Sie Ihren fertigen Lebenslauf als PDF oder Word (.docx). Das Format ist für ATS optimiert und bleibt dabei professionell. Bereit zum Anhängen an eine Bewerbung oder zum Hochladen auf eine Jobplattform.",
+    "feat13Title": "Übersetzung in 4 Sprachen",
+    "feat13Desc": "Übersetzen Sie Ihren Lebenslauf mit einem Klick ins Französische, Englische, Spanische oder Deutsche. Der Fachvokabular wird für jede Sprache angepasst, für ein natürliches, idiomatisches Ergebnis.",
+    "feat14Title": "Hintergrundaufgaben",
+    "feat14Desc": "Starten Sie eine Generierung oder Übersetzung und surfen Sie weiter. Ihre Aufgaben werden im Hintergrund ausgeführt und Sie werden benachrichtigt, sobald sie fertig sind.",
+    "ctaTitle": "Bereit, Ihren Lebenslauf zu optimieren?",
+    "ctaText": "15 kostenlose Credits bei der Anmeldung. Keine Kreditkarte erforderlich.",
+    "ctaButton": "Kostenlos starten"
+  },
+  "PricingPage": {
+    "metaTitle": "Preise — Credits und Pakete zur Lebenslauf-Optimierung",
+    "metaDescription": "Entdecken Sie die Preise von FitMyCV: kein Abonnement, zahlen Sie nur, was Sie nutzen. 15 kostenlose Credits bei der Anmeldung. Pakete von 15 bis 150 Credits.",
+    "pageTitle": "Einfache, transparente Preise",
+    "pageSubtitle": "Kein Abonnement. Keine versteckten Kosten. Zahlen Sie nur, was Sie nutzen.",
+    "creditSystemTitle": "Wie funktionieren die Credits?",
+    "creditSystemP1": "FitMyCV funktioniert mit einem Credit-System. Jede KI-Aktion verbraucht eine bestimmte Anzahl von Credits. Bei der Anmeldung erhalten Sie 15 kostenlose Credits, um alle Funktionen zu testen — keine Kreditkarte erforderlich.",
+    "creditSystemP2": "Credits verfallen nie und bleiben gültig, solange Ihr Konto aktiv ist. Wenn Ihre Credits aufgebraucht sind, können Sie nach Bedarf weitere kaufen.",
+    "creditTableTitle": "Credit-Kosten pro Funktion",
+    "creditTableHeaders": ["Funktion", "Credits"],
+    "creditTableRows": [
+      ["Import und Extraktion des Lebenslaufs aus PDF", "2"],
+      ["KI-Lebenslauf-Generierung (pro Anzeige)", "3"],
+      ["Matching-Score Lebenslauf/Anzeige", "1"],
+      ["Gezielte Lebenslauf-Optimierung", "2"],
+      ["PDF- oder Word-Export", "1"],
+      ["Lebenslauf-Übersetzung", "3"]
+    ],
+    "packsTitle": "Credit-Pakete",
+    "packsSubtitle": "Wählen Sie das Paket, das zu Ihren Bedürfnissen passt.",
+    "packStarter": "Starter",
+    "packPro": "Pro",
+    "packExpert": "Expert",
+    "packUltimate": "Ultimate",
+    "perCredit": "/Credit",
+    "faqTitle": "Häufige Fragen zu Preisen",
+    "faq": [
+      {
+        "question": "Verfallen die Credits?",
+        "answer": "Nein. Ihre Credits bleiben gültig, solange Ihr Konto aktiv ist. Keine zeitliche Begrenzung."
+      },
+      {
+        "question": "Kann ich kostenlos testen?",
+        "answer": "Ja. Sie erhalten 15 kostenlose Credits bei der Kontoerstellung, ohne Kreditkarte. Das reicht, um mehrere Lebensläufe zu generieren und zu optimieren."
+      },
+      {
+        "question": "Gibt es ein Abonnement?",
+        "answer": "Nein. FitMyCV funktioniert ohne Abonnement. Sie kaufen Credits nach Bedarf, wann Sie sie brauchen. Keine Verpflichtung."
+      },
+      {
+        "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+        "answer": "Zahlungen werden von Stripe gesichert. Wir akzeptieren Kreditkarten (Visa, Mastercard), Apple Pay, Google Pay und weitere Zahlungsmethoden je nach Standort."
+      }
+    ],
+    "ctaTitle": "Starten Sie mit 15 kostenlosen Credits",
+    "ctaText": "Keine Kreditkarte erforderlich. Testen Sie alle Funktionen.",
+    "ctaButton": "Konto erstellen"
+  },
+  "Blog": {
+    "metaTitle": "Blog — Tipps und Tricks zur Lebenslauf-Optimierung",
+    "metaDescription": "Lesen Sie unsere Artikel und Anleitungen zur Optimierung Ihres Lebenslaufs mit KI, zum Verständnis von ATS-Systemen und für mehr Vorstellungsgespräche.",
+    "pageTitle": "Blog",
+    "pageSubtitle": "Tipps, Anleitungen und Neuigkeiten zur Optimierung Ihrer Bewerbungen.",
+    "readMore": "Artikel lesen",
+    "publishedOn": "Veröffentlicht am",
+    "backToBlog": "Zurück zum Blog",
+    "noPosts": "Noch keine Artikel."
   }
 }

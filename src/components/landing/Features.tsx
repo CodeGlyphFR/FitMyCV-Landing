@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 /* ── Flag data URIs ── */
 const FLAG_FR =
@@ -1626,6 +1627,9 @@ export default function Features() {
 
           </div>
 
+        </div>
+        <div className="section-learn-more">
+          <Link href="/features">{t("learnMore")}</Link>
         </div>
       </section>
     </>

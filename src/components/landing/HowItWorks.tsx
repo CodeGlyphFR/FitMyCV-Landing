@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const BASE_W = 960;
 const BASE_H = 600;
@@ -516,6 +517,9 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="section-learn-more">
+        <Link href="/how-it-works">{t('learnMore')}</Link>
       </div>
     </section>
   );

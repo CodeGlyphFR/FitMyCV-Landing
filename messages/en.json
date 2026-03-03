@@ -44,6 +44,7 @@
     "stepPrev": "Previous step",
     "stepNext": "Next step",
     "stepN": "Step {step}",
+    "learnMore": "Learn more →",
     "steps": [
       {
         "label": "PDF Import",
@@ -195,7 +196,8 @@
     "card16Title": "Browser extension",
     "card16Sub": "Start a generation without leaving your tab",
     "card16CvLabel": "Full-Stack JS Dev",
-    "card16GenBtn": "Generate my resume"
+    "card16GenBtn": "Generate my resume",
+    "learnMore": "See all features →"
   },
   "Pricing": {
     "title": "<highlight>No subscription.</highlight>\nPay for what you use.",
@@ -224,7 +226,8 @@
     "launchRemaining": "<green>{remaining}</green>/{max} spots remaining",
     "launchNoteAsterisk": "*Code valid for first purchase only",
     "ctaBtn": "Get started for free",
-    "launchNote": "15 free credits · No credit card required"
+    "launchNote": "15 free credits · No credit card required",
+    "learnMore": "See detailed pricing →"
   },
   "FAQ": {
     "title": "Frequently\nasked questions",
@@ -286,6 +289,7 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "support": "Support",
+    "blog": "Blog",
     "legal": "Legal",
     "terms": "Terms of Sale",
     "privacy": "Privacy Policy",
@@ -627,5 +631,141 @@
     "stepsSubtitle": "Each step loops independently.",
     "footer": "FitMyCV.io — Internal Showcase",
     "stepLabels": ["Resume Import", "AI Generation", "Review Mode", "Score Calculation", "Resume Optimization", "Optimization Review", "PDF/Word Export"]
+  },
+  "HowItWorksPage": {
+    "metaTitle": "How to Optimize Your Resume with AI — 7-Step Guide",
+    "metaDescription": "Learn how FitMyCV uses AI to tailor your resume to any job posting in 7 steps: import, analysis, optimization, and PDF/Word export.",
+    "pageTitle": "How It Works",
+    "pageSubtitle": "From importing your resume to exporting an optimized version, discover the complete 7-step process.",
+    "intro": "FitMyCV uses artificial intelligence to analyze your resume and tailor it to each job posting. The process is simple, fast, and you stay in full control of every change. Here's how to transform your resume into a powerful application tool.",
+    "step1Title": "Step 1 — Import Your Resume",
+    "step1P1": "Start by importing your existing resume as a PDF. Simply drag and drop your file or select it from your computer. The AI automatically analyzes the structure of your document and extracts your skills, work experience, education, and contact information.",
+    "step1P2": "The system recognizes different sections of your resume, even if they're presented in an unconventional format. Your data is structured and ready to be optimized in just seconds.",
+    "step1P3": "Once the import is complete, you'll find your entire background in an intuitive online editor. You can verify that all information was correctly extracted before moving to the next step.",
+    "step2Title": "Step 2 — AI Generation",
+    "step2P1": "Paste the link to the job posting you're targeting. The AI analyzes the posting's content: required skills, mentioned technologies, expected soft skills, and specific job requirements. Based on this analysis, it generates a version of your resume tailored to that specific posting.",
+    "step2P2": "You can target up to 10 job postings simultaneously. FitMyCV then generates 10 versions of your resume, each optimized for a different posting. Multi-posting processing runs in parallel for maximum time savings.",
+    "step2P3": "The AI never fabricates fictional content. It rephrases, reorganizes, and highlights your real skills based on what the recruiter is looking for. Your background remains true to reality.",
+    "step3Title": "Step 3 — Review Changes",
+    "step3P1": "Each AI-suggested change is presented as a diff, similar to a code review tool. You clearly see the before and after for each modified section: experience, skills, professional summary.",
+    "step3P2": "Accept, reject, or adjust each suggestion individually. You maintain full control over the final content of your resume. No change is applied without your explicit approval.",
+    "step4Title": "Step 4 — Match Score",
+    "step4P1": "An algorithm evaluates the match between your resume and the targeted job posting. The score takes into account technical skills, relevant keywords, ATS structure, and the overall fit of your profile with the job requirements.",
+    "step4P2": "The score is displayed as a percentage with a category-by-category breakdown. You see exactly which aspects of your resume match the posting and which areas can be improved. Each optimization updates the score in real time.",
+    "step5Title": "Step 5 — Targeted Optimization",
+    "step5P1": "The AI provides concrete recommendations to improve your match score. Each suggestion is ranked by impact (high, medium, low) and explains precisely what to add or modify in your resume.",
+    "step5P2": "Select the suggestions that match your real profile and add your own notes. The AI then regenerates the relevant sections incorporating your choices. Your match score increases with each applied optimization.",
+    "step6Title": "Step 6 — Final Review",
+    "step6P1": "Review all applied optimizations and verify the final result. Your match score reflects all the improvements made. You can still adjust any section via the online editor.",
+    "step6P2": "This step lets you make sure your resume is exactly how you want it before export. Every change is traceable and reversible.",
+    "step7Title": "Step 7 — PDF / Word Export",
+    "step7P1": "Preview your finalized resume in the format of your choice. Export is available in PDF and Word (.docx), ready to attach to an application or upload to a job platform.",
+    "step7P2": "The format is optimized for ATS systems: clean layout, readable fonts, standard structure. Your resume passes automated filters while remaining elegant and professional for human recruiters.",
+    "ctaTitle": "Ready to optimize your resume?",
+    "ctaText": "Create your free account and get 15 credits to test all features.",
+    "ctaButton": "Get started for free"
+  },
+  "FeaturesPage": {
+    "metaTitle": "Features — AI Resume Generator with ATS Optimization",
+    "metaDescription": "Discover all FitMyCV features: AI resume generation, ATS match score, targeted optimization, PDF/Word export, and more.",
+    "pageTitle": "All Features",
+    "pageSubtitle": "An AI resume generator built for your job applications. Every feature is designed to save you time and land more interviews.",
+    "category1Title": "Import & Generation",
+    "category1Desc": "From your existing resume to an optimized version for every job posting.",
+    "feat1Title": "Smart PDF Import",
+    "feat1Desc": "Drag and drop your PDF resume. The AI automatically extracts your skills, work experience, education, and contact details. Your document's structure is analyzed and converted into editable data in seconds.",
+    "feat2Title": "Multi-Posting Generation",
+    "feat2Desc": "Add up to 10 job posting links and generate as many tailored resume versions in parallel. Each version is optimized for a specific posting, with the keywords and structure expected by the recruiter.",
+    "feat3Title": "Generation by Job Title",
+    "feat3Desc": "No link? Simply enter a job title and the AI generates a resume tailored to the typical profile sought for that role. Perfect for spontaneous applications.",
+    "feat4Title": "Browser Extension",
+    "feat4Desc": "Launch a resume generation directly from the job posting page, without leaving your tab. Compatible with Chrome, Edge, Brave, and Firefox. Perfect for sites requiring authentication like LinkedIn.",
+    "category2Title": "Analysis & Optimization",
+    "category2Desc": "The AI analyzes, compares, and guides you to maximize your chances.",
+    "feat5Title": "Match Score",
+    "feat5Desc": "A percentage measures the fit between your resume and the targeted posting. The score breaks down the match by category: technical skills, experience, ATS keywords. Each optimization updates the score in real time.",
+    "feat6Title": "ATS Optimization",
+    "feat6Desc": "The AI rephrases your experiences with the terms expected by Applicant Tracking Systems (ATS). Structure, keywords, and section hierarchy are optimized to pass automated filters.",
+    "feat7Title": "Job Posting Analysis",
+    "feat7Desc": "The posting is automatically decoded: required skills, mentioned technologies, benefits, recruitment process. You see exactly what the recruiter is looking for.",
+    "feat8Title": "Targeted Suggestions",
+    "feat8Desc": "The AI tells you precisely what to improve to boost your score. Each recommendation is ranked by impact and explains exactly what to add or change. Select the ones that match your real profile.",
+    "category3Title": "Control & Editing",
+    "category3Desc": "You stay in full control of every change.",
+    "feat9Title": "Review Mode",
+    "feat9Desc": "Every AI change is presented as a diff. Accept, reject, or adjust each suggestion individually. No change is applied without your explicit approval.",
+    "feat10Title": "Online Editor",
+    "feat10Desc": "Edit every section of your resume directly in the browser. Experience, skills, education, summary — everything is editable in one click, with instant score updates.",
+    "feat11Title": "Version History",
+    "feat11Desc": "Travel back in time and restore a previous version of your resume in one click. Every change is automatically saved.",
+    "category4Title": "Export & Multilingual",
+    "category4Desc": "Export and translate your resume in the format and language of your choice.",
+    "feat12Title": "PDF & Word Export",
+    "feat12Desc": "Export your finalized resume as PDF or Word (.docx). The format is optimized for ATS while remaining professional. Ready to attach to an application or upload to a job platform.",
+    "feat13Title": "Translation in 4 Languages",
+    "feat13Desc": "Translate your resume into French, English, Spanish, or German in one click. Professional vocabulary is adapted for each language for a natural, idiomatic result.",
+    "feat14Title": "Background Tasks",
+    "feat14Desc": "Launch a generation or translation and keep browsing. Your tasks run in the background and you're notified once they're done.",
+    "ctaTitle": "Ready to optimize your resume?",
+    "ctaText": "15 free credits on sign-up. No credit card required.",
+    "ctaButton": "Get started for free"
+  },
+  "PricingPage": {
+    "metaTitle": "Pricing — Credits and Packs for Resume Optimization",
+    "metaDescription": "Discover FitMyCV pricing: no subscription, pay only for what you use. 15 free credits on sign-up. Packs from 15 to 150 credits.",
+    "pageTitle": "Simple, Transparent Pricing",
+    "pageSubtitle": "No subscription. No hidden fees. Pay only for what you use.",
+    "creditSystemTitle": "How Do Credits Work?",
+    "creditSystemP1": "FitMyCV works with a credit system. Each AI action consumes a set number of credits. On sign-up, you receive 15 free credits to test all features — no credit card required.",
+    "creditSystemP2": "Credits never expire and remain valid as long as your account is active. When your credits run out, you can purchase more on demand based on your needs.",
+    "creditTableTitle": "Credit Cost per Feature",
+    "creditTableHeaders": ["Feature", "Credits"],
+    "creditTableRows": [
+      ["Resume import and extraction from PDF", "2"],
+      ["AI resume generation (per posting)", "3"],
+      ["Resume-posting match score", "1"],
+      ["Targeted resume optimization", "2"],
+      ["PDF or Word export", "1"],
+      ["Resume translation", "3"]
+    ],
+    "packsTitle": "Credit Packs",
+    "packsSubtitle": "Choose the pack that fits your needs.",
+    "packStarter": "Starter",
+    "packPro": "Pro",
+    "packExpert": "Expert",
+    "packUltimate": "Ultimate",
+    "perCredit": "/credit",
+    "faqTitle": "Pricing FAQ",
+    "faq": [
+      {
+        "question": "Do credits expire?",
+        "answer": "No. Your credits remain valid as long as your account is active. No time limit."
+      },
+      {
+        "question": "Can I try for free?",
+        "answer": "Yes. You receive 15 free credits when you create your account, with no credit card required. That's enough to generate and optimize several resumes."
+      },
+      {
+        "question": "Is there a subscription?",
+        "answer": "No. FitMyCV works without a subscription. You buy credits on demand, when you need them. No commitment."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "Payments are secured by Stripe. We accept credit cards (Visa, Mastercard), Apple Pay, Google Pay, and other payment methods depending on your location."
+      }
+    ],
+    "ctaTitle": "Start with 15 free credits",
+    "ctaText": "No credit card required. Test all features.",
+    "ctaButton": "Create my account"
+  },
+  "Blog": {
+    "metaTitle": "Blog — Tips and Tricks to Optimize Your Resume",
+    "metaDescription": "Read our articles and guides on optimizing your resume with AI, understanding ATS systems, and landing more interviews.",
+    "pageTitle": "Blog",
+    "pageSubtitle": "Tips, guides, and news to optimize your job applications.",
+    "readMore": "Read article",
+    "publishedOn": "Published on",
+    "backToBlog": "Back to blog",
+    "noPosts": "No articles yet."
   }
 }

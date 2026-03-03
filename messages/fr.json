@@ -44,6 +44,7 @@
     "stepPrev": "Étape précédente",
     "stepNext": "Étape suivante",
     "stepN": "Étape {step}",
+    "learnMore": "En savoir plus →",
     "steps": [
       {
         "label": "Import PDF",
@@ -195,7 +196,8 @@
     "card16Title": "Extension navigateur",
     "card16Sub": "Lancez une génération sans quitter votre onglet",
     "card16CvLabel": "Dev Full-Stack JS",
-    "card16GenBtn": "Générer mon CV"
+    "card16GenBtn": "Générer mon CV",
+    "learnMore": "Voir toutes les fonctionnalités →"
   },
   "Pricing": {
     "title": "<highlight>Pas d'abonnement.</highlight>\nPayez ce que vous utilisez.",
@@ -224,7 +226,8 @@
     "launchRemaining": "<green>{remaining}</green>/{max} places restantes",
     "launchNoteAsterisk": "*Code valable pour le premier achat uniquement",
     "ctaBtn": "Commencer gratuitement",
-    "launchNote": "15 crédits offerts · Aucune carte bancaire requise"
+    "launchNote": "15 crédits offerts · Aucune carte bancaire requise",
+    "learnMore": "Voir les tarifs détaillés →"
   },
   "FAQ": {
     "title": "Questions\nfréquentes",
@@ -286,6 +289,7 @@
     "pricing": "Tarifs",
     "faq": "FAQ",
     "support": "Support",
+    "blog": "Blog",
     "legal": "Légal",
     "terms": "CGU",
     "privacy": "Vie privée",
@@ -627,5 +631,141 @@
     "stepsSubtitle": "Chaque étape tourne en boucle indépendamment.",
     "footer": "FitMyCV.io — Showcase interne",
     "stepLabels": ["Import de CV", "Génération de CV", "Mode Review", "Calcul de Score", "Optimisation du CV", "Review de l'Optimisation", "Export PDF/Word"]
+  },
+  "HowItWorksPage": {
+    "metaTitle": "Comment optimiser votre CV avec l'IA — Guide en 7 étapes",
+    "metaDescription": "Découvrez comment FitMyCV utilise l'IA pour adapter votre CV à chaque offre d'emploi en 7 étapes : import, analyse, optimisation et export PDF/Word.",
+    "pageTitle": "Comment ça marche",
+    "pageSubtitle": "De l'import de votre CV à l'export optimisé, découvrez le processus complet en 7 étapes.",
+    "intro": "FitMyCV utilise l'intelligence artificielle pour analyser votre CV et l'adapter à chaque offre d'emploi. Le processus est simple, rapide et vous gardez le contrôle total sur chaque modification. Voici comment transformer votre CV en un outil de candidature performant.",
+    "step1Title": "Étape 1 — Importez votre CV",
+    "step1P1": "Commencez par importer votre CV existant au format PDF. Il vous suffit de glisser-déposer votre fichier ou de le sélectionner depuis votre ordinateur. L'intelligence artificielle analyse automatiquement la structure de votre document et extrait vos compétences, expériences professionnelles, formations et coordonnées.",
+    "step1P2": "Le système reconnaît les différentes sections de votre CV, même si elles sont présentées de manière non conventionnelle. Vos données sont structurées et prêtes à être optimisées en quelques secondes seulement.",
+    "step1P3": "Une fois l'import terminé, vous retrouvez l'intégralité de votre parcours dans un éditeur en ligne intuitif. Vous pouvez vérifier que toutes les informations ont été correctement extraites avant de passer à l'étape suivante.",
+    "step2Title": "Étape 2 — Génération IA",
+    "step2P1": "Collez le lien de l'offre d'emploi que vous ciblez. L'IA analyse le contenu de l'annonce : compétences requises, technologies mentionnées, soft skills attendus et exigences spécifiques du poste. À partir de cette analyse, elle génère une version de votre CV adaptée à cette offre précise.",
+    "step2P2": "Vous pouvez cibler jusqu'à 10 offres d'emploi simultanément. FitMyCV génère alors 10 versions de votre CV, chacune optimisée pour une offre différente. Le traitement multi-offres s'effectue en parallèle pour un gain de temps maximal.",
+    "step2P3": "L'IA ne fabrique jamais de contenu fictif. Elle reformule, réorganise et met en valeur vos compétences réelles en fonction de ce que recherche le recruteur. Votre parcours reste fidèle à la réalité.",
+    "step3Title": "Étape 3 — Revue des modifications",
+    "step3P1": "Chaque modification suggérée par l'IA est présentée sous forme de diff, comme dans un outil de révision de code. Vous voyez clairement l'avant et l'après pour chaque section modifiée : expériences, compétences, résumé professionnel.",
+    "step3P2": "Acceptez, rejetez ou ajustez chaque proposition individuellement. Vous gardez le contrôle total sur le contenu final de votre CV. Aucune modification n'est appliquée sans votre validation explicite.",
+    "step4Title": "Étape 4 — Score de compatibilité",
+    "step4P1": "Un algorithme évalue la correspondance entre votre CV et l'offre d'emploi ciblée. Le score prend en compte les compétences techniques, les mots-clés pertinents, la structure ATS et l'adéquation globale de votre profil avec les exigences du poste.",
+    "step4P2": "Le score est affiché en pourcentage avec un détail par catégorie. Vous voyez exactement quels aspects de votre CV correspondent à l'offre et quels points peuvent être améliorés. Chaque optimisation appliquée fait évoluer le score en temps réel.",
+    "step5Title": "Étape 5 — Optimisation ciblée",
+    "step5P1": "L'IA vous fournit des recommandations concrètes pour améliorer votre score de compatibilité. Chaque suggestion est classée par impact (haute, moyenne, faible) et explique précisément quoi ajouter ou modifier dans votre CV.",
+    "step5P2": "Sélectionnez les suggestions qui correspondent à votre profil réel et ajoutez vos propres notes. L'IA régénère alors les sections concernées en intégrant vos choix. Votre score de compatibilité augmente à chaque optimisation appliquée.",
+    "step6Title": "Étape 6 — Validation finale",
+    "step6P1": "Revoyez l'ensemble des optimisations appliquées et vérifiez le résultat final. Votre score de compatibilité reflète toutes les améliorations apportées. Vous pouvez encore ajuster n'importe quelle section via l'éditeur en ligne.",
+    "step6P2": "Cette étape vous permet de vous assurer que votre CV est exactement comme vous le souhaitez avant l'export. Chaque modification est traçable et réversible.",
+    "step7Title": "Étape 7 — Export PDF / Word",
+    "step7P1": "Prévisualisez votre CV finalisé dans le format de votre choix. L'export est disponible en PDF et en Word (.docx), prêt à être joint à une candidature ou chargé sur une plateforme d'emploi.",
+    "step7P2": "Le format est optimisé pour les systèmes ATS : mise en page claire, polices lisibles, structure standard. Votre CV passe les filtres automatiques tout en restant élégant et professionnel pour les recruteurs humains.",
+    "ctaTitle": "Prêt à optimiser votre CV ?",
+    "ctaText": "Créez votre compte gratuitement et recevez 15 crédits pour tester toutes les fonctionnalités.",
+    "ctaButton": "Commencer gratuitement"
+  },
+  "FeaturesPage": {
+    "metaTitle": "Fonctionnalités — Générateur de CV IA compatible ATS",
+    "metaDescription": "Découvrez toutes les fonctionnalités de FitMyCV : génération de CV par IA, score de compatibilité ATS, optimisation ciblée, export PDF/Word et plus encore.",
+    "pageTitle": "Toutes les fonctionnalités",
+    "pageSubtitle": "Un générateur de CV par IA conçu pour vos candidatures. Chaque fonctionnalité a été pensée pour vous faire gagner du temps et décrocher plus d'entretiens.",
+    "category1Title": "Import & Génération",
+    "category1Desc": "De votre CV existant à un CV optimisé pour chaque offre d'emploi.",
+    "feat1Title": "Import PDF intelligent",
+    "feat1Desc": "Glissez-déposez votre CV au format PDF. L'IA extrait automatiquement vos compétences, expériences, formations et coordonnées. La structure de votre document est analysée et convertie en données éditables en quelques secondes.",
+    "feat2Title": "Génération multi-offres",
+    "feat2Desc": "Ajoutez jusqu'à 10 liens d'offres d'emploi et générez autant de versions de CV adaptées en parallèle. Chaque version est optimisée pour une offre spécifique, avec les mots-clés et la structure attendus par le recruteur.",
+    "feat3Title": "Génération par titre de poste",
+    "feat3Desc": "Pas de lien ? Saisissez simplement un titre de poste et l'IA génère un CV adapté au profil type recherché pour ce métier. Idéal pour les candidatures spontanées.",
+    "feat4Title": "Extension navigateur",
+    "feat4Desc": "Lancez une génération de CV directement depuis la page de l'offre d'emploi, sans quitter votre onglet. Compatible Chrome, Edge, Brave et Firefox. Parfait pour les sites nécessitant une authentification comme LinkedIn.",
+    "category2Title": "Analyse & Optimisation",
+    "category2Desc": "L'IA analyse, compare et vous guide pour maximiser vos chances.",
+    "feat5Title": "Score de compatibilité",
+    "feat5Desc": "Un pourcentage mesure l'adéquation entre votre CV et l'offre ciblée. Le score détaille la correspondance par catégorie : compétences techniques, expérience, mots-clés ATS. Chaque optimisation fait évoluer le score en temps réel.",
+    "feat6Title": "Optimisation ATS",
+    "feat6Desc": "L'IA reformule vos expériences avec les termes attendus par les systèmes de suivi des candidatures (ATS). Structure, mots-clés et hiérarchie des sections sont optimisés pour passer les filtres automatiques.",
+    "feat7Title": "Analyse de l'offre d'emploi",
+    "feat7Desc": "L'offre est décryptée automatiquement : compétences requises, technologies mentionnées, avantages, processus de recrutement. Vous voyez exactement ce que le recruteur recherche.",
+    "feat8Title": "Suggestions ciblées",
+    "feat8Desc": "L'IA vous dit concrètement quoi améliorer pour faire monter votre score. Chaque recommandation est classée par impact et explique précisément quoi ajouter ou modifier. Sélectionnez celles qui correspondent à votre profil réel.",
+    "category3Title": "Contrôle & Édition",
+    "category3Desc": "Vous gardez le contrôle total sur chaque modification.",
+    "feat9Title": "Mode révision",
+    "feat9Desc": "Chaque modification de l'IA est présentée sous forme de diff. Acceptez, rejetez ou ajustez chaque proposition individuellement. Aucun changement n'est appliqué sans votre validation explicite.",
+    "feat10Title": "Éditeur en ligne",
+    "feat10Desc": "Modifiez chaque section de votre CV directement dans le navigateur. Expériences, compétences, formations, résumé — tout est éditable en un clic, avec mise à jour instantanée du score.",
+    "feat11Title": "Historique des versions",
+    "feat11Desc": "Voyagez dans le temps et restaurez une version précédente de votre CV en un clic. Chaque modification est sauvegardée automatiquement.",
+    "category4Title": "Export & Multilangue",
+    "category4Desc": "Exportez et traduisez votre CV dans le format et la langue de votre choix.",
+    "feat12Title": "Export PDF & Word",
+    "feat12Desc": "Exportez votre CV finalisé en PDF ou Word (.docx). Le format est optimisé pour les ATS tout en restant professionnel. Prêt à être joint à une candidature ou chargé sur une plateforme d'emploi.",
+    "feat13Title": "Traduction en 4 langues",
+    "feat13Desc": "Traduisez votre CV en français, anglais, espagnol ou allemand en un clic. Le vocabulaire professionnel est adapté à chaque langue pour un résultat naturel et idiomatique.",
+    "feat14Title": "Tâches en arrière-plan",
+    "feat14Desc": "Lancez une génération ou une traduction et continuez à naviguer. Vos tâches s'exécutent en arrière-plan et vous sont notifiées une fois terminées.",
+    "ctaTitle": "Prêt à optimiser votre CV ?",
+    "ctaText": "15 crédits offerts à l'inscription. Aucune carte bancaire requise.",
+    "ctaButton": "Commencer gratuitement"
+  },
+  "PricingPage": {
+    "metaTitle": "Tarifs — Crédits et packs pour optimiser votre CV",
+    "metaDescription": "Découvrez les tarifs de FitMyCV : pas d'abonnement, payez uniquement ce que vous utilisez. 15 crédits offerts à l'inscription. Packs de 15 à 150 crédits.",
+    "pageTitle": "Tarifs simples et transparents",
+    "pageSubtitle": "Pas d'abonnement. Pas de frais cachés. Payez uniquement ce que vous utilisez.",
+    "creditSystemTitle": "Comment fonctionnent les crédits ?",
+    "creditSystemP1": "FitMyCV fonctionne avec un système de crédits. Chaque action IA consomme un nombre défini de crédits. À l'inscription, vous recevez 15 crédits gratuits pour tester l'ensemble des fonctionnalités — aucune carte bancaire requise.",
+    "creditSystemP2": "Les crédits n'expirent jamais et restent valables tant que votre compte est actif. Lorsque vos crédits sont épuisés, vous pouvez en acheter à la demande selon vos besoins.",
+    "creditTableTitle": "Coût en crédits par fonctionnalité",
+    "creditTableHeaders": ["Fonctionnalité", "Crédits"],
+    "creditTableRows": [
+      ["Import et extraction de CV depuis PDF", "2"],
+      ["Génération de CV par IA (par offre)", "3"],
+      ["Score de compatibilité CV/offre", "1"],
+      ["Optimisation ciblée du CV", "2"],
+      ["Export PDF ou Word", "1"],
+      ["Traduction de CV", "3"]
+    ],
+    "packsTitle": "Packs de crédits",
+    "packsSubtitle": "Choisissez le pack adapté à vos besoins.",
+    "packStarter": "Starter",
+    "packPro": "Pro",
+    "packExpert": "Expert",
+    "packUltimate": "Ultimate",
+    "perCredit": "/crédit",
+    "faqTitle": "Questions fréquentes sur les tarifs",
+    "faq": [
+      {
+        "question": "Les crédits expirent-ils ?",
+        "answer": "Non. Vos crédits restent valables tant que votre compte est actif. Aucune limite de temps."
+      },
+      {
+        "question": "Puis-je tester gratuitement ?",
+        "answer": "Oui. Vous recevez 15 crédits gratuits à la création de votre compte, sans carte bancaire requise. C'est suffisant pour générer et optimiser plusieurs CV."
+      },
+      {
+        "question": "Y a-t-il un abonnement ?",
+        "answer": "Non. FitMyCV fonctionne sans abonnement. Vous achetez des crédits à la demande, quand vous en avez besoin. Aucun engagement."
+      },
+      {
+        "question": "Quels moyens de paiement acceptez-vous ?",
+        "answer": "Les paiements sont sécurisés par Stripe. Nous acceptons les cartes bancaires (Visa, Mastercard), Apple Pay, Google Pay et d'autres moyens de paiement selon votre localisation."
+      }
+    ],
+    "ctaTitle": "Commencez avec 15 crédits gratuits",
+    "ctaText": "Aucune carte bancaire requise. Testez toutes les fonctionnalités.",
+    "ctaButton": "Créer mon compte"
+  },
+  "Blog": {
+    "metaTitle": "Blog — Conseils et astuces pour optimiser votre CV",
+    "metaDescription": "Retrouvez nos articles et guides pour optimiser votre CV avec l'IA, comprendre les ATS et décrocher plus d'entretiens.",
+    "pageTitle": "Blog",
+    "pageSubtitle": "Conseils, guides et actualités pour optimiser vos candidatures.",
+    "readMore": "Lire l'article",
+    "publishedOn": "Publié le",
+    "backToBlog": "Retour au blog",
+    "noPosts": "Aucun article pour le moment."
   }
 }
