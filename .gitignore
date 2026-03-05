@@ -42,6 +42,11 @@ next-env.d.ts
 /_bmad/
 /_bmad-output/
 /.claude/
+/.agents/
+skills-lock.json
+CLEANUP_SUMMARY.md
+CODEBASE_SCAN.md
+DEPS_REPORT.md
 
 # mockup build output
 public/mockups/*.bundle.js
