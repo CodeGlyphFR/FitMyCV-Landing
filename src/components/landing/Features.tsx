@@ -4,7 +4,6 @@ import { useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
-/* ── Flag data URIs ── */
 const FLAG_FR =
   "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22cFR%22%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22256%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23cFR)%22%3E%3Crect%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23002395%22%2F%3E%3Crect%20x%3D%22170%22%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%22340%22%20width%3D%22172%22%20height%3D%22512%22%20fill%3D%22%23ED2939%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22253%22%20fill%3D%22none%22%20stroke%3D%22%2300000022%22%20stroke-width%3D%226%22%2F%3E%3C%2Fsvg%3E";
 
@@ -1105,41 +1104,24 @@ export default function Features() {
        CLEANUP
        ====================================================================== */
     return () => {
-      // Cancel all async animation cycles
       cancellers.forEach((c) => c());
-
-      // Stop rAF loop
       cancelAnimationFrame(featRafId);
-
-      // Stop section observer
       sectionObs.disconnect();
-
-      // Clear resize timer
       clearTimeout(featResizeTimer);
-
-      // Remove document-level listeners
       document.removeEventListener('visibilitychange', onVisibilityChange);
       document.removeEventListener('mousemove', onDocMouseMove);
       document.removeEventListener('mouseup', onDocMouseUp);
       window.removeEventListener('resize', onResize);
-
-      // Remove grid listener
       grid?.removeEventListener('mousemove', onGridMouseMove);
-
-      // Remove touch handlers
       touchHandlers.forEach(({ row, start, move, end }) => {
         row.removeEventListener('touchstart', start);
         row.removeEventListener('touchmove', move);
         row.removeEventListener('touchend', end);
       });
-
-      // Remove hover handlers
       hoverHandlers.forEach(({ el, enter, leave }) => {
         el.removeEventListener('mouseenter', enter);
         el.removeEventListener('mouseleave', leave);
       });
-
-      // Remove mousedown handlers
       mouseDownHandlers.forEach(({ row, handler }) => {
         row.removeEventListener('mousedown', handler);
       });
@@ -1148,7 +1130,6 @@ export default function Features() {
 
   return (
     <>
-      {/* SVG gradient defs for score circles */}
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <defs>
           <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="0%">

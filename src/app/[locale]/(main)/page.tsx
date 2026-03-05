@@ -123,7 +123,6 @@ export default async function Home() {
         <Features />
         <SectionDivider />
         <Pricing />
-        {/* <Reviews /> */}
         <FAQ />
       </main>
       <Footer />
