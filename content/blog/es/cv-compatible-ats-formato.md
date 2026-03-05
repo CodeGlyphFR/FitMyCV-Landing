@@ -1,7 +1,7 @@
 ---
 title: "Cómo formatear un CV compatible con ATS: estructura, fuentes y modelo"
 description: "Guía práctica para crear un CV en formato compatible con ATS: tipo de archivo, estructura de secciones, fuentes recomendadas y elementos a evitar."
-date: "2026-03-03"
+date: "2026-02-28"
 translationKey: "ats-format"
 tags: ["ATS", "CV", "formato", "diseño", "modelo"]
 ---

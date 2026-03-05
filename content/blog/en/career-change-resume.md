@@ -1,7 +1,7 @@
 ---
 title: "Career Change Resume: How to Highlight Your Transferable Skills"
 description: "Learn how to build a career change resume that showcases transferable skills and convinces recruiters, with practical AI-powered optimization tips."
-date: "2026-02-14"
+date: "2026-01-29"
 translationKey: "career-change-resume"
 tags: ["career change", "transferable skills", "resume", "career"]
 ---

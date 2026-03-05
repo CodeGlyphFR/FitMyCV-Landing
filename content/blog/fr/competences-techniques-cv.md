@@ -1,7 +1,7 @@
 ---
 title: "Hard skills sur le CV : comment les présenter pour les ATS"
 description: "Découvrez comment organiser et présenter vos compétences techniques sur votre CV pour maximiser votre score ATS. Formats, exemples et pièges à éviter."
-date: "2026-01-15"
+date: "2025-12-17"
 translationKey: "hard-skills-resume-ats"
 tags: ["hard skills", "compétences techniques", "CV", "ATS"]
 ---
@@ -94,7 +94,7 @@ Les étoiles, les barres, les pourcentages visuels sont invisibles pour l'ATS. C
 
 Si l'offre mentionne "React.js", ne mettez pas seulement "React". Si elle dit "Adobe Photoshop", n'écrivez pas "retouche d'image". La précision est critique pour le matching automatique.
 
-Pour identifier systématiquement les bons termes, lisez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-cles-cv-offre-emploi).
+Pour identifier systématiquement les bons termes, lisez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-clés-cv-offre-emploi).
 
 ### Règle 2 : Incluez les acronymes ET les formes complètes
 
@@ -176,7 +176,7 @@ Les certifications sont des preuves vérifiables de compétence. Si vous êtes c
 Vous n'êtes pas certain d'avoir listé les bonnes compétences techniques ? FitMyCV compare votre CV à l'offre d'emploi et identifie précisément :
 - Les hard skills demandés dans l'offre mais absents de votre CV
 - Les compétences que vous mentionnez sous une formulation différente de celle de l'offre
-- Votre [score de compatibilité technique](/blog/score-compatibilite-cv-offre) par rapport aux attentes du poste
+- Votre [score de compatibilité technique](/blog/score-compatibilité-cv-offre) par rapport aux attentes du poste
 
 L'[IA de FitMyCV](/blog/adapter-cv-ats-ia) vous propose des suggestions concrètes pour intégrer les compétences manquantes, avec le bon wording et dans le bon contexte.
 

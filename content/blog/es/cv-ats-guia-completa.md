@@ -1,7 +1,7 @@
 ---
 title: "CV ATS: la guía completa para superar los filtros en 2026"
 description: "¿Qué es un ATS? ¿Cómo funciona? Descubre todo lo que necesitas saber para crear un CV que supere los filtros automáticos de los reclutadores en 2026."
-date: "2026-03-03"
+date: "2026-02-25"
 translationKey: "ats-complete-guide"
 tags: ["ATS", "CV", "guía", "reclutamiento", "filtros"]
 ---

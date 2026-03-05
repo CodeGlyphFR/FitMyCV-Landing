@@ -1,7 +1,7 @@
 ---
 title: "ATS-Lebenslauf nach Branche: Tech, Finanzen, Gesundheit, Marketing und was sich unterscheidet"
 description: "Erfahren Sie, wie Sie Ihren ATS-Lebenslauf je nach Branche anpassen. Die Erwartungen in Tech, Finanzen, Gesundheit und Marketing sind unterschiedlich."
-date: "2026-02-05"
+date: "2026-01-13"
 translationKey: "ats-resume-by-sector"
 tags: ["ATS", "Lebenslauf", "Branche", "Tech", "Finanzen", "Gesundheit"]
 ---

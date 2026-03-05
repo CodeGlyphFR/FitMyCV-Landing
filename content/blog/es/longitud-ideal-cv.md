@@ -1,7 +1,7 @@
 ---
 title: "CV de una pagina o dos paginas: ¿que longitud elegir?"
 description: "¿Una pagina o dos para tu CV? Criterios de eleccion segun tu experiencia, tu sector y las expectativas de los reclutadores en 2026."
-date: "2026-02-16"
+date: "2026-02-05"
 translationKey: "ideal-resume-length"
 tags: ["longitud", "CV", "una pagina", "dos paginas", "diseno"]
 ---

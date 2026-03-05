@@ -1,7 +1,7 @@
 ---
 title: "So formatieren Sie einen ATS-kompatiblen Lebenslauf: Struktur, Schriftarten und Vorlage"
 description: "Praktischer Leitfaden zur Erstellung eines ATS-kompatiblen Lebenslauf-Formats: Dateityp, Abschnittsstruktur, empfohlene Schriftarten und zu vermeidende Elemente."
-date: "2026-03-03"
+date: "2026-02-28"
 translationKey: "ats-format"
 tags: ["ATS", "Lebenslauf", "Format", "Layout", "Vorlage"]
 ---

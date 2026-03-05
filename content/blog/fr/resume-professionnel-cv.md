@@ -1,7 +1,7 @@
 ---
 title: "Comment écrire un résumé professionnel percutant"
 description: "Apprenez à rédiger un résumé professionnel qui capte l'attention des recruteurs et des ATS en quelques secondes. Méthode, exemples et erreurs à éviter."
-date: "2026-01-20"
+date: "2025-12-24"
 translationKey: "professional-summary-cv"
 tags: ["résumé professionnel", "CV", "accroche", "profil"]
 ---
@@ -10,7 +10,7 @@ tags: ["résumé professionnel", "CV", "accroche", "profil"]
 
 Un recruteur passe en moyenne 6 secondes sur un CV lors du premier tri. Le résumé professionnel est la première section de contenu qu'il lit, juste après votre nom et votre titre. Si ces quelques lignes ne captent pas son attention, il passe au candidat suivant.
 
-Pour les ATS, le résumé professionnel est aussi stratégique. C'est une zone dense en mots-clés qui permet au logiciel de vous catégoriser rapidement. Un bon résumé peut faire basculer votre [score de compatibilité](/blog/score-compatibilite-cv-offre) au-dessus du seuil de sélection.
+Pour les ATS, le résumé professionnel est aussi stratégique. C'est une zone dense en mots-clés qui permet au logiciel de vous catégoriser rapidement. Un bon résumé peut faire basculer votre [score de compatibilité](/blog/score-compatibilité-cv-offre) au-dessus du seuil de sélection.
 
 Si vous n'êtes pas encore familier avec le fonctionnement des ATS, notre [guide complet](/blog/cv-ats-guide-complet) vous donnera les bases nécessaires.
 
@@ -48,7 +48,7 @@ Précisez votre domaine d'expertise ou votre secteur. C'est ce qui vous différe
 
 ### 3. Vos compétences clés
 
-Intégrez 2 à 4 compétences qui correspondent aux mots-clés de l'offre. C'est ici que se fait l'essentiel du matching ATS. Pour savoir quels mots-clés cibler, lisez notre article sur [l'identification des mots-clés](/blog/mots-cles-cv-offre-emploi).
+Intégrez 2 à 4 compétences qui correspondent aux mots-clés de l'offre. C'est ici que se fait l'essentiel du matching ATS. Pour savoir quels mots-clés cibler, lisez notre article sur [l'identification des mots-clés](/blog/mots-clés-cv-offre-emploi).
 
 ### 4. Un résultat chiffré
 
@@ -137,13 +137,13 @@ L'adaptation ne signifie pas tout réécrire. Voici une méthode rapide en 3 ét
 
 **Étape 3 :** Ajustez votre résultat chiffré pour qu'il soit pertinent pour le poste. Si l'offre est axée sur la croissance, mettez en avant une métrique de croissance. Si elle est axée sur l'optimisation, choisissez un résultat de réduction de coûts ou d'efficacité.
 
-Pour en savoir plus sur les mots-clés à cibler, consultez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-cles-cv-offre-emploi).
+Pour en savoir plus sur les mots-clés à cibler, consultez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-clés-cv-offre-emploi).
 
 ## Comment FitMyCV vous aide à optimiser votre résumé
 
 Rédiger un résumé professionnel percutant demande de croiser votre parcours avec les attentes de chaque offre. FitMyCV simplifie ce processus.
 
-L'outil analyse votre CV face à l'offre d'emploi et identifie les mots-clés manquants dans votre résumé professionnel. L'[IA intégrée](/blog/adapter-cv-ats-ia) vous suggère des reformulations concrètes pour renforcer cette section critique, en respectant votre parcours tout en maximisant le [score de compatibilité ATS](/blog/score-compatibilite-cv-offre).
+L'outil analyse votre CV face à l'offre d'emploi et identifie les mots-clés manquants dans votre résumé professionnel. L'[IA intégrée](/blog/adapter-cv-ats-ia) vous suggère des reformulations concrètes pour renforcer cette section critique, en respectant votre parcours tout en maximisant le [score de compatibilité ATS](/blog/score-compatibilité-cv-offre).
 
 Vérifiez aussi que le reste de votre CV est dans un [format compatible ATS](/blog/cv-compatible-ats-format) pour que votre résumé ait l'impact maximal.
 

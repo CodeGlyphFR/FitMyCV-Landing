@@ -1,7 +1,7 @@
 ---
 title: "Cómo identificar e integrar las palabras clave de una oferta de empleo en tu CV"
 description: "Aprende a detectar las palabras clave esenciales de una oferta de empleo e integrarlas en tu CV para maximizar tu puntuación ATS y conseguir entrevistas."
-date: "2026-02-10"
+date: "2026-01-23"
 translationKey: "cv-keywords-job-posting"
 tags: ["palabras clave", "CV", "oferta de empleo", "ATS", "optimización"]
 ---

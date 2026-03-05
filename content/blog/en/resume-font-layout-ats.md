@@ -1,7 +1,7 @@
 ---
 title: "Best Fonts and Layout for an ATS-Friendly Resume"
 description: "Guide to fonts, sizes, margins, and layout rules to create an ATS-compatible resume that still looks great to human recruiters."
-date: "2026-02-03"
+date: "2026-01-09"
 translationKey: "resume-font-layout-ats"
 tags: ["font", "layout", "resume", "ATS", "design"]
 ---

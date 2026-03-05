@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf fuer Initiativbewerbungen: So passen Sie ihn ohne Stellenanzeige an"
 description: "Erfahren Sie, wie Sie einen ueberzeugenden Lebenslauf fuer Initiativbewerbungen erstellen, auch ohne Stellenanzeige, dank KI und Jobtitel-Generierung."
-date: "2026-02-22"
+date: "2026-02-15"
 translationKey: "unsolicited-application-resume"
 tags: ["Initiativbewerbung", "Lebenslauf", "Jobsuche", "Tipps"]
 ---

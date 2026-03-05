@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf bei Berufswechsel: So heben Sie Ihre uebertragbaren Kompetenzen hervor"
 description: "Erfahren Sie, wie Sie einen Lebenslauf fuer den Berufswechsel erstellen, der uebertragbare Faehigkeiten betont und Recruiter mit KI-Unterstuetzung ueberzeugt."
-date: "2026-02-14"
+date: "2026-01-29"
 translationKey: "career-change-resume"
 tags: ["Berufswechsel", "uebertragbare Kompetenzen", "Lebenslauf", "Karriere"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "IA y redaccion de CV en 2026: lo que ha cambiado"
 description: "Descubre como la inteligencia artificial ha transformado la redaccion de CV en 2026 y como aprovecharla para conseguir mas entrevistas."
-date: "2026-02-25"
+date: "2026-02-18"
 translationKey: "ai-resume-writing-2026"
 tags: ["IA", "CV", "2026", "inteligencia artificial", "redaccion"]
 ---

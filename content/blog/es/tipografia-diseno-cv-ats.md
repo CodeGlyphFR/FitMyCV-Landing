@@ -1,7 +1,7 @@
 ---
 title: "Que tipografia y diseno usar para un CV compatible con ATS"
 description: "Guia de fuentes, tamanos, margenes y reglas de diseno para crear un CV compatible ATS que siga siendo visualmente atractivo para el reclutador."
-date: "2026-02-03"
+date: "2026-01-09"
 translationKey: "resume-font-layout-ats"
 tags: ["tipografia", "diseno", "CV", "ATS", "formato"]
 ---

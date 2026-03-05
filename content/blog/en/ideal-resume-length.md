@@ -1,7 +1,7 @@
 ---
 title: "One-Page or Two-Page Resume: How Long Should Your Resume Be?"
 description: "One page or two? Criteria for choosing the right resume length based on your experience, industry, and what recruiters expect in 2026."
-date: "2026-02-16"
+date: "2026-02-05"
 translationKey: "ideal-resume-length"
 tags: ["length", "resume", "one page", "two pages", "layout"]
 ---

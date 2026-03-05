@@ -1,7 +1,7 @@
 ---
 title: "Titulo y frase de enganche del CV: las formulas que funcionan"
 description: "Como redactar un titulo de CV impactante y un resumen profesional eficaz. Ejemplos concretos por profesion y consejos para captar la atencion."
-date: "2026-01-08"
+date: "2025-12-07"
 translationKey: "resume-title-headline"
 tags: ["titulo", "enganche", "CV", "resumen profesional", "perfil"]
 ---

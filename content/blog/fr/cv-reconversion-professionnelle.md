@@ -1,118 +1,118 @@
 ---
-title: "CV de reconversion : mettre en valeur vos competences transferables"
-description: "Apprenez a construire un CV de reconversion professionnelle qui valorise vos competences transferables et convainc les recruteurs grace a l'IA."
-date: "2026-02-14"
+title: "CV de reconversion : mettre en valeur vos compétences transférables"
+description: "Apprenez à construire un CV de reconversion professionnelle qui valorise vos compétences transférables et convainc les recruteurs grâce à l'IA."
+date: "2026-01-29"
 translationKey: "career-change-resume"
-tags: ["reconversion", "competences transferables", "CV", "carriere"]
+tags: ["reconversion", "compétences transférables", "CV", "carrière"]
 ---
 
 ## La reconversion professionnelle n'est plus l'exception
 
-Les parcours lineaires, ou l'on entre dans une entreprise a 25 ans pour y rester jusqu'a la retraite, appartiennent au passe. Aujourd'hui, un actif change en moyenne de metier deux a trois fois au cours de sa carriere. La reconversion professionnelle est devenue un choix assume et valorise par de nombreux recruteurs.
+Les parcours linéaires, où l'on entre dans une entreprise à 25 ans pour y rester jusqu'à la retraite, appartiennent au passé. Aujourd'hui, un actif change en moyenne de métier deux à trois fois au cours de sa carrière. La reconversion professionnelle est devenue un choix assumé et valorisé par de nombreux recruteurs.
 
-Pourtant, le CV reste un obstacle pour beaucoup de candidats en transition. Comment presenter un parcours qui ne correspond pas directement au poste vise ? Comment convaincre un recruteur que vos experiences passees sont un atout et non un handicap ? C'est la que la strategie de redaction et les outils d'IA font toute la difference.
+Pourtant, le CV reste un obstacle pour beaucoup de candidats en transition. Comment présenter un parcours qui ne correspond pas directement au poste visé ? Comment convaincre un recruteur que vos expériences passées sont un atout et non un handicap ? C'est là que la stratégie de rédaction et les outils d'IA font toute la différence.
 
-## Pourquoi les CV classiques echouent en reconversion
+## Pourquoi les CV classiques échouent en reconversion
 
-### Le piege du CV chronologique
+### Le piège du CV chronologique
 
-Le CV chronologique classique met en avant votre dernier poste et remonte dans le temps. En reconversion, ce format joue contre vous : votre experience la plus recente ne correspond pas au poste vise, et le recruteur doit deviner le lien entre votre parcours et ses besoins.
+Le CV chronologique classique met en avant votre dernier poste et remonte dans le temps. En reconversion, ce format joue contre vous : votre expérience la plus récente ne correspond pas au poste visé, et le recruteur doit deviner le lien entre votre parcours et ses besoins.
 
-### Le probleme des mots-cles
+### Le problème des mots-clés
 
-Les systemes ATS filtrent les CV sur la base de mots-cles lies au poste. Si vous passez de la finance au marketing digital, votre CV contiendra naturellement des termes financiers, pas marketing. Sans adaptation, votre candidature sera rejetee avant meme d'etre lue. Comprendre les [mecanismes de filtrage ATS](/blog/cv-ats-guide-complet) est essentiel dans ce contexte.
+Les systèmes ATS filtrent les CV sur la base de mots-clés liés au poste. Si vous passez de la finance au marketing digital, votre CV contiendra naturellement des termes financiers, pas marketing. Sans adaptation, votre candidature sera rejetée avant même d'être lue. Comprendre les [mécanismes de filtrage ATS](/blog/cv-ats-guide-complet) est essentiel dans ce contexte.
 
 ### La perception du risque
 
-Un recruteur qui voit un profil en reconversion peut percevoir un risque : le candidat va-t-il s'adapter ? A-t-il les competences necessaires ? Votre CV doit anticiper ces doutes et y repondre de maniere proactive.
+Un recruteur qui voit un profil en reconversion peut percevoir un risque : le candidat va-t-il s'adapter ? A-t-il les compétences nécessaires ? Votre CV doit anticiper ces doutes et y répondre de manière proactive.
 
-## Les competences transferables : votre meilleur atout
+## Les compétences transférables : votre meilleur atout
 
-Les competences transferables sont des savoir-faire applicables dans differents secteurs et fonctions. Elles constituent le pont entre votre experience passee et votre nouveau metier.
+Les compétences transférables sont des savoir-faire applicables dans différents secteurs et fonctions. Elles constituent le pont entre votre expérience passée et votre nouveau métier.
 
-### Categories de competences transferables
+### Catégories de compétences transférables
 
-**Competences de gestion :** leadership, gestion d'equipe, gestion de projet, planification strategique, gestion de budget. Un chef de rayon en grande distribution peut parfaitement gerer une equipe dans le secteur tech.
+**Compétences de gestion :** leadership, gestion d'équipe, gestion de projet, planification stratégique, gestion de budget. Un chef de rayon en grande distribution peut parfaitement gérer une équipe dans le secteur tech.
 
-**Competences analytiques :** analyse de donnees, resolution de problemes, pensee critique, prise de decision. Un ingenieur en production possede des competences analytiques directement applicables au conseil en organisation.
+**Compétences analytiques :** analyse de données, résolution de problèmes, pensée critique, prise de décision. Un ingénieur en production possède des compétences analytiques directement applicables au conseil en organisation.
 
-**Competences relationnelles :** communication, negociation, service client, gestion de conflits, travail en equipe. Un enseignant maitrise la communication, la pedagogie et la gestion de groupe, competences recherchees en formation professionnelle et en RH.
+**Compétences relationnelles :** communication, négociation, service client, gestion de conflits, travail en équipe. Un enseignant maîtrise la communication, la pédagogie et la gestion de groupe, compétences recherchées en formation professionnelle et en RH.
 
-**Competences techniques transversales :** maitrise d'outils numeriques, gestion de CRM, analyse de KPI, redaction professionnelle. Ces competences traversent les secteurs.
+**Compétences techniques transversales :** maîtrise d'outils numériques, gestion de CRM, analyse de KPI, rédaction professionnelle. Ces compétences traversent les secteurs.
 
-### Comment identifier vos competences transferables
+### Comment identifier vos compétences transférables
 
-1. Listez toutes vos responsabilites actuelles et passees
-2. Pour chaque responsabilite, identifiez la competence sous-jacente
-3. Recherchez ces competences dans les offres de votre secteur cible
-4. Notez les correspondances et les ecarts
+1. Listez toutes vos responsabilités actuelles et passées
+2. Pour chaque responsabilité, identifiez la compétence sous-jacente
+3. Recherchez ces compétences dans les offres de votre secteur cible
+4. Notez les correspondances et les écarts
 
 ## Structurer un CV de reconversion efficace
 
-### Privilegiez le format fonctionnel ou hybride
+### Privilégiez le format fonctionnel ou hybride
 
-Au lieu du format chronologique, optez pour un format qui met les competences en avant :
+Au lieu du format chronologique, optez pour un format qui met les compétences en avant :
 
-**Le CV fonctionnel** organise votre parcours par blocs de competences plutot que par postes. Il permet de regrouper des experiences issues de secteurs differents sous des themes communs.
+**Le CV fonctionnel** organise votre parcours par blocs de compétences plutôt que par postes. Il permet de regrouper des expériences issues de secteurs différents sous des thèmes communs.
 
-**Le CV hybride** (recommande) combine un resume de competences en haut du document et un historique professionnel succinct en dessous. C'est le format le mieux accepte par les ATS tout en valorisant vos competences transferables. Consultez notre guide sur le [format de CV compatible ATS](/blog/cv-compatible-ats-format) pour plus de details.
+**Le CV hybride** (recommandé) combine un résumé de compétences en haut du document et un historique professionnel succinct en dessous. C'est le format le mieux accepté par les ATS tout en valorisant vos compétences transférables. Consultez notre guide sur le [format de CV compatible ATS](/blog/cv-compatible-ats-format) pour plus de détails.
 
 ### L'accroche : expliquez votre transition
 
 Votre profil professionnel doit aborder la transition de front. Ne la cachez pas, assumez-la.
 
 **Exemple :**
-> Ancien responsable commercial B2B (8 ans) en transition vers le management de produit digital. Competences eprouvees en analyse des besoins clients, pilotage de projets transversaux et negociation strategique. Certifie Product Owner (PSPO I).
+> Ancien responsable commercial B2B (8 ans) en transition vers le management de produit digital. Compétences éprouvées en analyse des besoins clients, pilotage de projets transversaux et négociation stratégique. Certifié Product Owner (PSPO I).
 
-### Reformulez vos experiences
+### Reformulez vos expériences
 
-Chaque experience doit etre reformulee pour souligner les competences pertinentes pour le nouveau poste.
+Chaque expérience doit être reformulée pour souligner les compétences pertinentes pour le nouveau poste.
 
-**Avant (langage finance) :** "Elaboration de reportings financiers mensuels et analyse des ecarts budgetaires"
-**Apres (langage marketing) :** "Creation de tableaux de bord d'analyse de performance et suivi des KPI avec recommandations d'optimisation"
+**Avant (langage finance) :** "Élaboration de reportings financiers mensuels et analyse des écarts budgétaires"
+**Après (langage marketing) :** "Création de tableaux de bord d'analyse de performance et suivi des KPI avec recommandations d'optimisation"
 
-La competence sous-jacente (analyse de donnees, suivi d'indicateurs, recommandations) est la meme. Seul le vocabulaire change.
+La compétence sous-jacente (analyse de données, suivi d'indicateurs, recommandations) est la même. Seul le vocabulaire change.
 
-## Comment l'IA accelere votre reconversion
+## Comment l'IA accélère votre reconversion
 
 ### Le Match Score pour valider votre positionnement
 
-Le [score de compatibilite](/blog/score-compatibilite-cv-offre) de FitMyCV vous permet de mesurer objectivement l'adequation entre votre profil et le poste vise. En reconversion, ce score est particulierement utile : il vous montre concretement quels aspects de votre profil correspondent deja et lesquels necessitent un travail d'adaptation.
+Le [score de compatibilité](/blog/score-compatibilité-cv-offre) de FitMyCV vous permet de mesurer objectivement l'adéquation entre votre profil et le poste visé. En reconversion, ce score est particulièrement utile : il vous montre concrètement quels aspects de votre profil correspondent déjà et lesquels nécessitent un travail d'adaptation.
 
-### Les suggestions IA pour reformuler vos experiences
+### Les suggestions IA pour reformuler vos expériences
 
-FitMyCV analyse votre CV et les exigences du poste cible pour proposer des reformulations intelligentes. L'IA ne vous invente pas de nouvelles competences : elle vous aide a presenter celles que vous avez dans le langage du secteur vise. Chaque suggestion apparait sous forme de diff, et vous gardez le controle total sur ce que vous acceptez ou refusez.
+FitMyCV analyse votre CV et les exigences du poste cible pour proposer des reformulations intelligentes. L'IA ne vous invente pas de nouvelles compétences : elle vous aide à présenter celles que vous avez dans le langage du secteur visé. Chaque suggestion apparaît sous forme de diff, et vous gardez le contrôle total sur ce que vous acceptez ou refusez.
 
-### Identifier les lacunes a combler
+### Identifier les lacunes à combler
 
-Les suggestions IA mettent egalement en lumiere les competences qui manquent a votre profil. C'est une information precieuse pour orienter votre formation complementaire, vos certifications ou vos projets personnels avant de postuler.
+Les suggestions IA mettent également en lumière les compétences qui manquent à votre profil. C'est une information précieuse pour orienter votre formation complémentaire, vos certifications ou vos projets personnels avant de postuler.
 
-## Completer votre CV de reconversion
+## Compléter votre CV de reconversion
 
 ### La formation continue
 
-Listez les formations, certifications et MOOC que vous avez suivis dans votre nouveau domaine. Meme une formation courte montre votre engagement dans la transition.
+Listez les formations, certifications et MOOC que vous avez suivis dans votre nouveau domaine. Même une formation courte montre votre engagement dans la transition.
 
-### Les projets personnels et le benevolat
+### Les projets personnels et le bénévolat
 
-Un projet personnel dans votre nouveau domaine est souvent plus convaincant qu'un diplome. Vous visez le developpement web ? Montrez vos projets GitHub. Le marketing digital ? Presentez un blog ou une campagne que vous avez geree.
+Un projet personnel dans votre nouveau domaine est souvent plus convaincant qu'un diplôme. Vous visez le développement web ? Montrez vos projets GitHub. Le marketing digital ? Présentez un blog ou une campagne que vous avez gérée.
 
-### Le reseau
+### Le réseau
 
-Mentionnez les communautes professionnelles, les meetups ou les associations liees a votre nouveau secteur. Cela montre votre immersion dans l'ecosysteme.
+Mentionnez les communautés professionnelles, les meetups ou les associations liées à votre nouveau secteur. Cela montre votre immersion dans l'écosystème.
 
-## Les erreurs a eviter
+## Les erreurs à éviter
 
-1. **Minimiser votre experience passee.** Votre parcours precedent est un atout, pas un fardeau. Ne le cachez pas, valorisez-le.
+1. **Minimiser votre expérience passée.** Votre parcours précédent est un atout, pas un fardeau. Ne le cachez pas, valorisez-le.
 
-2. **Copier-coller les termes de l'offre sans coherence.** Les recruteurs et les ATS detectent le bourrage de mots-cles. Les [erreurs courantes en optimisation ATS](/blog/erreurs-cv-ats) s'appliquent doublement en reconversion.
+2. **Copier-coller les termes de l'offre sans cohérence.** Les recruteurs et les ATS détectent le bourrage de mots-clés. Les [erreurs courantes en optimisation ATS](/blog/erreurs-cv-ats) s'appliquent doublement en reconversion.
 
-3. **Ne pas expliquer votre motivation.** Une reconversion sans explication suscite la mefiance. Votre CV et votre lettre de motivation doivent raconter une histoire coherente.
+3. **Ne pas expliquer votre motivation.** Une reconversion sans explication suscite la méfiance. Votre CV et votre lettre de motivation doivent raconter une histoire cohérente.
 
-4. **Postuler sans adapter chaque candidature.** En reconversion plus qu'ailleurs, chaque CV doit etre [adapte a l'offre ciblee](/blog/adapter-cv-ats-ia). Un outil comme FitMyCV rend cette personnalisation rapide et efficace.
+4. **Postuler sans adapter chaque candidature.** En reconversion plus qu'ailleurs, chaque CV doit être [adapté à l'offre ciblée](/blog/adapter-cv-ats-ia). Un outil comme FitMyCV rend cette personnalisation rapide et efficace.
 
 ## Conclusion
 
-La reconversion professionnelle est un projet ambitieux qui merite un CV a la hauteur de vos ambitions. En identifiant vos competences transferables, en adoptant le bon format et en utilisant l'IA pour reformuler et optimiser votre parcours, vous pouvez convaincre les recruteurs que votre profil atypique est exactement ce qu'ils recherchent. Le changement de carriere n'est pas un obstacle : c'est une preuve d'adaptabilite et de courage.
+La reconversion professionnelle est un projet ambitieux qui mérite un CV à la hauteur de vos ambitions. En identifiant vos compétences transférables, en adoptant le bon format et en utilisant l'IA pour reformuler et optimiser votre parcours, vous pouvez convaincre les recruteurs que votre profil atypique est exactement ce qu'ils recherchent. Le changement de carrière n'est pas un obstacle : c'est une preuve d'adaptabilité et de courage.
 
 [Optimisez votre CV de reconversion avec FitMyCV →](https://app.fitmycv.io)

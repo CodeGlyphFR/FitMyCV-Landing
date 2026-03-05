@@ -1,7 +1,7 @@
 ---
 title: "So optimieren Sie Ihren Lebenslauf für ATS mit KI im Jahr 2026"
 description: "Erfahren Sie, wie künstliche Intelligenz Ihnen helfen kann, einen ATS-kompatiblen Lebenslauf zu erstellen, der automatische Filter überwindet und mehr Vorstellungsgespräche bringt."
-date: "2026-02-15"
+date: "2026-02-02"
 translationKey: "tailor-ai"
 tags: ["ATS", "KI", "Lebenslauf", "Optimierung"]
 ---

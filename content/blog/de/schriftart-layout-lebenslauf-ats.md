@@ -1,7 +1,7 @@
 ---
 title: "Welche Schriftart und welches Layout fuer einen ATS-lesbaren Lebenslauf?"
 description: "Leitfaden zu Schriftarten, Groessen, Raendern und Layout-Regeln fuer einen ATS-kompatiblen Lebenslauf, der auch optisch ueberzeugt."
-date: "2026-02-03"
+date: "2026-01-09"
 translationKey: "resume-font-layout-ats"
 tags: ["Schriftart", "Layout", "Lebenslauf", "ATS", "Design"]
 ---

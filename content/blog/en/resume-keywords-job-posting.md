@@ -1,7 +1,7 @@
 ---
 title: "How to Identify and Include the Right Keywords from a Job Posting in Your Resume"
 description: "Learn how to spot essential keywords in job postings and weave them into your resume to maximize your ATS score and land more interviews."
-date: "2026-02-10"
+date: "2026-01-23"
 translationKey: "cv-keywords-job-posting"
 tags: ["keywords", "resume", "job posting", "ATS", "optimization"]
 ---

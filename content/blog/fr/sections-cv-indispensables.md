@@ -1,7 +1,7 @@
 ---
 title: "Les sections indispensables d'un CV en 2026"
 description: "Quelles sections un CV doit-il contenir en 2026 ? Découvrez la structure idéale pour passer les filtres ATS et convaincre les recruteurs humains."
-date: "2026-01-28"
+date: "2026-01-03"
 translationKey: "essential-resume-sections"
 tags: ["CV", "sections", "structure", "2026", "conseils"]
 ---
@@ -75,9 +75,9 @@ Cette section est un concentré de mots-clés que l'ATS scanne en priorité. Org
 - **Outils** : HubSpot, Salesforce, Mailchimp, Semrush
 - **Méthodologies** : Agile Marketing, A/B Testing, Attribution multi-touch
 
-Utilisez les termes exacts de l'offre d'emploi. Si l'offre dit "Semrush", ne mettez pas "SEMrush" ou "outil SEO". Pour identifier les bons mots-clés, lisez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-cles-cv-offre-emploi).
+Utilisez les termes exacts de l'offre d'emploi. Si l'offre dit "Semrush", ne mettez pas "SEMrush" ou "outil SEO". Pour identifier les bons mots-clés, lisez notre article sur [les mots-clés d'une offre d'emploi](/blog/mots-clés-cv-offre-emploi).
 
-Pour approfondir la présentation des hard skills, consultez notre guide sur [les compétences techniques et les ATS](/blog/competences-techniques-cv).
+Pour approfondir la présentation des hard skills, consultez notre guide sur [les compétences techniques et les ATS](/blog/compétences-techniques-cv).
 
 ### 5. La formation
 
@@ -173,7 +173,7 @@ L'ordre dépend de votre niveau d'expérience :
 
 La structure de votre CV est aussi importante que son contenu. FitMyCV analyse non seulement les mots-clés, mais aussi la présence et l'organisation de vos sections. L'outil vérifie que votre CV contient les sections attendues et les [erreurs de formatage](/blog/erreurs-cv-ats) qui pourraient bloquer l'ATS.
 
-Importez votre CV et collez l'offre d'emploi pour obtenir un diagnostic complet, incluant un [score de compatibilité](/blog/score-compatibilite-cv-offre) et des recommandations sur la structure.
+Importez votre CV et collez l'offre d'emploi pour obtenir un diagnostic complet, incluant un [score de compatibilité](/blog/score-compatibilité-cv-offre) et des recommandations sur la structure.
 
 ## Passez à l'action
 

@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT vs Specialized Resume Tool: An Honest Comparison"
 description: "A detailed comparison between ChatGPT and a specialized tool like FitMyCV for resume optimization. Find out which is more effective for landing interviews."
-date: "2026-02-18"
+date: "2026-02-08"
 translationKey: "chatgpt-vs-specialized-tool"
 tags: ["ChatGPT", "AI", "resume", "comparison", "optimization"]
 ---

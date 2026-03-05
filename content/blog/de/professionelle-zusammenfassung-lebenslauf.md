@@ -1,7 +1,7 @@
 ---
 title: "So schreiben Sie eine überzeugende professionelle Zusammenfassung für Ihren Lebenslauf"
 description: "Erfahren Sie, wie Sie ein Profil verfassen, das Recruiter und ATS-Systeme in Sekunden überzeugt. Methode, Beispiele und typische Fehler."
-date: "2026-01-20"
+date: "2025-12-24"
 translationKey: "professional-summary-cv"
 tags: ["professionelle Zusammenfassung", "Lebenslauf", "Profil", "Kurzprofil"]
 ---

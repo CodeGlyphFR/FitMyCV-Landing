@@ -1,14 +1,14 @@
 ---
 title: "Soft skills et ATS : comment les intégrer intelligemment"
 description: "Les soft skills comptent dans le recrutement, mais comment les intégrer dans un CV sans se faire filtrer par les ATS ? Méthode concrète et exemples."
-date: "2026-01-10"
+date: "2025-12-10"
 translationKey: "soft-skills-resume-ats"
 tags: ["soft skills", "compétences", "CV", "ATS", "recrutement"]
 ---
 
 ## Les soft skills comptent, mais pas comme vous le pensez
 
-Vous le savez : les compétences comportementales sont devenues un critère de recrutement majeur. En 2026, 92 % des recruteurs déclarent que les soft skills sont aussi importantes, voire plus, que les [hard skills](/blog/competences-techniques-cv). Leadership, communication, résolution de problèmes, adaptabilité : ces qualités font la différence entre un bon candidat et le candidat idéal.
+Vous le savez : les compétences comportementales sont devenues un critère de recrutement majeur. En 2026, 92 % des recruteurs déclarent que les soft skills sont aussi importantes, voire plus, que les [hard skills](/blog/compétences-techniques-cv). Leadership, communication, résolution de problèmes, adaptabilité : ces qualités font la différence entre un bon candidat et le candidat idéal.
 
 Le problème, c'est que les ATS ont été conçus pour évaluer des compétences techniques, pas des qualités humaines. Écrire "je suis un excellent communicant" sur votre CV ne vous donnera aucun point ATS. Pire, une section entière dédiée aux soft skills sans contexte peut être perçue comme du remplissage.
 
@@ -187,9 +187,9 @@ Une liste de 10 soft skills sans contexte n'impressionne ni l'ATS ni le recruteu
 
 N'ajoutez pas "empathie" si l'offre ne la mentionne pas et que le poste ne le requiert pas. Concentrez-vous sur les compétences comportementales explicitement demandées dans l'offre.
 
-### 4. Négliger les [mots-clés techniques](/blog/mots-cles-cv-offre-emploi)
+### 4. Négliger les [mots-clés techniques](/blog/mots-clés-cv-offre-emploi)
 
-Les soft skills sont un complément, pas un substitut aux hard skills. Un CV ne peut pas compenser un manque de compétences techniques par une surabondance de qualités humaines. L'ATS filtre d'abord sur les [compétences techniques](/blog/competences-techniques-cv).
+Les soft skills sont un complément, pas un substitut aux hard skills. Un CV ne peut pas compenser un manque de compétences techniques par une surabondance de qualités humaines. L'ATS filtre d'abord sur les [compétences techniques](/blog/compétences-techniques-cv).
 
 ### 5. Oublier la cohérence
 
@@ -202,7 +202,7 @@ FitMyCV analyse votre CV face à l'offre d'emploi et identifie les compétences 
 - Les soft skills que vous listez sans les démontrer
 - Des suggestions de reformulation pour intégrer ces compétences dans le contexte de vos expériences
 
-L'[IA de FitMyCV](/blog/adapter-cv-ats-ia) vous propose des bullet points concrets qui combinent le mot-clé de la soft skill avec une réalisation mesurable, maximisant à la fois votre [score ATS](/blog/score-compatibilite-cv-offre) et votre impact auprès du recruteur.
+L'[IA de FitMyCV](/blog/adapter-cv-ats-ia) vous propose des bullet points concrets qui combinent le mot-clé de la soft skill avec une réalisation mesurable, maximisant à la fois votre [score ATS](/blog/score-compatibilité-cv-offre) et votre impact auprès du recruteur.
 
 Assurez-vous que votre CV respecte les [standards de format ATS](/blog/cv-compatible-ats-format) pour que toutes vos compétences, techniques et comportementales, soient correctement lues.
 

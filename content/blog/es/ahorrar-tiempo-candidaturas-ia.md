@@ -1,7 +1,7 @@
 ---
 title: "Como reducir un 80 % el tiempo que dedicas a tus candidaturas"
 description: "Descubre como la IA y las herramientas especializadas pueden reducir drasticamente el tiempo de preparacion de tus candidaturas sin sacrificar la calidad."
-date: "2026-01-30"
+date: "2026-01-06"
 translationKey: "save-time-job-applications-ai"
 tags: ["ahorro de tiempo", "candidatura", "IA", "productividad"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Optimizar tu CV con IA sin mentir: las buenas practicas"
 description: "Como usar la IA para mejorar tu CV manteniendo la honestidad. Guia practica de buenas practicas eticas para la optimizacion de CV asistida por IA."
-date: "2026-02-08"
+date: "2026-01-19"
 translationKey: "ai-resume-without-lying"
 tags: ["IA", "CV", "etica", "optimizacion", "buenas practicas"]
 ---

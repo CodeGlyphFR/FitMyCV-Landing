@@ -1,7 +1,7 @@
 ---
 title: "ATS-Lebenslauf: Der vollständige Leitfaden, um die Filter 2026 zu überwinden"
 description: "Was ist ein ATS? Wie funktioniert es? Erfahren Sie alles, was Sie wissen müssen, um einen Lebenslauf zu erstellen, der die automatischen Filter der Recruiter 2026 überwindet."
-date: "2026-03-03"
+date: "2026-02-25"
 translationKey: "ats-complete-guide"
 tags: ["ATS", "Lebenslauf", "Leitfaden", "Recruiting", "Filter"]
 ---

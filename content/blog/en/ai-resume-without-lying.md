@@ -1,7 +1,7 @@
 ---
 title: "How to Optimize Your Resume with AI Without Lying: Best Practices"
 description: "How to use AI to improve your resume while staying honest. A practical guide to ethical best practices for AI-assisted resume optimization."
-date: "2026-02-08"
+date: "2026-01-19"
 translationKey: "ai-resume-without-lying"
 tags: ["AI", "resume", "ethics", "optimization", "best practices"]
 ---

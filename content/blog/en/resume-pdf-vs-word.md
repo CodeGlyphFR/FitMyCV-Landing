@@ -1,7 +1,7 @@
 ---
 title: "Resume in PDF or Word: Which Format Should You Send?"
 description: "PDF or Word for your resume? Complete comparison of both formats, ATS compatibility, use cases, and tips to pick the right format every time."
-date: "2026-02-28"
+date: "2026-02-22"
 translationKey: "resume-pdf-vs-word"
 tags: ["PDF", "Word", "format", "resume", "recruiter"]
 ---

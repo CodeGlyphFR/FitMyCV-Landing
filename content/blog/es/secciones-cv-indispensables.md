@@ -1,7 +1,7 @@
 ---
 title: "Las secciones indispensables de un CV en 2026"
 description: "¿Qué secciones debe incluir un CV en 2026? Descubre la estructura ideal para superar los filtros ATS y convencer a los reclutadores."
-date: "2026-01-28"
+date: "2026-01-03"
 translationKey: "essential-resume-sections"
 tags: ["CV", "secciones", "estructura", "2026", "consejos"]
 ---

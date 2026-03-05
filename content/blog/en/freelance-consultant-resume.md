@@ -1,7 +1,7 @@
 ---
 title: "Freelance and Consultant Resume: Key Differences and Optimization Tips"
 description: "Learn how to structure a freelance or consultant resume to win projects, with AI optimization and multi-posting strategies for independent professionals."
-date: "2026-01-25"
+date: "2025-12-30"
 translationKey: "freelance-consultant-resume"
 tags: ["freelance", "consultant", "resume", "independent"]
 ---

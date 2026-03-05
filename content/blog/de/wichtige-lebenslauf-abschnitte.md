@@ -1,7 +1,7 @@
 ---
 title: "Die unverzichtbaren Abschnitte eines Lebenslaufs in 2026"
 description: "Welche Abschnitte muss ein Lebenslauf 2026 enthalten? Entdecken Sie die ideale Struktur, um ATS-Filter zu bestehen und Recruiter zu überzeugen."
-date: "2026-01-28"
+date: "2026-01-03"
 translationKey: "essential-resume-sections"
 tags: ["Lebenslauf", "Abschnitte", "Struktur", "2026", "Tipps"]
 ---

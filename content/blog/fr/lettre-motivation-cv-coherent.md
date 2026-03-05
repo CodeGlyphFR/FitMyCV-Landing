@@ -1,153 +1,153 @@
 ---
-title: "Lettre de motivation + CV : assurer la coherence de votre candidature"
-description: "Apprenez a construire une candidature coherente entre votre lettre de motivation et votre CV, avec des conseils pratiques et l'aide de l'analyse d'offre IA."
-date: "2026-01-18"
+title: "Lettre de motivation + CV : assurer la cohérence de votre candidature"
+description: "Apprenez à construire une candidature cohérente entre votre lettre de motivation et votre CV, avec des conseils pratiques et l'aide de l'analyse d'offre IA."
+date: "2025-12-20"
 translationKey: "cover-letter-resume-consistency"
-tags: ["lettre de motivation", "CV", "coherence", "candidature"]
+tags: ["lettre de motivation", "CV", "cohérence", "candidature"]
 ---
 
-## Pourquoi la coherence entre CV et lettre de motivation est cruciale
+## Pourquoi la cohérence entre CV et lettre de motivation est cruciale
 
-Votre CV et votre lettre de motivation sont deux documents complementaires qui forment un ensemble. Le CV presente les faits : votre parcours, vos competences, vos realisations. La lettre de motivation donne le contexte : votre motivation, votre comprehension du poste et la maniere dont vous pouvez contribuer a l'entreprise.
+Votre CV et votre lettre de motivation sont deux documents complémentaires qui forment un ensemble. Le CV présente les faits : votre parcours, vos compétences, vos réalisations. La lettre de motivation donne le contexte : votre motivation, votre compréhension du poste et la manière dont vous pouvez contribuer à l'entreprise.
 
-Quand ces deux documents se contredisent, envoient des messages differents ou ne se completent pas, le recruteur le remarque immediatement. Une candidature incoherente suscite la mefiance et finit generalement dans la pile des refus.
+Quand ces deux documents se contredisent, envoient des messages différents ou ne se complètent pas, le recruteur le remarque immédiatement. Une candidature incohérente suscite la méfiance et finit généralement dans la pile des refus.
 
-## Les formes d'incoherence les plus frequentes
+## Les formes d'incohérence les plus fréquentes
 
-### Le decalage de competences
+### Le décalage de compétences
 
-Votre CV met en avant la gestion de projet, mais votre lettre de motivation parle exclusivement de vos competences techniques. Ou inversement, votre lettre insiste sur votre leadership alors que votre CV ne contient aucune experience manageriale. Ce type de decalage cree de la confusion.
+Votre CV met en avant la gestion de projet, mais votre lettre de motivation parle exclusivement de vos compétences techniques. Ou inversement, votre lettre insiste sur votre leadership alors que votre CV ne contient aucune expérience managériale. Ce type de décalage crée de la confusion.
 
-### Le decalage de ton
+### Le décalage de ton
 
-Un CV tres formel associe a une lettre de motivation familiere (ou l'inverse) donne une impression de manque de professionnalisme. Le registre de langue doit etre coherent entre les deux documents.
+Un CV très formel associé à une lettre de motivation familière (ou l'inverse) donne une impression de manque de professionnalisme. Le registre de langue doit être cohérent entre les deux documents.
 
-### Le decalage de cible
+### Le décalage de cible
 
-Votre CV est adapte pour un poste de chef de projet digital, mais votre lettre de motivation est restee generique ou, pire, cible un autre type de poste. Cette erreur trahit un manque de preparation et de personnalisation.
+Votre CV est adapté pour un poste de chef de projet digital, mais votre lettre de motivation est restée générique ou, pire, cible un autre type de poste. Cette erreur trahit un manque de préparation et de personnalisation.
 
-### La repetition pure et simple
+### La répétition pure et simple
 
-A l'oppose de l'incoherence, la repetition mot pour mot du contenu du CV dans la lettre de motivation est tout aussi problematique. La lettre n'est pas un resume du CV : c'est un document qui apporte une valeur ajoutee differente.
+À l'opposé de l'incohérence, la répétition mot pour mot du contenu du CV dans la lettre de motivation est tout aussi problématique. La lettre n'est pas un résumé du CV : c'est un document qui apporte une valeur ajoutée différente.
 
-## Comment construire une candidature coherente
+## Comment construire une candidature cohérente
 
-### Etape 1 : Analyser l'offre d'emploi en profondeur
+### Étape 1 : Analyser l'offre d'emploi en profondeur
 
 Tout commence par une analyse rigoureuse de l'offre. Identifiez :
-- Les competences techniques requises
-- Les soft skills mentionnes
-- Les responsabilites du poste
+- Les compétences techniques requises
+- Les soft skills mentionnés
+- Les responsabilités du poste
 - Les valeurs de l'entreprise
-- Le vocabulaire utilise
+- Le vocabulaire utilisé
 
-C'est exactement ce que la fonctionnalite d'analyse d'offre de FitMyCV permet de faire de maniere systematique. L'outil decompose l'offre pour extraire les exigences cles, ce qui vous donne une base solide pour construire un CV et une lettre alignes.
+C'est exactement ce que la fonctionnalité d'analyse d'offre de FitMyCV permet de faire de manière systématique. L'outil décompose l'offre pour extraire les exigences clés, ce qui vous donne une base solide pour construire un CV et une lettre alignés.
 
-### Etape 2 : Construire votre CV en premier
+### Étape 2 : Construire votre CV en premier
 
-Le CV est le socle de votre candidature. Commencez par [l'adapter a l'offre](/blog/adapter-cv-ats-ia) en utilisant les mots-cles identifies et en reorganisant vos experiences pour mettre en avant les plus pertinentes. Utilisez le [score de compatibilite](/blog/score-compatibilite-cv-offre) pour valider que votre CV repond aux attentes.
+Le CV est le socle de votre candidature. Commencez par [l'adapter à l'offre](/blog/adapter-cv-ats-ia) en utilisant les mots-clés identifiés et en réorganisant vos expériences pour mettre en avant les plus pertinentes. Utilisez le [score de compatibilité](/blog/score-compatibilité-cv-offre) pour valider que votre CV répond aux attentes.
 
-### Etape 3 : Rediger la lettre de motivation en complement
+### Étape 3 : Rédiger la lettre de motivation en complément
 
-Une fois votre CV optimise, redigez votre lettre de motivation en vous appuyant sur les memes themes, mais avec une approche differente.
+Une fois votre CV optimisé, rédigez votre lettre de motivation en vous appuyant sur les mêmes thèmes, mais avec une approche différente.
 
-**Le CV dit :** "Gestion d'une equipe de 8 developpeurs, livraison de 3 projets majeurs en 12 mois"
-**La lettre ajoute :** "Cette experience de management m'a appris que la reussite d'un projet repose autant sur la qualite technique que sur la communication au sein de l'equipe. C'est pourquoi j'ai mis en place des retrospectives bi-hebdomadaires qui ont reduit notre taux de bugs de 30 %."
+**Le CV dit :** "Gestion d'une équipe de 8 développeurs, livraison de 3 projets majeurs en 12 mois"
+**La lettre ajoute :** "Cette expérience de management m'a appris que la réussite d'un projet repose autant sur la qualité technique que sur la communication au sein de l'équipe. C'est pourquoi j'ai mis en place des rétrospectives bi-hebdomadaires qui ont réduit notre taux de bugs de 30 %."
 
-Le CV donne le fait. La lettre donne le recit et le contexte.
+Le CV donne le fait. La lettre donne le récit et le contexte.
 
-## La structure d'une lettre de motivation coherente
+## La structure d'une lettre de motivation cohérente
 
 ### L'accroche : pourquoi cette entreprise
 
-Montrez que vous avez fait vos recherches. Mentionnez un element specifique de l'entreprise (un projet, une valeur, un produit) qui motive votre candidature. Evitez les formules generiques comme "Votre entreprise m'interesse beaucoup."
+Montrez que vous avez fait vos recherches. Mentionnez un élément spécifique de l'entreprise (un projet, une valeur, un produit) qui motive votre candidature. Évitez les formules génériques comme "Votre entreprise m'intéresse beaucoup."
 
 **Exemple :**
-> L'annonce recente du lancement de votre plateforme de telemedicine a retenu mon attention. Avec 5 ans d'experience en gestion de produit dans le secteur de la sante digitale, je souhaite contribuer a ce projet qui rejoint mes convictions sur l'accessibilite des soins.
+> L'annonce récente du lancement de votre plateforme de télémédecine a retenu mon attention. Avec 5 ans d'expérience en gestion de produit dans le secteur de la santé digitale, je souhaite contribuer à ce projet qui rejoint mes convictions sur l'accessibilité des soins.
 
 ### Le corps : vos atouts en action
 
-Choisissez 2 a 3 competences ou experiences cles de votre CV et developpez-les avec du contexte, des resultats et votre approche personnelle. Ne repetez pas la liste du CV : racontez l'histoire derriere les chiffres.
+Choisissez 2 à 3 compétences ou expériences clés de votre CV et développez-les avec du contexte, des résultats et votre approche personnelle. Ne répétez pas la liste du CV : racontez l'histoire derrière les chiffres.
 
 ### La projection : votre contribution future
 
-Expliquez concretement ce que vous apporteriez a l'equipe et au poste. Reliez vos competences aux besoins identifies dans l'offre.
+Expliquez concrètement ce que vous apporteriez à l'équipe et au poste. Reliez vos compétences aux besoins identifiés dans l'offre.
 
-### La conclusion : un appel a l'action
+### La conclusion : un appel à l'action
 
-Proposez un echange ou un entretien. Soyez direct et professionnel, sans formule trop guindee.
+Proposez un échange ou un entretien. Soyez direct et professionnel, sans formule trop guindée.
 
-## L'analyse d'offre : le fil conducteur de la coherence
+## L'analyse d'offre : le fil conducteur de la cohérence
 
 ### Comment l'analyse d'offre structure votre candidature
 
-L'analyse d'offre de FitMyCV ne sert pas uniquement a optimiser votre CV. Les informations extraites de l'offre constituent le fil conducteur de toute votre candidature :
+L'analyse d'offre de FitMyCV ne sert pas uniquement à optimiser votre CV. Les informations extraites de l'offre constituent le fil conducteur de toute votre candidature :
 
 **Pour le CV :**
-- Integration des mots-cles techniques dans vos descriptions d'experience
-- Reordering des competences pour matcher les priorites de l'offre
+- Intégration des mots-clés techniques dans vos descriptions d'expérience
+- Réorganisation des compétences pour matcher les priorités de l'offre
 - Ajustement du titre et du profil professionnel
 
 **Pour la lettre de motivation :**
-- Identification des themes a developper
+- Identification des thèmes à développer
 - Reprise du vocabulaire de l'entreprise
-- Alignement de votre recit avec les attentes du poste
+- Alignement de votre récit avec les attentes du poste
 
-Cette approche garantit que les deux documents racontent la meme histoire, sous deux angles differents.
+Cette approche garantit que les deux documents racontent la même histoire, sous deux angles différents.
 
 ### L'importance du vocabulaire commun
 
-Un point souvent neglige : le vocabulaire utilise dans votre CV et votre lettre de motivation doit etre coherent avec celui de l'offre. Si l'offre parle de "pilotage de projet", utilisez ce terme dans les deux documents au lieu d'alterner entre "gestion de projet", "direction de projet" et "management de projet".
+Un point souvent négligé : le vocabulaire utilisé dans votre CV et votre lettre de motivation doit être cohérent avec celui de l'offre. Si l'offre parle de "pilotage de projet", utilisez ce terme dans les deux documents au lieu d'alterner entre "gestion de projet", "direction de projet" et "management de projet".
 
-Les [erreurs de vocabulaire](/blog/erreurs-cv-ats) ne penalisent pas seulement votre CV face aux ATS. Elles creent aussi une dissonance perceptible par le recruteur humain.
+Les [erreurs de vocabulaire](/blog/erreurs-cv-ats) ne pénalisent pas seulement votre CV face aux ATS. Elles créent aussi une dissonance perceptible par le recruteur humain.
 
 ## Les cas particuliers
 
-### Candidature spontanee
+### Candidature spontanée
 
-En [candidature spontanee](/blog/candidature-spontanee-cv), la coherence est encore plus importante car vous n'avez pas d'offre pour guider votre redaction. Votre lettre doit expliquer clairement pourquoi vous contactez cette entreprise et quel type de poste vous visez, en parfaite adequation avec ce que montre votre CV.
+En [candidature spontanée](/blog/candidature-spontanee-cv), la cohérence est encore plus importante car vous n'avez pas d'offre pour guider votre rédaction. Votre lettre doit expliquer clairement pourquoi vous contactez cette entreprise et quel type de poste vous visez, en parfaite adéquation avec ce que montre votre CV.
 
 ### Reconversion professionnelle
 
-En [reconversion](/blog/cv-reconversion-professionnelle), la lettre de motivation est essentielle pour expliquer votre transition. Votre CV montre vos competences transferables ; votre lettre raconte votre parcours de decision et votre motivation pour le nouveau domaine.
+En [reconversion](/blog/cv-reconversion-professionnelle), la lettre de motivation est essentielle pour expliquer votre transition. Votre CV montre vos compétences transferables ; votre lettre raconte votre parcours de décision et votre motivation pour le nouveau domaine.
 
-### Profil sans experience
+### Profil sans expérience
 
-Pour un [profil junior](/blog/cv-sans-experience), la lettre de motivation compense le manque d'experience en mettant en avant la motivation, les projets personnels et la comprehension du poste.
+Pour un [profil junior](/blog/cv-sans-expérience), la lettre de motivation compense le manque d'expérience en mettant en avant la motivation, les projets personnels et la compréhension du poste.
 
-## Les erreurs qui ruinent la coherence
+## Les erreurs qui ruinent la cohérence
 
-### 1. La lettre generique envoyee avec un CV adapte
+### 1. La lettre générique envoyée avec un CV adapté
 
-Vous avez pris le temps d'adapter votre CV a l'offre avec FitMyCV, mais vous envoyez la meme lettre de motivation a toutes les entreprises. Le recruteur le voit immediatement.
+Vous avez pris le temps d'adapter votre CV à l'offre avec FitMyCV, mais vous envoyez la même lettre de motivation a toutes les entreprises. Le recruteur le voit immédiatement.
 
 ### 2. Les informations contradictoires
 
-Votre CV indique "3 ans d'experience en Python" mais votre lettre mentionne "une expertise de 5 ans en developpement Python". Ces incoherences, meme mineures, minent la credibilite.
+Votre CV indique "3 ans d'expérience en Python" mais votre lettre mentionne "une expertise de 5 ans en développement Python". Ces incohérences, même mineures, minent la crédibilité.
 
 ### 3. L'oubli des soft skills dans le CV
 
-Votre lettre parle de votre sens du leadership et de votre esprit d'equipe, mais votre CV ne contient aucun element qui corrobore ces qualites. Chaque competence mentionnee dans la lettre doit etre illustree dans le CV.
+Votre lettre parle de votre sens du leadership et de votre esprit d'équipe, mais votre CV ne contient aucun élément qui corrobore ces qualités. Chaque compétence mentionnée dans la lettre doit être illustrée dans le CV.
 
 ### 4. Le format discordant
 
-Un CV sobre et bien structure envoye avec une lettre de motivation dans une police differente, avec une mise en page brouillonne, envoie un signal negatif. Harmonisez les polices, les marges et le style general.
+Un CV sobre et bien structuré envoyé avec une lettre de motivation dans une police différente, avec une mise en page brouillonne, envoie un signal négatif. Harmonisez les polices, les marges et le style général.
 
-## Checklist de coherence avant envoi
+## Checklist de cohérence avant envoi
 
-Avant d'envoyer votre candidature, verifiez ces points :
+Avant d'envoyer votre candidature, vérifiez ces points :
 
 - [ ] Le titre du poste est identique dans le CV et la lettre
-- [ ] Les competences mises en avant sont les memes (sous des angles differents)
-- [ ] Le vocabulaire est coherent avec celui de l'offre
+- [ ] Les compétences mises en avant sont les mêmes (sous des angles différents)
+- [ ] Le vocabulaire est cohérent avec celui de l'offre
 - [ ] Les dates et les chiffres sont identiques dans les deux documents
 - [ ] Le ton et le registre sont uniformes
-- [ ] La lettre developpe des points du CV sans les repeter
-- [ ] Le format visuel est harmonise
-- [ ] Vos coordonnees sont identiques partout
+- [ ] La lettre développe des points du CV sans les répéter
+- [ ] Le format visuel est harmonisé
+- [ ] Vos coordonnées sont identiques partout
 
 ## Conclusion
 
-Une candidature reussie repose sur la synergie entre le CV et la lettre de motivation. Le CV convainc par les faits ; la lettre convainc par le recit et la motivation. Quand les deux documents sont construits a partir de la meme analyse de l'offre et racontent une histoire coherente, votre candidature se demarque naturellement. L'analyse d'offre par IA vous fournit le cadre pour cette coherence, en vous donnant une vision claire des attentes du recruteur que vous pouvez decliner dans les deux documents.
+Une candidature réussie repose sur la synergie entre le CV et la lettre de motivation. Le CV convainc par les faits ; la lettre convainc par le récit et la motivation. Quand les deux documents sont construits à partir de la même analyse de l'offre et racontent une histoire cohérente, votre candidature se démarque naturellement. L'analyse d'offre par IA vous fournit le cadre pour cette cohérence, en vous donnant une vision claire des attentes du recruteur que vous pouvez décliner dans les deux documents.
 
 [Analysez votre prochaine offre avec FitMyCV →](https://app.fitmycv.io)

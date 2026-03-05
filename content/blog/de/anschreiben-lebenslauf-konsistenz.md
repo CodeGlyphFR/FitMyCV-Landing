@@ -1,7 +1,7 @@
 ---
 title: "Anschreiben + Lebenslauf: So stellen Sie die Konsistenz Ihrer Bewerbung sicher"
 description: "Erfahren Sie, wie Sie eine konsistente Bewerbung erstellen, bei der Anschreiben und Lebenslauf sich gegenseitig verstaerken, mit KI-gestuetzter Stellenanzeigen-Analyse."
-date: "2026-01-18"
+date: "2025-12-20"
 translationKey: "cover-letter-resume-consistency"
 tags: ["Anschreiben", "Lebenslauf", "Konsistenz", "Bewerbung"]
 ---

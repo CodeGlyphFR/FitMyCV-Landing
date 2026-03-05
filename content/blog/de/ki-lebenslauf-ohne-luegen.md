@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf mit KI optimieren, ohne zu schummeln: Best Practices"
 description: "Wie Sie KI nutzen, um Ihren Lebenslauf zu verbessern und dabei ehrlich bleiben. Ein praktischer Leitfaden fuer ethische Best Practices bei der KI-gestuetzten Optimierung."
-date: "2026-02-08"
+date: "2026-01-19"
 translationKey: "ai-resume-without-lying"
 tags: ["KI", "Lebenslauf", "Ethik", "Optimierung", "Best Practices"]
 ---

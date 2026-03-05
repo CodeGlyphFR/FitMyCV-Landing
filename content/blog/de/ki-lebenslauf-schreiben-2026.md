@@ -1,7 +1,7 @@
 ---
 title: "KI und Lebenslauf-Erstellung 2026: Was sich veraendert hat"
 description: "Erfahren Sie, wie kuenstliche Intelligenz die Lebenslauf-Erstellung 2026 veraendert hat und wie Sie davon profitieren, um mehr Vorstellungsgespraeche zu bekommen."
-date: "2026-02-25"
+date: "2026-02-18"
 translationKey: "ai-resume-writing-2026"
 tags: ["KI", "Lebenslauf", "2026", "kuenstliche Intelligenz", "Erstellung"]
 ---

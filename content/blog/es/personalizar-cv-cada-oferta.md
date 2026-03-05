@@ -1,7 +1,7 @@
 ---
 title: "Por que y como personalizar tu CV para cada oferta de empleo"
 description: "Descubre por que enviar el mismo CV a todas las ofertas reduce tus oportunidades y como personalizar cada candidatura de forma eficiente con las herramientas adecuadas."
-date: "2026-02-12"
+date: "2026-01-26"
 translationKey: "customize-resume-each-job"
 tags: ["personalizacion", "CV", "oferta de empleo", "candidatura"]
 ---

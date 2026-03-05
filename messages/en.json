@@ -766,6 +766,11 @@
     "readMore": "Read article",
     "publishedOn": "Published on",
     "backToBlog": "Back to blog",
-    "noPosts": "No articles yet."
+    "noPosts": "No articles yet.",
+    "pillar_ats-optimization": "Resume & ATS Optimization",
+    "pillar_ai-cv": "AI & Resume",
+    "pillar_job-search": "Job Search",
+    "pillar_format-layout": "Format, Layout & Export",
+    "pillar_international": "International & Multilingual"
   }
 }

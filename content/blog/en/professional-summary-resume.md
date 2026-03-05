@@ -1,7 +1,7 @@
 ---
 title: "How to Write a Compelling Professional Summary for Your Resume"
 description: "Learn how to craft a professional summary that grabs recruiter attention and scores with ATS in seconds. Method, examples, and mistakes to avoid."
-date: "2026-01-20"
+date: "2025-12-24"
 translationKey: "professional-summary-cv"
 tags: ["professional summary", "resume", "headline", "profile"]
 ---

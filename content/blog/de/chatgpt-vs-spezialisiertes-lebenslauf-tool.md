@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT vs spezialisiertes Tool zur Lebenslauf-Optimierung: ein ehrlicher Vergleich"
 description: "Detaillierter Vergleich zwischen ChatGPT und einem spezialisierten Tool wie FitMyCV zur Lebenslauf-Optimierung. Finden Sie heraus, was effektiver ist."
-date: "2026-02-18"
+date: "2026-02-08"
 translationKey: "chatgpt-vs-specialized-tool"
 tags: ["ChatGPT", "KI", "Lebenslauf", "Vergleich", "Optimierung"]
 ---

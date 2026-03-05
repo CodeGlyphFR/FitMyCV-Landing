@@ -1,7 +1,7 @@
 ---
 title: "Cómo destacar tus competencias lingüísticas en el CV"
 description: "Aprende a presentar tus idiomas en el CV de forma eficaz. Marco MCER, formulaciones, errores frecuentes y consejos para perfiles multilingües."
-date: "2026-01-02"
+date: "2025-12-01"
 translationKey: "multilingual-resume-language-skills"
 tags: ["idiomas", "multilingüe", "CV", "competencias lingüísticas"]
 ---

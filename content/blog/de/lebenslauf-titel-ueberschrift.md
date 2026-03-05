@@ -1,7 +1,7 @@
 ---
 title: "Titel und Kurzprofil im Lebenslauf: Formulierungen, die wirklich funktionieren"
 description: "Wie Sie einen ueberzeugenden Lebenslauf-Titel und ein wirkungsvolles Kurzprofil schreiben. Konkrete Beispiele nach Beruf und Tipps fuer mehr Aufmerksamkeit."
-date: "2026-01-08"
+date: "2025-12-07"
 translationKey: "resume-title-headline"
 tags: ["Titel", "Kurzprofil", "Lebenslauf", "Zusammenfassung", "Profil"]
 ---

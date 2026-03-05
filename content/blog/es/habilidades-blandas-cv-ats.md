@@ -1,7 +1,7 @@
 ---
 title: "Soft skills y ATS: cómo integrarlas de forma inteligente"
 description: "Las soft skills importan en el reclutamiento, pero ¿cómo incluirlas en un CV sin que el ATS las ignore? Método práctico con ejemplos concretos."
-date: "2026-01-10"
+date: "2025-12-10"
 translationKey: "soft-skills-resume-ats"
 tags: ["soft skills", "competencias", "CV", "ATS", "reclutamiento"]
 ---

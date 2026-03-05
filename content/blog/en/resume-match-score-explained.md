@@ -1,7 +1,7 @@
 ---
 title: "Resume Match Score: How It Works"
 description: "Understand how the match score between your resume and a job posting is calculated, and how to use it to improve your applications."
-date: "2026-02-20"
+date: "2026-02-12"
 translationKey: "match-score"
 tags: ["score", "matching", "resume", "job search"]
 ---

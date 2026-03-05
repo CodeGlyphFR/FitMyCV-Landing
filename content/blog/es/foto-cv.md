@@ -1,7 +1,7 @@
 ---
 title: "¿Hay que poner foto en el CV en 2026?"
 description: "Foto en el CV: ventajas, riesgos, normas por pais y buenas practicas. Todo lo que necesitas saber antes de decidir en 2026."
-date: "2026-01-22"
+date: "2025-12-27"
 translationKey: "photo-on-resume-france"
 tags: ["foto", "CV", "reclutamiento", "sesgo", "2026"]
 ---

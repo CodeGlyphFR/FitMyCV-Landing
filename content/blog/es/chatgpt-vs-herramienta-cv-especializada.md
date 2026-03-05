@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT vs herramienta especializada para optimizar tu CV: comparativa honesta"
 description: "Comparativa detallada entre ChatGPT y una herramienta especializada como FitMyCV para optimizar tu CV. Descubre cual es mas eficaz para conseguir entrevistas."
-date: "2026-02-18"
+date: "2026-02-08"
 translationKey: "chatgpt-vs-specialized-tool"
 tags: ["ChatGPT", "IA", "CV", "comparativa", "optimizacion"]
 ---

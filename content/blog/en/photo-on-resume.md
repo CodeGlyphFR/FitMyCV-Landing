@@ -1,7 +1,7 @@
 ---
 title: "Should You Put a Photo on Your Resume in 2026?"
 description: "Photo on your resume: pros, cons, cultural norms by country, and best practices. Everything you need to know before deciding in 2026."
-date: "2026-01-22"
+date: "2025-12-27"
 translationKey: "photo-on-resume-france"
 tags: ["photo", "resume", "recruitment", "bias", "2026"]
 ---

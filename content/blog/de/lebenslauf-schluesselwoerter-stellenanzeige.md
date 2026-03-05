@@ -1,7 +1,7 @@
 ---
 title: "So identifizieren und integrieren Sie die richtigen Schlüsselwörter aus einer Stellenanzeige in Ihren Lebenslauf"
 description: "Erfahren Sie, wie Sie relevante Keywords aus Stellenanzeigen erkennen und in Ihren Lebenslauf einbauen, um Ihren ATS-Score zu maximieren und Einladungen zu sichern."
-date: "2026-02-10"
+date: "2026-01-23"
 translationKey: "cv-keywords-job-posting"
 tags: ["Schlüsselwörter", "Lebenslauf", "Stellenanzeige", "ATS", "Optimierung"]
 ---

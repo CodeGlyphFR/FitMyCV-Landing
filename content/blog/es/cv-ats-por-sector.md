@@ -1,7 +1,7 @@
 ---
 title: "CV ATS por sector: tech, finanzas, salud, marketing y qué cambia en cada uno"
 description: "Aprende a adaptar tu CV ATS según tu sector profesional. Las expectativas varían en tech, finanzas, salud y marketing. Descubre qué debes tener en cuenta."
-date: "2026-02-05"
+date: "2026-01-13"
 translationKey: "ats-resume-by-sector"
 tags: ["ATS", "CV", "sector", "tech", "finanzas", "salud"]
 ---

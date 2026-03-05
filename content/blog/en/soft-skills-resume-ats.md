@@ -1,7 +1,7 @@
 ---
 title: "Soft Skills and ATS: How to Integrate Them Intelligently"
 description: "Soft skills matter in hiring, but how do you include them on a resume without getting filtered by ATS? A practical method with concrete examples."
-date: "2026-01-10"
+date: "2025-12-10"
 translationKey: "soft-skills-resume-ats"
 tags: ["soft skills", "skills", "resume", "ATS", "recruitment"]
 ---

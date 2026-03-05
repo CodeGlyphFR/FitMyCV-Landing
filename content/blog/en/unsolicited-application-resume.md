@@ -1,7 +1,7 @@
 ---
 title: "Unsolicited Application Resume: How to Tailor Your CV Without a Job Posting"
 description: "Learn how to craft a compelling resume for unsolicited applications when there is no job posting to reference, using AI-powered job title generation."
-date: "2026-02-22"
+date: "2026-02-15"
 translationKey: "unsolicited-application-resume"
 tags: ["unsolicited application", "resume", "job search", "tips"]
 ---

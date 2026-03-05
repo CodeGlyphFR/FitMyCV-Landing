@@ -1,7 +1,7 @@
 ---
 title: "Carta de presentacion + CV: como asegurar la coherencia de tu candidatura"
 description: "Aprende a construir una candidatura coherente entre tu carta de presentacion y tu CV, con consejos practicos y el apoyo del analisis de ofertas con IA."
-date: "2026-01-18"
+date: "2025-12-20"
 translationKey: "cover-letter-resume-consistency"
 tags: ["carta de presentacion", "CV", "coherencia", "candidatura"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "So reduzieren Sie den Zeitaufwand fuer Ihre Bewerbungen um 80 %"
 description: "Erfahren Sie, wie KI und spezialisierte Tools den Zeitaufwand fuer die Bewerbungsvorbereitung drastisch senken koennen, ohne die Qualitaet zu beeintraechtigen."
-date: "2026-01-30"
+date: "2026-01-06"
 translationKey: "save-time-job-applications-ai"
 tags: ["Zeitersparnis", "Bewerbung", "KI", "Produktivitaet"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Why and How to Customize Your Resume for Every Job Posting"
 description: "Learn why sending the same resume to every job reduces your chances and how to efficiently customize each application with the right tools."
-date: "2026-02-12"
+date: "2026-01-26"
 translationKey: "customize-resume-each-job"
 tags: ["customization", "resume", "job posting", "application"]
 ---

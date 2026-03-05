@@ -766,6 +766,11 @@
     "readMore": "Artikel lesen",
     "publishedOn": "Veröffentlicht am",
     "backToBlog": "Zurück zum Blog",
-    "noPosts": "Noch keine Artikel."
+    "noPosts": "Noch keine Artikel.",
+    "pillar_ats-optimization": "Lebenslauf- & ATS-Optimierung",
+    "pillar_ai-cv": "KI & Lebenslauf",
+    "pillar_job-search": "Jobsuche",
+    "pillar_format-layout": "Format, Layout & Export",
+    "pillar_international": "International & mehrsprachig"
   }
 }

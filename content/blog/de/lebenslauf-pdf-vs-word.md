@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf als PDF oder Word: Welches Format sollten Sie senden?"
 description: "PDF oder Word fuer Ihren Lebenslauf? Vollstaendiger Vergleich beider Formate, ATS-Kompatibilitaet, Anwendungsfaelle und Tipps zur richtigen Wahl."
-date: "2026-02-28"
+date: "2026-02-22"
 translationKey: "resume-pdf-vs-word"
 tags: ["PDF", "Word", "Format", "Lebenslauf", "Recruiter"]
 ---

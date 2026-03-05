@@ -1,7 +1,7 @@
 ---
 title: "Cómo escribir un resumen profesional impactante para tu CV"
 description: "Aprende a redactar un resumen profesional que capte la atención de los reclutadores y de los ATS en segundos. Método, ejemplos y errores a evitar."
-date: "2026-01-20"
+date: "2025-12-24"
 translationKey: "professional-summary-cv"
 tags: ["resumen profesional", "CV", "perfil", "extracto"]
 ---

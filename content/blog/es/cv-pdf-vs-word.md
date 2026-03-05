@@ -1,7 +1,7 @@
 ---
 title: "CV en PDF o Word: ¿qué formato enviar al reclutador?"
 description: "¿PDF o Word para tu CV? Comparativa completa de ambos formatos, compatibilidad ATS, casos de uso y consejos para elegir el formato correcto."
-date: "2026-02-28"
+date: "2026-02-22"
 translationKey: "resume-pdf-vs-word"
 tags: ["PDF", "Word", "formato", "CV", "reclutador"]
 ---

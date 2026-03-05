@@ -1,7 +1,7 @@
 ---
 title: "Hard skills en el CV: cómo presentarlas para los ATS"
 description: "Descubre cómo organizar y presentar tus competencias técnicas en el CV para maximizar tu puntuación ATS. Formatos, ejemplos y errores a evitar."
-date: "2026-01-15"
+date: "2025-12-17"
 translationKey: "hard-skills-resume-ats"
 tags: ["hard skills", "competencias técnicas", "CV", "ATS"]
 ---

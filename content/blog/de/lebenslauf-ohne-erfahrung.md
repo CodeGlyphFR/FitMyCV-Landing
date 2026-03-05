@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf ohne Erfahrung: So ueberzeugen Sie mit KI"
 description: "Erfahren Sie, wie Sie auch ohne Berufserfahrung einen ueberzeugenden Lebenslauf erstellen, mithilfe von KI-Vorschlaegen fuer Ihren ersten Job oder Ihr Praktikum."
-date: "2026-02-06"
+date: "2026-01-16"
 translationKey: "resume-no-experience"
 tags: ["ohne Erfahrung", "Lebenslauf", "Student", "erster Job", "KI"]
 ---

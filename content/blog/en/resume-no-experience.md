@@ -1,7 +1,7 @@
 ---
 title: "Resume with No Experience: How to Stand Out Using AI"
 description: "Learn how to write a compelling resume with no professional experience using AI-powered suggestions, and land your first job or internship."
-date: "2026-02-06"
+date: "2026-01-16"
 translationKey: "resume-no-experience"
 tags: ["no experience", "resume", "student", "first job", "AI"]
 ---

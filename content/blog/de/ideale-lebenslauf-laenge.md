@@ -1,7 +1,7 @@
 ---
 title: "Eine Seite oder zwei Seiten: Wie lang sollte Ihr Lebenslauf sein?"
 description: "Eine oder zwei Seiten fuer Ihren Lebenslauf? Entscheidungskriterien nach Erfahrung, Branche und Recruiter-Erwartungen im Jahr 2026."
-date: "2026-02-16"
+date: "2026-02-05"
 translationKey: "ideal-resume-length"
 tags: ["Laenge", "Lebenslauf", "eine Seite", "zwei Seiten", "Layout"]
 ---

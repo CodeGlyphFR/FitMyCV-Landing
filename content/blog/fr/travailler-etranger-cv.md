@@ -1,7 +1,7 @@
 ---
 title: "Préparer son CV pour travailler à l'étranger : le guide complet"
 description: "Découvrez comment adapter votre CV pour postuler à l'international. Formats, traduction, erreurs à éviter et conseils pratiques pour réussir votre expatriation."
-date: "2026-01-05"
+date: "2025-12-04"
 translationKey: "resume-working-abroad"
 tags: ["international", "CV", "étranger", "expatriation", "traduction"]
 ---
@@ -100,11 +100,11 @@ Les systèmes éducatifs diffèrent radicalement d'un pays à l'autre. Indiquez 
 
 ### Étape 4 : Mettez en avant vos compétences linguistiques
 
-Travailler à l'étranger implique de communiquer dans une autre langue. Vos [compétences linguistiques](/blog/cv-multilingue-competences-langues) deviennent un atout majeur. Utilisez le cadre européen (CECRL) pour les marchés européens, ou des descripteurs clairs pour les marchés non-européens.
+Travailler à l'étranger implique de communiquer dans une autre langue. Vos [compétences linguistiques](/blog/cv-multilingue-compétences-langues) deviennent un atout majeur. Utilisez le cadre européen (CECRL) pour les marchés européens, ou des descripteurs clairs pour les marchés non-européens.
 
 ### Étape 5 : Optimisez pour les ATS internationaux
 
-Un [score de compatibilité](/blog/score-compatibilite-cv-offre) vous permet de vérifier que votre CV correspond bien aux attentes de l'offre ciblée, mots-clés compris. C'est particulièrement important quand vous postulez dans une langue qui n'est pas votre langue maternelle.
+Un [score de compatibilité](/blog/score-compatibilité-cv-offre) vous permet de vérifier que votre CV correspond bien aux attentes de l'offre ciblée, mots-clés compris. C'est particulièrement important quand vous postulez dans une langue qui n'est pas votre langue maternelle.
 
 ## Comment FitMyCV simplifie la candidature internationale
 

@@ -18,6 +18,60 @@ export interface Post extends PostMeta {
   content: string;
 }
 
+/**
+ * Pillar assignment by translationKey.
+ * Keys not listed here fall into "other".
+ */
+const PILLAR_MAP: Record<string, string> = {
+  // Pillar 1: CV & ATS optimization
+  "ats-complete-guide": "ats-optimization",
+  "ats-format": "ats-optimization",
+  "ats-mistakes": "ats-optimization",
+  "match-score": "ats-optimization",
+  "tailor-ai": "ats-optimization",
+  "cv-keywords-job-posting": "ats-optimization",
+  "ats-resume-by-sector": "ats-optimization",
+  "essential-resume-sections": "ats-optimization",
+  "professional-summary-cv": "ats-optimization",
+  "hard-skills-resume-ats": "ats-optimization",
+  "soft-skills-resume-ats": "ats-optimization",
+  // Pillar 2: AI & CV
+  "ai-resume-writing-2026": "ai-cv",
+  "chatgpt-vs-specialized-tool": "ai-cv",
+  "customize-resume-each-job": "ai-cv",
+  "ai-resume-without-lying": "ai-cv",
+  "save-time-job-applications-ai": "ai-cv",
+  // Pillar 3: Job search
+  "unsolicited-application-resume": "job-search",
+  "career-change-resume": "job-search",
+  "resume-no-experience": "job-search",
+  "freelance-consultant-resume": "job-search",
+  "cover-letter-resume-consistency": "job-search",
+  "follow-up-recruiter-after-applying": "job-search",
+  // Pillar 4: Format & layout
+  "resume-pdf-vs-word": "format-layout",
+  "ideal-resume-length": "format-layout",
+  "resume-font-layout-ats": "format-layout",
+  "photo-on-resume-france": "format-layout",
+  "resume-title-headline": "format-layout",
+  // Pillar 5: International
+  "resume-working-abroad": "international",
+  "multilingual-resume-language-skills": "international",
+};
+
+export const PILLAR_ORDER = [
+  "ats-optimization",
+  "ai-cv",
+  "job-search",
+  "format-layout",
+  "international",
+] as const;
+
+export function getPillar(translationKey?: string): string {
+  if (!translationKey) return "other";
+  return PILLAR_MAP[translationKey] ?? "other";
+}
+
 export function getAllPosts(locale: string): PostMeta[] {
   const dir = path.join(BLOG_DIR, locale);
   if (!fs.existsSync(dir)) return [];

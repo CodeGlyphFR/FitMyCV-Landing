@@ -1,7 +1,7 @@
 ---
 title: "ATS Resume by Sector: Tech, Finance, Healthcare, Marketing and What Changes"
 description: "Learn how to tailor your ATS resume for different industries. Expectations vary across tech, finance, healthcare, and marketing. Here is what you need to know."
-date: "2026-02-05"
+date: "2026-01-13"
 translationKey: "ats-resume-by-sector"
 tags: ["ATS", "resume", "sector", "tech", "finance", "healthcare"]
 ---

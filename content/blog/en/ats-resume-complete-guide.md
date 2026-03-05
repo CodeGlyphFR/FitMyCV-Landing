@@ -1,7 +1,7 @@
 ---
 title: "ATS Resume: The Complete Guide to Beating the Filters in 2026"
 description: "What is an ATS? How does it work? Learn everything you need to know to create a resume that passes automated recruiter filters in 2026."
-date: "2026-03-03"
+date: "2026-02-25"
 translationKey: "ats-complete-guide"
 tags: ["ATS", "resume", "guide", "recruitment", "filters"]
 ---

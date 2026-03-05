@@ -1,7 +1,7 @@
 ---
 title: "How to Cut Your Job Application Time by 80%"
 description: "Discover how AI and specialized tools can drastically reduce the time you spend preparing job applications without sacrificing quality."
-date: "2026-01-30"
+date: "2026-01-06"
 translationKey: "save-time-job-applications-ai"
 tags: ["time saving", "job application", "AI", "productivity"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Essential Sections Every Resume Needs in 2026"
 description: "Which sections should your resume include in 2026? Discover the ideal structure to pass ATS filters and impress human recruiters."
-date: "2026-01-28"
+date: "2026-01-03"
 translationKey: "essential-resume-sections"
 tags: ["resume", "sections", "structure", "2026", "tips"]
 ---

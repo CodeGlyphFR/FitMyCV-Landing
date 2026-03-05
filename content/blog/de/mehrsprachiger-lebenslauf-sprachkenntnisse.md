@@ -1,7 +1,7 @@
 ---
 title: "Sprachkenntnisse im Lebenslauf richtig präsentieren"
 description: "Erfahren Sie, wie Sie Ihre Sprachkenntnisse im Lebenslauf wirkungsvoll darstellen. GER-Niveaus, Formulierungen, häufige Fehler und Tipps für mehrsprachige Profile."
-date: "2026-01-02"
+date: "2025-12-01"
 translationKey: "multilingual-resume-language-skills"
 tags: ["Sprachen", "mehrsprachig", "Lebenslauf", "Sprachkenntnisse"]
 ---

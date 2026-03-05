@@ -1,7 +1,7 @@
 ---
 title: "Soft Skills und ATS: So integrieren Sie sie intelligent in Ihren Lebenslauf"
 description: "Soft Skills zählen im Recruiting. Aber wie binden Sie sie in einen Lebenslauf ein, ohne von ATS-Systemen gefiltert zu werden? Methode und konkrete Beispiele."
-date: "2026-01-10"
+date: "2025-12-10"
 translationKey: "soft-skills-resume-ats"
 tags: ["Soft Skills", "Kompetenzen", "Lebenslauf", "ATS", "Recruiting"]
 ---

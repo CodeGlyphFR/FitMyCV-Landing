@@ -1,7 +1,7 @@
 ---
 title: "Como hacer seguimiento a un reclutador despues de enviar tu CV"
 description: "Aprende a hacer un seguimiento eficaz con los reclutadores despues de postular: timing, canales, tono y plantillas de mensajes para conseguir entrevistas."
-date: "2026-01-12"
+date: "2025-12-14"
 translationKey: "follow-up-recruiter-after-applying"
 tags: ["seguimiento", "reclutador", "candidatura", "entrevista"]
 ---

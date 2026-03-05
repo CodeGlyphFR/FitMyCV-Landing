@@ -1,7 +1,7 @@
 ---
 title: "So fassen Sie beim Recruiter nach der Bewerbung richtig nach"
 description: "Erfahren Sie, wie Sie nach einer Bewerbung effektiv beim Recruiter nachfassen: Timing, Kanaele, Tonalitaet und Nachrichtenvorlagen fuer mehr Vorstellungsgespraeche."
-date: "2026-01-12"
+date: "2025-12-14"
 translationKey: "follow-up-recruiter-after-applying"
 tags: ["Nachfassen", "Recruiter", "Bewerbung", "Vorstellungsgespraech"]
 ---

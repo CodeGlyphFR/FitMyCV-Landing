@@ -1,7 +1,7 @@
 ---
 title: "How to Showcase Your Language Skills on Your Resume"
 description: "Learn how to present language skills effectively on your resume. CEFR levels, phrasing tips, common mistakes, and advice for multilingual professionals."
-date: "2026-01-02"
+date: "2025-12-01"
 translationKey: "multilingual-resume-language-skills"
 tags: ["languages", "multilingual", "resume", "language skills"]
 ---

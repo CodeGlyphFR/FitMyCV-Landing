@@ -1,7 +1,7 @@
 ---
 title: "Warum und wie Sie Ihren Lebenslauf fuer jede Stellenanzeige anpassen sollten"
 description: "Erfahren Sie, warum der gleiche Lebenslauf fuer alle Stellen Ihre Chancen mindert und wie Sie jede Bewerbung effizient mit den richtigen Tools anpassen koennen."
-date: "2026-02-12"
+date: "2026-01-26"
 translationKey: "customize-resume-each-job"
 tags: ["Anpassung", "Lebenslauf", "Stellenanzeige", "Bewerbung"]
 ---

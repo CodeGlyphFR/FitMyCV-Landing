@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf für die Arbeit im Ausland vorbereiten: Der komplette Leitfaden"
 description: "Erfahren Sie, wie Sie Ihren Lebenslauf für internationale Arbeitsmärkte anpassen. Formate, Übersetzungstipps, häufige Fehler und praktische Ratschläge."
-date: "2026-01-05"
+date: "2025-12-04"
 translationKey: "resume-working-abroad"
 tags: ["international", "Lebenslauf", "Ausland", "Expatriation", "Übersetzung"]
 ---

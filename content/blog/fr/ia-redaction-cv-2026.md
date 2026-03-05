@@ -1,100 +1,100 @@
 ---
-title: "IA et redaction de CV en 2026 : ce qui a change"
-description: "Decouvrez comment l'intelligence artificielle a transforme la redaction de CV en 2026 et comment en tirer parti pour decrocher plus d'entretiens."
-date: "2026-02-25"
+title: "IA et rédaction de CV en 2026 : ce qui a changé"
+description: "Découvrez comment l'intelligence artificielle a transformé la rédaction de CV en 2026 et comment en tirer parti pour décrocher plus d'entretiens."
+date: "2026-02-18"
 translationKey: "ai-resume-writing-2026"
-tags: ["IA", "CV", "2026", "intelligence artificielle", "redaction"]
+tags: ["IA", "CV", "2026", "intelligence artificielle", "rédaction"]
 ---
 
-## La redaction de CV a l'ere de l'IA : un avant et un apres
+## La rédaction de CV à l'ère de l'IA : un avant et un après
 
-Il y a encore trois ans, rediger un CV consistait a ouvrir un document Word, copier un modele trouve en ligne et remplir les champs. En 2026, cette approche est devenue obsolete. L'intelligence artificielle a profondement modifie la facon dont les candidats preparent leurs candidatures, et surtout, la facon dont les recruteurs evaluent les CV.
+Il y a encore trois ans, rédiger un CV consistait à ouvrir un document Word, copier un modèle trouvé en ligne et remplir les champs. En 2026, cette approche est devenue obsolète. L'intelligence artificielle a profondément modifié la façon dont les candidats préparent leurs candidatures, et surtout, la façon dont les recruteurs évaluent les CV.
 
-Ce changement n'est pas anodin. Le marche de l'emploi est plus competitif que jamais, et les outils de tri automatise (ATS) sont devenus la norme dans la grande majorite des entreprises. Comprendre comment l'IA intervient dans la redaction de CV, c'est se donner un avantage concret sur les autres candidats.
+Ce changement n'est pas anodin. Le marché de l'emploi est plus compétitif que jamais, et les outils de tri automatisé (ATS) sont devenus la norme dans la grande majorité des entreprises. Comprendre comment l'IA intervient dans la rédaction de CV, c'est se donner un avantage concret sur les autres candidats.
 
-## Ce qui a change depuis 2023
+## Ce qui a changé depuis 2023
 
-### L'analyse semantique remplace le copier-coller de mots-cles
+### L'analyse sémantique remplace le copier-coller de mots-clés
 
-Auparavant, optimiser son CV pour un ATS revenait a identifier les mots-cles d'une offre et a les inserer dans son document. Cette technique rudimentaire avait ses limites : un CV bourre de mots-cles sans coherence etait souvent repere par les recruteurs.
+Auparavant, optimiser son CV pour un ATS revenait à identifier les mots-clés d'une offre et à les insérer dans son document. Cette technique rudimentaire avait ses limites : un CV bourré de mots-clés sans cohérence était souvent repéré par les recruteurs.
 
-En 2026, les outils d'IA analysent le sens profond des offres d'emploi. Ils comprennent que "pilotage de projet" et "gestion de projet" sont des competences proches. Ils savent que "React" et "React.js" designent la meme technologie. Cette comprehension semantique permet de reformuler vos experiences de maniere naturelle, sans forcer l'insertion de termes artificiels.
+En 2026, les outils d'IA analysent le sens profond des offres d'emploi. Ils comprennent que "pilotage de projet" et "gestion de projet" sont des compétences proches. Ils savent que "React" et "React.js" désignent la même technologie. Cette compréhension sémantique permet de reformuler vos expériences de manière naturelle, sans forcer l'insertion de termes artificiels.
 
 Pour en savoir plus sur le fonctionnement des ATS, consultez notre [guide complet sur les CV ATS](/blog/cv-ats-guide-complet).
 
 ### La personnalisation de masse est devenue accessible
 
-Adapter son CV a chaque offre d'emploi etait autrefois un processus chronophage. Modifier les mots-cles, reformuler certaines experiences, ajuster l'ordre des competences : chaque candidature demandait 30 a 60 minutes de travail.
+Adapter son CV à chaque offre d'emploi était autrefois un processus chronophage. Modifier les mots-clés, reformuler certaines expériences, ajuster l'ordre des compétences : chaque candidature demandait 30 à 60 minutes de travail.
 
-L'IA a rendu ce processus quasi instantane. En quelques secondes, un outil specialise peut analyser une offre, identifier les ecarts entre votre profil et les attentes du poste, puis proposer des modifications ciblees. Le candidat garde le controle total : il accepte ou rejette chaque suggestion.
+L'IA a rendu ce processus quasi instantané. En quelques secondes, un outil spécialisé peut analyser une offre, identifier les écarts entre votre profil et les attentes du poste, puis proposer des modifications ciblées. Le candidat garde le contrôle total : il accepte ou rejette chaque suggestion.
 
 ### Le match score est devenu un standard
 
-Le concept de score de compatibilite entre un CV et une offre d'emploi s'est generalise. Ce score, calcule par des algorithmes d'IA, mesure l'adequation entre votre profil et les exigences du poste. Il prend en compte les competences techniques, les soft skills, le niveau d'experience et la pertinence du vocabulaire utilise.
+Le concept de score de compatibilité entre un CV et une offre d'emploi s'est généralisé. Ce score, calculé par des algorithmes d'IA, mesure l'adéquation entre votre profil et les exigences du poste. Il prend en compte les compétences techniques, les soft skills, le niveau d'expérience et la pertinence du vocabulaire utilisé.
 
-Decouvrez comment fonctionne le [score de compatibilite CV-offre](/blog/score-compatibilite-cv-offre) et comment l'ameliorer.
+Découvrez comment fonctionne le [score de compatibilité CV-offre](/blog/score-compatibilité-cv-offre) et comment l'améliorer.
 
 ## Les 4 apports concrets de l'IA pour votre CV
 
-### 1. Une generation de contenu contextualisee
+### 1. Une génération de contenu contextualisée
 
-L'IA ne se contente plus de reformuler vos phrases. Elle peut generer des descriptions d'experience completes en se basant sur votre parcours reel. Vous indiquez votre poste, votre entreprise et vos responsabilites principales ; l'IA propose une formulation professionnelle, chiffree et orientee resultats.
+L'IA ne se contente plus de reformuler vos phrases. Elle peut générer des descriptions d'expérience complètes en se basant sur votre parcours réel. Vous indiquez votre poste, votre entreprise et vos responsabilités principales ; l'IA propose une formulation professionnelle, chiffrée et orientée résultats.
 
-Par exemple, si vous mentionnez avoir ete "responsable du site web de l'entreprise", l'IA pourrait suggerer : "Gestion et optimisation du site web corporate (refonte UX, amelioration du temps de chargement de 40 %, mise en place d'un suivi analytics)". Bien entendu, cette suggestion n'est pertinente que si ces elements correspondent a votre experience reelle.
+Par exemple, si vous mentionnez avoir été "responsable du site web de l'entreprise", l'IA pourrait suggérer : "Gestion et optimisation du site web corporate (refonte UX, amélioration du temps de chargement de 40 %, mise en place d'un suivi analytics)". Bien entendu, cette suggestion n'est pertinente que si ces éléments correspondent à votre expérience réelle.
 
 ### 2. L'adaptation au ton et au secteur
 
-Chaque secteur a ses codes. Le vocabulaire attendu dans la finance n'est pas le meme que dans le marketing digital ou l'ingenierie. L'IA de 2026 comprend ces nuances et adapte le ton de votre CV en consequence.
+Chaque secteur a ses codes. Le vocabulaire attendu dans la finance n'est pas le même que dans le marketing digital ou l'ingénierie. L'IA de 2026 comprend ces nuances et adapte le ton de votre CV en conséquence.
 
-Un CV pour un poste en startup tech ne sera pas redige de la meme maniere qu'un CV pour un cabinet de conseil ou une administration publique. L'IA ajuste le niveau de formalisme, le choix des verbes d'action et la mise en avant des competences les plus pertinentes.
+Un CV pour un poste en startup tech ne sera pas rédigé de la même manière qu'un CV pour un cabinet de conseil ou une administration publique. L'IA ajuste le niveau de formalisme, le choix des verbes d'action et la mise en avant des compétences les plus pertinentes.
 
-### 3. La detection des lacunes
+### 3. La détection des lacunes
 
-Au-dela de la reformulation, l'IA identifie ce qui manque dans votre CV par rapport a une offre donnee. Certifications absentes, competences non mentionnees, experiences insuffisamment detaillees : chaque lacune est signalee avec une suggestion d'amelioration.
+Au-delà de la reformulation, l'IA identifie ce qui manque dans votre CV par rapport à une offre donnée. Certifications absentes, compétences non mentionnées, expériences insuffisamment détaillées : chaque lacune est signalée avec une suggestion d'amélioration.
 
-Cela ne signifie pas inventer des competences. Il s'agit de mettre en valeur des elements de votre parcours que vous n'aviez peut-etre pas pense a mentionner. Pour approfondir ce sujet, lisez notre article sur les [erreurs courantes de CV ATS](/blog/erreurs-cv-ats).
+Cela ne signifie pas inventer des compétences. Il s'agit de mettre en valeur des éléments de votre parcours que vous n'aviez peut-être pas pensé à mentionner. Pour approfondir ce sujet, lisez notre article sur les [erreurs courantes de CV ATS](/blog/erreurs-cv-ats).
 
-### 4. Le controle qualite automatise
+### 4. Le contrôle qualité automatisé
 
-L'IA verifie la coherence globale de votre CV : orthographe, grammaire, format compatible ATS, longueur appropriee, absence de repetitions. Ces verifications, fastidieuses a faire manuellement, sont effectuees en temps reel.
+L'IA vérifie la cohérence globale de votre CV : orthographe, grammaire, format compatible ATS, longueur appropriée, absence de répétitions. Ces vérifications, fastidieuses à faire manuellement, sont effectuées en temps réel.
 
-## Les limites a connaitre
+## Les limites à connaître
 
 ### L'IA n'est pas infaillible
 
-Les suggestions de l'IA sont des propositions, pas des verites absolues. Il est essentiel de relire chaque modification et de s'assurer que le contenu reflete fidelement votre parcours. Un CV genere par IA sans supervision humaine risque de contenir des inexactitudes ou des formulations generiques.
+Les suggestions de l'IA sont des propositions, pas des vérités absolues. Il est essentiel de relire chaque modification et de s'assurer que le contenu reflète fidèlement votre parcours. Un CV généré par IA sans supervision humaine risque de contenir des inexactitudes ou des formulations génériques.
 
 ### Le risque d'uniformisation
 
-Si tout le monde utilise les memes outils d'IA, les CV risquent de se ressembler. C'est pourquoi les meilleurs outils proposent des suggestions personnalisees plutot que des modeles generiques. Votre touche personnelle reste indispensable.
+Si tout le monde utilise les mêmes outils d'IA, les CV risquent de se ressembler. C'est pourquoi les meilleurs outils proposent des suggestions personnalisées plutôt que des modèles génériques. Votre touche personnelle reste indispensable.
 
-### La question ethique
+### La question éthique
 
-Optimiser son CV avec l'IA est parfaitement legitime, a condition de ne pas franchir la ligne entre mise en valeur et mensonge. L'IA doit vous aider a mieux presenter ce que vous savez faire, pas a pretendre savoir faire ce que vous ne maitrisez pas. Nous detaillons les [bonnes pratiques ethiques dans cet article dedie](/blog/cv-ia-sans-mentir).
+Optimiser son CV avec l'IA est parfaitement légitime, à condition de ne pas franchir la ligne entre mise en valeur et mensonge. L'IA doit vous aider à mieux présenter ce que vous savez faire, pas à prétendre savoir faire ce que vous ne maîtrisez pas. Nous détaillons les [bonnes pratiques éthiques dans cet article dédié](/blog/cv-ia-sans-mentir).
 
-## Comment FitMyCV integre ces avancees
+## Comment FitMyCV intègre ces avancées
 
-[FitMyCV](https://www.fitmycv.io) est un outil specialise dans l'optimisation de CV par IA. Contrairement aux outils generalistes comme ChatGPT, FitMyCV est concu specifiquement pour le processus de candidature :
+[FitMyCV](https://www.fitmycv.io) est un outil spécialisé dans l'optimisation de CV par IA. Contrairement aux outils généralistes comme ChatGPT, FitMyCV est conçu spécifiquement pour le processus de candidature :
 
-- **Generation contextuelle** : l'IA analyse votre CV et l'offre ciblee pour proposer des reformulations adaptees
-- **Score de compatibilite** : un indicateur en temps reel mesure l'adequation entre votre profil et le poste
-- **Mode review** : chaque modification est presentee sous forme de diff, vous acceptez ou rejetez individuellement
-- **Format ATS** : le [format de sortie est optimise](/blog/cv-compatible-ats-format) pour passer les filtres automatises
+- **Génération contextuelle** : l'IA analyse votre CV et l'offre ciblée pour proposer des reformulations adaptées
+- **Score de compatibilité** : un indicateur en temps réel mesure l'adéquation entre votre profil et le poste
+- **Mode review** : chaque modification est présentée sous forme de diff, vous acceptez ou rejetez individuellement
+- **Format ATS** : le [format de sortie est optimisé](/blog/cv-compatible-ats-format) pour passer les filtres automatisés
 
-Decouvrez toutes les fonctionnalites sur la page [features](/features) ou le fonctionnement detaille sur [how it works](/how-it-works).
+Découvrez toutes les fonctionnalités sur la page [features](/features) ou le fonctionnement détaillé sur [how it works](/how-it-works).
 
-## Ce que l'avenir reserve
+## Ce que l'avenir réserve
 
-L'evolution ne s'arrete pas la. Les tendances pour les prochains mois incluent :
+L'évolution ne s'arrête pas là. Les tendances pour les prochains mois incluent :
 
-- **L'analyse video** : certains ATS commencent a analyser les entretiens video avec l'IA, ce qui pourrait influencer la maniere dont les competences sont presentees dans le CV
-- **L'integration avec LinkedIn** : synchronisation automatique entre votre CV optimise et votre profil professionnel en ligne
-- **Les CV dynamiques** : des CV qui s'adaptent automatiquement en fonction du destinataire, avec differentes versions pour differents postes
+- **L'analyse video** : certains ATS commencent à analyser les entretiens vidéo avec l'IA, ce qui pourrait influencer la manière dont les compétences sont présentées dans le CV
+- **L'intégration avec LinkedIn** : synchronisation automatique entre votre CV optimisé et votre profil professionnel en ligne
+- **Les CV dynamiques** : des CV qui s'adaptent automatiquement en fonction du destinataire, avec différentes versions pour différents postes
 
 ## Conclusion
 
-L'IA a transforme la redaction de CV d'une corvee repetitive en un processus strategique et assiste. En 2026, ne pas utiliser l'IA pour preparer ses candidatures revient a se presenter a une course avec des chaussures inadaptees : c'est possible, mais c'est un handicap inutile.
+L'IA a transformé la rédaction de CV d'une corvée répétitive en un processus stratégique et assisté. En 2026, ne pas utiliser l'IA pour préparer ses candidatures revient à se présenter à une course avec des chaussures inadaptées : c'est possible, mais c'est un handicap inutile.
 
-L'essentiel est de choisir les bons outils, de garder le controle sur le contenu et de ne jamais perdre de vue que votre CV doit reflete fidement votre parcours et vos competences reelles.
+L'essentiel est de choisir les bons outils, de garder le contrôle sur le contenu et de ne jamais perdre de vue que votre CV doit refléter fidèlement votre parcours et vos compétences réelles.
 
-[Essayez FitMyCV gratuitement avec 15 credits et optimisez votre premier CV en quelques minutes.](https://app.fitmycv.io)
+[Essayez FitMyCV gratuitement avec 15 crédits et optimisez votre premier CV en quelques minutes.](https://app.fitmycv.io)

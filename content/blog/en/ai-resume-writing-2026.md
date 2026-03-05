@@ -1,7 +1,7 @@
 ---
 title: "AI and Resume Writing in 2026: What Has Changed"
 description: "Discover how artificial intelligence has transformed resume writing in 2026 and how to leverage it to land more interviews."
-date: "2026-02-25"
+date: "2026-02-18"
 translationKey: "ai-resume-writing-2026"
 tags: ["AI", "resume", "2026", "artificial intelligence", "writing"]
 ---

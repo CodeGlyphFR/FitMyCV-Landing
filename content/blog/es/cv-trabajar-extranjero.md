@@ -1,7 +1,7 @@
 ---
 title: "Cómo preparar tu CV para trabajar en el extranjero: la guía completa"
 description: "Aprende a adaptar tu CV para mercados laborales internacionales. Formatos, traducción, errores frecuentes y consejos prácticos para conseguir empleo fuera."
-date: "2026-01-05"
+date: "2025-12-04"
 translationKey: "resume-working-abroad"
 tags: ["internacional", "CV", "extranjero", "expatriación", "traducción"]
 ---

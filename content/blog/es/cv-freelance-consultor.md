@@ -1,7 +1,7 @@
 ---
 title: "CV freelance y consultor: especificidades y optimizacion"
 description: "Descubre como estructurar un CV de freelance o consultor para conseguir proyectos, con consejos de optimizacion IA y estrategias de multi-posting."
-date: "2026-01-25"
+date: "2025-12-30"
 translationKey: "freelance-consultant-resume"
 tags: ["freelance", "consultor", "CV", "independiente"]
 ---

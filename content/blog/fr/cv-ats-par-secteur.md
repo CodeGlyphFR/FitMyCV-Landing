@@ -1,7 +1,7 @@
 ---
 title: "CV ATS par secteur : tech, finance, santé, marketing, ce qui change"
 description: "Découvrez comment adapter votre CV ATS selon votre secteur d'activité. Les attentes diffèrent en tech, finance, santé et marketing. Voici ce qu'il faut savoir."
-date: "2026-02-05"
+date: "2026-01-13"
 translationKey: "ats-resume-by-sector"
 tags: ["ATS", "CV", "secteur", "tech", "finance", "santé"]
 ---
@@ -41,7 +41,7 @@ Dans le secteur technologique, les ATS sont configurés pour scanner des compét
 4. **Projets personnels ou open source** : si pertinents pour le poste
 5. **Formation et certifications**
 
-Pour identifier les mots-clés précis à reprendre dans votre CV tech, [un outil d'analyse](/blog/mots-cles-cv-offre-emploi) peut vous faire gagner un temps considérable.
+Pour identifier les mots-clés précis à reprendre dans votre CV tech, [un outil d'analyse](/blog/mots-clés-cv-offre-emploi) peut vous faire gagner un temps considérable.
 
 ## Finance et banque : rigueur et conformité
 
@@ -140,7 +140,7 @@ Malgré les différences, certaines règles restent universelles :
 
 L'un des avantages de FitMyCV est sa capacité à analyser votre CV en fonction de l'offre spécifique, quel que soit le secteur. L'outil ne se contente pas de vérifier les mots-clés : il comprend le contexte sectoriel et évalue la pertinence de vos compétences par rapport aux attentes du poste.
 
-Que vous postuliez dans la tech, la finance, la santé ou le marketing, l'[IA de FitMyCV](/blog/adapter-cv-ats-ia) ajuste ses recommandations au vocabulaire et aux standards de votre secteur. Le [score de compatibilité](/blog/score-compatibilite-cv-offre) reflète cette analyse sectorielle.
+Que vous postuliez dans la tech, la finance, la santé ou le marketing, l'[IA de FitMyCV](/blog/adapter-cv-ats-ia) ajuste ses recommandations au vocabulaire et aux standards de votre secteur. Le [score de compatibilité](/blog/score-compatibilité-cv-offre) reflète cette analyse sectorielle.
 
 ## Passez à l'action
 

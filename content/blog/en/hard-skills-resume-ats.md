@@ -1,7 +1,7 @@
 ---
 title: "Hard Skills on Your Resume: How to Present Them for ATS Success"
 description: "Discover how to organize and present technical skills on your resume to maximize your ATS score. Formats, examples, and pitfalls to avoid."
-date: "2026-01-15"
+date: "2025-12-17"
 translationKey: "hard-skills-resume-ats"
 tags: ["hard skills", "technical skills", "resume", "ATS"]
 ---

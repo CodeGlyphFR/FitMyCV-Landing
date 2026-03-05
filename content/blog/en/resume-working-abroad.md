@@ -1,7 +1,7 @@
 ---
 title: "How to Prepare Your Resume for Working Abroad: The Complete Guide"
 description: "Learn how to adapt your resume for international job markets. Formats, translation tips, common mistakes, and practical advice for landing a job abroad."
-date: "2026-01-05"
+date: "2025-12-04"
 translationKey: "resume-working-abroad"
 tags: ["international", "resume", "abroad", "expat", "translation"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "How to Tailor Your ATS Resume with AI in 2026"
 description: "Learn how artificial intelligence can help you create an ATS-compatible resume that passes automated filters and lands you more interviews."
-date: "2026-02-15"
+date: "2026-02-02"
 translationKey: "tailor-ai"
 tags: ["ATS", "AI", "resume", "optimization"]
 ---

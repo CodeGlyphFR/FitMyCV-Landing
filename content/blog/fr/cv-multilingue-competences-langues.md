@@ -1,7 +1,7 @@
 ---
 title: "Comment valoriser vos compétences linguistiques sur le CV"
 description: "Apprenez à présenter vos langues sur votre CV de manière efficace. Cadre CECRL, formulations, erreurs à éviter et conseils pour les profils multilingues."
-date: "2026-01-02"
+date: "2025-12-01"
 translationKey: "multilingual-resume-language-skills"
 tags: ["langues", "multilingue", "CV", "compétences linguistiques"]
 ---
@@ -148,7 +148,7 @@ Les barres de progression, les étoiles ou les pourcentages sont populaires dans
 
 ### Adaptez à chaque offre
 
-Une offre demande "allemand courant" ? Mettez l'allemand en premier dans votre rubrique langues. L'ordre dans lequel vous listez vos langues envoie un signal, aussi bien à l'ATS qu'au recruteur humain. L'[analyse de compatibilité](/blog/score-compatibilite-cv-offre) de votre CV avec l'offre vous permet de vérifier que vos langues sont correctement mises en avant.
+Une offre demande "allemand courant" ? Mettez l'allemand en premier dans votre rubrique langues. L'ordre dans lequel vous listez vos langues envoie un signal, aussi bien à l'ATS qu'au recruteur humain. L'[analyse de compatibilité](/blog/score-compatibilité-cv-offre) de votre CV avec l'offre vous permet de vérifier que vos langues sont correctement mises en avant.
 
 ## Cas particuliers : comment les gérer
 

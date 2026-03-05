@@ -1,143 +1,143 @@
 ---
 title: "Optimiser son CV avec l'IA sans tricher : les bonnes pratiques"
-description: "Comment utiliser l'IA pour ameliorer votre CV tout en restant honnete. Guide pratique des bonnes pratiques ethiques pour l'optimisation de CV assistee par IA."
-date: "2026-02-08"
+description: "Comment utiliser l'IA pour améliorer votre CV tout en restant honnête. Guide pratique des bonnes pratiques éthiques pour l'optimisation de CV assistée par IA."
+date: "2026-01-19"
 translationKey: "ai-resume-without-lying"
-tags: ["IA", "CV", "ethique", "optimisation", "bonnes pratiques"]
+tags: ["IA", "CV", "éthique", "optimisation", "bonnes pratiques"]
 ---
 
 ## La ligne fine entre optimisation et mensonge
 
-L'IA a rendu l'optimisation de CV plus rapide et plus accessible que jamais. Mais cette facilite souleve une question importante : ou se situe la limite entre mettre en valeur ses competences et les inventer ?
+L'IA a rendu l'optimisation de CV plus rapide et plus accessible que jamais. Mais cette facilité soulève une question importante : où se situe la limite entre mettre en valeur ses compétences et les inventer ?
 
-La reponse est plus nuancee qu'il n'y parait. Reformuler une experience pour qu'elle corresponde mieux au vocabulaire d'une offre est parfaitement legitime. Inventer une certification que vous n'avez pas est un mensonge. Entre ces deux extremes, il existe une zone grise que cet article va vous aider a naviguer.
+La réponse est plus nuancée qu'il n'y paraît. Reformuler une expérience pour qu'elle corresponde mieux au vocabulaire d'une offre est parfaitement légitime. Inventer une certification que vous n'avez pas est un mensonge. Entre ces deux extrêmes, il existe une zone grise que cet article va vous aider à naviguer.
 
 ## Pourquoi la tentation du mensonge est plus forte avec l'IA
 
-### L'IA genere du contenu convaincant
+### L'IA génère du contenu convaincant
 
-Les modeles de langage comme ChatGPT produisent des descriptions d'experience qui sonnent professionnelles et credibles. Le probleme, c'est qu'ils peuvent generer ces descriptions meme quand elles ne correspondent pas a votre parcours reel. Le texte est si bien ecrit qu'il est tentant de le garder tel quel.
+Les modèles de langage comme ChatGPT produisent des descriptions d'expérience qui sonnent professionnelles et crédibles. Le problème, c'est qu'ils peuvent générer ces descriptions même quand elles ne correspondent pas à votre parcours réel. Le texte est si bien écrit qu'il est tentant de le garder tel quel.
 
-### La pression de la competition
+### La pression de la compétition
 
-Le marche de l'emploi est competitif. Quand vous voyez que votre [score de compatibilite](/blog/score-compatibilite-cv-offre) est bas pour une offre qui vous interesse, la tentation est forte d'ajouter des competences que vous ne maitrisez pas pour faire monter ce score.
+Le marché de l'emploi est compétitif. Quand vous voyez que votre [score de compatibilité](/blog/score-compatibilité-cv-offre) est bas pour une offre qui vous intéresse, la tentation est forte d'ajouter des compétences que vous ne maîtrisez pas pour faire monter ce score.
 
-### L'absence de controle immediat
+### L'absence de contrôle immédiat
 
-Contrairement a un entretien en face-a-face, un CV n'est pas verifie en temps reel. Il est donc tentant de penser que de petits arrangements avec la verite passeront inapercu. Spoiler : ce n'est souvent pas le cas.
+Contrairement à un entretien en face-à-face, un CV n'est pas vérifié en temps réel. Il est donc tentant de penser que de petits arrangements avec la vérité passeront inaperçus. Spoiler : ce n'est souvent pas le cas.
 
 ## Les risques concrets du mensonge sur CV
 
-### La verification par les recruteurs
+### La vérification par les recruteurs
 
-Les recruteurs professionnels verifient les informations cles de votre CV. Les certifications sont facilement verifiables en ligne. Les references sont contactees. Les dates d'emploi sont recoupees avec LinkedIn et les anciens employeurs. Un mensonge decouvert pendant le processus de recrutement elimine instantanement votre candidature.
+Les recruteurs professionnels vérifient les informations clés de votre CV. Les certifications sont facilement vérifiables en ligne. Les références sont contactées. Les dates d'emploi sont recoupées avec LinkedIn et les anciens employeurs. Un mensonge découvert pendant le processus de recrutement élimine instantanément votre candidature.
 
 ### Le test technique
 
-Si vous pretendez maitriser Python, attendez-vous a un test technique en Python. Si vous affirmez avoir gere des projets en methode agile, on vous posera des questions precises sur vos sprints, vos retrospectives, vos outils. Le decalage entre le CV et la realite se revele generalement tres rapidement en entretien.
+Si vous prétendez maîtriser Python, attendez-vous à un test technique en Python. Si vous affirmez avoir géré des projets en méthode agile, on vous posera des questions précises sur vos sprints, vos rétrospectives, vos outils. Le décalage entre le CV et la réalité se révèle généralement très rapidement en entretien.
 
-### Les consequences juridiques
+### Les conséquences juridiques
 
-En France et dans de nombreux pays, mentir sur un CV peut constituer un motif de licenciement pour faute grave, meme apres plusieurs annees en poste. Certains cas ont mene a des poursuites pour escroquerie. Le jeu n'en vaut pas la chandelle.
+En France et dans de nombreux pays, mentir sur un CV peut constituer un motif de licenciement pour faute grave, même après plusieurs années en poste. Certains cas ont mené à des poursuites pour escroquerie. Le jeu n'en vaut pas la chandelle.
 
-### La reputation professionnelle
+### La réputation professionnelle
 
-Dans un monde professionnel connecte, la reputation circule vite. Un candidat repere pour avoir menti sur son CV peut voir cette information partagee entre recruteurs, surtout dans des secteurs ou les reseaux sont denses.
+Dans un monde professionnel connecté, la réputation circule vite. Un candidat repéré pour avoir menti sur son CV peut voir cette information partagée entre recruteurs, surtout dans des secteurs où les réseaux sont denses.
 
-## Ce qui est ethique vs ce qui ne l'est pas
+## Ce qui est éthique vs ce qui ne l'est pas
 
-### Ethique : reformuler pour correspondre au vocabulaire de l'offre
+### Éthique : reformuler pour correspondre au vocabulaire de l'offre
 
-Votre CV dit "gestion de projet". L'offre parle de "pilotage de projet". Reformuler pour utiliser le terme de l'offre est parfaitement ethique, car il s'agit de la meme competence exprimee differemment.
+Votre CV dit "gestion de projet". L'offre parle de "pilotage de projet". Reformuler pour utiliser le terme de l'offre est parfaitement éthique, car il s'agit de la même compétence exprimée différemment.
 
-C'est exactement ce que fait un bon outil d'IA comme [FitMyCV](https://www.fitmycv.io) : il reformule vos experiences en utilisant le vocabulaire de l'offre, sans inventer de contenu.
+C'est exactement ce que fait un bon outil d'IA comme [FitMyCV](https://www.fitmycv.io) : il reformule vos expériences en utilisant le vocabulaire de l'offre, sans inventer de contenu.
 
-### Ethique : quantifier vos realisations
+### Éthique : quantifier vos réalisations
 
-Votre CV dit "J'ai ameliore les ventes". L'IA suggere "Augmentation du chiffre d'affaires de 15 % sur 12 mois grace a la mise en place d'une strategie de cross-selling". Si ce chiffre est exact, cette reformulation est non seulement ethique mais recommandee : les recruteurs preferent les resultats chiffres.
+Votre CV dit "J'ai amélioré les ventes". L'IA suggère "Augmentation du chiffre d'affaires de 15 % sur 12 mois grâce à la mise en place d'une stratégie de cross-selling". Si ce chiffre est exact, cette reformulation est non seulement éthique mais recommandée : les recruteurs préfèrent les résultats chiffrés.
 
-### Ethique : reorganiser l'ordre des experiences et competences
+### Éthique : réorganiser l'ordre des expériences et compétences
 
-Mettre en avant certaines experiences plutot que d'autres en fonction de l'offre est une forme de personnalisation parfaitement acceptable. Vous ne cachez rien, vous changez la hierarchie de presentation. Pour en savoir plus, lisez notre article sur [comment personnaliser votre CV pour chaque offre](/blog/personnaliser-cv-chaque-offre).
+Mettre en avant certaines expériences plutôt que d'autres en fonction de l'offre est une forme de personnalisation parfaitement acceptable. Vous ne cachez rien, vous changez la hiérarchie de présentation. Pour en savoir plus, lisez notre article sur [comment personnaliser votre CV pour chaque offre](/blog/personnaliser-cv-chaque-offre).
 
-### Non ethique : ajouter des competences que vous n'avez pas
+### Non éthique : ajouter des compétences que vous n'avez pas
 
-L'offre exige "Kubernetes" et vous ne l'avez jamais utilise. L'ajouter a votre CV est un mensonge, meme si vous avez utilise Docker (qui est une technologie liee mais differente). Mentionnez plutot Docker et votre interet pour l'ecosysteme conteneur.
+L'offre exige "Kubernetes" et vous ne l'avez jamais utilisé. L'ajouter à votre CV est un mensonge, même si vous avez utilisé Docker (qui est une technologie liée mais différente). Mentionnez plutôt Docker et votre intérêt pour l'écosystème conteneur.
 
-### Non ethique : inventer des certifications
+### Non éthique : inventer des certifications
 
-Pretendre avoir une certification PMP, AWS, ou Scrum Master que vous n'avez pas est verifiable en quelques minutes par un recruteur. C'est un risque inutile.
+Prétendre avoir une certification PMP, AWS, ou Scrum Master que vous n'avez pas est vérifiable en quelques minutes par un recruteur. C'est un risque inutile.
 
-### Non ethique : gonfler les chiffres
+### Non éthique : gonfler les chiffres
 
-Transformer "equipe de 3 personnes" en "equipe de 15 personnes" ou "5 % de croissance" en "50 % de croissance" est un mensonge, meme si la direction est correcte.
+Transformer "équipe de 3 personnes" en "équipe de 15 personnes" ou "5 % de croissance" en "50 % de croissance" est un mensonge, même si la direction est correcte.
 
-### Non ethique : modifier les dates d'emploi
+### Non éthique : modifier les dates d'emploi
 
-Combler un trou dans le CV en allongeant la duree d'un poste est facilement detectable via LinkedIn ou une verification de references.
+Combler un trou dans le CV en allongeant la durée d'un poste est facilement détectable via LinkedIn ou une vérification de références.
 
-## Comment l'outil adapte aide a rester honnete
+## Comment l'outil adapté aide à rester honnête
 
-### Le mode review : votre filet de securite
+### Le mode review : votre filet de sécurité
 
-L'un des avantages majeurs d'un outil specialise par rapport a ChatGPT est le mode review. Avec [FitMyCV](/features), chaque modification proposee par l'IA est presentee sous forme de diff, comme dans un outil de versioning de code :
+L'un des avantages majeurs d'un outil spécialisé par rapport à ChatGPT est le mode review. Avec [FitMyCV](/features), chaque modification proposée par l'IA est présentée sous forme de diff, comme dans un outil de versioning de code :
 
-- Vous voyez le texte original et le texte modifie cote a cote
+- Vous voyez le texte original et le texte modifié côte à côte
 - Vous acceptez ou rejetez chaque modification individuellement
-- Aucune modification n'est appliquee sans votre validation explicite
+- Aucune modification n'est appliquée sans votre validation explicite
 
-Ce processus vous oblige a examiner chaque changement et a vous demander : "Est-ce que cela reflete fidelement mon experience ?"
+Ce processus vous oblige à examiner chaque changement et à vous demander : "Est-ce que cela reflète fidèlement mon expérience ?"
 
-### Le travail exclusif a partir de vos donnees
+### Le travail exclusif à partir de vos données
 
-Contrairement a ChatGPT qui peut inventer du contenu (les fameuses hallucinations), un outil specialise travaille uniquement a partir des informations que vous avez fournies. Il reformule, restructure et optimise, mais ne genere pas de contenu fictif.
+Contrairement à ChatGPT qui peut inventer du contenu (les fameuses hallucinations), un outil spécialisé travaille uniquement à partir des informations que vous avez fournies. Il reformule, restructure et optimise, mais ne génère pas de contenu fictif.
 
 ### Le score comme guide, pas comme objectif
 
-Le score de compatibilite est un indicateur utile, mais il ne doit pas devenir une obsession. Un score de 75 % avec un CV honnete est infiniment plus precieux qu'un score de 95 % avec un CV truque. Le score vous indique ou concentrer vos efforts de reformulation, pas ou inventer des competences.
+Le score de compatibilité est un indicateur utile, mais il ne doit pas devenir une obsession. Un score de 75 % avec un CV honnête est infiniment plus précieux qu'un score de 95 % avec un CV truqué. Le score vous indique où concentrer vos efforts de reformulation, pas où inventer des compétences.
 
-Pour comprendre comment le score fonctionne, consultez notre article sur le [score de compatibilite CV-offre](/blog/score-compatibilite-cv-offre).
+Pour comprendre comment le score fonctionne, consultez notre article sur le [score de compatibilité CV-offre](/blog/score-compatibilité-cv-offre).
 
-## Les bonnes pratiques concretes
+## Les bonnes pratiques concrètes
 
-### 1. Commencez toujours par un inventaire honnete
+### 1. Commencez toujours par un inventaire honnête
 
-Avant d'utiliser l'IA, faites la liste de vos competences reelles, de vos experiences verifiables et de vos resultats mesurables. C'est la matiere premiere sur laquelle l'IA va travailler. Plus cette base est solide et detaillee, meilleures seront les reformulations.
+Avant d'utiliser l'IA, faites la liste de vos compétences réelles, de vos expériences vérifiables et de vos résultats mesurables. C'est la matière première sur laquelle l'IA va travailler. Plus cette base est solide et détaillée, meilleures seront les reformulations.
 
-### 2. Relisez chaque suggestion a voix haute
+### 2. Relisez chaque suggestion à voix haute
 
-Une technique simple pour detecter les exagerations : lisez chaque ligne de votre CV a voix haute et imaginez qu'on vous pose la question "Pouvez-vous detailler cette experience ?" en entretien. Si vous ne pouvez pas repondre confortablement, la formulation est probablement trop ambitieuse.
+Une technique simple pour détecter les exagérations : lisez chaque ligne de votre CV à voix haute et imaginez qu'on vous pose la question "Pouvez-vous détailler cette expérience ?" en entretien. Si vous ne pouvez pas répondre confortablement, la formulation est probablement trop ambitieuse.
 
-### 3. Utilisez le conditionnel pour les competences emergentes
+### 3. Utilisez le conditionnel pour les compétences émergentes
 
-Si vous etes en train d'apprendre une technologie mais ne la maitrisez pas encore, vous pouvez mentionner "formation en cours en Kubernetes" ou "notions de machine learning". C'est honnete et cela montre votre volonte de progresser.
+Si vous êtes en train d'apprendre une technologie mais ne la maîtrisez pas encore, vous pouvez mentionner "formation en cours en Kubernetes" ou "notions de machine learning". C'est honnête et cela montre votre volonté de progresser.
 
 ### 4. Faites relire par un tiers
 
-Demandez a un collegue ou un ami de confiance de relire votre CV optimise. Un regard exterieur detecte plus facilement les incoherences ou les formulations qui sonnent trop beau pour etre vrai.
+Demandez à un collègue ou un ami de confiance de relire votre CV optimisé. Un regard extérieur détecte plus facilement les incohérences ou les formulations qui sonnent trop beau pour être vrai.
 
-### 5. Verifiez la coherence avec votre profil LinkedIn
+### 5. Vérifiez la cohérence avec votre profil LinkedIn
 
-Votre CV et votre profil LinkedIn doivent raconter la meme histoire. Si votre CV mentionne des responsabilites ou des realisations qui n'apparaissent nulle part sur LinkedIn, un recruteur s'interrogera.
+Votre CV et votre profil LinkedIn doivent raconter la même histoire. Si votre CV mentionne des responsabilités ou des réalisations qui n'apparaissent nulle part sur LinkedIn, un recruteur s'interrogera.
 
-## Que faire quand votre profil ne correspond pas a l'offre ?
+## Que faire quand votre profil ne correspond pas à l'offre ?
 
-C'est la situation la plus delicate. Vous trouvez une offre qui vous passionne, mais votre profil ne correspond qu'a 40 %. Plutot que de mentir, voici des alternatives ethiques :
+C'est la situation la plus délicate. Vous trouvez une offre qui vous passionne, mais votre profil ne correspond qu'à 40 %. Plutôt que de mentir, voici des alternatives éthiques :
 
-- **Mettez en avant les competences transferables** : votre experience en gestion de projet marketing peut etre pertinente pour un poste en gestion de projet IT
-- **Valorisez les projets personnels** : un projet open source en Python compte comme experience, meme s'il n'est pas professionnel
-- **Mentionnez les formations en cours** : un certificat en preparation montre votre engagement
-- **Redigez une lettre de motivation ciblee** : elle peut compenser les lacunes du CV en expliquant votre motivation et votre capacite d'apprentissage
-- **Postulez quand meme** : les offres d'emploi decrivent souvent le candidat ideal, pas le candidat minimum. Un profil a 70 % peut tres bien etre retenu
+- **Mettez en avant les compétences transférables** : votre expérience en gestion de projet marketing peut être pertinente pour un poste en gestion de projet IT
+- **Valorisez les projets personnels** : un projet open source en Python compte comme expérience, même s'il n'est pas professionnel
+- **Mentionnez les formations en cours** : un certificat en préparation montre votre engagement
+- **Rédigez une lettre de motivation ciblée** : elle peut compenser les lacunes du CV en expliquant votre motivation et votre capacité d'apprentissage
+- **Postulez quand même** : les offres d'emploi décrivent souvent le candidat idéal, pas le candidat minimum. Un profil à 70 % peut très bien être retenu
 
 Pour d'autres conseils sur l'adaptation de votre CV, consultez notre article sur [l'adaptation de CV avec l'IA](/blog/adapter-cv-ats-ia).
 
 ## Conclusion
 
-L'IA est un outil puissant pour optimiser votre CV, mais elle ne remplace pas votre integrite. Le meilleur CV est celui qui presente fidelement votre parcours dans le langage que le recruteur attend.
+L'IA est un outil puissant pour optimiser votre CV, mais elle ne remplace pas votre intégrité. Le meilleur CV est celui qui présente fidèlement votre parcours dans le langage que le recruteur attend.
 
-Un outil specialise comme FitMyCV vous aide a trouver cet equilibre : il optimise la forme sans alterer le fond. Le mode review vous donne le controle total, et le score de compatibilite vous guide sans vous pousser a mentir.
+Un outil spécialisé comme FitMyCV vous aide à trouver cet équilibre : il optimise la forme sans altérer le fond. Le mode review vous donne le contrôle total, et le score de compatibilité vous guide sans vous pousser à mentir.
 
-Rappelez-vous : un CV honnete qui passe les filtres ATS et impressionne en entretien vaut infiniment plus qu'un CV truque qui s'effondre a la premiere question.
+Rappelez-vous : un CV honnête qui passe les filtres ATS et impressionne en entretien vaut infiniment plus qu'un CV truqué qui s'effondre à la première question.
 
-[Optimisez votre CV en toute transparence avec FitMyCV. 15 credits gratuits pour commencer.](https://app.fitmycv.io)
+[Optimisez votre CV en toute transparence avec FitMyCV. 15 crédits gratuits pour commencer.](https://app.fitmycv.io)

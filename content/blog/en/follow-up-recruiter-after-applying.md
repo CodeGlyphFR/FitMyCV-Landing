@@ -1,7 +1,7 @@
 ---
 title: "How to Follow Up with a Recruiter After Submitting Your Resume"
 description: "Learn how to effectively follow up with recruiters after applying: timing, channels, tone, and message templates to maximize your interview chances."
-date: "2026-01-12"
+date: "2025-12-14"
 translationKey: "follow-up-recruiter-after-applying"
 tags: ["follow-up", "recruiter", "application", "interview"]
 ---

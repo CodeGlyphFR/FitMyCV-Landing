@@ -766,6 +766,11 @@
     "readMore": "Lire l'article",
     "publishedOn": "Publié le",
     "backToBlog": "Retour au blog",
-    "noPosts": "Aucun article pour le moment."
+    "noPosts": "Aucun article pour le moment.",
+    "pillar_ats-optimization": "Optimisation CV & ATS",
+    "pillar_ai-cv": "IA & CV",
+    "pillar_job-search": "Recherche d'emploi",
+    "pillar_format-layout": "Format, mise en page & export",
+    "pillar_international": "International & multilingue"
   }
 }

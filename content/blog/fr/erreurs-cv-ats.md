@@ -12,7 +12,7 @@ Vous avez passé des heures à peaufiner votre CV, vous correspondez parfaitemen
 
 Ces logiciels de tri automatique rejettent **3 CV sur 4** avant qu'un recruteur ne les voie. La bonne nouvelle ? Les erreurs qui causent ces rejets sont souvent simples à corriger. Si vous ne savez pas encore comment fonctionne un ATS, commencez par [notre guide complet sur les CV ATS](/blog/cv-ats-guide-complet).
 
-Voici les 10 erreurs fatales — et comment les éviter.
+Voici les 10 erreurs fatales, et comment les éviter.
 
 ## Les 10 erreurs fatales (et leurs solutions)
 
@@ -61,7 +61,7 @@ Voici les 10 erreurs fatales — et comment les éviter.
 | Icône téléphone | 📱 suivi du numéro | Un caractère inconnu |
 | Étoiles de compétence | ★★★★☆ | Rien |
 
-**La solution :** Remplacez chaque élément visuel par du texte : « Python — Niveau avancé », « Excel — Tableaux croisés dynamiques, macros VBA ».
+**La solution :** Remplacez chaque élément visuel par du texte : « Python : Niveau avancé », « Excel : Tableaux croisés dynamiques, macros VBA ».
 
 ### 6. Placer les informations de contact dans l'en-tête ou le pied de page
 
@@ -73,7 +73,7 @@ Voici les 10 erreurs fatales — et comment les éviter.
 
 **Le problème :** Un CV générique obtient un score de matching faible sur chaque offre. Les candidats qui adaptent leur CV ont **60 % de chances supplémentaires** d'obtenir un entretien.
 
-**La solution :** Personnalisez au minimum la section compétences et le résumé professionnel pour chaque offre. [L'IA peut automatiser cette adaptation](/blog/adapter-cv-ats-ia), et vous pouvez [vérifier votre score de compatibilité](/blog/score-compatibilite-cv-offre) avant chaque envoi.
+**La solution :** Personnalisez au minimum la section compétences et le résumé professionnel pour chaque offre. [L'IA peut automatiser cette adaptation](/blog/adapter-cv-ats-ia), et vous pouvez [vérifier votre score de compatibilité](/blog/score-compatibilité-cv-offre) avant chaque envoi.
 
 ### 8. Faire du keyword stuffing (bourrage de mots-clés)
 
@@ -83,13 +83,13 @@ Voici les 10 erreurs fatales — et comment les éviter.
 
 ### 9. Utiliser des abréviations ou du jargon interne
 
-**Le problème :** « Projet Aurora » ou « Initiative Delta » ne disent rien à un ATS — ni à un recruteur externe d'ailleurs.
+**Le problème :** « Projet Aurora » ou « Initiative Delta » ne disent rien à un ATS, ni à un recruteur externe d'ailleurs.
 
-**La solution :** Décrivez en termes universels : « Migration CRM vers Salesforce (Projet Aurora) — 500 utilisateurs, budget 200 K€ ». Le nom de code peut rester, mais les mots-clés techniques doivent être explicites.
+**La solution :** Décrivez en termes universels : « Migration CRM vers Salesforce (Projet Aurora), 500 utilisateurs, budget 200 K€ ». Le nom de code peut rester, mais les mots-clés techniques doivent être explicites.
 
 ### 10. Ne pas inclure de section compétences dédiée
 
-**Le problème :** La section « Compétences » est la source primaire de matching pour la plupart des ATS. Sans elle, le système doit extraire les compétences du texte libre de vos expériences — avec un taux de détection bien plus faible.
+**Le problème :** La section « Compétences » est la source primaire de matching pour la plupart des ATS. Sans elle, le système doit extraire les compétences du texte libre de vos expériences, avec un taux de détection bien plus faible.
 
 **La solution :** Créez une section « Compétences » claire, positionnée après votre résumé professionnel. Groupez vos compétences par catégorie (Techniques, Métier, Outils, Langues).
 

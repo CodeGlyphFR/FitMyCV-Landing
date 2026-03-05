@@ -1,7 +1,7 @@
 ---
 title: "CV para candidatura espontanea: como adaptarlo sin oferta de empleo"
 description: "Aprende a redactar un CV eficaz para una candidatura espontanea, incluso sin oferta de referencia, gracias a la IA y la generacion por titulo de puesto."
-date: "2026-02-22"
+date: "2026-02-15"
 translationKey: "unsolicited-application-resume"
 tags: ["candidatura espontanea", "CV", "busqueda de empleo", "consejos"]
 ---

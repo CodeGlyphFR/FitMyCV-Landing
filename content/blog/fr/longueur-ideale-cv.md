@@ -1,7 +1,7 @@
 ---
 title: "CV d'une page ou deux pages : quelle longueur choisir ?"
-description: "Une page ou deux pages pour votre CV ? Criteres de choix selon votre experience, votre secteur et les attentes des recruteurs en 2026."
-date: "2026-02-16"
+description: "Une page ou deux pages pour votre CV ? Critères de choix selon votre expérience, votre secteur et les attentes des recruteurs en 2026."
+date: "2026-02-05"
 translationKey: "ideal-resume-length"
 tags: ["longueur", "CV", "une page", "deux pages", "mise en page"]
 ---
@@ -14,11 +14,11 @@ Ce qui est certain, c'est que la longueur de votre CV n'est jamais neutre. Un CV
 
 ## Ce que les études nous disent
 
-Plusieurs études menées aupres de recruteurs apportent des éclairages concrets :
+Plusieurs études menées auprès de recruteurs apportent des éclairages concrets :
 
 - **Un recruteur passe en moyenne 7 secondes** sur un premier tri de CV. Ce chiffre, souvent cité, signifie que votre CV doit permettre de capter l'essentiel en un coup d'oeil, quelle que soit sa longueur.
 - **Les CV de deux pages sont aussi bien notés que ceux d'une page** pour les profils expérimentés (plus de 5 ans), selon une étude ResumeGo publiée en 2023.
-- **Les ATS ne pénalisent pas la longueur**, mais certains systemes anciens tronquent au-dela de deux pages. Pour en savoir plus sur le fonctionnement des ATS, consultez [notre guide complet](/blog/cv-ats-guide-complet).
+- **Les ATS ne pénalisent pas la longueur**, mais certains systèmes anciens tronquent au-delà de deux pages. Pour en savoir plus sur le fonctionnement des ATS, consultez [notre guide complet](/blog/cv-ats-guide-complet).
 
 ## Le CV d'une page : pour qui ?
 
@@ -26,20 +26,20 @@ Plusieurs études menées aupres de recruteurs apportent des éclairages concret
 
 Le CV d'une page est adapté dans les cas suivants :
 
-- **Jeunes diplomes** avec moins de 3 ans d'expérience professionnelle.
-- **Reconversion professionnelle** ou vous souhaitez vous concentrer sur les compétences transférables plutot que sur un long historique.
-- **Stages et alternances** ou l'expérience est par nature limitée.
-- **Secteurs créatifs** ou la concision et le design comptent autant que le contenu.
+- **Jeunes diplômés** avec moins de 3 ans d'expérience professionnelle.
+- **Reconversion professionnelle** où vous souhaitez vous concentrer sur les compétences transférables plutôt que sur un long historique.
+- **Stages et alternances** où l'expérience est par nature limitée.
+- **Secteurs créatifs** où la concision et le design comptent autant que le contenu.
 
 ### Les avantages
 
 - **Impact immédiat :** chaque ligne est lue, chaque mot compte.
-- **Discipline rédactionnelle :** vous etes obligé de ne garder que l'essentiel.
+- **Discipline rédactionnelle :** vous êtes obligé de ne garder que l'essentiel.
 - **Adapté au scan rapide :** le recruteur peut évaluer votre profil en quelques secondes.
 
 ### Les risques
 
-- **Réduire la taille de police** en dessous de 10 pt pour tout faire tenir. Cela rend le CV difficile à lire et peut poser des problemes aux ATS. Pour les regles typographiques à respecter, lisez [notre article sur les polices et la mise en page ATS](/blog/police-mise-en-page-cv-ats).
+- **Réduire la taille de police** en dessous de 10 pt pour tout faire tenir. Cela rend le CV difficile à lire et peut poser des problèmes aux ATS. Pour les règles typographiques à respecter, lisez [notre article sur les polices et la mise en page ATS](/blog/police-mise-en-page-cv-ats).
 - **Supprimer des sections importantes** comme les certifications ou les langues.
 - **Comprimer les marges** au point de rendre le document étouffant.
 
@@ -53,19 +53,19 @@ Le CV de deux pages se justifie quand votre parcours le nécessite :
 - **Profils techniques** (ingénieurs, développeurs, data scientists) avec une liste significative de projets, technologies et certifications.
 - **Cadres et managers** dont les responsabilités et réalisations sont trop nombreuses pour une seule page.
 - **Profils académiques ou scientifiques** avec des publications et des projets de recherche.
-- **Candidatures à l'international** ou les normes locales favorisent un CV plus détaillé (Allemagne, Pays-Bas, par exemple).
+- **Candidatures à l'international** où les normes locales favorisent un CV plus détaillé (Allemagne, Pays-Bas, par exemple).
 
 ### Les avantages
 
 - **Espace pour les détails :** vous pouvez développer vos réalisations avec des chiffres concrets.
-- **Couverture complete :** certifications, langues, bénévolat, projets personnels trouvent leur place.
+- **Couverture complète :** certifications, langues, bénévolat, projets personnels trouvent leur place.
 - **Meilleure intégration des mots-clés :** plus d'espace signifie plus de possibilités d'inclure les termes recherchés par l'ATS. Découvrez comment adapter vos mots-clés dans [notre article sur l'optimisation IA](/blog/adapter-cv-ats-ia).
 
 ### Les risques
 
 - **Remplissage :** ajouter du contenu pour atteindre deux pages est contre-productif. Chaque ligne doit apporter de la valeur.
-- **Informations noyées :** si la deuxieme page contient des éléments secondaires, le recruteur risque de ne jamais les lire.
-- **Troisieme page :** si vous dépassez deux pages, c'est un signal d'alerte. Tres peu de postes justifient un CV de trois pages.
+- **Informations noyées :** si la deuxième page contient des éléments secondaires, le recruteur risque de ne jamais les lire.
+- **Troisième page :** si vous dépassez deux pages, c'est un signal d'alerte. Très peu de postes justifient un CV de trois pages.
 
 ## Comment décider : le framework pratique
 
@@ -82,7 +82,7 @@ Pour trancher, posez-vous ces quatre questions :
 
 ### 2. L'expérience ancienne est-elle pertinente ?
 
-Un poste occupé il y a 15 ans dans un domaine different de celui visé ne mérite probablement qu'une ligne. Concentrez-vous sur les 10 dernieres années et résumez le reste en une ou deux lignes sous "Expériences antérieures".
+Un poste occupé il y a 15 ans dans un domaine différent de celui visé ne mérite probablement qu'une ligne. Concentrez-vous sur les 10 dernières années et résumez le reste en une ou deux lignes sous "Expériences antérieures".
 
 ### 3. Le poste est-il technique ?
 
@@ -96,9 +96,9 @@ Relisez chaque bullet point et demandez-vous : "Est-ce que cela aide le recruteu
 
 ### Si votre CV est trop long
 
-- **Fusionnez les postes similaires** dans la meme entreprise en un seul bloc.
+- **Fusionnez les postes similaires** dans la même entreprise en un seul bloc.
 - **Supprimez les compétences évidentes** : Word, Excel, email ne sont plus des compétences différenciantes en 2026.
-- **Limitez les bullet points** à 3-5 par poste. Au-dela, c'est trop.
+- **Limitez les bullet points** à 3-5 par poste. Au-delà, c'est trop.
 - **Résumez les postes anciens** (plus de 10 ans) en une ligne : intitulé, entreprise, dates.
 - **Retirez les références** et la mention "Références disponibles sur demande". C'est implicite.
 
@@ -108,39 +108,39 @@ Relisez chaque bullet point et demandez-vous : "Est-ce que cela aide le recruteu
 - **Ajoutez des projets personnels** pertinents pour le poste.
 - **Incluez le bénévolat** ou les activités associatives qui démontrent des compétences transférables.
 - **Détaillez vos formations** : projets de fin d'études, mémoire, spécialisations.
-- **Ne gonflez jamais artificiellement :** un CV d'une page bien rempli vaut mieux qu'un CV de deux pages a moitié vide.
+- **Ne gonflez jamais artificiellement :** un CV d'une page bien rempli vaut mieux qu'un CV de deux pages à moitié vide.
 
 ## Le cas particulier de la page et demie
 
-Un CV qui s'arrete au milieu de la deuxieme page donne-t-il une mauvaise impression ? Les avis divergent, mais voici une regle simple :
+Un CV qui s'arrête au milieu de la deuxième page donne-t-il une mauvaise impression ? Les avis divergent, mais voici une règle simple :
 
-- **Si la deuxieme page contient au moins la moitié** de la page remplie, c'est acceptable.
-- **Si elle ne contient que quelques lignes**, essayez de tout condenser sur une page ou étoffez la deuxieme.
+- **Si la deuxième page contient au moins la moitié** de la page remplie, c'est acceptable.
+- **Si elle ne contient que quelques lignes**, essayez de tout condenser sur une page ou étoffez la deuxième.
 
 L'important est que la coupure entre les pages soit logique. Ne séparez pas une expérience entre deux pages si c'est évitable.
 
 ## L'impact de la longueur sur les ATS
 
-Les ATS modernes n'ont pas de limite stricte de pages. Ils lisent l'intégralité du document. Cependant, certains systemes anciens tronquent le texte apres un certain nombre de caracteres ou de pages. Votre [score de compatibilité](/blog/score-compatibilite-cv-offre) dépend du contenu extrait, pas du nombre de pages.
+Les ATS modernes n'ont pas de limite stricte de pages. Ils lisent l'intégralité du document. Cependant, certains systèmes anciens tronquent le texte après un certain nombre de caractères ou de pages. Votre [score de compatibilité](/blog/score-compatibilité-cv-offre) dépend du contenu extrait, pas du nombre de pages.
 
-En pratique, cela signifie que vos informations les plus importantes (compétences clés, expériences récentes, titre) doivent figurer sur la premiere page.
+En pratique, cela signifie que vos informations les plus importantes (compétences clés, expériences récentes, titre) doivent figurer sur la première page.
 
 ## FAQ
 
 **Un CV de trois pages est-il jamais acceptable ?**
-Dans le monde francophone, tres rarement. Les seuls cas ou cela se justifie sont les profils académiques (avec publications) ou les cadres tres senior postulant à des postes de direction générale. Pour 99 % des candidats, deux pages sont le maximum.
+Dans le monde francophone, très rarement. Les seuls cas où cela se justifie sont les profils académiques (avec publications) ou les cadres très senior postulant à des postes de direction générale. Pour 99 % des candidats, deux pages sont le maximum.
 
 **Faut-il adapter la longueur à chaque candidature ?**
-Idéalement, oui. Un poste junior dans une startup n'appelle pas le meme CV qu'un poste de direction dans un grand groupe. L'adaptation de la longueur fait partie de l'optimisation globale de votre candidature.
+Idéalement, oui. Un poste junior dans une startup n'appelle pas le même CV qu'un poste de direction dans un grand groupe. L'adaptation de la longueur fait partie de l'optimisation globale de votre candidature.
 
-**Les recruteurs préferent-ils vraiment les CV courts ?**
-Les recruteurs préferent les CV pertinents. Un CV d'une page rempli d'informations sans rapport avec le poste est moins efficace qu'un CV de deux pages parfaitement ciblé. La qualité prime sur la quantité.
+**Les recruteurs préfèrent-ils vraiment les CV courts ?**
+Les recruteurs préfèrent les CV pertinents. Un CV d'une page rempli d'informations sans rapport avec le poste est moins efficace qu'un CV de deux pages parfaitement ciblé. La qualité prime sur la quantité.
 
 **Que faire si l'offre impose un format spécifique ?**
 Respectez toujours les consignes de l'offre. Si elle demande un CV d'une page, tenez-vous-en à une page. Si elle ne donne aucune indication, suivez les recommandations de cet article.
 
 ## Passez à l'action
 
-La bonne longueur de CV est celle qui présente votre profil de maniere complete et percutante, sans remplissage. FitMyCV vous aide à identifier les éléments essentiels pour chaque candidature et à structurer votre CV pour maximiser son impact, que ce soit sur une ou deux pages.
+La bonne longueur de CV est celle qui présente votre profil de manière complète et percutante, sans remplissage. FitMyCV vous aide à identifier les éléments essentiels pour chaque candidature et à structurer votre CV pour maximiser son impact, que ce soit sur une ou deux pages.
 
-[Optimiser la longueur de mon CV ->](https://app.fitmycv.io) | [Comment ca marche ->](/how-it-works)
+[Optimiser la longueur de mon CV ->](https://app.fitmycv.io) | [Comment ça marche ->](/how-it-works)

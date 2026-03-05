@@ -1,7 +1,7 @@
 ---
 title: "CV sin experiencia: como convencer con la ayuda de la IA"
 description: "Aprende a redactar un CV convincente sin experiencia profesional gracias a las sugerencias de IA, y consigue tu primer empleo o practicas."
-date: "2026-02-06"
+date: "2026-01-16"
 translationKey: "resume-no-experience"
 tags: ["sin experiencia", "CV", "estudiante", "primer empleo", "IA"]
 ---

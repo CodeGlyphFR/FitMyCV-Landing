@@ -1,7 +1,7 @@
 ---
 title: "Cover Letter + Resume: How to Ensure Your Application Is Consistent"
 description: "Learn how to build a coherent application where your cover letter and resume reinforce each other, with practical tips and AI-powered job posting analysis."
-date: "2026-01-18"
+date: "2025-12-20"
 translationKey: "cover-letter-resume-consistency"
 tags: ["cover letter", "resume", "consistency", "application"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Hard Skills im Lebenslauf: So präsentieren Sie sie für ATS-Erfolg"
 description: "Erfahren Sie, wie Sie fachliche Kompetenzen in Ihrem Lebenslauf strukturieren und darstellen, um Ihren ATS-Score zu maximieren. Formate, Beispiele und Fehler."
-date: "2026-01-15"
+date: "2025-12-17"
 translationKey: "hard-skills-resume-ats"
 tags: ["Hard Skills", "fachliche Kompetenzen", "Lebenslauf", "ATS"]
 ---

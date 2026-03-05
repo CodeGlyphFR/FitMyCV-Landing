@@ -1,7 +1,7 @@
 ---
 title: "Resume Title and Summary: Formulas That Actually Work"
 description: "How to write a compelling resume title and professional summary. Concrete examples by profession and tips to grab the recruiter's attention."
-date: "2026-01-08"
+date: "2025-12-07"
 translationKey: "resume-title-headline"
 tags: ["title", "headline", "resume", "summary", "profile"]
 ---

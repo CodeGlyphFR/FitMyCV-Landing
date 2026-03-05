@@ -1,7 +1,7 @@
 ---
 title: "CV de reconversion profesional: como destacar tus competencias transferibles"
 description: "Aprende a construir un CV de cambio de carrera que valore tus competencias transferibles y convenza a los reclutadores con la ayuda de la IA."
-date: "2026-02-14"
+date: "2026-01-29"
 translationKey: "career-change-resume"
 tags: ["reconversion", "competencias transferibles", "CV", "carrera"]
 ---

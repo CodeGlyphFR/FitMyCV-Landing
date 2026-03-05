@@ -1,14 +1,14 @@
 ---
 title: "Comment identifier et intégrer les mots-clés d'une offre d'emploi dans votre CV"
 description: "Apprenez à repérer les mots-clés essentiels d'une offre d'emploi et à les intégrer dans votre CV pour maximiser votre score ATS et décrocher un entretien."
-date: "2026-02-10"
+date: "2026-01-23"
 translationKey: "cv-keywords-job-posting"
 tags: ["mots-clés", "CV", "offre d'emploi", "ATS", "optimisation"]
 ---
 
 ## Pourquoi les mots-clés sont la clé de votre candidature
 
-Chaque offre d'emploi est un document structuré. Derrière les formulations du recruteur se cachent des termes précis que le logiciel ATS utilise pour filtrer les candidatures. Comprendre ces termes et les intégrer dans votre CV, c'est la différence entre un dossier qui arrive sur le bureau du recruteur et un dossier qui disparaît dans le néant numérique.
+Chaque offre d'emploi est un document structuré. Derrière les formulations du recruteur se cachent des termes précis que le logiciel ATS utilisé pour filtrer les candidatures. Comprendre ces termes et les intégrer dans votre CV, c'est la différence entre un dossier qui arrive sur le bureau du recruteur et un dossier qui disparaît dans le néant numérique.
 
 Les études le confirment : un CV qui reprend au moins 60 % des mots-clés d'une offre a **trois fois plus de chances** d'être retenu par un ATS qu'un CV générique. Pourtant, la majorité des candidats envoient le même CV pour toutes leurs candidatures.
 
@@ -21,7 +21,7 @@ Si vous n'avez pas encore lu notre [guide complet sur les ATS](/blog/cv-ats-guid
 Tous les mots-clés ne se valent pas. On peut les classer en trois catégories :
 
 **1. Les compétences techniques (hard skills)**
-Ce sont les mots les plus faciles à repérer : langages de programmation, logiciels, méthodologies, certifications. Par exemple : "Python", "Salesforce", "méthode Agile", "certification PMP". Pour aller plus loin sur ce sujet, consultez notre article sur [les hard skills et les ATS](/blog/competences-techniques-cv).
+Ce sont les mots les plus faciles à repérer : langages de programmation, logiciels, méthodologies, certifications. Par exemple : "Python", "Salesforce", "méthode Agile", "certification PMP". Pour aller plus loin sur ce sujet, consultez notre article sur [les hard skills et les ATS](/blog/compétences-techniques-cv).
 
 **2. Les compétences comportementales (soft skills)**
 Elles apparaissent souvent dans la description du profil recherché : "leadership", "esprit d'équipe", "communication", "résolution de problèmes". Les ATS modernes les analysent aussi. Découvrez [comment les intégrer intelligemment](/blog/soft-skills-cv-ats).
@@ -80,7 +80,7 @@ Mentionnez les diplômes et certifications avec leur intitulé exact. Si l'offre
 
 Visez un taux d'intégration de 60 à 80 % des mots-clés de l'offre. En dessous de 60 %, votre CV risque d'être filtré. Au-dessus de 80 %, vous risquez le "keyword stuffing", que les ATS récents pénalisent.
 
-Pour connaître votre taux exact, vous pouvez utiliser un outil comme FitMyCV qui [calcule votre score de compatibilité](/blog/score-compatibilite-cv-offre) avec l'offre ciblée.
+Pour connaître votre taux exact, vous pouvez utiliser un outil comme FitMyCV qui [calcule votre score de compatibilité](/blog/score-compatibilité-cv-offre) avec l'offre ciblée.
 
 ## Les pièges à éviter
 
@@ -107,7 +107,7 @@ L'identification manuelle des mots-clés fonctionne, mais elle prend du temps. P
 FitMyCV automatise cette analyse. L'outil compare votre CV à l'offre d'emploi et identifie :
 - Les mots-clés présents dans l'offre et absents de votre CV
 - Les termes que vous utilisez et qui ne correspondent pas à la formulation de l'offre
-- Votre [score de compatibilité global](/blog/score-compatibilite-cv-offre) avec des recommandations pour l'améliorer
+- Votre [score de compatibilité global](/blog/score-compatibilité-cv-offre) avec des recommandations pour l'améliorer
 
 L'[IA intégrée](/blog/adapter-cv-ats-ia) vous suggère des reformulations concrètes pour intégrer les mots-clés manquants de manière naturelle, sans dénaturer votre parcours.
 

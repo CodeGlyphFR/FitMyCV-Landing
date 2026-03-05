@@ -1,7 +1,7 @@
 ---
 title: "Lebenslauf fuer Freelancer und Berater: Besonderheiten und Optimierung"
 description: "Erfahren Sie, wie Sie einen Freelancer- oder Berater-Lebenslauf strukturieren, um Projekte zu gewinnen, mit KI-Optimierung und Multi-Posting-Strategien."
-date: "2026-01-25"
+date: "2025-12-30"
 translationKey: "freelance-consultant-resume"
 tags: ["Freelancer", "Berater", "Lebenslauf", "Selbststaendiger"]
 ---

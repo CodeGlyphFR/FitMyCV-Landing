@@ -1,7 +1,7 @@
 ---
 title: "Sollten Sie 2026 ein Foto in Ihren Lebenslauf aufnehmen?"
 description: "Foto im Lebenslauf: Vorteile, Risiken, Laendernormen und Best Practices. Alles, was Sie wissen muessen, bevor Sie sich 2026 entscheiden."
-date: "2026-01-22"
+date: "2025-12-27"
 translationKey: "photo-on-resume-france"
 tags: ["Foto", "Lebenslauf", "Bewerbung", "Recruiting", "2026"]
 ---
