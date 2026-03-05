@@ -32,6 +32,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# Google service account keys
+gen-lang-client-*.json
+
 # vercel
 .vercel
 
