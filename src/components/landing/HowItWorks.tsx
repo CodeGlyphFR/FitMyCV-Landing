@@ -40,7 +40,6 @@ export default function HowItWorks() {
     iframe.style.transform = `scale(${scale})`;
   }, []);
 
-  // Switch to a given step
   const switchToStep = useCallback((n: number) => {
     if (n === currentStepRef.current && iframeLoadedRef.current) return;
 
@@ -60,7 +59,6 @@ export default function HowItWorks() {
     }
   }, [locale]);
 
-  // Handle iframe load event
   useEffect(() => {
     const iframe = mockupIframeRef.current;
     const frame = mockupFrameRef.current;
@@ -107,7 +105,6 @@ export default function HowItWorks() {
     return () => observer.disconnect();
   }, [switchToStep]);
 
-  // Resize listener
   useEffect(() => {
     updateScale();
     window.addEventListener('resize', updateScale);
@@ -213,11 +210,11 @@ export default function HowItWorks() {
           try {
             if (!entry.isIntersecting && !paused) {
               paused = true;
-              iframe.contentWindow?.postMessage('pause-demo', '*');
+              iframe.contentWindow?.postMessage('pause-demo', window.location.origin);
               sparklesRef.current?.classList.add('paused');
             } else if (entry.isIntersecting && paused) {
               paused = false;
-              iframe.contentWindow?.postMessage('resume-demo', '*');
+              iframe.contentWindow?.postMessage('resume-demo', window.location.origin);
               sparklesRef.current?.classList.remove('paused');
             }
           } catch {
@@ -269,13 +266,11 @@ export default function HowItWorks() {
     };
   }, []);
 
-  // Initialize on mount
   useEffect(() => {
     switchToStep(1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Click on step dot buttons
   const handleDotClick = useCallback(
     (step: number) => {
       switchToStep(step);
@@ -289,7 +284,6 @@ export default function HowItWorks() {
     [switchToStep]
   );
 
-  // Arrow navigation
   const handlePrev = useCallback(() => {
     if (currentStepRef.current > 1) {
       const card = stepsTextRef.current?.querySelector<HTMLElement>(

@@ -58,6 +58,7 @@ const { setup, run } = stepMap[stepNum];
 if (isEmbed) {
   document.body.classList.add('embed');
   window.addEventListener('message', (e) => {
+    if (e.origin !== location.origin) return;
     if (e.data === 'start-demo') runStepLoop(stepNum, setup, run);
     if (e.data === 'pause-demo') setPaused(true);
     if (e.data === 'resume-demo') setPaused(false);

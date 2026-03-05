@@ -34,6 +34,7 @@ const isEmbed = location.search.includes('embed');
 
 if (isEmbed) {
   window.addEventListener('message', (e) => {
+    if (e.origin !== location.origin) return;
     if (e.data === 'start-demo') runAnimation();
     if (e.data === 'pause-demo') setPaused(true);
     if (e.data === 'resume-demo') setPaused(false);
