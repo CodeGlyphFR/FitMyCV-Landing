@@ -1,7 +1,7 @@
 ---
 title: "Puntuación de compatibilidad CV-oferta: ¿cómo funciona?"
 description: "Entiende cómo se calcula la puntuación de correspondencia entre tu CV y una oferta de empleo, y cómo utilizarla para mejorar tus candidaturas."
-date: "2026-02-20"
+date: "2026-02-12"
 translationKey: "match-score"
 tags: ["puntuación", "matching", "CV", "candidatura"]
 ---

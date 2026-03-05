@@ -1,7 +1,7 @@
 ---
 title: "Cómo adaptar tu CV para los ATS con IA en 2026"
 description: "Descubre cómo la inteligencia artificial puede ayudarte a crear un CV compatible con ATS que supere los filtros automáticos de los reclutadores y consiga más entrevistas."
-date: "2026-02-15"
+date: "2026-02-02"
 translationKey: "tailor-ai"
 tags: ["ATS", "IA", "CV", "optimización"]
 ---

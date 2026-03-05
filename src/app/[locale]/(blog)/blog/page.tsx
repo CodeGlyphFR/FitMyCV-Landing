@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { getAlternates, getBreadcrumbJsonLd, getOgUrl } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, getPillar, PILLAR_ORDER } from "@/lib/blog";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -77,27 +77,40 @@ export default async function BlogPage({
       {posts.length === 0 ? (
         <p className="blog-empty">{t("noPosts")}</p>
       ) : (
-        <div className="blog-grid">
-          {posts.map((post) => (
-            <article key={post.slug} className="blog-card">
-              <Link href={`/blog/${post.slug}`}>
-                <h2>{post.title}</h2>
-                <p className="blog-card-desc">{post.description}</p>
-                <div className="blog-card-meta">
-                  <time dateTime={post.date}>
-                    {t("publishedOn")}{" "}
-                    {new Date(post.date).toLocaleDateString(locale, {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                </div>
-                <span className="blog-read-more">{t("readMore")}</span>
-              </Link>
-            </article>
-          ))}
-        </div>
+        PILLAR_ORDER.map((pillar) => {
+          const pillarPosts = posts.filter(
+            (p) => getPillar(p.translationKey) === pillar
+          );
+          if (pillarPosts.length === 0) return null;
+          return (
+            <section key={pillar} className="blog-pillar">
+              <h2 className="blog-pillar-title">
+                {t(`pillar_${pillar}`)}
+              </h2>
+              <div className="blog-grid">
+                {pillarPosts.map((post) => (
+                  <article key={post.slug} className="blog-card">
+                    <Link href={`/blog/${post.slug}`}>
+                      <h3>{post.title}</h3>
+                      <p className="blog-card-desc">{post.description}</p>
+                      <div className="blog-card-meta">
+                        <time dateTime={post.date}>
+                          {t("publishedOn")}{" "}
+                          {new Date(post.date).toLocaleDateString(locale, {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </time>
+                      </div>
+                      <span className="blog-read-more">{t("readMore")}</span>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </section>
+          );
+        })
       )}
     </>
   );

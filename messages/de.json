@@ -339,7 +339,7 @@
     "s2_3p3": "Credits haben kein Ablaufdatum und bleiben gültig, solange Ihr Konto aktiv ist.",
     "s2_3p4": "Wenn Ihre Credits aufgebraucht sind, können Sie über die Seite <creditsLink>Credit-Verwaltung</creditsLink> neue kaufen.",
     "s3Title": "3. Preise und Zahlungen",
-    "s3p1": "Alle Preise sind in Euro (EUR) angegeben. Der Herausgeber ist gemäß Artikel 293 B des französischen Steuergesetzbuchs (Code Général des Impôts) von der Mehrwertsteuer befreit.",
+    "s3p1": "Die Preise verstehen sich ohne Mehrwertsteuer (MwSt.). Die geltende MwSt. wird beim Bezahlvorgang hinzugefügt, zum jeweils gültigen Satz im Wohnsitzland des Käufers gemäß der EU-Verordnung über digitale Dienstleistungen.",
     "s3p2": "Die Zahlungen werden über Stripe abgesichert und akzeptieren Kreditkarten, Apple Pay, Google Pay und weitere Zahlungsmethoden je nach Ihrem Standort.",
     "s3p3": "Die Preise der Credit-Pakete finden Sie auf der Seite <creditsLink>Credit-Verwaltung</creditsLink>.",
     "s4Title": "4. Widerrufsrecht",
@@ -414,7 +414,7 @@
     "s14p2": "Im Streitfall und nach einem gütlichen Einigungsversuch sind ausschließlich die Gerichte in Paris zuständig.",
     "s15Title": "15. Impressum",
     "s15p1": "Herausgeber des Dienstes FitMyCV.io:",
-    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nE-Mail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nVon der Mehrwertsteuer befreit (Artikel 293 B des CGI)",
+    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nE-Mail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nUSt-IdNr.: FR58995375862",
     "s15_hosting": "Hosting",
     "s15_hostingP": "Der Dienst wird vom Herausgeber selbst gehostet.",
     "s15_dataProtection": "Datenschutz",
@@ -766,6 +766,11 @@
     "readMore": "Artikel lesen",
     "publishedOn": "Veröffentlicht am",
     "backToBlog": "Zurück zum Blog",
-    "noPosts": "Noch keine Artikel."
+    "noPosts": "Noch keine Artikel.",
+    "pillar_ats-optimization": "Lebenslauf- & ATS-Optimierung",
+    "pillar_ai-cv": "KI & Lebenslauf",
+    "pillar_job-search": "Jobsuche",
+    "pillar_format-layout": "Format, Layout & Export",
+    "pillar_international": "International & mehrsprachig"
   }
 }

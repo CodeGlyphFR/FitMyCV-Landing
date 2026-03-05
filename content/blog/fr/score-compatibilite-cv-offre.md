@@ -1,7 +1,7 @@
 ---
 title: "Score de compatibilité CV-offre : comment ça marche ?"
 description: "Comprenez comment le score de correspondance entre votre CV et une offre d'emploi est calculé, et comment l'utiliser pour améliorer vos candidatures."
-date: "2026-02-20"
+date: "2026-02-12"
 translationKey: "match-score"
 tags: ["score", "matching", "CV", "candidature"]
 ---
@@ -10,7 +10,7 @@ tags: ["score", "matching", "CV", "candidature"]
 
 Quand vous postulez à une offre d'emploi, une question se pose toujours : « Est-ce que mon profil correspond vraiment à ce que le recruteur recherche ? » Le score de compatibilité apporte une réponse objective et chiffrée.
 
-Ce score, exprimé en pourcentage, mesure l'adéquation entre le contenu de votre CV et les exigences de l'offre ciblée. Plus le score est élevé, plus votre profil correspond aux attentes du recruteur — et plus vos chances de décrocher un entretien augmentent.
+Ce score, exprimé en pourcentage, mesure l'adéquation entre le contenu de votre CV et les exigences de l'offre ciblée. Plus le score est élevé, plus votre profil correspond aux attentes du recruteur, et plus vos chances de décrocher un entretien augmentent.
 
 ## Comment le score est-il calculé ?
 
@@ -36,10 +36,10 @@ La structure de votre CV est évaluée : sections présentes, hiérarchie de l'i
 
 | Score | Interprétation |
 |-------|---------------|
-| 90-100% | Excellente correspondance — votre profil est très aligné avec l'offre |
-| 75-89% | Bonne correspondance — quelques ajustements peuvent améliorer votre candidature |
-| 60-74% | Correspondance moyenne — des optimisations significatives sont recommandées |
-| Moins de 60% | Correspondance faible — le poste nécessite des compétences que votre CV ne met pas en avant |
+| 90-100% | Excellente correspondance : votre profil est très aligné avec l'offre |
+| 75-89% | Bonne correspondance : quelques ajustements peuvent améliorer votre candidature |
+| 60-74% | Correspondance moyenne : des optimisations significatives sont recommandées |
+| Moins de 60% | Correspondance faible : le poste nécessite des compétences que votre CV ne met pas en avant |
 
 Un score de 100 % n'est ni réaliste ni nécessaire. Viser un score entre 80 et 90 % est un objectif raisonnable qui maximise vos chances tout en restant fidèle à votre parcours.
 
@@ -57,7 +57,7 @@ Chaque suggestion est actionnable et peut être appliquée en un clic. [Découvr
 
 ### Reformulez vos expériences
 
-Parfois, le problème n'est pas un manque de compétences mais une mauvaise formulation. « Travail en équipe » devient « Collaboration en méthodologie Scrum avec des sprints de 2 semaines » — même expérience, mais beaucoup plus impactant pour un ATS.
+Parfois, le problème n'est pas un manque de compétences mais une mauvaise formulation. « Travail en équipe » devient « Collaboration en méthodologie Scrum avec des sprints de 2 semaines », même expérience, mais beaucoup plus impactant pour un ATS.
 
 ### Ajoutez les mots-clés manquants
 
@@ -88,7 +88,7 @@ Prenons un développeur full-stack qui postule à une offre demandant React, Nod
 - Reformulation avec TypeScript (il codait effectivement en TS)
 - Détail de l'expérience avec des métriques quantifiées
 
-Le score est passé de 72 à 87 % sans inventer quoi que ce soit — juste en mettant mieux en valeur des compétences déjà existantes.
+Le score est passé de 72 à 87 % sans inventer quoi que ce soit, juste en mettant mieux en valeur des compétences déjà existantes.
 
 ## Conclusion
 

@@ -8,10 +8,18 @@ const rateMap = new Map<string, number[]>();
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const timestamps = (rateMap.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
-  rateMap.set(ip, timestamps);
+
+  if (timestamps.length === 0) {
+    rateMap.delete(ip);
+  }
+
+  if (rateMap.size > 50_000) {
+    rateMap.clear();
+  }
 
   if (timestamps.length >= MAX_REQUESTS) return true;
   timestamps.push(now);
+  rateMap.set(ip, timestamps);
   return false;
 }
 
@@ -44,6 +52,18 @@ export async function POST(request: Request) {
       message: string;
       website?: string;
     };
+
+    const MAX_NAME_LEN = 100;
+    const MAX_EMAIL_LEN = 254;
+    const MAX_MSG_LEN = 5000;
+
+    if (
+      typeof name !== 'string' || name.length > MAX_NAME_LEN ||
+      typeof email !== 'string' || email.length > MAX_EMAIL_LEN ||
+      typeof message !== 'string' || message.length > MAX_MSG_LEN
+    ) {
+      return NextResponse.json({ error: "Invalid input" }, { status: 400 });
+    }
 
     if (website) {
       return NextResponse.json({ ok: true });

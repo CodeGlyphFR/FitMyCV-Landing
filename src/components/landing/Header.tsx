@@ -56,7 +56,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Hamburger menu toggle
   const closeMenu = useCallback(() => {
     burgerRef.current?.classList.remove("open");
     menuRef.current?.classList.remove("open");

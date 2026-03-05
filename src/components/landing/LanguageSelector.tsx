@@ -2,29 +2,13 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { usePathnameOverrides } from "@/components/PathnameOverrides";
-
-const FLAG_SRC: Record<string, string> = {
-  fr: "/icons/fr.svg",
-  en: "/icons/gb.svg",
-  es: "/icons/es.svg",
-  de: "/icons/de.svg",
-};
-
-const LABELS: Record<string, string> = {
-  fr: "Français",
-  en: "English",
-  es: "Español",
-  de: "Deutsch",
-};
+import { FLAG_SRC, LABELS } from "@/lib/locale-metadata";
+import { useLocaleSwitch } from "@/hooks/useLocaleSwitch";
 
 export default function LanguageSelector() {
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const overrides = usePathnameOverrides();
+  const switchLocale = useLocaleSwitch();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,13 +26,12 @@ export default function LanguageSelector() {
     return () => document.removeEventListener("click", handleClick);
   }, [open, close]);
 
-  const switchLocale = useCallback(
+  const handleSwitch = useCallback(
     (newLocale: string) => {
-      const target = overrides[newLocale] ?? pathname;
-      router.replace(target, { locale: newLocale as "fr" | "en" | "es" | "de" });
+      switchLocale(newLocale);
       close();
     },
-    [router, pathname, overrides, close]
+    [switchLocale, close]
   );
 
   // Inactive locales ordered to the left of the active one
@@ -61,7 +44,7 @@ export default function LanguageSelector() {
           key={loc}
           className="lang-expand-btn other"
           style={{ transitionDelay: open ? `${(others.length - 1 - i) * 50}ms` : `${i * 30}ms` }}
-          onClick={() => switchLocale(loc)}
+          onClick={() => handleSwitch(loc)}
           aria-label={LABELS[loc]}
           title={LABELS[loc]}
         >

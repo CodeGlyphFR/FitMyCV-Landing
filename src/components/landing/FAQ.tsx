@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { faqConfig } from '@/data/faq-config';
+import FaqAccordionList from '@/components/ui/FaqAccordionList';
 
-/* ── Neural network config ── */
 const NN_LAYERS = [3, 6, 7, 2];
 const X_PAD = 50;
 const X_END = 370;
@@ -31,7 +31,6 @@ function buildNeuronsByLayer(): Neuron[][] {
 
 const neuronsByLayer = buildNeuronsByLayer();
 
-/* ── Helpers ── */
 function pickRandom(max: number, n: number): number[] {
   const indices = Array.from({ length: max }, (_, i) => i);
   for (let i = indices.length - 1; i > 0; i--) {
@@ -41,27 +40,17 @@ function pickRandom(max: number, n: number): number[] {
   return indices.slice(0, Math.min(n, max));
 }
 
-/* ── Component ── */
 export default function FAQ() {
   const t = useTranslations('FAQ');
   const allItems = t.raw('items') as Array<{ question: string; answer: string }>;
   const faqItems = faqConfig
     .filter((c) => c.landing)
     .map((c) => ({ ...allItems[c.id], id: c.id }));
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const synapsesRef = useRef<SVGGElement>(null);
   const neuronsRef = useRef<SVGGElement>(null);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
-  const handleItemClick = useCallback(
-    (index: number) => {
-      setActiveIndex((prev) => (prev === index ? null : index));
-    },
-    []
-  );
-
-  /* ── Neural network animation ── */
   useEffect(() => {
     const synG = synapsesRef.current;
     const neuG = neuronsRef.current;
@@ -69,7 +58,6 @@ export default function FAQ() {
 
     const svgNS = 'http://www.w3.org/2000/svg';
 
-    // Clear any existing content
     synG.innerHTML = '';
     neuG.innerHTML = '';
 
@@ -125,7 +113,6 @@ export default function FAQ() {
       backLines.push(layerBack);
     }
 
-    // Draw neuron circles
     const neuronCores: SVGCircleElement[][] = [];
     neuronsByLayer.forEach((layerNeurons) => {
       const cores: SVGCircleElement[] = [];
@@ -353,31 +340,7 @@ export default function FAQ() {
             </svg>
           </div>
         </div>
-        <div className="faq-list">
-          {faqItems.map((item, i) => (
-            <div
-              key={i}
-              className={`faq-item${activeIndex === i ? ' active' : ''}`}
-              onClick={() => handleItemClick(i)}
-            >
-              <div className="faq-item-header">
-                <div className="faq-icon">
-                  <svg className="faq-icon-plus" viewBox="0 0 24 24">
-                    <path d="M12 5v14" />
-                    <path d="M5 12h14" />
-                  </svg>
-                  <svg className="faq-icon-minus" viewBox="0 0 24 24">
-                    <path d="M5 12h14" />
-                  </svg>
-                </div>
-                <h3 className="faq-question">{item.question}</h3>
-              </div>
-              <div className="faq-answer">
-                <p>{item.answer}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <FaqAccordionList items={faqItems} className="faq-list" />
       </div>
     </section>
   );

@@ -339,7 +339,7 @@
     "s2_3p3": "Credits do not expire and remain valid as long as your account is active.",
     "s2_3p4": "When your credits run out, you can purchase more from the <creditsLink>Credit Management</creditsLink> page.",
     "s3Title": "3. Pricing and Payments",
-    "s3p1": "All prices are displayed in euros (EUR). The publisher is exempt from VAT pursuant to Article 293 B of the French General Tax Code (Code Général des Impôts).",
+    "s3p1": "Prices are displayed excluding VAT. The applicable VAT will be added at checkout, at the rate in force in the buyer's country of residence in accordance with EU regulations on digital services.",
     "s3p2": "Payments are secured by Stripe and accept credit cards, Apple Pay, Google Pay, and other payment methods depending on your location.",
     "s3p3": "Credit pack pricing is available on the <creditsLink>Credit Management</creditsLink> page.",
     "s4Title": "4. Right of Withdrawal",
@@ -414,7 +414,7 @@
     "s14p2": "In the event of a dispute, and after an attempt at amicable resolution, the courts of Paris shall have exclusive jurisdiction.",
     "s15Title": "15. Legal Information",
     "s15p1": "Publisher of the FitMyCV.io service:",
-    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nNot subject to VAT (Article 293 B of the French General Tax Code)",
+    "s15Infobox": "Codeglyph\nSIRET: 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail: <contactEmail>contact@codeglyph.fr</contactEmail>\n\nEU VAT number: FR58995375862",
     "s15_hosting": "Hosting",
     "s15_hostingP": "The service is self-hosted by the publisher.",
     "s15_dataProtection": "Data Protection",
@@ -766,6 +766,11 @@
     "readMore": "Read article",
     "publishedOn": "Published on",
     "backToBlog": "Back to blog",
-    "noPosts": "No articles yet."
+    "noPosts": "No articles yet.",
+    "pillar_ats-optimization": "Resume & ATS Optimization",
+    "pillar_ai-cv": "AI & Resume",
+    "pillar_job-search": "Job Search",
+    "pillar_format-layout": "Format, Layout & Export",
+    "pillar_international": "International & Multilingual"
   }
 }

@@ -291,7 +291,7 @@
     "support": "Support",
     "blog": "Blog",
     "legal": "Légal",
-    "terms": "CGU",
+    "terms": "CGV",
     "privacy": "Vie privée",
     "contact": "Contact",
     "copyright": "© 2026 FitMyCV.io"
@@ -339,7 +339,7 @@
     "s2_3p3": "Les crédits n'ont pas de date d'expiration et restent valables tant que votre compte est actif.",
     "s2_3p4": "Lorsque vos crédits sont épuisés, vous pouvez en acheter depuis la page <creditsLink>Gestion des crédits</creditsLink>.",
     "s3Title": "3. Tarifs et paiements",
-    "s3p1": "Tous les prix sont affichés en euros (EUR). L'éditeur n'est pas assujetti à la TVA conformément à l'article 293 B du Code Général des Impôts.",
+    "s3p1": "Les prix sont indiqués hors taxes (HT). La TVA applicable sera ajoutée lors du paiement, au taux en vigueur selon le pays de résidence de l'acheteur conformément à la réglementation européenne sur les services numériques.",
     "s3p2": "Les paiements sont sécurisés par Stripe et acceptent les cartes bancaires, Apple Pay, Google Pay et d'autres moyens de paiement selon votre localisation.",
     "s3p3": "Les tarifs des packs de crédits sont disponibles sur la page <creditsLink>Gestion des crédits</creditsLink>.",
     "s4Title": "4. Droit de rétractation",
@@ -414,7 +414,7 @@
     "s14p2": "En cas de litige, et après tentative de résolution amiable, les tribunaux de Paris seront seuls compétents.",
     "s15Title": "15. Informations légales",
     "s15p1": "Éditeur du service FitMyCV.io :",
-    "s15Infobox": "Codeglyph\nSIRET : 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail : <contactEmail>contact@codeglyph.fr</contactEmail>\n\nNon assujetti à la TVA (article 293 B du CGI)",
+    "s15Infobox": "Codeglyph\nSIRET : 995 375 862 00019\n200 rue de la Croix Nivert, 75015 Paris\nEmail : <contactEmail>contact@codeglyph.fr</contactEmail>\n\nN° TVA intracommunautaire : FR58995375862",
     "s15_hosting": "Hébergement",
     "s15_hostingP": "Le service est auto-hébergé par l'éditeur.",
     "s15_dataProtection": "Protection des données",
@@ -766,6 +766,11 @@
     "readMore": "Lire l'article",
     "publishedOn": "Publié le",
     "backToBlog": "Retour au blog",
-    "noPosts": "Aucun article pour le moment."
+    "noPosts": "Aucun article pour le moment.",
+    "pillar_ats-optimization": "Optimisation CV & ATS",
+    "pillar_ai-cv": "IA & CV",
+    "pillar_job-search": "Recherche d'emploi",
+    "pillar_format-layout": "Format, mise en page & export",
+    "pillar_international": "International & multilingue"
   }
 }

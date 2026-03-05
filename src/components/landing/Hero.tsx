@@ -95,11 +95,9 @@ export default function Hero() {
 
     let titleY = currentY * 0.55;
 
-    // Lire les hauteurs pour l'anti-chevauchement
     const contentH = heroContent.offsetHeight;
     const indicatorH = scrollIndicator.offsetHeight;
 
-    // Anti-chevauchement : clamper hero-content au-dessus du scroll-indicator
     if (contentH > 0) {
       const OVERLAP_PADDING = 24;
       const contentBottom = titleY + contentH * 0.55;
@@ -154,17 +152,17 @@ export default function Hero() {
     if (progress > 0.1 && !demoStartedRef.current) {
       demoStartedRef.current = true;
       demoPausedRef.current = false;
-      mockupIframe.contentWindow?.postMessage('start-demo', '*');
+      mockupIframe.contentWindow?.postMessage('start-demo', window.location.origin);
     }
 
     if (demoStartedRef.current) {
       const mockupVisible = currentY < vh && currentY + mockupHeight > 0 && progress > 0.3;
       if (!mockupVisible && !demoPausedRef.current) {
         demoPausedRef.current = true;
-        mockupIframe.contentWindow?.postMessage('pause-demo', '*');
+        mockupIframe.contentWindow?.postMessage('pause-demo', window.location.origin);
       } else if (mockupVisible && demoPausedRef.current) {
         demoPausedRef.current = false;
-        mockupIframe.contentWindow?.postMessage('resume-demo', '*');
+        mockupIframe.contentWindow?.postMessage('resume-demo', window.location.origin);
       }
     }
   }, [updateScale]);
@@ -175,14 +173,12 @@ export default function Hero() {
     }
   }, [update]);
 
-  // Video setup
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
     video.loop = false;
   }, []);
 
-  // Scroll-synced animation: RAF loop on scroll/resize
   useEffect(() => {
     scheduleUpdate();
 
@@ -244,7 +240,6 @@ export default function Hero() {
           for (const phrase of phrasesRef.current) {
             if (cancelledRef.current) return;
             await waitVisible();
-            // Type in character by character
             for (let i = 0; i <= phrase.length; i++) {
               if (cancelledRef.current) return;
               el.textContent = phrase.slice(0, i);
@@ -252,7 +247,6 @@ export default function Hero() {
             }
             await wait(1000);
             await waitVisible();
-            // Erase word by word
             const words = phrase.split(' ');
             while (words.length > 0) {
               if (cancelledRef.current) return;

@@ -1,7 +1,7 @@
 ---
 title: "Kompatibilitäts-Score Lebenslauf-Stelle: Wie funktioniert er?"
 description: "Verstehen Sie, wie der Übereinstimmungs-Score zwischen Ihrem Lebenslauf und einer Stellenanzeige berechnet wird, und wie Sie ihn nutzen können, um Ihre Bewerbungen zu verbessern."
-date: "2026-02-20"
+date: "2026-02-12"
 translationKey: "match-score"
 tags: ["Score", "Matching", "Lebenslauf", "Bewerbung"]
 ---

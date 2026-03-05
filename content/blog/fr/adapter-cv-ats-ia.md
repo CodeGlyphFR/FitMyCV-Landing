@@ -1,7 +1,7 @@
 ---
 title: "Comment adapter votre CV pour les ATS avec l'IA en 2026"
 description: "Découvrez comment l'intelligence artificielle peut vous aider à créer un CV compatible ATS qui passe les filtres automatiques des recruteurs et décroche plus d'entretiens."
-date: "2026-02-15"
+date: "2026-02-02"
 translationKey: "tailor-ai"
 tags: ["ATS", "IA", "CV", "optimisation"]
 ---
@@ -10,7 +10,7 @@ tags: ["ATS", "IA", "CV", "optimisation"]
 
 Un ATS (Applicant Tracking System) est un logiciel utilisé par les entreprises pour gérer les candidatures. Selon les études récentes, plus de 75 % des grandes entreprises et 60 % des PME utilisent un ATS pour filtrer les CV avant même qu'un recruteur ne les lise.
 
-Concrètement, cela signifie que votre CV doit d'abord convaincre un algorithme avant de convaincre un humain. Si votre CV n'est pas formaté correctement ou ne contient pas les bons mots-clés, il sera rejeté automatiquement — même si vous êtes parfaitement qualifié pour le poste.
+Concrètement, cela signifie que votre CV doit d'abord convaincre un algorithme avant de convaincre un humain. Si votre CV n'est pas formaté correctement ou ne contient pas les bons mots-clés, il sera rejeté automatiquement, même si vous êtes parfaitement qualifié pour le poste.
 
 ## Les erreurs qui bloquent votre CV dans un ATS
 
@@ -24,7 +24,7 @@ Chaque offre d'emploi contient des mots-clés spécifiques que l'ATS recherche d
 
 ### 3. Des intitulés de section non standards
 
-« Mon parcours » au lieu de « Expérience professionnelle », ou « Ce que je sais faire » au lieu de « Compétences » — ces intitulés créatifs peuvent perdre un ATS. Utilisez des intitulés conventionnels que les systèmes reconnaissent.
+« Mon parcours » au lieu de « Expérience professionnelle », ou « Ce que je sais faire » au lieu de « Compétences », ces intitulés créatifs peuvent dérouter un ATS. Utilisez des intitulés conventionnels que les systèmes reconnaissent.
 
 ## Comment l'IA transforme l'optimisation ATS
 
@@ -36,7 +36,7 @@ Au lieu de simplement copier-coller des mots-clés, l'IA comprend le contexte de
 
 ### Reformulation contextuelle
 
-L'IA reformule vos expériences pour qu'elles résonnent avec les attentes du recruteur, sans inventer de compétences que vous n'avez pas. Par exemple, « J'ai travaillé sur des projets web » devient « Pilotage de projets web full-stack en méthodologie agile » — à condition que cela corresponde à votre parcours réel.
+L'IA reformule vos expériences pour qu'elles résonnent avec les attentes du recruteur, sans inventer de compétences que vous n'avez pas. Par exemple, « J'ai travaillé sur des projets web » devient « Pilotage de projets web full-stack en méthodologie agile », à condition que cela corresponde à votre parcours réel.
 
 ### Score de compatibilité
 
@@ -54,7 +54,7 @@ Collez le lien de l'offre ou saisissez un titre de poste. L'IA analyse les exige
 
 ### 3. Revoyez chaque modification
 
-Chaque suggestion est présentée sous forme de diff. Acceptez ou rejetez individuellement — vous gardez le contrôle total.
+Chaque suggestion est présentée sous forme de diff. Acceptez ou rejetez individuellement : vous gardez le contrôle total.
 
 ### 4. Optimisez avec les suggestions ciblées
 
@@ -79,6 +79,6 @@ Un outil dédié comme [FitMyCV](/features) résout ces problèmes en travaillan
 
 ## Conclusion
 
-L'optimisation ATS n'est plus un luxe — c'est une nécessité. Avec l'IA, vous pouvez adapter votre CV à chaque offre en quelques minutes au lieu de plusieurs heures. Le résultat : un CV qui passe les filtres automatiques ET qui impressionne les recruteurs.
+L'optimisation ATS n'est plus un luxe, c'est une nécessité. Avec l'IA, vous pouvez adapter votre CV à chaque offre en quelques minutes au lieu de plusieurs heures. Le résultat : un CV qui passe les filtres automatiques et qui impressionne les recruteurs.
 
 [Commencez gratuitement avec 15 crédits →](https://app.fitmycv.io)

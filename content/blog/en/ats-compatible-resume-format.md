@@ -1,7 +1,7 @@
 ---
 title: "How to Format an ATS-Compatible Resume: Structure, Fonts, and Template"
 description: "Practical guide to creating an ATS-compatible resume format: file type, section structure, recommended fonts, and elements to avoid."
-date: "2026-03-03"
+date: "2026-02-28"
 translationKey: "ats-format"
 tags: ["ATS", "resume", "format", "layout", "template"]
 ---
