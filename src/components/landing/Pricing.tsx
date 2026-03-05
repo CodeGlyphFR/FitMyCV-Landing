@@ -4,8 +4,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePostHog } from 'posthog-js/react';
 import { Link } from '@/i18n/navigation';
-
-/* ── Data ── */
+import PricingCalculator, { computeCost } from '@/components/pricing/PricingCalculator';
 
 interface PackData {
   tier: number;
@@ -19,7 +18,6 @@ interface PackData {
   savings?: string;
 }
 
-/* ── Constants ── */
 const CIRCUMFERENCE = 2 * Math.PI * 35; // ~220
 const EV_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -29,42 +27,6 @@ function randomString(len: number): string {
   return s;
 }
 
-/* ── Cost Calculator Logic ── */
-const CREDITS_IMPORT = 2;     // import CV — once
-const CREDITS_PER_OFFER = 7;  // per job offer: generate(3) + score(1) + optimize(2) + export(1)
-const FREE_CREDITS = 15;
-const LAUNCH_DISCOUNT = 0.70; // -30% first purchase
-
-const CALC_PACKS = [
-  { name: 'Starter', credits: 15, price: 499 },
-  { name: 'Pro', credits: 50, price: 1499 },
-  { name: 'Expert', credits: 100, price: 2699 },
-  { name: 'Ultimate', credits: 150, price: 3599 },
-];
-
-function computeCost(n: number): { total: number; perOffer: number; packName: string; fullPrice: number } {
-  if (n <= 0) return { total: 0, perOffer: 0, packName: '', fullPrice: 0 };
-
-  const creditsNeeded = CREDITS_IMPORT + n * CREDITS_PER_OFFER;
-  const packCreditsNeeded = Math.max(0, creditsNeeded - FREE_CREDITS);
-
-  if (packCreditsNeeded === 0) {
-    return { total: 0, perOffer: 0, packName: '', fullPrice: 0 };
-  }
-
-  const pack = CALC_PACKS.find(p => p.credits >= packCreditsNeeded) || CALC_PACKS[CALC_PACKS.length - 1];
-  const fullPrice = pack.price / 100;
-  const discounted = Math.round(pack.price * LAUNCH_DISCOUNT) / 100;
-  const perOffer = (discounted / pack.credits) * CREDITS_PER_OFFER;
-
-  return { total: discounted, perOffer, packName: pack.name, fullPrice };
-}
-
-function fmtPrice(v: number, suffix?: string): string {
-  return v.toFixed(2).replace('.', ',') + '\u00a0€' + (suffix ? '\u00a0' + suffix : '');
-}
-
-/* ── Copy Icon ── */
 function CopyIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -74,7 +36,6 @@ function CopyIcon() {
   );
 }
 
-/* ── Check Icon ── */
 function CheckIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -83,7 +44,6 @@ function CheckIcon() {
   );
 }
 
-/* ── Component ── */
 export default function Pricing() {
   const t = useTranslations('Pricing');
   const posthog = usePostHog();
@@ -628,7 +588,6 @@ export default function Pricing() {
 
   return (
     <>
-      {/* SVG gradients for ring gauges */}
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <defs>
           <linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -651,7 +610,6 @@ export default function Pricing() {
       </svg>
 
       <section className="pricing-section" id="pricing" ref={sectionRef}>
-        {/* Header */}
         <div className="section-header">
           <h2 className="section-title">
             {t.rich('title', {
@@ -661,49 +619,15 @@ export default function Pricing() {
           <p className="section-subtitle">{t('subtitle')}</p>
         </div>
 
-        {/* Cost Calculator */}
-        <div className="cost-calc">
-          <p className="cost-calc-q">{t('calcQuestion')}</p>
-          <div className="cost-calc-slider">
-            <input
-              type="range"
-              min={1}
-              max={20}
-              value={applications}
-              onChange={(e) => {
-                userTouchingCarouselRef.current = false;
-                setHoveredTier(null);
-                setApplications(parseInt(e.target.value));
-              }}
-              style={{ '--range-pct': `${((applications - 1) / 19) * 100}%` } as React.CSSProperties}
-            />
-            <span className="cost-calc-val">{applications}</span>
-          </div>
-          <div className="cost-calc-metrics">
-            <div className="cost-calc-metric">
-              <span className="label">{t('calcTotal')}<sup>1</sup></span>
-              <span className="value green" key={`t-${applications}`}>
-                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.total, t('exclTax'))}
-              </span>
-            </div>
-            <div className="cost-calc-metric">
-              <span className="label">{t('calcPerOffer')}<sup>2</sup></span>
-              <span className="value cyan" key={`p-${applications}`}>
-                {cost.total === 0 ? t('calcFree') : fmtPrice(cost.perOffer, t('exclTax'))}
-              </span>
-            </div>
-            <div className="cost-calc-metric">
-              <span className="label">{t('calcCompetition')}</span>
-              <span className="value red">{t('calcCompetitionValue')}<span className="approx">{t('calcPerMonth')}</span></span>
-            </div>
-          </div>
-          <div className="cost-calc-notes">
-            <p><sup>1</sup>{t('calcNote1')}</p>
-            <p><sup>2</sup>{t('calcNote2')}</p>
-          </div>
-        </div>
+        <PricingCalculator
+          max={20}
+          onApplicationsChange={(n) => {
+            userTouchingCarouselRef.current = false;
+            setHoveredTier(null);
+            setApplications(n);
+          }}
+        />
 
-        {/* Pack cards */}
         <div className="packs-grid-wrapper">
           <div className="packs-grid" id="packsGrid" ref={packsGridRef}>
             {packs.map((pack) => (
@@ -758,7 +682,6 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Trust strip */}
         <div className="trust-strip">
           {trustItems.map((item, i) => (
             <div className="trust-item" key={i}>
@@ -767,7 +690,6 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Launch offer */}
         <div className="launch-offer">
           <div className="launch-tag">{t('launchTag')}</div>
           <div className="launch-title">

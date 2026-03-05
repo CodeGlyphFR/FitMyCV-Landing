@@ -15,7 +15,7 @@ const CALC_PACKS = [
   { name: "Ultimate", credits: 150, price: 3599 },
 ];
 
-function computeCost(n: number) {
+export function computeCost(n: number) {
   if (n <= 0) return { total: 0, perOffer: 0, packName: "", fullPrice: 0 };
   const creditsNeeded = CREDITS_IMPORT + n * CREDITS_PER_OFFER;
   const packCreditsNeeded = Math.max(0, creditsNeeded - FREE_CREDITS);
@@ -31,10 +31,15 @@ function fmtPrice(v: number, suffix?: string): string {
   return v.toFixed(2).replace(".", ",") + "\u00a0€" + (suffix ? "\u00a0" + suffix : "");
 }
 
-export default function PricingCalculator() {
+interface PricingCalculatorProps {
+  max?: number;
+  onApplicationsChange?: (applications: number) => void;
+}
+
+export default function PricingCalculator({ max = 30, onApplicationsChange }: PricingCalculatorProps) {
   const t = useTranslations("Pricing");
   const [applications, setApplications] = useState(5);
-  const rangePct = ((applications - 1) / 29) * 100;
+  const rangePct = ((applications - 1) / (max - 1)) * 100;
 
   const cost = useMemo(() => computeCost(applications), [applications]);
 
@@ -45,9 +50,13 @@ export default function PricingCalculator() {
         <input
           type="range"
           min={1}
-          max={30}
+          max={max}
           value={applications}
-          onChange={(e) => setApplications(Number(e.target.value))}
+          onChange={(e) => {
+            const n = Number(e.target.value);
+            setApplications(n);
+            onApplicationsChange?.(n);
+          }}
           style={{ "--range-pct": `${rangePct}%` } as React.CSSProperties}
         />
         <span className="cost-calc-val">{applications}</span>
